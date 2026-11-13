@@ -74,12 +74,13 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .side-item .label { font-size: 18px; font-weight: 700; }
 
 /* Feature cards, right: 2 columns x 4 rows */
-.features { position: absolute; right: 20px; top: 210px; display: grid; grid-template-columns: repeat(2, 238px); grid-auto-rows: 106px; gap: 16px 14px; }
+.features { position: absolute; right: 16px; top: 196px; display: grid; grid-template-columns: repeat(2, 256px); grid-auto-rows: 130px; gap: 10px 14px; }
 .feature { position: relative; text-align: right; }
-.card-art { object-fit: fill; }
+/* Card PNGs are 768x512 with the card at bbox 102,113-665,398 (safe-zone padding): scale the image so the card itself fills the button. */
+.feature img.card-art { inset: auto; left: -18.1%; top: -39.6%; width: 136.4%; height: 179.6%; object-fit: fill; }
 .card-art.missing { border-radius: 0; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0 50%);
   background: linear-gradient(120deg, #3a4aa8 0, #1b2160 45%, #12173f 100%); border: 0; }
-.feature .label { position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 24px; font-weight: 700; }
+.feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
 .feature:hover .card-art, .side-item:hover .round, .bottom-item:hover .bottom-icon, .round:hover { filter: brightness(1.2); }
 
 /* Bottom bar */
