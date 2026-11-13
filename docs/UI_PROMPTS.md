@@ -29,7 +29,7 @@ Item slot frame is exactly SQUARE, 389x389 px.
 The inside of item and card frames is the flat background colour, no scene, mountains or gradient.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Square item slot frames only, one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
@@ -59,15 +59,15 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 1024x1536, exact grid of 3 columns × 2 rows, equal cells.
-Each cell is 341x768 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 259x584 px and nothing touches or crosses a cell edge.
+Sprite sheet, canvas 1536x1024, exact grid of 3 columns × 2 rows, equal cells.
+Each cell is 512x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 389x389 px and nothing touches or crosses a cell edge.
 One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
 Card frame is exactly 2:3 portrait, 259x389 px.
 The inside of item and card frames is the flat background colour, no scene, mountains or gradient.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
-Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
+Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. The opening inside every card is plain flat background colour: no painted mist, smoke, gradient, glow or scenery inside the frame. Colours match the item slot frames of the same tier (R is jade green-blue, not plain blue).
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
 - R: Linh: jade green-blue, simple clean lines, faint soft glow.
@@ -102,7 +102,7 @@ One shared outer frame size for the whole set: UR is richer through ornament thi
 Name plate is about 4:1, 584x146 px, interior one flat dark colour, pendant and ornaments stay off the edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Wide name plate banners only (about 4:1), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
@@ -137,7 +137,7 @@ Each cell is 307x512 px; cell borders are invisible (no lines, no gutters drawn)
 One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Pure solid black #000000 background (glows will be used with additive blending, so nothing but light on black).
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Columns are rarities N,R,SR,SSR,UR. Row 1: summon glow burst (radial). Row 2: card shine sweep overlay. Glow colour and intensity follow the rarity table; N is nearly none.
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
@@ -180,7 +180,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
 Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: primary (gold), secondary (jade).
 Cells, left to right, top to bottom:
 1. row 1, col 1: primary gold button, normal state
@@ -213,7 +213,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
 Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: danger (crimson), tab.
 Cells, left to right, top to bottom:
 1. row 1, col 1: danger crimson button, normal state
@@ -246,7 +246,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
 Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Empty containers, no text, nothing inside. Left to right, top to bottom as listed.
 Cells, left to right, top to bottom:
 1. row 1, col 1: large ornate window panel, dark indigo glass interior, gold and jade trim
@@ -287,7 +287,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
 Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Currency and material icons, one object per cell, centred, no text.
 Cells, left to right, top to bottom:
 1. row 1, col 1: spirit stone: faceted pale blue glowing crystal
@@ -320,7 +320,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
 Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Element emblems, same style and size, distinct silhouettes.
 Cells, left to right, top to bottom:
 1. row 1, col 1: wood element emblem, green leaf and branch
@@ -353,7 +353,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
 Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Lobby menu icons, one per cell.
 Cells, left to right, top to bottom:
 1. row 1, col 1: cultivation: meditation lotus with rising qi
@@ -394,7 +394,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
 Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Lobby menu icons, one per cell. Unused cells are left empty.
 Cells, left to right, top to bottom:
 1. row 1, col 1: mail: sealed letter with flying crane
@@ -431,7 +431,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 3 columns × 2 rows, equal cells.
 Each cell is 512x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 389x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #FF00FF chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element. This sheet has green parts, so no pink or magenta anywhere in the elements.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening. This sheet has green parts, so no pink or magenta anywhere in the elements.
 HUD parts, empty containers, no text. Cells are separate objects, each fully inside its cell. Magenta #FF00FF is the background because several parts are green: do not use pink, magenta or purple-pink inside any element.
 Cells, left to right, top to bottom:
 1. row 1, col 1: round ornate avatar frame, patterned gold and jade ring, hollow flat-filled centre
@@ -459,7 +459,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 1 columns × 2 rows, equal cells.
 Each cell is 1536x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 1167x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Wide HUD strips, empty, no text, one per row, each about 3:1 or wider.
 Cells, left to right, top to bottom:
 1. row 1, col 1: dark wide player-name panel, gold trim on the left, fading transparent toward the right, empty
@@ -480,7 +480,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 2 columns × 2 rows, equal cells.
 Each cell is 768x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 584x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.
 Cells, left to right, top to bottom:
 1. row 1, col 1: feature card, left illustration: lotus platform with meditation cushion and swirling qi
@@ -505,7 +505,7 @@ Sprite sheet, canvas 1536x1024, exact grid of 2 columns × 2 rows, equal cells.
 Each cell is 768x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 584x389 px and nothing touches or crosses a cell edge.
  Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Never use the background colour inside any element.
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.
 Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.
 Cells, left to right, top to bottom:
 1. row 1, col 1: feature card, left illustration: summoning altar with light pillar

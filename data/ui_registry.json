@@ -27,8 +27,8 @@
       "id": "SHEET.RARITY_CARD",
       "cols": 3,
       "rows": 2,
-      "size": "1024x1536",
-      "desc": "Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. ",
+      "size": "1536x1024",
+      "desc": "Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. The opening inside every card is plain flat background colour: no painted mist, smoke, gradient, glow or scenery inside the frame. Colours match the item slot frames of the same tier (R is jade green-blue, not plain blue).",
       "cells": [
         "UI.FRAME.CARD.N",
         "UI.FRAME.CARD.R",

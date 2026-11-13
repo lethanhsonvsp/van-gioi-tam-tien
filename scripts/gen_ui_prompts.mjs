@@ -55,7 +55,7 @@ ${STYLE}
 Sprite sheet, canvas ${s.size}, exact grid of ${s.cols} columns × ${s.rows} rows, equal cells.
 ${rules(s, cw, ch)} Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 ${bgRule(s.bg ?? '#00FF00')}
-Never use the background colour inside any element.${s.bg === '#FF00FF' ? ' This sheet has green parts, so no pink or magenta anywhere in the elements.' : ''}
+Never use the background colour in the material of any element; the only place it may appear inside an element is an empty frame opening.${s.bg === '#FF00FF' ? ' This sheet has green parts, so no pink or magenta anywhere in the elements.' : ''}
 ${s.desc}
 ${usesRarity ? `Rarity tiers, each visibly different in material, ornament and glow:\n${rar}\n` : ''}Cells, left to right, top to bottom:
 ${cells}

@@ -1,0 +1,172 @@
+{
+  "sheet_id": "SHEET.RARITY_ITEM",
+  "source": "/mnt/data/SHEET.RARITY_ITEM_draft.png",
+  "canvas": {
+    "w": 1536,
+    "h": 1024
+  },
+  "grid": {
+    "cols": 3,
+    "rows": 2
+  },
+  "background": "#00FF00",
+  "status": "approved_override",
+  "edge_failures": [
+    {
+      "id": "UI.FRAME.ITEM.UR",
+      "edges": [
+        "top"
+      ]
+    }
+  ],
+  "safe_zone_fail_ids": [
+    "UI.FRAME.ITEM.R",
+    "UI.FRAME.ITEM.SR",
+    "UI.FRAME.ITEM.SSR",
+    "UI.FRAME.ITEM.UR"
+  ],
+  "nonempty_unused_cells": [],
+  "alpha": "soft chroma + 2-pixel green-fringe despill",
+  "cells": [
+    {
+      "cell": 1,
+      "row": 1,
+      "col": 1,
+      "id": "UI.FRAME.ITEM.N",
+      "file": "UI.FRAME.ITEM.N.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        81,
+        79,
+        439,
+        425
+      ],
+      "edges_6px_background": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true,
+      "empty_expected": false,
+      "actually_empty": false
+    },
+    {
+      "cell": 2,
+      "row": 1,
+      "col": 2,
+      "id": "UI.FRAME.ITEM.R",
+      "file": "UI.FRAME.ITEM.R.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        77,
+        60,
+        435,
+        435
+      ],
+      "edges_6px_background": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": false,
+      "empty_expected": false,
+      "actually_empty": false
+    },
+    {
+      "cell": 3,
+      "row": 1,
+      "col": 3,
+      "id": "UI.FRAME.ITEM.SR",
+      "file": "UI.FRAME.ITEM.SR.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        62,
+        33,
+        450,
+        444
+      ],
+      "edges_6px_background": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": false,
+      "empty_expected": false,
+      "actually_empty": false
+    },
+    {
+      "cell": 4,
+      "row": 2,
+      "col": 1,
+      "id": "UI.FRAME.ITEM.SSR",
+      "file": "UI.FRAME.ITEM.SSR.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        65,
+        27,
+        454,
+        437
+      ],
+      "edges_6px_background": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": false,
+      "empty_expected": false,
+      "actually_empty": false
+    },
+    {
+      "cell": 5,
+      "row": 2,
+      "col": 2,
+      "id": "UI.FRAME.ITEM.UR",
+      "file": "UI.FRAME.ITEM.UR.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        37,
+        0,
+        476,
+        461
+      ],
+      "edges_6px_background": {
+        "top": false,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": false,
+      "empty_expected": false,
+      "actually_empty": false
+    },
+    {
+      "cell": 6,
+      "row": 2,
+      "col": 3,
+      "id": null,
+      "file": null,
+      "w": 512,
+      "h": 512,
+      "bbox": null,
+      "edges_6px_background": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true,
+      "empty_expected": true,
+      "actually_empty": true
+    }
+  ],
+  "accepted_by_user": true
+}

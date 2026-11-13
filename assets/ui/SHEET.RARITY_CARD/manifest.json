@@ -1,0 +1,252 @@
+{
+  "sheet": "SHEET.RARITY_CARD",
+  "sheet_canvas": [
+    1024,
+    1536
+  ],
+  "grid": [
+    3,
+    2
+  ],
+  "sheet_provenance": "RECOMPOSED FROM LANDSCAPE GENERATED IMAGE, NOT A DIRECT UNMODIFIED AI SHEET",
+  "strict_prompt_compliance": false,
+  "technical_validation": {
+    "four_edges_6px": "PASS",
+    "safe_zone_12pct": "PASS",
+    "despill": "APPLIED",
+    "soft_alpha": "APPLIED",
+    "empty_cell": "PASS",
+    "original_canvas_direct": "FAIL"
+  },
+  "limitations": [
+    "AI output canvas was 1536x1024, not requested 1024x1536.",
+    "Original AI cards had painted interiors; interior pixels were removed to produce transparent openings.",
+    "Frame artworks were individually rescaled and recomposed onto target sheet; do not treat as a strict After generation crop of original model output."
+  ],
+  "background_chroma_rgb": [
+    0,
+    255,
+    0
+  ],
+  "source_chroma_estimate_rgb": [
+    3.0,
+    248.0,
+    1.0
+  ],
+  "cells": [
+    {
+      "id": "UI.FRAME.CARD.N",
+      "file": "UI.FRAME.CARD.N.png",
+      "w": 341,
+      "h": 768,
+      "bbox": [
+        48,
+        199,
+        292,
+        569
+      ],
+      "edges_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true
+    },
+    {
+      "id": "UI.FRAME.CARD.R",
+      "file": "UI.FRAME.CARD.R.png",
+      "w": 342,
+      "h": 768,
+      "bbox": [
+        49,
+        199,
+        293,
+        569
+      ],
+      "edges_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true
+    },
+    {
+      "id": "UI.FRAME.CARD.SR",
+      "file": "UI.FRAME.CARD.SR.png",
+      "w": 341,
+      "h": 768,
+      "bbox": [
+        49,
+        199,
+        293,
+        569
+      ],
+      "edges_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true
+    },
+    {
+      "id": "UI.FRAME.CARD.SSR",
+      "file": "UI.FRAME.CARD.SSR.png",
+      "w": 341,
+      "h": 768,
+      "bbox": [
+        48,
+        199,
+        292,
+        569
+      ],
+      "edges_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true
+    },
+    {
+      "id": "UI.FRAME.CARD.UR",
+      "file": "UI.FRAME.CARD.UR.png",
+      "w": 342,
+      "h": 768,
+      "bbox": [
+        49,
+        199,
+        293,
+        569
+      ],
+      "edges_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "safe_zone_12pct": true
+    }
+  ],
+  "empty_cells": [
+    {
+      "row": 2,
+      "col": 3,
+      "bbox": [
+        683,
+        768,
+        1024,
+        1536
+      ]
+    }
+  ],
+  "source_placements": [
+    {
+      "id": "UI.FRAME.CARD.N",
+      "source_bbox": [
+        180,
+        8,
+        514,
+        480
+      ],
+      "source_object_bbox": [
+        15,
+        28,
+        314,
+        460
+      ],
+      "placed_box": [
+        48,
+        199,
+        292,
+        569
+      ]
+    },
+    {
+      "id": "UI.FRAME.CARD.R",
+      "source_bbox": [
+        603,
+        8,
+        939,
+        480
+      ],
+      "source_object_bbox": [
+        14,
+        20,
+        315,
+        462
+      ],
+      "placed_box": [
+        390,
+        199,
+        634,
+        569
+      ]
+    },
+    {
+      "id": "UI.FRAME.CARD.SR",
+      "source_bbox": [
+        1018,
+        9,
+        1361,
+        482
+      ],
+      "source_object_bbox": [
+        20,
+        18,
+        323,
+        462
+      ],
+      "placed_box": [
+        732,
+        199,
+        976,
+        569
+      ]
+    },
+    {
+      "id": "UI.FRAME.CARD.SSR",
+      "source_bbox": [
+        347,
+        493,
+        686,
+        981
+      ],
+      "source_object_bbox": [
+        16,
+        27,
+        318,
+        475
+      ],
+      "placed_box": [
+        48,
+        967,
+        292,
+        1337
+      ]
+    },
+    {
+      "id": "UI.FRAME.CARD.UR",
+      "source_bbox": [
+        769,
+        488,
+        1166,
+        1001
+      ],
+      "source_object_bbox": [
+        18,
+        21,
+        374,
+        490
+      ],
+      "placed_box": [
+        390,
+        967,
+        634,
+        1337
+      ]
+    }
+  ]
+}
