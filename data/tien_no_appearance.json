@@ -1,139 +1,406 @@
 {
   "status": "PROPOSAL: core traits from Female Character Design System v1.0 table IX; secondary details (brows, chin, hair, outfit) proposed, owner may change before production.",
   "elementBackgrounds": {
-    "MOC": "deep green", "BANG": "icy pale blue", "HOA": "red-orange", "HUYEN": "violet-pink",
-    "AM": "purple-black", "LOI": "electric blue", "THUY": "ocean blue", "THO": "earthy gold"
+    "MOC": "deep green",
+    "BANG": "icy pale blue",
+    "HOA": "red-orange",
+    "HUYEN": "violet-pink",
+    "AM": "purple-black",
+    "LOI": "electric blue",
+    "THUY": "ocean blue",
+    "THO": "earthy gold"
   },
   "characters": [
     {
-      "id": "CHAR.TIEN_NO.LAC_THANH_Y", "name": "Lạc Thanh Y", "role": "Saintess of Thanh Van Sect", "element": "MOC", "apparentAge": 23,
-      "face": { "shape": "soft round face, full cheeks, length close to width", "forehead": "medium height, rounded", "cheekbones": "low, soft", "jaw": "rounded soft jaw", "chin": "small rounded chin" },
-      "eyes": { "shape": "almond eyes", "spacing": "average", "depth": "shallow", "eyelid": "thin double eyelid", "iris": "warm brown" },
+      "id": "CHAR.TIEN_NO.LAC_THANH_Y",
+      "name": "Lạc Thanh Y",
+      "role": "Saintess of Thanh Van Sect",
+      "element": "MOC",
+      "apparentAge": 23,
+      "face": {
+        "shape": "soft round face, full cheeks, length close to width",
+        "forehead": "medium height, rounded",
+        "cheekbones": "low, soft",
+        "jaw": "rounded soft jaw",
+        "chin": "small rounded chin"
+      },
+      "eyes": {
+        "shape": "almond eyes",
+        "spacing": "average",
+        "depth": "shallow",
+        "eyelid": "thin double eyelid",
+        "iris": "warm brown"
+      },
       "brows": "softly curved, medium thickness, gently arched",
       "nose": "small nose, low-medium bridge, round tip, narrow wings",
       "mouth": "small mouth, thin upper lip, slightly fuller lower lip, corners very slightly lifted",
       "ears": "small, close to head, attached lobes",
       "hair": "long straight black hair to the waist, half-up bun with white jade flower pin, middle part",
-      "body": { "heightCm": 162, "type": "graceful balanced build, soft lines", "shoulders": "narrow", "waist": "defined", "hips": "medium", "muscle": "low" },
-      "aura": "gentle and kind", "expression": "calm soft gaze, lips closed with a faint gentle curve", "posture": "upright, hands folded in front",
-      "outfit": "white and jade-green layered sect robes with leaf embroidery, flowing sleeves, healing light motif"
+      "body": {
+        "heightCm": 162,
+        "type": "graceful balanced build, soft lines",
+        "shoulders": "narrow",
+        "waist": "defined",
+        "hips": "medium",
+        "muscle": "low"
+      },
+      "aura": "gentle and kind",
+      "expression": "calm soft gaze, lips closed with a faint gentle curve",
+      "posture": "upright, hands folded in front",
+      "outfit": "sheer layered white and jade-green saintess gown with halter neckline, open back, thigh-high side slits, gold leaf body chains, detached translucent long sleeves, healing light motif",
+      "outfitKey": "halter saintess gown"
     },
     {
-      "id": "CHAR.TIEN_NO.MO_DUNG_TUYET", "name": "Mộ Dung Tuyết", "role": "Sword Immortal of the Northern Wastes", "element": "BANG", "apparentAge": 29,
-      "face": { "shape": "diamond face, wide cheekbones, narrow forehead and jaw", "forehead": "narrow, smooth", "cheekbones": "high and prominent", "jaw": "narrow tapered jaw", "chin": "narrow pointed-medium chin" },
-      "eyes": { "shape": "long narrow eyes, small opening", "spacing": "average", "depth": "medium", "eyelid": "hooded inner fold", "iris": "pale ice blue" },
+      "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
+      "name": "Mộ Dung Tuyết",
+      "role": "Sword Immortal of the Northern Wastes",
+      "element": "BANG",
+      "apparentAge": 29,
+      "face": {
+        "shape": "diamond face, wide cheekbones, narrow forehead and jaw",
+        "forehead": "narrow, smooth",
+        "cheekbones": "high and prominent",
+        "jaw": "narrow tapered jaw",
+        "chin": "narrow pointed-medium chin"
+      },
+      "eyes": {
+        "shape": "long narrow eyes, small opening",
+        "spacing": "average",
+        "depth": "medium",
+        "eyelid": "hooded inner fold",
+        "iris": "pale ice blue"
+      },
       "brows": "straight sword brows, thin, long, slight upward angle",
       "nose": "tall straight nose, high root, narrow bridge, refined tip",
       "mouth": "straight horizontal mouth, both lips thin, flat cupid bow",
       "ears": "medium, thin rims",
       "hair": "long straight silver-white hair, high ponytail with ice crystal crown, no bangs",
-      "body": { "heightCm": 175, "type": "tall and slender, long limbs", "shoulders": "medium", "waist": "narrow", "hips": "narrow", "muscle": "lean" },
-      "aura": "cold and aloof", "expression": "neutral, sharp level gaze, lips firmly closed", "posture": "straight, sword held vertically at side",
-      "outfit": "white and frost-blue swordswoman robes with white fur collar, silver armor accents, long straight sword"
+      "body": {
+        "heightCm": 175,
+        "type": "tall and slender, long limbs",
+        "shoulders": "medium",
+        "waist": "narrow",
+        "hips": "narrow",
+        "muscle": "lean"
+      },
+      "aura": "cold and aloof",
+      "expression": "neutral, sharp level gaze, lips firmly closed",
+      "posture": "straight, sword held vertically at side",
+      "outfit": "frost-silver fitted short combat dress with high-cut sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape, long straight sword",
+      "outfitKey": "short combat dress with boots"
     },
     {
-      "id": "CHAR.TIEN_NO.DIEM_VO_TAM", "name": "Diễm Vô Tâm", "role": "Demoness of U Minh Palace", "element": "HOA", "apparentAge": 32,
-      "face": { "shape": "soft square face, broad jaw with softened angles", "forehead": "broad, slightly flat", "cheekbones": "medium-high", "jaw": "wide soft-square jaw", "chin": "broad rounded-square chin" },
-      "eyes": { "shape": "deep-set eyes with visible sockets", "spacing": "slightly close", "depth": "deep", "eyelid": "deep double eyelid", "iris": "dark crimson" },
+      "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
+      "name": "Diễm Vô Tâm",
+      "role": "Demoness of U Minh Palace",
+      "element": "HOA",
+      "apparentAge": 32,
+      "face": {
+        "shape": "soft square face, broad jaw with softened angles",
+        "forehead": "broad, slightly flat",
+        "cheekbones": "medium-high",
+        "jaw": "wide soft-square jaw",
+        "chin": "broad rounded-square chin"
+      },
+      "eyes": {
+        "shape": "deep-set eyes with visible sockets",
+        "spacing": "slightly close",
+        "depth": "deep",
+        "eyelid": "deep double eyelid",
+        "iris": "dark crimson"
+      },
       "brows": "thick, low, slightly angled brows",
       "nose": "nose with a gentle convex curve on the bridge, medium width, defined tip",
       "mouth": "wide mouth, thin upper lip, full lower lip, corners level",
       "ears": "medium, detached lobes with ruby earrings",
       "hair": "long thick wavy black hair with red undertone, side part, red spider-lily ornament",
-      "body": { "heightCm": 168, "type": "hourglass figure", "shoulders": "medium", "waist": "very defined", "hips": "wide", "muscle": "low" },
-      "aura": "bewitching and dangerous", "expression": "half-lidded knowing gaze, lips closed, faint asymmetric curve", "posture": "weight on one hip, one hand raised with crimson flame",
-      "outfit": "black and crimson demonic palace gown with gold trim, flame motifs, sheer sleeves"
+      "body": {
+        "heightCm": 168,
+        "type": "hourglass figure",
+        "shoulders": "medium",
+        "waist": "very defined",
+        "hips": "wide",
+        "muscle": "low"
+      },
+      "aura": "bewitching and dangerous",
+      "expression": "half-lidded knowing gaze, lips closed, faint asymmetric curve",
+      "posture": "weight on one hip, one hand raised with crimson flame",
+      "outfit": "black and crimson gown with a deep plunging V neckline, side waist cutouts, long translucent crimson trailing skirt panels, gold body chains with rubies, flame motifs",
+      "outfitKey": "plunging trailing gown"
     },
     {
-      "id": "CHAR.TIEN_NO.BACH_LINH_NHI", "name": "Bạch Linh Nhi", "role": "Nine-Tailed Fox Spirit", "element": "HUYEN", "apparentAge": 20,
-      "face": { "shape": "heart face, wide forehead, small chin", "forehead": "wide, rounded", "cheekbones": "medium", "jaw": "short tapered jaw", "chin": "small short chin" },
-      "eyes": { "shape": "large round eyes, wide opening", "spacing": "slightly wide", "depth": "shallow", "eyelid": "double eyelid", "iris": "violet with gold ring" },
+      "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
+      "name": "Bạch Linh Nhi",
+      "role": "Nine-Tailed Fox Spirit",
+      "element": "HUYEN",
+      "apparentAge": 20,
+      "face": {
+        "shape": "heart face, wide forehead, small chin",
+        "forehead": "wide, rounded",
+        "cheekbones": "medium",
+        "jaw": "short tapered jaw",
+        "chin": "small short chin"
+      },
+      "eyes": {
+        "shape": "large round eyes, wide opening",
+        "spacing": "slightly wide",
+        "depth": "shallow",
+        "eyelid": "double eyelid",
+        "iris": "violet with gold ring"
+      },
       "brows": "short, softly curved, light brows",
       "nose": "short nose, slightly upturned tip, low bridge",
       "mouth": "small mouth, heart-shaped lips, defined cupid bow",
       "ears": "white fox ears on top of head (spirit race), small human ears hidden",
       "hair": "shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon",
-      "body": { "heightCm": 153, "type": "petite, small frame", "shoulders": "narrow", "waist": "small", "hips": "narrow", "muscle": "low" },
-      "aura": "playful and mischievous", "expression": "lively eyes, lips closed with a playful slight curve", "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
-      "outfit": "white and lavender fox-spirit dress with pink illusion mist, bells and tassels"
+      "body": {
+        "heightCm": 153,
+        "type": "petite, small frame",
+        "shoulders": "narrow",
+        "waist": "small",
+        "hips": "narrow",
+        "muscle": "low"
+      },
+      "aura": "playful and mischievous",
+      "expression": "lively eyes, lips closed with a playful slight curve",
+      "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
+      "outfit": "off-shoulder lavender and white short wrap dress, sheer pink layered sleeves, small bells and tassels, ribbon thigh garters, pink illusion mist",
+      "outfitKey": "off-shoulder short wrap"
     },
     {
-      "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO", "name": "Tần Nguyệt Dao", "role": "Assassin of Shadowless Tower", "element": "AM", "apparentAge": 27,
-      "face": { "shape": "narrow rectangular face, long and lean", "forehead": "medium, sloping slightly", "cheekbones": "medium, defined", "jaw": "straight narrow jaw", "chin": "long narrow chin" },
-      "eyes": { "shape": "eyes with hidden inner fold (mono-hooded), medium opening", "spacing": "average", "depth": "medium", "eyelid": "hidden fold", "iris": "dark grey" },
+      "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
+      "name": "Tần Nguyệt Dao",
+      "role": "Assassin of Shadowless Tower",
+      "element": "AM",
+      "apparentAge": 27,
+      "face": {
+        "shape": "narrow rectangular face, long and lean",
+        "forehead": "medium, sloping slightly",
+        "cheekbones": "medium, defined",
+        "jaw": "straight narrow jaw",
+        "chin": "long narrow chin"
+      },
+      "eyes": {
+        "shape": "eyes with hidden inner fold (mono-hooded), medium opening",
+        "spacing": "average",
+        "depth": "medium",
+        "eyelid": "hidden fold",
+        "iris": "dark grey"
+      },
       "brows": "straight, thin, slightly lowered brows",
       "nose": "long nose with a pointed tip, narrow bridge",
       "mouth": "wide mouth with slightly downturned corners, medium lips",
       "ears": "small, close to head",
       "hair": "long straight black hair in a low tight braid, uneven bangs, dark purple hair cord",
-      "body": { "heightCm": 170, "type": "toned athletic build", "shoulders": "medium", "waist": "defined", "hips": "medium", "muscle": "toned" },
-      "aura": "mysterious", "expression": "unreadable, watchful, lips closed", "posture": "crouched-ready stance, dagger held reverse grip",
-      "outfit": "close-fitting black and deep violet assassin attire with layered short cape, purple veil lowered around neck so the face is visible, twin daggers"
+      "body": {
+        "heightCm": 170,
+        "type": "toned athletic build",
+        "shoulders": "medium",
+        "waist": "defined",
+        "hips": "medium",
+        "muscle": "toned"
+      },
+      "aura": "mysterious",
+      "expression": "unreadable, watchful, lips closed",
+      "posture": "crouched-ready stance, dagger held reverse grip",
+      "outfit": "black halter crop top with criss-cross straps, bare midriff, high-cut wrap skirt open at one side, long deep-violet sash, arm wraps, thigh dagger holsters, purple veil lowered around the neck so the face is visible",
+      "outfitKey": "strappy crop top and wrap skirt"
     },
     {
-      "id": "CHAR.TIEN_NO.LIEU_NHU_YEN", "name": "Liễu Như Yên", "role": "Alchemist of Medicine King Valley", "element": "MOC", "apparentAge": 35,
-      "face": { "shape": "pear face, fuller lower cheeks and jaw", "forehead": "narrow, low", "cheekbones": "low", "jaw": "full rounded jaw", "chin": "full rounded chin" },
-      "eyes": { "shape": "downturned eyes, outer corners lower", "spacing": "average", "depth": "medium", "eyelid": "heavy upper lid, double fold", "iris": "amber" },
+      "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
+      "name": "Liễu Như Yên",
+      "role": "Alchemist of Medicine King Valley",
+      "element": "MOC",
+      "apparentAge": 35,
+      "face": {
+        "shape": "pear face, fuller lower cheeks and jaw",
+        "forehead": "narrow, low",
+        "cheekbones": "low",
+        "jaw": "full rounded jaw",
+        "chin": "full rounded chin"
+      },
+      "eyes": {
+        "shape": "downturned eyes, outer corners lower",
+        "spacing": "average",
+        "depth": "medium",
+        "eyelid": "heavy upper lid, double fold",
+        "iris": "amber"
+      },
       "brows": "soft natural sparse brows, gently downturned",
       "nose": "low soft nose, rounded wide tip",
       "mouth": "full lips, flat cupid bow, medium width",
       "ears": "medium, detached lobes with jade studs",
       "hair": "long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part",
-      "body": { "heightCm": 160, "type": "soft full figure", "shoulders": "medium", "waist": "soft", "hips": "wide", "muscle": "low" },
-      "aura": "experienced and composed", "expression": "calm knowing gaze, lips closed, at ease", "posture": "relaxed, holding a small green elixir vial",
-      "outfit": "layered green and cream alchemist robes, herb pouches at the waist, rolled sleeves"
+      "body": {
+        "heightCm": 160,
+        "type": "soft full figure",
+        "shoulders": "medium",
+        "waist": "soft",
+        "hips": "wide",
+        "muscle": "low"
+      },
+      "aura": "experienced and composed",
+      "expression": "calm knowing gaze, lips closed, at ease",
+      "posture": "relaxed, holding a small green elixir vial",
+      "outfit": "emerald silk dress with sweetheart corset bodice, bare shoulders, sheer cream overrobe slipping off the shoulders, high front slit, herb pouches on a gold waist chain",
+      "outfitKey": "corset dress with slipping overrobe"
     },
     {
-      "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG", "name": "Hàn Nguyệt Sương", "role": "General of Bac Minh", "element": "LOI", "apparentAge": 30,
-      "face": { "shape": "angular face, defined bone structure", "forehead": "high, flat", "cheekbones": "prominent", "jaw": "sharp angular jaw", "chin": "square-angular chin" },
-      "eyes": { "shape": "phoenix eyes, long with lifted outer corners", "spacing": "average", "depth": "medium-deep", "eyelid": "thin double eyelid", "iris": "steel grey with blue glint" },
+      "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
+      "name": "Hàn Nguyệt Sương",
+      "role": "General of Bac Minh",
+      "element": "LOI",
+      "apparentAge": 30,
+      "face": {
+        "shape": "angular face, defined bone structure",
+        "forehead": "high, flat",
+        "cheekbones": "prominent",
+        "jaw": "sharp angular jaw",
+        "chin": "square-angular chin"
+      },
+      "eyes": {
+        "shape": "phoenix eyes, long with lifted outer corners",
+        "spacing": "average",
+        "depth": "medium-deep",
+        "eyelid": "thin double eyelid",
+        "iris": "steel grey with blue glint"
+      },
       "brows": "thick straight sword brows, strong",
       "nose": "tall nose, narrow wings, straight bridge",
       "mouth": "long horizontal mouth, thin lips",
       "ears": "medium, close to head",
       "hair": "long black hair in a high warrior topknot with braided sides, metal hair crown",
-      "body": { "heightCm": 176, "type": "martial build, developed shoulders and back", "shoulders": "broad", "waist": "firm", "hips": "medium", "muscle": "strong" },
-      "aura": "commanding and dignified", "expression": "direct steady gaze, lips firmly closed", "posture": "squared stance, hand on halberd",
-      "outfit": "dark navy and silver lamellar armor with lightning engravings, short cape, guandao halberd crackling with lightning"
+      "body": {
+        "heightCm": 176,
+        "type": "martial build, developed shoulders and back",
+        "shoulders": "broad",
+        "waist": "firm",
+        "hips": "medium",
+        "muscle": "strong"
+      },
+      "aura": "commanding and dignified",
+      "expression": "direct steady gaze, lips firmly closed",
+      "posture": "squared stance, hand on halberd",
+      "outfit": "sculpted navy and silver armor breastplate leaving shoulders and midriff bare, armored tassets over a short battle skirt, thigh-high armored greaves, short cape with lightning engravings, guandao halberd crackling with lightning",
+      "outfitKey": "sculpted armor with bare midriff"
     },
     {
-      "id": "CHAR.TIEN_NO.SO_HONG_LIEN", "name": "Sở Hồng Liên", "role": "Princess of the Fire Kingdom", "element": "HOA", "apparentAge": 25,
-      "face": { "shape": "inverted triangle face, wide forehead, tapered jaw", "forehead": "wide, slightly high", "cheekbones": "high", "jaw": "tapered jaw", "chin": "medium pointed chin" },
-      "eyes": { "shape": "upturned eyes, outer corners higher", "spacing": "average", "depth": "medium", "eyelid": "double eyelid", "iris": "golden amber" },
+      "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
+      "name": "Sở Hồng Liên",
+      "role": "Princess of the Fire Kingdom",
+      "element": "HOA",
+      "apparentAge": 25,
+      "face": {
+        "shape": "inverted triangle face, wide forehead, tapered jaw",
+        "forehead": "wide, slightly high",
+        "cheekbones": "high",
+        "jaw": "tapered jaw",
+        "chin": "medium pointed chin"
+      },
+      "eyes": {
+        "shape": "upturned eyes, outer corners higher",
+        "spacing": "average",
+        "depth": "medium",
+        "eyelid": "double eyelid",
+        "iris": "golden amber"
+      },
       "brows": "high arched brows with sharp tails",
       "nose": "straight nose with a fuller tip",
       "mouth": "fuller upper lip, sharp defined corners, medium width",
       "ears": "medium, gold phoenix earrings",
       "hair": "long black hair with blunt straight bangs, side locks, gold phoenix crown",
-      "body": { "heightCm": 172, "type": "tall balanced build", "shoulders": "medium", "waist": "defined", "hips": "medium", "muscle": "moderate" },
-      "aura": "proud and regal", "expression": "chin slightly raised, confident gaze, lips closed", "posture": "upright royal stance, one hand on sword hilt",
-      "outfit": "crimson and gold royal battle dress with phoenix embroidery, gold shoulder guards, flame-patterned sash"
+      "body": {
+        "heightCm": 172,
+        "type": "tall balanced build",
+        "shoulders": "medium",
+        "waist": "defined",
+        "hips": "medium",
+        "muscle": "moderate"
+      },
+      "aura": "proud and regal",
+      "expression": "chin slightly raised, confident gaze, lips closed",
+      "posture": "upright royal stance, one hand on sword hilt",
+      "outfit": "sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout, floor-length with twin thigh-high slits, gold phoenix shoulder guards, flame-patterned sash",
+      "outfitKey": "collared slit royal gown"
     },
     {
-      "id": "CHAR.TIEN_NO.VAN_MONG_DAO", "name": "Vân Mộng Dao", "role": "Formation Master of Thien Co Pavilion", "element": "THUY", "apparentAge": 26,
-      "face": { "shape": "long face, slim lines", "forehead": "high, arched hairline", "cheekbones": "medium-low", "jaw": "slim jaw", "chin": "long soft chin" },
-      "eyes": { "shape": "monolid eyes, no visible crease, medium-narrow opening", "spacing": "slightly wide", "depth": "shallow", "eyelid": "monolid", "iris": "dark blue-black" },
+      "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
+      "name": "Vân Mộng Dao",
+      "role": "Formation Master of Thien Co Pavilion",
+      "element": "THUY",
+      "apparentAge": 26,
+      "face": {
+        "shape": "long face, slim lines",
+        "forehead": "high, arched hairline",
+        "cheekbones": "medium-low",
+        "jaw": "slim jaw",
+        "chin": "long soft chin"
+      },
+      "eyes": {
+        "shape": "monolid eyes, no visible crease, medium-narrow opening",
+        "spacing": "slightly wide",
+        "depth": "shallow",
+        "eyelid": "monolid",
+        "iris": "dark blue-black"
+      },
       "brows": "thin long gently curved brows",
       "nose": "small nose with a low bridge, small tip",
       "mouth": "small mouth, straight horizontal lips, thin",
       "ears": "small, detached lobes, pearl drops",
       "hair": "very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part",
-      "body": { "heightCm": 165, "type": "slender, narrow shoulders, long limbs", "shoulders": "narrow", "waist": "slim", "hips": "narrow", "muscle": "low" },
-      "aura": "intelligent and observant", "expression": "focused thoughtful gaze, lips closed", "posture": "standing still, glowing water formation array floating at her hand",
-      "outfit": "deep blue and white scholar robes with formation diagrams on the hem, flowing water ribbons"
+      "body": {
+        "heightCm": 165,
+        "type": "slender, narrow shoulders, long limbs",
+        "shoulders": "narrow",
+        "waist": "slim",
+        "hips": "narrow",
+        "muscle": "low"
+      },
+      "aura": "intelligent and observant",
+      "expression": "focused thoughtful gaze, lips closed",
+      "posture": "standing still, glowing water formation array floating at her hand",
+      "outfit": "deep blue and white sheer layered robe draped off one shoulder, backless wrapped bodice, translucent water-ribbon skirt revealing the legs, formation-script embroidery on the hems",
+      "outfitKey": "one-shoulder backless flowing robe"
     },
     {
-      "id": "CHAR.TIEN_NO.CO_U_LAN", "name": "Cổ U Lan", "role": "Keeper of the Ancient Immortal Tomb", "element": "THO", "apparentAge": 34,
-      "face": { "shape": "wide face with high prominent cheekbones", "forehead": "medium, flat", "cheekbones": "high and wide", "jaw": "wide, slightly angular", "chin": "broad chin" },
-      "eyes": { "shape": "deep-set eyes, heavy upper lids", "spacing": "wide", "depth": "deep", "eyelid": "heavy hooded lid", "iris": "light gold-brown" },
+      "id": "CHAR.TIEN_NO.CO_U_LAN",
+      "name": "Cổ U Lan",
+      "role": "Keeper of the Ancient Immortal Tomb",
+      "element": "THO",
+      "apparentAge": 34,
+      "face": {
+        "shape": "wide face with high prominent cheekbones",
+        "forehead": "medium, flat",
+        "cheekbones": "high and wide",
+        "jaw": "wide, slightly angular",
+        "chin": "broad chin"
+      },
+      "eyes": {
+        "shape": "deep-set eyes, heavy upper lids",
+        "spacing": "wide",
+        "depth": "deep",
+        "eyelid": "heavy hooded lid",
+        "iris": "light gold-brown"
+      },
       "brows": "straight, medium-thick, natural",
       "nose": "long nose with a rounded tip, medium width",
       "mouth": "wide mouth, thin lips, level corners",
       "ears": "large, long lobes",
       "hair": "long straight ash-grey hair, low ponytail bound with bronze rings, no bangs",
-      "body": { "heightCm": 174, "type": "tall and firm build", "shoulders": "broad", "waist": "firm", "hips": "medium", "muscle": "toned" },
-      "aura": "serene and calm", "expression": "still, quiet steady gaze, lips closed", "posture": "standing firm, staff planted, small stone guardian beside her",
-      "outfit": "ochre and dark brown ancient guardian robes with bronze talismans, earth rune patterns, heavy stone-bead necklace"
+      "body": {
+        "heightCm": 174,
+        "type": "tall and firm build",
+        "shoulders": "broad",
+        "waist": "firm",
+        "hips": "medium",
+        "muscle": "toned"
+      },
+      "aura": "serene and calm",
+      "expression": "still, quiet steady gaze, lips closed",
+      "posture": "standing firm, staff planted, small stone guardian beside her",
+      "outfit": "ochre one-shoulder draped garment with wide bronze belt, bare arms with bronze arm bands, long skirt of open side panels over a dark sheer underlayer, heavy stone-bead necklace, bronze talismans",
+      "outfitKey": "one-shoulder drape with open panels"
     }
-  ]
+  ],
+  "outfitRule": "Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric."
 }

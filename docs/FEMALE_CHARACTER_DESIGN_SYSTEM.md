@@ -612,3 +612,11 @@ Mình đề xuất áp dụng **3 lớp nhận diện độc lập**:
 **Tiêu chuẩn duyệt:** Mỗi Tiên Nô phải có ảnh chính diện để kiểm tra khuôn mặt, ảnh toàn thân để kiểm tra vóc dáng và ảnh thẻ nghệ thuật để thể hiện khí chất. Chỉ sau khi ba ảnh nhất quán mới tạo phiên bản Pixel cho Thí Luyện và Bí Cảnh.
 
 Với hệ thống này, chúng ta có thể xây dựng hàng trăm Tiên Nô có bản sắc riêng, thay vì một khuôn mặt được nhân bản hàng trăm lần.
+
+---
+
+# XI. PHONG CÁCH ẢNH VÀ TRANG PHỤC (chủ dự án chốt 2026-11-13)
+
+- **Phong cách:** tranh nhân vật game tiên hiệp cao cấp, bán hiện thực bóng bẩy kiểu render 3D xuất 2D, vẻ đẹp lộng lẫy lý tưởng hóa. **Không** ảnh chụp người thật, không kiểu live-action. Ảnh nhận diện chính diện cũng vẽ cùng phong cách này.
+- **Trang phục 18+:** gợi cảm, được hở vai, lưng, eo, chân, vải xuyên thấu nhiều lớp, xẻ tà; **không bao giờ khỏa thân: đầu ngực và vùng kín luôn được che bằng vải không xuyên thấu.** Dáng người trưởng thành rõ ràng.
+- **Không trùng trang phục:** mỗi Tiên Nô một kiểu dáng trang phục riêng (`outfitKey` trong `data/tien_no_appearance.json`, script báo lỗi nếu trùng). Đổi màu hay hoa văn trên cùng một kiểu dáng không tính là khác.
