@@ -1,0 +1,52 @@
+{
+  "sheet_id": "SHEET.BG_LOBBY",
+  "assets": [
+    {
+      "id": "BG.LOBBY.NGUYET_DA",
+      "file": "BG.LOBBY.NGUYET_DA.png",
+      "w": 1536,
+      "h": 1024,
+      "bbox": [
+        0,
+        0,
+        1536,
+        1024
+      ]
+    }
+  ],
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "full_bleed": true,
+    "grid": null,
+    "chroma_key": null
+  },
+  "after_generation": {
+    "no_cropping": true,
+    "no_resizing": true,
+    "no_transparency": true,
+    "single_image": true,
+    "copied_original_bytes": true
+  },
+  "quality_checks": {
+    "exact_size_1536x1024": true,
+    "single_image": true,
+    "night_palette": true,
+    "crystal_visible_at_centre": true,
+    "violet_tree_waterfalls": true,
+    "ui_text_people_detected_by_visual_review": false,
+    "crop_16_9": {
+      "x": 0,
+      "y": 80,
+      "w": 1536,
+      "h": 864,
+      "caveat": "Moon near top can be partly clipped in centred 16:9 crop; original full-bleed is preserved."
+    },
+    "reference_image_pixel_comparison": "not_performed: attached reference bytes not available for direct comparison",
+    "qualitative_status": "approximation; inspect composition in-game before accepting"
+  },
+  "original_sha256": "7041709cb54febf6d5aca477bfa2b8b4446c14e54f529593d111e4f19ebb4f5a",
+  "original_prompt": "Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.\nSingle background image, canvas 1536x1024, no grid, no chroma key, full-bleed.\nSingle full-bleed background image, not a sprite sheet. Keep the important area inside the centre 16:9 band (about 1536x864) because code crops to 16:9.\nNIGHT scene under a large full moon: deep indigo and blue-violet night sky with stars, cool moonlight, NO daylight, NO blue day sky, NO sun. Immortal sect courtyard seen from the plaza: a large glowing blue spirit crystal on a round stone dais at the exact centre, emitting soft cyan light rings; stone stairs behind it rising to a lit main hall; several waterfalls on misty cliffs; a large VIOLET/LAVENDER blossom tree framing the left edge (purple, not pink); stone lanterns with warm glow; tall indigo banners carrying only an emblem. Match the lighting, palette and composition of docs/reference/lobby_target.png but with every UI element, label and person removed. No UI, no people, no text.\nNo text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.\nNo UI elements.",
+  "source_prompt_repo": "lethanhsonvsp/van-gioi-tam-tien/docs/UI_PROMPTS.md"
+}
