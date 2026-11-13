@@ -53,3 +53,10 @@ tests/
 
 ## Unresolved design decisions
 Swap cooldown; death/revive; party size limit; reward sharing; offline auto; definitive HD-2D engine; multiplayer hosting. Ask owner before locking any of these.
+
+## Locked visual and character rules (2026-11-13)
+- Lobby reference selected: **Nguyệt Dạ Thanh Vân**, moonlit blue-violet sect courtyard, waterfalls, central spirit crystal. Implement as functional responsive UI, not a static screenshot.
+- **Player is the protagonist**, cultivates and progresses independently of Gacha.
+- All Gacha recruits are **Tiên Nô**, with distinct identities, backgrounds, social roles, personalities and abilities.
+- **Every Tiên Nô must have a unique face**. Hair/clothing changes alone do not establish uniqueness. Distinguish facial anatomy and proportions; compare new portraits against existing roster. **No smiles showing teeth, lips closed.** Maintain identity across 2D and pixel versions.
+- Ask owner whether the player protagonist counts within the six Bí Cảnh slots/lives before changing party mechanics.
