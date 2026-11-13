@@ -13,6 +13,7 @@ export const UI_ACTIONS = {
   "lobby.btn.guild": "screen.guild",
   "lobby.btn.ranking": "screen.ranking",
   "lobby.btn.mail": "screen.mail",
+  "lobby.btn.notifications": "screen.notifications",
   "lobby.btn.journal": "screen.journal",
   "lobby.btn.quests": "screen.quests",
   "lobby.btn.events": "screen.events",
