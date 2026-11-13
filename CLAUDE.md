@@ -67,3 +67,8 @@ Swap cooldown; death/revive; party size limit; reward sharing; offline auto; def
 - Render **exactly one active character per player** on the exploration map. Swapping does not reset HP/status of inactive characters.
 - Three co-op players: up to **18 lives**, exactly **3 visible characters** when all three are present.
 - Previous documentation question about protagonist vs six slots is RESOLVED: protagonist is included in the six.
+
+## Launch roster / UI scope update (2026-11-13)
+- Initial Gacha roster: **10 female Tiên Nô**. **Male Tiên Nô: Coming Soon**, excluded from current Gacha pools and summon results. Do not interpret this as restricting the player's own protagonist gender.
+- Preserve unique face and closed-mouth portrait requirements. Keep nonpixel main UI; pixel art only for Thí Luyện and Bí Cảnh.
+- Two new general UI concepts were generated, but the owner has not selected a final revision; do not replace the approved Nguyệt Dạ Thanh Vân lobby without confirmation.
