@@ -55,3 +55,10 @@
 - **Hard character-art rules:** every Tiên Nô has a genuinely distinct face (eyes, nose, lips, jaw, cheekbones and facial proportions). Changing only hairstyle or costume does not count. **No tooth-showing smiles: lips must stay closed.** Preserve face identity across portraits, full-body, poses and pixel sprites. Compare each new design against the roster.
 - Keep player and Tiên Nô conceptually distinct in the domain model even where progression systems are shared.
 - Open question: Does the protagonist occupy one of the six Bí Cảnh slots/lives or exist in addition to six Tiên Nô? Ask owner before implementation.
+
+## Locked decision — Bí Cảnh roster (2026-11-13)
+- **Option A CONFIRMED by owner:** each player's Bí Cảnh roster has exactly **1 player protagonist + up to 5 Tiên Nô = 6 characters / up to 6 lives**.
+- The protagonist occupies a **mandatory reserved slot** and cannot be replaced by a sixth Tiên Nô.
+- Only **one active character per player** is visible on the Bí Cảnh map at any time; swapping selects from the player's six-member roster. Each member retains its own HP and status while inactive.
+- A 3-player co-op party can have up to **18 lives total**, but only **3 visible active characters** at once (one per player).
+- This replaces the previous open question about whether the protagonist counts among the six slots.
