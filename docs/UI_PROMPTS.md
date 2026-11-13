@@ -528,7 +528,7 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
 Single background image, canvas 1536x1024, no grid, no chroma key, full-bleed.
 Single full-bleed background image, not a sprite sheet. Keep the important area inside the centre 16:9 band (about 1536x864) because code crops to 16:9.
-moonlit sect courtyard at night, stone plaza, waterfall cascading on the far side, a large glowing spirit stone at the centre, a purple-blossom tree, banners carrying only emblems; no UI, no people, no text
+NIGHT scene under a large full moon: deep indigo and blue-violet night sky with stars, cool moonlight, NO daylight, NO blue day sky, NO sun. Immortal sect courtyard seen from the plaza: a large glowing blue spirit crystal on a round stone dais at the exact centre, emitting soft cyan light rings; stone stairs behind it rising to a lit main hall; several waterfalls on misty cliffs; a large VIOLET/LAVENDER blossom tree framing the left edge (purple, not pink); stone lanterns with warm glow; tall indigo banners carrying only an emblem. Match the lighting, palette and composition of docs/reference/lobby_target.png but with every UI element, label and person removed. No UI, no people, no text.
 No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
 No UI elements.
 ```

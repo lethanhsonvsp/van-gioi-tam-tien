@@ -317,7 +317,7 @@
     "ICON.FN.BENEFITS": "benefits: gift box with ribbon",
     "ICON.FN.DAILY_LOGIN": "daily login: calendar tablet with sun",
     "ICON.FN.SETTINGS": "settings: bronze gear with cloud pattern",
-    "BG.LOBBY.NGUYET_DA": "moonlit sect courtyard at night, stone plaza, waterfall cascading on the far side, a large glowing spirit stone at the centre, a purple-blossom tree, banners carrying only emblems; no UI, no people, no text",
+    "BG.LOBBY.NGUYET_DA": "NIGHT scene under a large full moon: deep indigo and blue-violet night sky with stars, cool moonlight, NO daylight, NO blue day sky, NO sun. Immortal sect courtyard seen from the plaza: a large glowing blue spirit crystal on a round stone dais at the exact centre, emitting soft cyan light rings; stone stairs behind it rising to a lit main hall; several waterfalls on misty cliffs; a large VIOLET/LAVENDER blossom tree framing the left edge (purple, not pink); stone lanterns with warm glow; tall indigo banners carrying only an emblem. Match the lighting, palette and composition of docs/reference/lobby_target.png but with every UI element, label and person removed. No UI, no people, no text.",
     "UI.FRAME.AVATAR": "round ornate avatar frame, patterned gold and jade ring, hollow flat-filled centre",
     "UI.BADGE.LEVEL": "small shield-shaped level badge, gold trim, empty flat dark centre",
     "UI.BAR.FILL.LINH_LUC": "horizontal bar fill, glowing green spirit-power, no frame",
