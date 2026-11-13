@@ -1,0 +1,171 @@
+{
+  "sheet_id": "SHEET.FEATURE_CARDS",
+  "source_prompt_sha256": "8adf791c1225dfdf892b9e6b41e49337a663938a11bae93003d5a4456e0bd9e5",
+  "source_image": "a_clean_highly_detailed_game_ui_sprite_sheet_on_a.png",
+  "source_image_size": [
+    1536,
+    1024
+  ],
+  "grid": [
+    2,
+    2
+  ],
+  "generated_source_pass": false,
+  "derived_geometry_pass": true,
+  "admission": "Not a strict After generation pass. The generated whole sheet exceeded 12% safe zone; source cells were resized in a separately labelled DERIVED version. The original source is included unchanged as _sheet.png.",
+  "background_rgb": [
+    0,
+    255,
+    0
+  ],
+  "despill": "on foreground edge adjacent to key background, G<=max(R,B)",
+  "alpha": "soft Gaussian transition on chroma boundary",
+  "edge_test": "all four strips 6px each",
+  "safe_zone": "12 percent each side",
+  "contents": [
+    {
+      "id": "UI.FEATURE_CARD.CULTIVATION",
+      "file": "UI.FEATURE_CARD.CULTIVATION.png",
+      "grid_row": 1,
+      "grid_col": 1,
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        102,
+        113,
+        665,
+        398
+      ],
+      "source_bbox": [
+        42,
+        110,
+        736,
+        462
+      ],
+      "source_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "source_safe_12pct": false,
+      "derived_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "derived_safe_12pct": true,
+      "derived_scale": 0.811239,
+      "source_original_cell_direct_crop": false
+    },
+    {
+      "id": "UI.FEATURE_CARD.BREAKTHROUGH",
+      "file": "UI.FEATURE_CARD.BREAKTHROUGH.png",
+      "grid_row": 1,
+      "grid_col": 2,
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        102,
+        113,
+        665,
+        398
+      ],
+      "source_bbox": [
+        31,
+        110,
+        725,
+        462
+      ],
+      "source_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "source_safe_12pct": false,
+      "derived_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "derived_safe_12pct": true,
+      "derived_scale": 0.811239,
+      "source_original_cell_direct_crop": false
+    },
+    {
+      "id": "UI.FEATURE_CARD.TIEN_NO",
+      "file": "UI.FEATURE_CARD.TIEN_NO.png",
+      "grid_row": 2,
+      "grid_col": 1,
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        102,
+        113,
+        665,
+        399
+      ],
+      "source_bbox": [
+        43,
+        36,
+        737,
+        389
+      ],
+      "source_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "source_safe_12pct": false,
+      "derived_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "derived_safe_12pct": true,
+      "derived_scale": 0.811239,
+      "source_original_cell_direct_crop": false
+    },
+    {
+      "id": "UI.FEATURE_CARD.EQUIPMENT",
+      "file": "UI.FEATURE_CARD.EQUIPMENT.png",
+      "grid_row": 2,
+      "grid_col": 2,
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        102,
+        113,
+        665,
+        399
+      ],
+      "source_bbox": [
+        31,
+        36,
+        725,
+        389
+      ],
+      "source_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "source_safe_12pct": false,
+      "derived_edges_6px": {
+        "left": true,
+        "right": true,
+        "top": true,
+        "bottom": true
+      },
+      "derived_safe_12pct": true,
+      "derived_scale": 0.811239,
+      "source_original_cell_direct_crop": false
+    }
+  ]
+}

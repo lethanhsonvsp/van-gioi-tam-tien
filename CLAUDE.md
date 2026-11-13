@@ -81,3 +81,7 @@ Swap cooldown; death/revive; party size limit; reward sharing; offline auto; def
 - Current goal: game frame only, no characters. Follow RULE-UI-003 in `docs/ART_QUALITY_RULES.md`.
 - Use IDs from `data/ui_registry.json` everywhere (frontend, backend, data). Rarity tiers: N, R, SR, SSR, UR (assumed, confirm with owner).
 - Regenerate prompts with `node scripts/gen_ui_prompts.mjs` after editing the registry.
+
+## Tiên Nô appearance (2026-11-13)
+- Source of truth for female Tiên Nô appearance: `docs/FEMALE_CHARACTER_DESIGN_SYSTEM.md`. Per-character profiles: `data/tien_no_appearance.json`; prompts generated into `docs/CHAR_PROMPTS.md` by `node scripts/gen_char_prompts.mjs` (asserts unique core face per character, age 18–35).
+- Order per character: identity sheet (front, eye level) → full body → card art; pixel only after all three agree. One character per image, never a collage.
