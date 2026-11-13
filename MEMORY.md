@@ -47,3 +47,11 @@
 3. Build a reliable character data model and dual-art asset pipeline.
 4. Implement six-life swap rules in Bí Cảnh and AI-only party prototype clearly labeled as simulation.
 5. Add backend multiplayer only after single-player mechanics and state synchronization are stable.
+
+## Locked decisions — 2026-11-13: protagonist, Tiên Nô, lobby
+- **Selected lobby concept: Nguyệt Dạ Thanh Vân (concept 2)**, moonlit blue-violet sect courtyard, waterfall, central spirit crystal, ornate xianxia UI. Reference is visual direction, not production-ready UI.
+- **The player is the protagonist and cultivates personally**: own realm, spiritual roots, techniques, breakthroughs, equipment and combat progression. Never replace player protagonist with a gacha recruit.
+- **All gacha-recruited characters are called Tiên Nô** in Vietnamese UI and game lore. Each Tiên Nô has distinct identity, origin/social status, personality, biography, cultivation attributes and skills. Examples: thánh nữ, ma nữ, kiếm tu, đan sư, yêu tộc, công chúa, tán tu, trưởng lão, tiên tử.
+- **Hard character-art rules:** every Tiên Nô has a genuinely distinct face (eyes, nose, lips, jaw, cheekbones and facial proportions). Changing only hairstyle or costume does not count. **No tooth-showing smiles: lips must stay closed.** Preserve face identity across portraits, full-body, poses and pixel sprites. Compare each new design against the roster.
+- Keep player and Tiên Nô conceptually distinct in the domain model even where progression systems are shared.
+- Open question: Does the protagonist occupy one of the six Bí Cảnh slots/lives or exist in addition to six Tiên Nô? Ask owner before implementation.
