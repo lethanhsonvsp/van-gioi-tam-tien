@@ -47,7 +47,7 @@
       "aura": "gentle and kind",
       "expression": "calm soft gaze, lips closed with a faint gentle curve",
       "posture": "upright, hands folded in front",
-      "outfit": "sheer layered white and jade-green saintess gown with halter neckline, open back, thigh-high side slits, gold leaf body chains, detached translucent long sleeves, healing light motif",
+      "outfit": "minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates, bare midriff and back, low-slung sheer white loincloth skirt with thigh-high slits to the hip, gold leaf body chains, detached translucent long sleeves",
       "outfitKey": "halter saintess gown"
     },
     {
@@ -86,7 +86,7 @@
       "aura": "cold and aloof",
       "expression": "neutral, sharp level gaze, lips firmly closed",
       "posture": "straight, sword held vertically at side",
-      "outfit": "frost-silver fitted short combat dress with high-cut sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape, long straight sword",
+      "outfit": "frost-silver high-leg combat leotard with deep plunging neckline and open sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape",
       "outfitKey": "short combat dress with boots"
     },
     {
@@ -125,7 +125,7 @@
       "aura": "bewitching and dangerous",
       "expression": "half-lidded knowing gaze, lips closed, faint asymmetric curve",
       "posture": "weight on one hip, one hand raised with crimson flame",
-      "outfit": "black and crimson gown with a deep plunging V neckline, side waist cutouts, long translucent crimson trailing skirt panels, gold body chains with rubies, flame motifs",
+      "outfit": "black and crimson gown with a plunging neckline open to the navel, sideboob, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels, gold body chains with rubies",
       "outfitKey": "plunging trailing gown"
     },
     {
@@ -164,7 +164,7 @@
       "aura": "playful and mischievous",
       "expression": "lively eyes, lips closed with a playful slight curve",
       "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
-      "outfit": "off-shoulder lavender and white short wrap dress, sheer pink layered sleeves, small bells and tassels, ribbon thigh garters, pink illusion mist",
+      "outfit": "off-shoulder lavender micro wrap top tied under the bust, bare midriff, very short layered ruffle skirt, sheer pink detached sleeves, bells and tassels, ribbon thigh garters",
       "outfitKey": "off-shoulder short wrap"
     },
     {
@@ -203,7 +203,7 @@
       "aura": "mysterious",
       "expression": "unreadable, watchful, lips closed",
       "posture": "crouched-ready stance, dagger held reverse grip",
-      "outfit": "black halter crop top with criss-cross straps, bare midriff, high-cut wrap skirt open at one side, long deep-violet sash, arm wraps, thigh dagger holsters, purple veil lowered around the neck so the face is visible",
+      "outfit": "black strappy bandeau bra with criss-cross straps across the bare torso, bare midriff, tiny black thong-cut briefs under a single open side loincloth sash in deep violet, arm wraps, thigh dagger holsters, purple veil lowered around the neck",
       "outfitKey": "strappy crop top and wrap skirt"
     },
     {
@@ -242,7 +242,7 @@
       "aura": "experienced and composed",
       "expression": "calm knowing gaze, lips closed, at ease",
       "posture": "relaxed, holding a small green elixir vial",
-      "outfit": "emerald silk dress with sweetheart corset bodice, bare shoulders, sheer cream overrobe slipping off the shoulders, high front slit, herb pouches on a gold waist chain",
+      "outfit": "emerald silk underbust corset with a tiny sweetheart cup top, bare shoulders and cleavage, very short emerald silk skirt, sheer cream overrobe slipping off both shoulders down to the elbows, herb pouches on a gold waist chain",
       "outfitKey": "corset dress with slipping overrobe"
     },
     {
@@ -281,7 +281,7 @@
       "aura": "commanding and dignified",
       "expression": "direct steady gaze, lips firmly closed",
       "posture": "squared stance, hand on halberd",
-      "outfit": "sculpted navy and silver armor breastplate leaving shoulders and midriff bare, armored tassets over a short battle skirt, thigh-high armored greaves, short cape with lightning engravings, guandao halberd crackling with lightning",
+      "outfit": "bikini armor: sculpted navy and silver metal bra plates, bare shoulders, arms and midriff, armored loincloth tassets over a high-cut metal bottom, thigh-high armored greaves, short cape with lightning engravings",
       "outfitKey": "sculpted armor with bare midriff"
     },
     {
@@ -320,7 +320,7 @@
       "aura": "proud and regal",
       "expression": "chin slightly raised, confident gaze, lips closed",
       "posture": "upright royal stance, one hand on sword hilt",
-      "outfit": "sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout, floor-length with twin thigh-high slits, gold phoenix shoulder guards, flame-patterned sash",
+      "outfit": "crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides fully open to the hip, gold phoenix shoulder guards",
       "outfitKey": "collared slit royal gown"
     },
     {
@@ -359,7 +359,7 @@
       "aura": "intelligent and observant",
       "expression": "focused thoughtful gaze, lips closed",
       "posture": "standing still, glowing water formation array floating at her hand",
-      "outfit": "deep blue and white sheer layered robe draped off one shoulder, backless wrapped bodice, translucent water-ribbon skirt revealing the legs, formation-script embroidery on the hems",
+      "outfit": "deep blue sheer silk wrap draped over one breast and shoulder only, fully backless and open on the other side down to the hip, tiny opaque blue underlayer, translucent water-ribbon skirt panels revealing the legs",
       "outfitKey": "one-shoulder backless flowing robe"
     },
     {
@@ -398,9 +398,9 @@
       "aura": "serene and calm",
       "expression": "still, quiet steady gaze, lips closed",
       "posture": "standing firm, staff planted, small stone guardian beside her",
-      "outfit": "ochre one-shoulder draped garment with wide bronze belt, bare arms with bronze arm bands, long skirt of open side panels over a dark sheer underlayer, heavy stone-bead necklace, bronze talismans",
+      "outfit": "ochre one-shoulder bandeau drape with a wide bronze belt low on the hips, bare midriff and arms with bronze arm bands, two narrow front and back cloth panels with fully open sides, heavy stone-bead necklace",
       "outfitKey": "one-shoulder drape with open panels"
     }
   ],
-  "outfitRule": "Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric."
+  "outfitRule": "Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body."
 }

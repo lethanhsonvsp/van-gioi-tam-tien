@@ -30,14 +30,14 @@ Save files as `<ID>.ID.png`, `<ID>.FULL.png`, `<ID>.CARD.png` in `assets/charact
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: sheer layered white and jade-green saintess gown with halter neckline.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates.
 Apparent age 23.
 Face: soft round face, full cheeks, length close to width; forehead medium height, rounded; cheekbones low, soft; jaw rounded soft jaw; chin small rounded chin.
 Eyes: almond eyes, average spacing, shallow sockets, thin double eyelid, warm brown iris.
 Brows: softly curved, medium thickness, gently arched. Nose: small nose, low-medium bridge, round tip, narrow wings. Mouth: small mouth, thin upper lip, slightly fuller lower lip, corners very slightly lifted. Ears: small, close to head, attached lobes.
 Expression: neutral, calm soft gaze, lips closed with a faint gentle curve.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -50,10 +50,10 @@ Eyes: almond eyes, average spacing, shallow sockets, thin double eyelid, warm br
 Brows: softly curved, medium thickness, gently arched. Nose: small nose, low-medium bridge, round tip, narrow wings. Mouth: small mouth, thin upper lip, slightly fuller lower lip, corners very slightly lifted. Ears: small, close to head, attached lobes.
 Hair: long straight black hair to the waist, half-up bun with white jade flower pin, middle part.
 Body: height about 162 cm, graceful balanced build, soft lines; shoulders narrow, waist defined, hips medium, muscle low.
-Role: Saintess of Thanh Van Sect. Outfit: sheer layered white and jade-green saintess gown with halter neckline, open back, thigh-high side slits, gold leaf body chains, detached translucent long sleeves, healing light motif.
+Role: Saintess of Thanh Van Sect. Outfit: minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates, bare midriff and back, low-slung sheer white loincloth skirt with thigh-high slits to the hip, gold leaf body chains, detached translucent long sleeves.
 Aura: gentle and kind. Expression: calm soft gaze, lips closed with a faint gentle curve. Posture: upright, hands folded in front.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -65,10 +65,10 @@ Face: soft round face, full cheeks, length close to width; forehead medium heigh
 Eyes: almond eyes, average spacing, shallow sockets, thin double eyelid, warm brown iris.
 Brows: softly curved, medium thickness, gently arched. Nose: small nose, low-medium bridge, round tip, narrow wings. Mouth: small mouth, thin upper lip, slightly fuller lower lip, corners very slightly lifted. Ears: small, close to head, attached lobes.
 Hair: long straight black hair to the waist, half-up bun with white jade flower pin, middle part.
-Role: Saintess of Thanh Van Sect. Outfit: sheer layered white and jade-green saintess gown with halter neckline, open back, thigh-high side slits, gold leaf body chains, detached translucent long sleeves, healing light motif.
+Role: Saintess of Thanh Van Sect. Outfit: minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates, bare midriff and back, low-slung sheer white loincloth skirt with thigh-high slits to the hip, gold leaf body chains, detached translucent long sleeves.
 Aura: gentle and kind. Expression: calm soft gaze, lips closed with a faint gentle curve. Posture: upright, hands folded in front.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Mộ Dung Tuyết — CHAR.TIEN_NO.MO_DUNG_TUYET
@@ -77,14 +77,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: frost-silver fitted short combat dress with high-cut sides.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: frost-silver high-leg combat leotard with deep plunging neckline and open sides.
 Apparent age 29.
 Face: diamond face, wide cheekbones, narrow forehead and jaw; forehead narrow, smooth; cheekbones high and prominent; jaw narrow tapered jaw; chin narrow pointed-medium chin.
 Eyes: long narrow eyes, small opening, average spacing, medium sockets, hooded inner fold, pale ice blue iris.
 Brows: straight sword brows, thin, long, slight upward angle. Nose: tall straight nose, high root, narrow bridge, refined tip. Mouth: straight horizontal mouth, both lips thin, flat cupid bow. Ears: medium, thin rims.
 Expression: neutral, neutral, sharp level gaze, lips firmly closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -97,10 +97,10 @@ Eyes: long narrow eyes, small opening, average spacing, medium sockets, hooded i
 Brows: straight sword brows, thin, long, slight upward angle. Nose: tall straight nose, high root, narrow bridge, refined tip. Mouth: straight horizontal mouth, both lips thin, flat cupid bow. Ears: medium, thin rims.
 Hair: long straight silver-white hair, high ponytail with ice crystal crown, no bangs.
 Body: height about 175 cm, tall and slender, long limbs; shoulders medium, waist narrow, hips narrow, muscle lean.
-Role: Sword Immortal of the Northern Wastes. Outfit: frost-silver fitted short combat dress with high-cut sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape, long straight sword.
+Role: Sword Immortal of the Northern Wastes. Outfit: frost-silver high-leg combat leotard with deep plunging neckline and open sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape.
 Aura: cold and aloof. Expression: neutral, sharp level gaze, lips firmly closed. Posture: straight, sword held vertically at side.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -112,10 +112,10 @@ Face: diamond face, wide cheekbones, narrow forehead and jaw; forehead narrow, s
 Eyes: long narrow eyes, small opening, average spacing, medium sockets, hooded inner fold, pale ice blue iris.
 Brows: straight sword brows, thin, long, slight upward angle. Nose: tall straight nose, high root, narrow bridge, refined tip. Mouth: straight horizontal mouth, both lips thin, flat cupid bow. Ears: medium, thin rims.
 Hair: long straight silver-white hair, high ponytail with ice crystal crown, no bangs.
-Role: Sword Immortal of the Northern Wastes. Outfit: frost-silver fitted short combat dress with high-cut sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape, long straight sword.
+Role: Sword Immortal of the Northern Wastes. Outfit: frost-silver high-leg combat leotard with deep plunging neckline and open sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape.
 Aura: cold and aloof. Expression: neutral, sharp level gaze, lips firmly closed. Posture: straight, sword held vertically at side.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Diễm Vô Tâm — CHAR.TIEN_NO.DIEM_VO_TAM
@@ -124,14 +124,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: black and crimson gown with a deep plunging V neckline.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: black and crimson gown with a plunging neckline open to the navel.
 Apparent age 32.
 Face: soft square face, broad jaw with softened angles; forehead broad, slightly flat; cheekbones medium-high; jaw wide soft-square jaw; chin broad rounded-square chin.
 Eyes: deep-set eyes with visible sockets, slightly close spacing, deep sockets, deep double eyelid, dark crimson iris.
 Brows: thick, low, slightly angled brows. Nose: nose with a gentle convex curve on the bridge, medium width, defined tip. Mouth: wide mouth, thin upper lip, full lower lip, corners level. Ears: medium, detached lobes with ruby earrings.
 Expression: neutral, half-lidded knowing gaze, lips closed, faint asymmetric curve.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -144,10 +144,10 @@ Eyes: deep-set eyes with visible sockets, slightly close spacing, deep sockets, 
 Brows: thick, low, slightly angled brows. Nose: nose with a gentle convex curve on the bridge, medium width, defined tip. Mouth: wide mouth, thin upper lip, full lower lip, corners level. Ears: medium, detached lobes with ruby earrings.
 Hair: long thick wavy black hair with red undertone, side part, red spider-lily ornament.
 Body: height about 168 cm, hourglass figure; shoulders medium, waist very defined, hips wide, muscle low.
-Role: Demoness of U Minh Palace. Outfit: black and crimson gown with a deep plunging V neckline, side waist cutouts, long translucent crimson trailing skirt panels, gold body chains with rubies, flame motifs.
+Role: Demoness of U Minh Palace. Outfit: black and crimson gown with a plunging neckline open to the navel, sideboob, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels, gold body chains with rubies.
 Aura: bewitching and dangerous. Expression: half-lidded knowing gaze, lips closed, faint asymmetric curve. Posture: weight on one hip, one hand raised with crimson flame.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -159,10 +159,10 @@ Face: soft square face, broad jaw with softened angles; forehead broad, slightly
 Eyes: deep-set eyes with visible sockets, slightly close spacing, deep sockets, deep double eyelid, dark crimson iris.
 Brows: thick, low, slightly angled brows. Nose: nose with a gentle convex curve on the bridge, medium width, defined tip. Mouth: wide mouth, thin upper lip, full lower lip, corners level. Ears: medium, detached lobes with ruby earrings.
 Hair: long thick wavy black hair with red undertone, side part, red spider-lily ornament.
-Role: Demoness of U Minh Palace. Outfit: black and crimson gown with a deep plunging V neckline, side waist cutouts, long translucent crimson trailing skirt panels, gold body chains with rubies, flame motifs.
+Role: Demoness of U Minh Palace. Outfit: black and crimson gown with a plunging neckline open to the navel, sideboob, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels, gold body chains with rubies.
 Aura: bewitching and dangerous. Expression: half-lidded knowing gaze, lips closed, faint asymmetric curve. Posture: weight on one hip, one hand raised with crimson flame.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Bạch Linh Nhi — CHAR.TIEN_NO.BACH_LINH_NHI
@@ -171,14 +171,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: off-shoulder lavender and white short wrap dress.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: off-shoulder lavender micro wrap top tied under the bust.
 Apparent age 20.
 Face: heart face, wide forehead, small chin; forehead wide, rounded; cheekbones medium; jaw short tapered jaw; chin small short chin.
 Eyes: large round eyes, wide opening, slightly wide spacing, shallow sockets, double eyelid, violet with gold ring iris.
 Brows: short, softly curved, light brows. Nose: short nose, slightly upturned tip, low bridge. Mouth: small mouth, heart-shaped lips, defined cupid bow. Ears: white fox ears on top of head (spirit race), small human ears hidden.
 Expression: neutral, lively eyes, lips closed with a playful slight curve.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -191,10 +191,10 @@ Eyes: large round eyes, wide opening, slightly wide spacing, shallow sockets, do
 Brows: short, softly curved, light brows. Nose: short nose, slightly upturned tip, low bridge. Mouth: small mouth, heart-shaped lips, defined cupid bow. Ears: white fox ears on top of head (spirit race), small human ears hidden.
 Hair: shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon.
 Body: height about 153 cm, petite, small frame; shoulders narrow, waist small, hips narrow, muscle low.
-Role: Nine-Tailed Fox Spirit. Outfit: off-shoulder lavender and white short wrap dress, sheer pink layered sleeves, small bells and tassels, ribbon thigh garters, pink illusion mist.
+Role: Nine-Tailed Fox Spirit. Outfit: off-shoulder lavender micro wrap top tied under the bust, bare midriff, very short layered ruffle skirt, sheer pink detached sleeves, bells and tassels, ribbon thigh garters.
 Aura: playful and mischievous. Expression: lively eyes, lips closed with a playful slight curve. Posture: light on her feet, head slightly tilted, nine white fox tails behind.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -206,10 +206,10 @@ Face: heart face, wide forehead, small chin; forehead wide, rounded; cheekbones 
 Eyes: large round eyes, wide opening, slightly wide spacing, shallow sockets, double eyelid, violet with gold ring iris.
 Brows: short, softly curved, light brows. Nose: short nose, slightly upturned tip, low bridge. Mouth: small mouth, heart-shaped lips, defined cupid bow. Ears: white fox ears on top of head (spirit race), small human ears hidden.
 Hair: shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon.
-Role: Nine-Tailed Fox Spirit. Outfit: off-shoulder lavender and white short wrap dress, sheer pink layered sleeves, small bells and tassels, ribbon thigh garters, pink illusion mist.
+Role: Nine-Tailed Fox Spirit. Outfit: off-shoulder lavender micro wrap top tied under the bust, bare midriff, very short layered ruffle skirt, sheer pink detached sleeves, bells and tassels, ribbon thigh garters.
 Aura: playful and mischievous. Expression: lively eyes, lips closed with a playful slight curve. Posture: light on her feet, head slightly tilted, nine white fox tails behind.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Tần Nguyệt Dao — CHAR.TIEN_NO.TAN_NGUYET_DAO
@@ -218,14 +218,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: black halter crop top with criss-cross straps.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: black strappy bandeau bra with criss-cross straps across the bare torso.
 Apparent age 27.
 Face: narrow rectangular face, long and lean; forehead medium, sloping slightly; cheekbones medium, defined; jaw straight narrow jaw; chin long narrow chin.
 Eyes: eyes with hidden inner fold (mono-hooded), medium opening, average spacing, medium sockets, hidden fold, dark grey iris.
 Brows: straight, thin, slightly lowered brows. Nose: long nose with a pointed tip, narrow bridge. Mouth: wide mouth with slightly downturned corners, medium lips. Ears: small, close to head.
 Expression: neutral, unreadable, watchful, lips closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -238,10 +238,10 @@ Eyes: eyes with hidden inner fold (mono-hooded), medium opening, average spacing
 Brows: straight, thin, slightly lowered brows. Nose: long nose with a pointed tip, narrow bridge. Mouth: wide mouth with slightly downturned corners, medium lips. Ears: small, close to head.
 Hair: long straight black hair in a low tight braid, uneven bangs, dark purple hair cord.
 Body: height about 170 cm, toned athletic build; shoulders medium, waist defined, hips medium, muscle toned.
-Role: Assassin of Shadowless Tower. Outfit: black halter crop top with criss-cross straps, bare midriff, high-cut wrap skirt open at one side, long deep-violet sash, arm wraps, thigh dagger holsters, purple veil lowered around the neck so the face is visible.
+Role: Assassin of Shadowless Tower. Outfit: black strappy bandeau bra with criss-cross straps across the bare torso, bare midriff, tiny black thong-cut briefs under a single open side loincloth sash in deep violet, arm wraps, thigh dagger holsters, purple veil lowered around the neck.
 Aura: mysterious. Expression: unreadable, watchful, lips closed. Posture: crouched-ready stance, dagger held reverse grip.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -253,10 +253,10 @@ Face: narrow rectangular face, long and lean; forehead medium, sloping slightly;
 Eyes: eyes with hidden inner fold (mono-hooded), medium opening, average spacing, medium sockets, hidden fold, dark grey iris.
 Brows: straight, thin, slightly lowered brows. Nose: long nose with a pointed tip, narrow bridge. Mouth: wide mouth with slightly downturned corners, medium lips. Ears: small, close to head.
 Hair: long straight black hair in a low tight braid, uneven bangs, dark purple hair cord.
-Role: Assassin of Shadowless Tower. Outfit: black halter crop top with criss-cross straps, bare midriff, high-cut wrap skirt open at one side, long deep-violet sash, arm wraps, thigh dagger holsters, purple veil lowered around the neck so the face is visible.
+Role: Assassin of Shadowless Tower. Outfit: black strappy bandeau bra with criss-cross straps across the bare torso, bare midriff, tiny black thong-cut briefs under a single open side loincloth sash in deep violet, arm wraps, thigh dagger holsters, purple veil lowered around the neck.
 Aura: mysterious. Expression: unreadable, watchful, lips closed. Posture: crouched-ready stance, dagger held reverse grip.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Liễu Như Yên — CHAR.TIEN_NO.LIEU_NHU_YEN
@@ -265,14 +265,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: emerald silk dress with sweetheart corset bodice.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: emerald silk underbust corset with a tiny sweetheart cup top.
 Apparent age 35.
 Face: pear face, fuller lower cheeks and jaw; forehead narrow, low; cheekbones low; jaw full rounded jaw; chin full rounded chin.
 Eyes: downturned eyes, outer corners lower, average spacing, medium sockets, heavy upper lid, double fold, amber iris.
 Brows: soft natural sparse brows, gently downturned. Nose: low soft nose, rounded wide tip. Mouth: full lips, flat cupid bow, medium width. Ears: medium, detached lobes with jade studs.
 Expression: neutral, calm knowing gaze, lips closed, at ease.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -285,10 +285,10 @@ Eyes: downturned eyes, outer corners lower, average spacing, medium sockets, hea
 Brows: soft natural sparse brows, gently downturned. Nose: low soft nose, rounded wide tip. Mouth: full lips, flat cupid bow, medium width. Ears: medium, detached lobes with jade studs.
 Hair: long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part.
 Body: height about 160 cm, soft full figure; shoulders medium, waist soft, hips wide, muscle low.
-Role: Alchemist of Medicine King Valley. Outfit: emerald silk dress with sweetheart corset bodice, bare shoulders, sheer cream overrobe slipping off the shoulders, high front slit, herb pouches on a gold waist chain.
+Role: Alchemist of Medicine King Valley. Outfit: emerald silk underbust corset with a tiny sweetheart cup top, bare shoulders and cleavage, very short emerald silk skirt, sheer cream overrobe slipping off both shoulders down to the elbows, herb pouches on a gold waist chain.
 Aura: experienced and composed. Expression: calm knowing gaze, lips closed, at ease. Posture: relaxed, holding a small green elixir vial.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -300,10 +300,10 @@ Face: pear face, fuller lower cheeks and jaw; forehead narrow, low; cheekbones l
 Eyes: downturned eyes, outer corners lower, average spacing, medium sockets, heavy upper lid, double fold, amber iris.
 Brows: soft natural sparse brows, gently downturned. Nose: low soft nose, rounded wide tip. Mouth: full lips, flat cupid bow, medium width. Ears: medium, detached lobes with jade studs.
 Hair: long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part.
-Role: Alchemist of Medicine King Valley. Outfit: emerald silk dress with sweetheart corset bodice, bare shoulders, sheer cream overrobe slipping off the shoulders, high front slit, herb pouches on a gold waist chain.
+Role: Alchemist of Medicine King Valley. Outfit: emerald silk underbust corset with a tiny sweetheart cup top, bare shoulders and cleavage, very short emerald silk skirt, sheer cream overrobe slipping off both shoulders down to the elbows, herb pouches on a gold waist chain.
 Aura: experienced and composed. Expression: calm knowing gaze, lips closed, at ease. Posture: relaxed, holding a small green elixir vial.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Hàn Nguyệt Sương — CHAR.TIEN_NO.HAN_NGUYET_SUONG
@@ -312,14 +312,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: sculpted navy and silver armor breastplate leaving shoulders and midriff bare.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: bikini armor: sculpted navy and silver metal bra plates.
 Apparent age 30.
 Face: angular face, defined bone structure; forehead high, flat; cheekbones prominent; jaw sharp angular jaw; chin square-angular chin.
 Eyes: phoenix eyes, long with lifted outer corners, average spacing, medium-deep sockets, thin double eyelid, steel grey with blue glint iris.
 Brows: thick straight sword brows, strong. Nose: tall nose, narrow wings, straight bridge. Mouth: long horizontal mouth, thin lips. Ears: medium, close to head.
 Expression: neutral, direct steady gaze, lips firmly closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -332,10 +332,10 @@ Eyes: phoenix eyes, long with lifted outer corners, average spacing, medium-deep
 Brows: thick straight sword brows, strong. Nose: tall nose, narrow wings, straight bridge. Mouth: long horizontal mouth, thin lips. Ears: medium, close to head.
 Hair: long black hair in a high warrior topknot with braided sides, metal hair crown.
 Body: height about 176 cm, martial build, developed shoulders and back; shoulders broad, waist firm, hips medium, muscle strong.
-Role: General of Bac Minh. Outfit: sculpted navy and silver armor breastplate leaving shoulders and midriff bare, armored tassets over a short battle skirt, thigh-high armored greaves, short cape with lightning engravings, guandao halberd crackling with lightning.
+Role: General of Bac Minh. Outfit: bikini armor: sculpted navy and silver metal bra plates, bare shoulders, arms and midriff, armored loincloth tassets over a high-cut metal bottom, thigh-high armored greaves, short cape with lightning engravings.
 Aura: commanding and dignified. Expression: direct steady gaze, lips firmly closed. Posture: squared stance, hand on halberd.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -347,10 +347,10 @@ Face: angular face, defined bone structure; forehead high, flat; cheekbones prom
 Eyes: phoenix eyes, long with lifted outer corners, average spacing, medium-deep sockets, thin double eyelid, steel grey with blue glint iris.
 Brows: thick straight sword brows, strong. Nose: tall nose, narrow wings, straight bridge. Mouth: long horizontal mouth, thin lips. Ears: medium, close to head.
 Hair: long black hair in a high warrior topknot with braided sides, metal hair crown.
-Role: General of Bac Minh. Outfit: sculpted navy and silver armor breastplate leaving shoulders and midriff bare, armored tassets over a short battle skirt, thigh-high armored greaves, short cape with lightning engravings, guandao halberd crackling with lightning.
+Role: General of Bac Minh. Outfit: bikini armor: sculpted navy and silver metal bra plates, bare shoulders, arms and midriff, armored loincloth tassets over a high-cut metal bottom, thigh-high armored greaves, short cape with lightning engravings.
 Aura: commanding and dignified. Expression: direct steady gaze, lips firmly closed. Posture: squared stance, hand on halberd.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Sở Hồng Liên — CHAR.TIEN_NO.SO_HONG_LIEN
@@ -359,14 +359,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel.
 Apparent age 25.
 Face: inverted triangle face, wide forehead, tapered jaw; forehead wide, slightly high; cheekbones high; jaw tapered jaw; chin medium pointed chin.
 Eyes: upturned eyes, outer corners higher, average spacing, medium sockets, double eyelid, golden amber iris.
 Brows: high arched brows with sharp tails. Nose: straight nose with a fuller tip. Mouth: fuller upper lip, sharp defined corners, medium width. Ears: medium, gold phoenix earrings.
 Expression: neutral, chin slightly raised, confident gaze, lips closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -379,10 +379,10 @@ Eyes: upturned eyes, outer corners higher, average spacing, medium sockets, doub
 Brows: high arched brows with sharp tails. Nose: straight nose with a fuller tip. Mouth: fuller upper lip, sharp defined corners, medium width. Ears: medium, gold phoenix earrings.
 Hair: long black hair with blunt straight bangs, side locks, gold phoenix crown.
 Body: height about 172 cm, tall balanced build; shoulders medium, waist defined, hips medium, muscle moderate.
-Role: Princess of the Fire Kingdom. Outfit: sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout, floor-length with twin thigh-high slits, gold phoenix shoulder guards, flame-patterned sash.
+Role: Princess of the Fire Kingdom. Outfit: crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides fully open to the hip, gold phoenix shoulder guards.
 Aura: proud and regal. Expression: chin slightly raised, confident gaze, lips closed. Posture: upright royal stance, one hand on sword hilt.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -394,10 +394,10 @@ Face: inverted triangle face, wide forehead, tapered jaw; forehead wide, slightl
 Eyes: upturned eyes, outer corners higher, average spacing, medium sockets, double eyelid, golden amber iris.
 Brows: high arched brows with sharp tails. Nose: straight nose with a fuller tip. Mouth: fuller upper lip, sharp defined corners, medium width. Ears: medium, gold phoenix earrings.
 Hair: long black hair with blunt straight bangs, side locks, gold phoenix crown.
-Role: Princess of the Fire Kingdom. Outfit: sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout, floor-length with twin thigh-high slits, gold phoenix shoulder guards, flame-patterned sash.
+Role: Princess of the Fire Kingdom. Outfit: crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides fully open to the hip, gold phoenix shoulder guards.
 Aura: proud and regal. Expression: chin slightly raised, confident gaze, lips closed. Posture: upright royal stance, one hand on sword hilt.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Vân Mộng Dao — CHAR.TIEN_NO.VAN_MONG_DAO
@@ -406,14 +406,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: deep blue and white sheer layered robe draped off one shoulder.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: deep blue sheer silk wrap draped over one breast and shoulder only.
 Apparent age 26.
 Face: long face, slim lines; forehead high, arched hairline; cheekbones medium-low; jaw slim jaw; chin long soft chin.
 Eyes: monolid eyes, no visible crease, medium-narrow opening, slightly wide spacing, shallow sockets, monolid, dark blue-black iris.
 Brows: thin long gently curved brows. Nose: small nose with a low bridge, small tip. Mouth: small mouth, straight horizontal lips, thin. Ears: small, detached lobes, pearl drops.
 Expression: neutral, focused thoughtful gaze, lips closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -426,10 +426,10 @@ Eyes: monolid eyes, no visible crease, medium-narrow opening, slightly wide spac
 Brows: thin long gently curved brows. Nose: small nose with a low bridge, small tip. Mouth: small mouth, straight horizontal lips, thin. Ears: small, detached lobes, pearl drops.
 Hair: very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part.
 Body: height about 165 cm, slender, narrow shoulders, long limbs; shoulders narrow, waist slim, hips narrow, muscle low.
-Role: Formation Master of Thien Co Pavilion. Outfit: deep blue and white sheer layered robe draped off one shoulder, backless wrapped bodice, translucent water-ribbon skirt revealing the legs, formation-script embroidery on the hems.
+Role: Formation Master of Thien Co Pavilion. Outfit: deep blue sheer silk wrap draped over one breast and shoulder only, fully backless and open on the other side down to the hip, tiny opaque blue underlayer, translucent water-ribbon skirt panels revealing the legs.
 Aura: intelligent and observant. Expression: focused thoughtful gaze, lips closed. Posture: standing still, glowing water formation array floating at her hand.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -441,10 +441,10 @@ Face: long face, slim lines; forehead high, arched hairline; cheekbones medium-l
 Eyes: monolid eyes, no visible crease, medium-narrow opening, slightly wide spacing, shallow sockets, monolid, dark blue-black iris.
 Brows: thin long gently curved brows. Nose: small nose with a low bridge, small tip. Mouth: small mouth, straight horizontal lips, thin. Ears: small, detached lobes, pearl drops.
 Hair: very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part.
-Role: Formation Master of Thien Co Pavilion. Outfit: deep blue and white sheer layered robe draped off one shoulder, backless wrapped bodice, translucent water-ribbon skirt revealing the legs, formation-script embroidery on the hems.
+Role: Formation Master of Thien Co Pavilion. Outfit: deep blue sheer silk wrap draped over one breast and shoulder only, fully backless and open on the other side down to the hip, tiny opaque blue underlayer, translucent water-ribbon skirt panels revealing the legs.
 Aura: intelligent and observant. Expression: focused thoughtful gaze, lips closed. Posture: standing still, glowing water formation array floating at her hand.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ## Cổ U Lan — CHAR.TIEN_NO.CO_U_LAN
@@ -453,14 +453,14 @@ Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; s
 ```text
 High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: ochre one-shoulder draped garment with wide bronze belt.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: ochre one-shoulder bandeau drape with a wide bronze belt low on the hips.
 Apparent age 34.
 Face: wide face with high prominent cheekbones; forehead medium, flat; cheekbones high and wide; jaw wide, slightly angular; chin broad chin.
 Eyes: deep-set eyes, heavy upper lids, wide spacing, deep sockets, heavy hooded lid, light gold-brown iris.
 Brows: straight, medium-thick, natural. Nose: long nose with a rounded tip, medium width. Mouth: wide mouth, thin lips, level corners. Ears: large, long lobes.
 Expression: neutral, still, quiet steady gaze, lips closed.
 Canvas 1024x1024.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### FULL
@@ -473,10 +473,10 @@ Eyes: deep-set eyes, heavy upper lids, wide spacing, deep sockets, heavy hooded 
 Brows: straight, medium-thick, natural. Nose: long nose with a rounded tip, medium width. Mouth: wide mouth, thin lips, level corners. Ears: large, long lobes.
 Hair: long straight ash-grey hair, low ponytail bound with bronze rings, no bangs.
 Body: height about 174 cm, tall and firm build; shoulders broad, waist firm, hips medium, muscle toned.
-Role: Keeper of the Ancient Immortal Tomb. Outfit: ochre one-shoulder draped garment with wide bronze belt, bare arms with bronze arm bands, long skirt of open side panels over a dark sheer underlayer, heavy stone-bead necklace, bronze talismans.
+Role: Keeper of the Ancient Immortal Tomb. Outfit: ochre one-shoulder bandeau drape with a wide bronze belt low on the hips, bare midriff and arms with bronze arm bands, two narrow front and back cloth panels with fully open sides, heavy stone-bead necklace.
 Aura: serene and calm. Expression: still, quiet steady gaze, lips closed. Posture: standing firm, staff planted, small stone guardian beside her.
 Same face as the identity sheet. Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```
 
 ### CARD
@@ -488,8 +488,8 @@ Face: wide face with high prominent cheekbones; forehead medium, flat; cheekbone
 Eyes: deep-set eyes, heavy upper lids, wide spacing, deep sockets, heavy hooded lid, light gold-brown iris.
 Brows: straight, medium-thick, natural. Nose: long nose with a rounded tip, medium width. Mouth: wide mouth, thin lips, level corners. Ears: large, long lobes.
 Hair: long straight ash-grey hair, low ponytail bound with bronze rings, no bangs.
-Role: Keeper of the Ancient Immortal Tomb. Outfit: ochre one-shoulder draped garment with wide bronze belt, bare arms with bronze arm bands, long skirt of open side panels over a dark sheer underlayer, heavy stone-bead necklace, bronze talismans.
+Role: Keeper of the Ancient Immortal Tomb. Outfit: ochre one-shoulder bandeau drape with a wide bronze belt low on the hips, bare midriff and arms with bronze arm bands, two narrow front and back cloth panels with fully open sides, heavy stone-bead necklace.
 Aura: serene and calm. Expression: still, quiet steady gaze, lips closed. Posture: standing firm, staff planted, small stone guardian beside her.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
-Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
+Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body. Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.
 ```

@@ -618,5 +618,5 @@ Với hệ thống này, chúng ta có thể xây dựng hàng trăm Tiên Nô c
 # XI. PHONG CÁCH ẢNH VÀ TRANG PHỤC (chủ dự án chốt 2026-11-13)
 
 - **Phong cách:** tranh nhân vật game tiên hiệp cao cấp, bán hiện thực bóng bẩy kiểu render 3D xuất 2D, vẻ đẹp lộng lẫy lý tưởng hóa. **Không** ảnh chụp người thật, không kiểu live-action. Ảnh nhận diện chính diện cũng vẽ cùng phong cách này.
-- **Trang phục 18+:** gợi cảm, được hở vai, lưng, eo, chân, vải xuyên thấu nhiều lớp, xẻ tà; **không bao giờ khỏa thân: đầu ngực và vùng kín luôn được che bằng vải không xuyên thấu.** Dáng người trưởng thành rõ ràng.
+- **Trang phục 18+, hở tối đa** (chủ dự án nhấn mạnh 2026-11-13): che ít nhất có thể, hở vai, lưng, eo, khe ngực, hông, chân; vải xuyên thấu, xẻ sâu, khoét. **Giới hạn cứng: không khỏa thân, đầu ngực và vùng kín luôn được che bằng vải hoặc giáp không xuyên thấu.** Mặt và dáng người trưởng thành rõ ràng.
 - **Không trùng trang phục:** mỗi Tiên Nô một kiểu dáng trang phục riêng (`outfitKey` trong `data/tien_no_appearance.json`, script báo lỗi nếu trùng). Đổi màu hay hoa văn trên cùng một kiểu dáng không tính là khác.
