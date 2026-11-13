@@ -9,16 +9,28 @@ Scope: game frame only. No characters. One prompt per sheet: copy the whole code
 - SSR: Thiên: polished gold, engraved dragon/phoenix scrollwork, strong warm glow, corner jewels.
 - UR: Tiên: celestial multi-hue (gold, white, aurora cyan-magenta), wings/halo ornaments, floating light particles, intense radiance. Must look clearly grander than SSR, not just brighter.
 
-## After generation
-Crop each cell, export PNG named by ID (e.g. `UI.FRAME.ITEM.SSR.png`) into `assets/ui/<SHEET.ID>/`. Green sheets: key green to transparent. Black FX sheet: keep black, game uses additive blend. Review SSR vs UR side by side before accepting.
+## After generation (for GPT / any assistant with Python)
+Per sheet, run Python on the generated image (canvas and grid are in its prompt):
+1. Cut exactly on the grid: cell (r, c) = box (c*W/cols, r*H/rows, (c+1)*W/cols, (r+1)*H/rows). Do not trim, do not resize: every cell keeps its full cell size.
+2. Check each cell: the 6 px strip along the right edge must be 100% background colour (tolerance <= 30 per channel). If any cell fails, redraw the WHOLE sheet; never shrink, erase or patch the cell.
+3. Make the background transparent (key the chroma colour). The black FX sheet keeps black (game uses additive blend). Single-image sheets (bg "none") are saved as is.
+4. Save each cell as `<ID>.png` inside a folder named `<SHEET.ID>/` (skip empty cells).
+5. Pack `<SHEET.ID>.zip` containing: the cell PNGs, `_sheet.png` (the original), `_preview.png` (cells on a checkerboard), and `manifest.json` listing for every cell: id, file, w, h, bbox of the non-transparent pixels.
+Then place the PNGs in `assets/ui/<SHEET.ID>/`. Review SSR vs UR side by side before accepting.
 
-## SHEET.RARITY_FRAMES
+## SHEET.RARITY_ITEM
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 4096x2560, exact grid of 5 columns × 3 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 3 columns × 2 rows, equal cells.
+Each cell is 512x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 389x389 px and nothing touches or crosses a cell edge.
+One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
+Item slot frame is exactly SQUARE, 389x389 px.
+The inside of item and card frames is the flat background colour, no scene, mountains or gradient.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Frames only, centre empty/transparent-looking flat fill. Columns are rarities N,R,SR,SSR,UR, in that order. Rows: item slot frame (square), card frame (portrait 2:3), name plate (wide banner).
+Never use the background colour inside any element.
+Square item slot frames only, one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
 - R: Linh: jade green-blue, simple clean lines, faint soft glow.
@@ -29,18 +41,9 @@ Cells, left to right, top to bottom:
 1. row 1, col 1: square item slot frame, N tier
 2. row 1, col 2: square item slot frame, R tier
 3. row 1, col 3: square item slot frame, SR tier
-4. row 1, col 4: square item slot frame, SSR tier
-5. row 1, col 5: square item slot frame, UR tier
-6. row 2, col 1: portrait 2:3 card frame, N tier
-7. row 2, col 2: portrait 2:3 card frame, R tier
-8. row 2, col 3: portrait 2:3 card frame, SR tier
-9. row 2, col 4: portrait 2:3 card frame, SSR tier
-10. row 2, col 5: portrait 2:3 card frame, UR tier
-11. row 3, col 1: wide name plate banner, N tier
-12. row 3, col 2: wide name plate banner, R tier
-13. row 3, col 3: wide name plate banner, SR tier
-14. row 3, col 4: wide name plate banner, SSR tier
-15. row 3, col 5: wide name plate banner, UR tier
+4. row 2, col 1: square item slot frame, SSR tier
+5. row 2, col 2: square item slot frame, UR tier
+6. row 2, col 3: leave empty
 No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
 ```
 
@@ -51,23 +54,90 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 | 3 | UI.FRAME.ITEM.SR |
 | 4 | UI.FRAME.ITEM.SSR |
 | 5 | UI.FRAME.ITEM.UR |
-| 6 | UI.FRAME.CARD.N |
-| 7 | UI.FRAME.CARD.R |
-| 8 | UI.FRAME.CARD.SR |
-| 9 | UI.FRAME.CARD.SSR |
-| 10 | UI.FRAME.CARD.UR |
-| 11 | UI.PLATE.N |
-| 12 | UI.PLATE.R |
-| 13 | UI.PLATE.SR |
-| 14 | UI.PLATE.SSR |
-| 15 | UI.PLATE.UR |
+
+## SHEET.RARITY_CARD
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1024x1536, exact grid of 3 columns × 2 rows, equal cells.
+Each cell is 341x768 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 259x584 px and nothing touches or crosses a cell edge.
+One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
+Card frame is exactly 2:3 portrait, 259x389 px.
+The inside of item and card frames is the flat background colour, no scene, mountains or gradient.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
+Rarity tiers, each visibly different in material, ornament and glow:
+- N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
+- R: Linh: jade green-blue, simple clean lines, faint soft glow.
+- SR: Huyền: violet and silver, small cloud/lotus ornaments, medium glow.
+- SSR: Thiên: polished gold, engraved dragon/phoenix scrollwork, strong warm glow, corner jewels.
+- UR: Tiên: celestial multi-hue (gold, white, aurora cyan-magenta), wings/halo ornaments, floating light particles, intense radiance. Must look clearly grander than SSR, not just brighter.
+Cells, left to right, top to bottom:
+1. row 1, col 1: portrait 2:3 card frame, N tier
+2. row 1, col 2: portrait 2:3 card frame, R tier
+3. row 1, col 3: portrait 2:3 card frame, SR tier
+4. row 2, col 1: portrait 2:3 card frame, SSR tier
+5. row 2, col 2: portrait 2:3 card frame, UR tier
+6. row 2, col 3: leave empty
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.FRAME.CARD.N |
+| 2 | UI.FRAME.CARD.R |
+| 3 | UI.FRAME.CARD.SR |
+| 4 | UI.FRAME.CARD.SSR |
+| 5 | UI.FRAME.CARD.UR |
+
+## SHEET.RARITY_PLATE
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 2 columns × 3 rows, equal cells.
+Each cell is 768x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 584x259 px and nothing touches or crosses a cell edge.
+One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
+Name plate is about 4:1, 584x146 px, interior one flat dark colour, pendant and ornaments stay off the edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Wide name plate banners only (about 4:1), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. 
+Rarity tiers, each visibly different in material, ornament and glow:
+- N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
+- R: Linh: jade green-blue, simple clean lines, faint soft glow.
+- SR: Huyền: violet and silver, small cloud/lotus ornaments, medium glow.
+- SSR: Thiên: polished gold, engraved dragon/phoenix scrollwork, strong warm glow, corner jewels.
+- UR: Tiên: celestial multi-hue (gold, white, aurora cyan-magenta), wings/halo ornaments, floating light particles, intense radiance. Must look clearly grander than SSR, not just brighter.
+Cells, left to right, top to bottom:
+1. row 1, col 1: wide name plate banner, N tier
+2. row 1, col 2: wide name plate banner, R tier
+3. row 2, col 1: wide name plate banner, SR tier
+4. row 2, col 2: wide name plate banner, SSR tier
+5. row 3, col 1: wide name plate banner, UR tier
+6. row 3, col 2: leave empty
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.PLATE.N |
+| 2 | UI.PLATE.R |
+| 3 | UI.PLATE.SR |
+| 4 | UI.PLATE.SSR |
+| 5 | UI.PLATE.UR |
 
 ## SHEET.FX_RARITY
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 4096x1638, exact grid of 5 columns × 2 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 5 columns × 2 rows, equal cells.
+Each cell is 307x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 233x389 px and nothing touches or crosses a cell edge.
+One shared outer frame size for the whole set: UR is richer through ornament thickness and detail, never a bigger frame; shrink UR if needed.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Pure solid black #000000 background (glows will be used with additive blending, so nothing but light on black).
+Never use the background colour inside any element.
 Columns are rarities N,R,SR,SSR,UR. Row 1: summon glow burst (radial). Row 2: card shine sweep overlay. Glow colour and intensity follow the rarity table; N is nearly none.
 Rarity tiers, each visibly different in material, ornament and glow:
 - N: Phàm: plain dull bronze/iron, no glow, no ornament, thin border.
@@ -106,9 +176,12 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 4096x2048, exact grid of 4 columns × 4 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
+Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: primary (gold), secondary (jade), danger (crimson), tab.
+Never use the background colour inside any element.
+No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: primary (gold), secondary (jade).
 Cells, left to right, top to bottom:
 1. row 1, col 1: primary gold button, normal state
 2. row 1, col 2: primary gold button, hover state
@@ -118,14 +191,6 @@ Cells, left to right, top to bottom:
 6. row 2, col 2: secondary jade button, hover state
 7. row 2, col 3: secondary jade button, pressed state
 8. row 2, col 4: secondary jade button, disabled state
-9. row 3, col 1: danger crimson button, normal state
-10. row 3, col 2: danger crimson button, hover state
-11. row 3, col 3: danger crimson button, pressed state
-12. row 3, col 4: danger crimson button, disabled state
-13. row 4, col 1: tab button, normal state
-14. row 4, col 2: tab button, hover state
-15. row 4, col 3: tab button, pressed state
-16. row 4, col 4: tab button, disabled state
 No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
 ```
 
@@ -139,21 +204,49 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 | 6 | UI.BTN.SECONDARY.HOVER |
 | 7 | UI.BTN.SECONDARY.PRESSED |
 | 8 | UI.BTN.SECONDARY.DISABLED |
-| 9 | UI.BTN.DANGER.NORMAL |
-| 10 | UI.BTN.DANGER.HOVER |
-| 11 | UI.BTN.DANGER.PRESSED |
-| 12 | UI.BTN.DANGER.DISABLED |
-| 13 | UI.BTN.TAB.NORMAL |
-| 14 | UI.BTN.TAB.HOVER |
-| 15 | UI.BTN.TAB.PRESSED |
-| 16 | UI.BTN.TAB.DISABLED |
+
+## SHEET.BUTTONS_2
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
+Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: danger (crimson), tab.
+Cells, left to right, top to bottom:
+1. row 1, col 1: danger crimson button, normal state
+2. row 1, col 2: danger crimson button, hover state
+3. row 1, col 3: danger crimson button, pressed state
+4. row 1, col 4: danger crimson button, disabled state
+5. row 2, col 1: tab button, normal state
+6. row 2, col 2: tab button, hover state
+7. row 2, col 3: tab button, pressed state
+8. row 2, col 4: tab button, disabled state
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.BTN.DANGER.NORMAL |
+| 2 | UI.BTN.DANGER.HOVER |
+| 3 | UI.BTN.DANGER.PRESSED |
+| 4 | UI.BTN.DANGER.DISABLED |
+| 5 | UI.BTN.TAB.NORMAL |
+| 6 | UI.BTN.TAB.HOVER |
+| 7 | UI.BTN.TAB.PRESSED |
+| 8 | UI.BTN.TAB.DISABLED |
 
 ## SHEET.PANELS
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 4096x3072, exact grid of 4 columns × 3 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
+Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
 Empty containers, no text, nothing inside. Left to right, top to bottom as listed.
 Cells, left to right, top to bottom:
 1. row 1, col 1: large ornate window panel, dark indigo glass interior, gold and jade trim
@@ -190,8 +283,11 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 2048x1024, exact grid of 4 columns × 2 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
+Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
 Currency and material icons, one object per cell, centred, no text.
 Cells, left to right, top to bottom:
 1. row 1, col 1: spirit stone: faceted pale blue glowing crystal
@@ -220,8 +316,11 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 2048x1024, exact grid of 4 columns × 2 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 2 rows, equal cells.
+Each cell is 384x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
 Element emblems, same style and size, distinct silhouettes.
 Cells, left to right, top to bottom:
 1. row 1, col 1: wood element emblem, green leaf and branch
@@ -250,30 +349,25 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 
 ```text
 Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
-Sprite sheet, canvas 2560x2048, exact grid of 5 columns × 4 rows, equal cells, thin empty gutter between cells, nothing crossing cell borders. Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
+Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
 Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
-Lobby menu icons, one per cell. The last cell is left empty.
+Never use the background colour inside any element.
+Lobby menu icons, one per cell.
 Cells, left to right, top to bottom:
 1. row 1, col 1: cultivation: meditation lotus with rising qi
 2. row 1, col 2: breakthrough: glowing golden core cracking outward
 3. row 1, col 3: companion roster: ornate folding fan with jade tassel
 4. row 1, col 4: equipment: crossed sword and armor plate
-5. row 1, col 5: summon: glowing summoning altar with light pillar
-6. row 2, col 1: trial tower: multi-tier pagoda
-7. row 2, col 2: secret realm: swirling portal gate in mountain
-8. row 2, col 3: team: three overlapping banner flags
-9. row 2, col 4: inventory: embroidered storage pouch
-10. row 2, col 5: shop: merchant pavilion with lantern
-11. row 3, col 1: guild: sect gate archway
-12. row 3, col 2: ranking: gold stele with laurel
-13. row 3, col 3: mail: sealed letter with flying crane
-14. row 3, col 4: journal: bound book with brush
-15. row 3, col 5: quests: unrolled scroll with seal mark
-16. row 4, col 1: events: firework lantern
-17. row 4, col 2: benefits: gift box with ribbon
-18. row 4, col 3: daily login: calendar tablet with sun
-19. row 4, col 4: settings: bronze gear with cloud pattern
-20. row 4, col 5: leave empty
+5. row 2, col 1: summon: glowing summoning altar with light pillar
+6. row 2, col 2: trial tower: multi-tier pagoda
+7. row 2, col 3: secret realm: swirling portal gate in mountain
+8. row 2, col 4: team: three overlapping banner flags
+9. row 3, col 1: inventory: embroidered storage pouch
+10. row 3, col 2: shop: merchant pavilion with lantern
+11. row 3, col 3: guild: sect gate archway
+12. row 3, col 4: ranking: gold stele with laurel
 No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
 ```
 
@@ -291,10 +385,154 @@ No text, no letters, no numbers, no watermark, no characters, no people, no face
 | 10 | ICON.FN.SHOP |
 | 11 | ICON.FN.GUILD |
 | 12 | ICON.FN.RANKING |
-| 13 | ICON.FN.MAIL |
-| 14 | ICON.FN.JOURNAL |
-| 15 | ICON.FN.QUESTS |
-| 16 | ICON.FN.EVENTS |
-| 17 | ICON.FN.BENEFITS |
-| 18 | ICON.FN.DAILY_LOGIN |
-| 19 | ICON.FN.SETTINGS |
+
+## SHEET.ICON_FUNCTION_2
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 4 columns × 3 rows, equal cells.
+Each cell is 384x341 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 292x259 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Lobby menu icons, one per cell. Unused cells are left empty.
+Cells, left to right, top to bottom:
+1. row 1, col 1: mail: sealed letter with flying crane
+2. row 1, col 2: journal: bound book with brush
+3. row 1, col 3: quests: unrolled scroll with seal mark
+4. row 1, col 4: events: firework lantern
+5. row 2, col 1: benefits: gift box with ribbon
+6. row 2, col 2: daily login: calendar tablet with sun
+7. row 2, col 3: settings: bronze gear with cloud pattern
+8. row 2, col 4: notifications: golden bell with jade clapper
+9. row 3, col 1: leave empty
+10. row 3, col 2: leave empty
+11. row 3, col 3: leave empty
+12. row 3, col 4: leave empty
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | ICON.FN.MAIL |
+| 2 | ICON.FN.JOURNAL |
+| 3 | ICON.FN.QUESTS |
+| 4 | ICON.FN.EVENTS |
+| 5 | ICON.FN.BENEFITS |
+| 6 | ICON.FN.DAILY_LOGIN |
+| 7 | ICON.FN.SETTINGS |
+| 8 | ICON.FN.NOTIFICATIONS |
+
+## SHEET.HUD
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 3 columns × 2 rows, equal cells.
+Each cell is 512x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 389x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #FF00FF chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element. This sheet has green parts, so no pink or magenta anywhere in the elements.
+HUD parts, empty containers, no text. Cells are separate objects, each fully inside its cell. Magenta #FF00FF is the background because several parts are green: do not use pink, magenta or purple-pink inside any element.
+Cells, left to right, top to bottom:
+1. row 1, col 1: round ornate avatar frame, patterned gold and jade ring, hollow flat-filled centre
+2. row 1, col 2: small shield-shaped level badge, gold trim, empty flat dark centre
+3. row 1, col 3: horizontal bar fill, glowing green spirit-power, no frame
+4. row 2, col 1: round gold button with a plus sign symbol (a shape, not a text character)
+5. row 2, col 2: round dark button base with gold rim, empty centre, shared by mail, bell, settings and left icons
+6. row 2, col 3: leave empty
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.FRAME.AVATAR |
+| 2 | UI.BADGE.LEVEL |
+| 3 | UI.BAR.FILL.LINH_LUC |
+| 4 | UI.BTN.PLUS |
+| 5 | UI.BTN.ROUND |
+
+## SHEET.HUD_WIDE
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 1 columns × 2 rows, equal cells.
+Each cell is 1536x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 1167x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Wide HUD strips, empty, no text, one per row, each about 3:1 or wider.
+Cells, left to right, top to bottom:
+1. row 1, col 1: dark wide player-name panel, gold trim on the left, fading transparent toward the right, empty
+2. row 2, col 1: carved bottom navigation bar, long ornate gold and jade trim, hollow dark interior
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.PANEL.PROFILE |
+| 2 | UI.NAV.BOTTOM_BAR |
+
+## SHEET.FEATURE_CARDS
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 2 columns × 2 rows, equal cells.
+Each cell is 768x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 584x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.
+Cells, left to right, top to bottom:
+1. row 1, col 1: feature card, left illustration: lotus platform with meditation cushion and swirling qi
+2. row 1, col 2: feature card, left illustration: glowing golden core cracking outward
+3. row 2, col 1: feature card, left illustration: jade folding fan with tassels and a hairpin
+4. row 2, col 2: feature card, left illustration: crossed sword and armor plate
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.FEATURE_CARD.CULTIVATION |
+| 2 | UI.FEATURE_CARD.BREAKTHROUGH |
+| 3 | UI.FEATURE_CARD.TIEN_NO |
+| 4 | UI.FEATURE_CARD.EQUIPMENT |
+
+## SHEET.FEATURE_CARDS_2
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Sprite sheet, canvas 1536x1024, exact grid of 2 columns × 2 rows, equal cells.
+Each cell is 768x512 px; cell borders are invisible (no lines, no gutters drawn). SAFE ZONE: keep 12% of the cell empty on every side, so everything, including glows, particles, wings, halos and pendants, stays inside the central 584x389 px and nothing touches or crosses a cell edge.
+ Each element sharp, centred in its cell, same scale within a row, lighting from top-left, one consistent style across the sheet.
+Flat solid #00FF00 chroma-key background, no shadows or glow spilling onto the background.
+Never use the background colour inside any element.
+Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.
+Cells, left to right, top to bottom:
+1. row 1, col 1: feature card, left illustration: summoning altar with light pillar
+2. row 1, col 2: feature card, left illustration: multi-tier trial pagoda
+3. row 2, col 1: feature card, left illustration: swirling portal gate in a mountain
+4. row 2, col 2: feature card, left illustration: three command tokens and banners
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+| Cell | ID |
+|---|---|
+| 1 | UI.FEATURE_CARD.GACHA |
+| 2 | UI.FEATURE_CARD.TRIAL |
+| 3 | UI.FEATURE_CARD.SECRET_REALM |
+| 4 | UI.FEATURE_CARD.TEAM |
+
+## SHEET.BG_LOBBY
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.
+Single background image, canvas 1536x1024, no grid, no chroma key, full-bleed.
+Single full-bleed background image, not a sprite sheet. Keep the important area inside the centre 16:9 band (about 1536x864) because code crops to 16:9.
+moonlit sect courtyard at night, stone plaza, waterfall cascading on the far side, a large glowing spirit stone at the centre, a purple-blossom tree, banners carrying only emblems; no UI, no people, no text
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+No UI elements.
+```
+
+| ID |
+|---|
+| BG.LOBBY.NGUYET_DA |

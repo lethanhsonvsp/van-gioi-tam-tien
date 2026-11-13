@@ -9,34 +9,55 @@
   },
   "sheets": [
     {
-      "id": "SHEET.RARITY_FRAMES",
-      "cols": 5,
-      "rows": 3,
-      "size": "4096x2560",
-      "desc": "Frames only, centre empty/transparent-looking flat fill. Columns are rarities N,R,SR,SSR,UR, in that order. Rows: item slot frame (square), card frame (portrait 2:3), name plate (wide banner).",
+      "id": "SHEET.RARITY_ITEM",
+      "cols": 3,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "Square item slot frames only, one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. ",
       "cells": [
         "UI.FRAME.ITEM.N",
         "UI.FRAME.ITEM.R",
         "UI.FRAME.ITEM.SR",
         "UI.FRAME.ITEM.SSR",
         "UI.FRAME.ITEM.UR",
+        ""
+      ]
+    },
+    {
+      "id": "SHEET.RARITY_CARD",
+      "cols": 3,
+      "rows": 2,
+      "size": "1024x1536",
+      "desc": "Portrait card frames only (exactly 2:3), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. ",
+      "cells": [
         "UI.FRAME.CARD.N",
         "UI.FRAME.CARD.R",
         "UI.FRAME.CARD.SR",
         "UI.FRAME.CARD.SSR",
         "UI.FRAME.CARD.UR",
+        ""
+      ]
+    },
+    {
+      "id": "SHEET.RARITY_PLATE",
+      "cols": 2,
+      "rows": 3,
+      "size": "1536x1024",
+      "desc": "Wide name plate banners only (about 4:1), one per rarity. Cells go in rarity order N, R, SR, SSR, UR (left to right, top to bottom); the sixth cell is left empty. ",
+      "cells": [
         "UI.PLATE.N",
         "UI.PLATE.R",
         "UI.PLATE.SR",
         "UI.PLATE.SSR",
-        "UI.PLATE.UR"
+        "UI.PLATE.UR",
+        ""
       ]
     },
     {
       "id": "SHEET.FX_RARITY",
       "cols": 5,
       "rows": 2,
-      "size": "4096x1638",
+      "size": "1536x1024",
       "desc": "Columns are rarities N,R,SR,SSR,UR. Row 1: summon glow burst (radial). Row 2: card shine sweep overlay. Glow colour and intensity follow the rarity table; N is nearly none.",
       "cells": [
         "FX.GLOW.N",
@@ -55,9 +76,9 @@
     {
       "id": "SHEET.BUTTONS",
       "cols": 4,
-      "rows": 4,
-      "size": "4096x2048",
-      "desc": "No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: primary (gold), secondary (jade), danger (crimson), tab.",
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: primary (gold), secondary (jade).",
       "cells": [
         "UI.BTN.PRIMARY.NORMAL",
         "UI.BTN.PRIMARY.HOVER",
@@ -66,7 +87,16 @@
         "UI.BTN.SECONDARY.NORMAL",
         "UI.BTN.SECONDARY.HOVER",
         "UI.BTN.SECONDARY.PRESSED",
-        "UI.BTN.SECONDARY.DISABLED",
+        "UI.BTN.SECONDARY.DISABLED"
+      ]
+    },
+    {
+      "id": "SHEET.BUTTONS_2",
+      "cols": 4,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "No text on buttons. Columns are states: normal, hover, pressed, disabled. Rows: danger (crimson), tab.",
+      "cells": [
         "UI.BTN.DANGER.NORMAL",
         "UI.BTN.DANGER.HOVER",
         "UI.BTN.DANGER.PRESSED",
@@ -81,7 +111,7 @@
       "id": "SHEET.PANELS",
       "cols": 4,
       "rows": 3,
-      "size": "4096x3072",
+      "size": "1536x1024",
       "desc": "Empty containers, no text, nothing inside. Left to right, top to bottom as listed.",
       "cells": [
         "UI.PANEL.MAIN",
@@ -102,7 +132,7 @@
       "id": "SHEET.ICON_RESOURCE",
       "cols": 4,
       "rows": 2,
-      "size": "2048x1024",
+      "size": "1536x1024",
       "desc": "Currency and material icons, one object per cell, centred, no text.",
       "cells": [
         "ICON.RES.LINH_THACH",
@@ -119,7 +149,7 @@
       "id": "SHEET.ICON_ELEMENT",
       "cols": 4,
       "rows": 2,
-      "size": "2048x1024",
+      "size": "1536x1024",
       "desc": "Element emblems, same style and size, distinct silhouettes.",
       "cells": [
         "ICON.ELEM.MOC",
@@ -134,10 +164,10 @@
     },
     {
       "id": "SHEET.ICON_FUNCTION",
-      "cols": 5,
-      "rows": 4,
-      "size": "2560x2048",
-      "desc": "Lobby menu icons, one per cell. The last cell is left empty.",
+      "cols": 4,
+      "rows": 3,
+      "size": "1536x1024",
+      "desc": "Lobby menu icons, one per cell.",
       "cells": [
         "ICON.FN.CULTIVATION",
         "ICON.FN.BREAKTHROUGH",
@@ -150,7 +180,16 @@
         "ICON.FN.INVENTORY",
         "ICON.FN.SHOP",
         "ICON.FN.GUILD",
-        "ICON.FN.RANKING",
+        "ICON.FN.RANKING"
+      ]
+    },
+    {
+      "id": "SHEET.ICON_FUNCTION_2",
+      "cols": 4,
+      "rows": 3,
+      "size": "1536x1024",
+      "desc": "Lobby menu icons, one per cell. Unused cells are left empty.",
+      "cells": [
         "ICON.FN.MAIL",
         "ICON.FN.JOURNAL",
         "ICON.FN.QUESTS",
@@ -158,8 +197,76 @@
         "ICON.FN.BENEFITS",
         "ICON.FN.DAILY_LOGIN",
         "ICON.FN.SETTINGS",
+        "ICON.FN.NOTIFICATIONS",
+        "",
+        "",
+        "",
         ""
       ]
+    },
+    {
+      "id": "SHEET.HUD",
+      "cols": 3,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "HUD parts, empty containers, no text. Cells are separate objects, each fully inside its cell. Magenta #FF00FF is the background because several parts are green: do not use pink, magenta or purple-pink inside any element.",
+      "cells": [
+        "UI.FRAME.AVATAR",
+        "UI.BADGE.LEVEL",
+        "UI.BAR.FILL.LINH_LUC",
+        "UI.BTN.PLUS",
+        "UI.BTN.ROUND",
+        ""
+      ],
+      "bg": "#FF00FF"
+    },
+    {
+      "id": "SHEET.HUD_WIDE",
+      "cols": 1,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "Wide HUD strips, empty, no text, one per row, each about 3:1 or wider.",
+      "cells": [
+        "UI.PANEL.PROFILE",
+        "UI.NAV.BOTTOM_BAR"
+      ]
+    },
+    {
+      "id": "SHEET.FEATURE_CARDS",
+      "cols": 2,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.",
+      "cells": [
+        "UI.FEATURE_CARD.CULTIVATION",
+        "UI.FEATURE_CARD.BREAKTHROUGH",
+        "UI.FEATURE_CARD.TIEN_NO",
+        "UI.FEATURE_CARD.EQUIPMENT"
+      ]
+    },
+    {
+      "id": "SHEET.FEATURE_CARDS_2",
+      "cols": 2,
+      "rows": 2,
+      "size": "1536x1024",
+      "desc": "Lobby feature cards, no text, no people. Each card is a chamfered-corner frame over a dark indigo glass body; illustration fills the LEFT ~45%, the RIGHT ~55% is empty dark glass reserved for a label added by code.",
+      "cells": [
+        "UI.FEATURE_CARD.GACHA",
+        "UI.FEATURE_CARD.TRIAL",
+        "UI.FEATURE_CARD.SECRET_REALM",
+        "UI.FEATURE_CARD.TEAM"
+      ]
+    },
+    {
+      "id": "SHEET.BG_LOBBY",
+      "cols": 1,
+      "rows": 1,
+      "size": "1536x1024",
+      "desc": "Single full-bleed background image, not a sprite sheet. Keep the important area inside the centre 16:9 band (about 1536x864) because code crops to 16:9.",
+      "cells": [
+        "BG.LOBBY.NGUYET_DA"
+      ],
+      "bg": "none"
     }
   ],
   "looks": {
@@ -209,6 +316,23 @@
     "ICON.FN.EVENTS": "events: firework lantern",
     "ICON.FN.BENEFITS": "benefits: gift box with ribbon",
     "ICON.FN.DAILY_LOGIN": "daily login: calendar tablet with sun",
-    "ICON.FN.SETTINGS": "settings: bronze gear with cloud pattern"
+    "ICON.FN.SETTINGS": "settings: bronze gear with cloud pattern",
+    "BG.LOBBY.NGUYET_DA": "moonlit sect courtyard at night, stone plaza, waterfall cascading on the far side, a large glowing spirit stone at the centre, a purple-blossom tree, banners carrying only emblems; no UI, no people, no text",
+    "UI.FRAME.AVATAR": "round ornate avatar frame, patterned gold and jade ring, hollow flat-filled centre",
+    "UI.BADGE.LEVEL": "small shield-shaped level badge, gold trim, empty flat dark centre",
+    "UI.BAR.FILL.LINH_LUC": "horizontal bar fill, glowing green spirit-power, no frame",
+    "UI.BTN.PLUS": "round gold button with a plus sign symbol (a shape, not a text character)",
+    "UI.BTN.ROUND": "round dark button base with gold rim, empty centre, shared by mail, bell, settings and left icons",
+    "UI.PANEL.PROFILE": "dark wide player-name panel, gold trim on the left, fading transparent toward the right, empty",
+    "UI.NAV.BOTTOM_BAR": "carved bottom navigation bar, long ornate gold and jade trim, hollow dark interior",
+    "ICON.FN.NOTIFICATIONS": "notifications: golden bell with jade clapper",
+    "UI.FEATURE_CARD.CULTIVATION": "feature card, left illustration: lotus platform with meditation cushion and swirling qi",
+    "UI.FEATURE_CARD.BREAKTHROUGH": "feature card, left illustration: glowing golden core cracking outward",
+    "UI.FEATURE_CARD.TIEN_NO": "feature card, left illustration: jade folding fan with tassels and a hairpin",
+    "UI.FEATURE_CARD.EQUIPMENT": "feature card, left illustration: crossed sword and armor plate",
+    "UI.FEATURE_CARD.GACHA": "feature card, left illustration: summoning altar with light pillar",
+    "UI.FEATURE_CARD.TRIAL": "feature card, left illustration: multi-tier trial pagoda",
+    "UI.FEATURE_CARD.SECRET_REALM": "feature card, left illustration: swirling portal gate in a mountain",
+    "UI.FEATURE_CARD.TEAM": "feature card, left illustration: three command tokens and banners"
   }
 }
