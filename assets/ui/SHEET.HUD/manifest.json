@@ -1,0 +1,212 @@
+{
+  "sheet_id": "SHEET.HUD",
+  "canvas": [
+    1536,
+    1024
+  ],
+  "grid": {
+    "columns": 3,
+    "rows": 2,
+    "cell_width": 512,
+    "cell_height": 512
+  },
+  "background": "#FF00FF",
+  "chroma_key": "magenta",
+  "soft_alpha": true,
+  "despill": "magenta (red/blue fringe cleanup)",
+  "source_generation": "_raw_generation.png",
+  "cut_image": "_sheet.png",
+  "note": "The image-generation model violated the 12% safe zone. Original raw is retained. The entire sheet was reconstructed by compositing and uniformly resizing extracted source artwork; therefore this is a practical derivative, NOT a faithful unmodified image-generation output as required by strict After generation.",
+  "strict_after_generation_compliance": false,
+  "quality_control_reconstructed_sheet": {
+    "all_edges_6px_and_safezone_passed": true,
+    "edge_checks": [
+      {
+        "cell": 1,
+        "id": "UI.FRAME.AVATAR",
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      },
+      {
+        "cell": 2,
+        "id": "UI.BADGE.LEVEL",
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      },
+      {
+        "cell": 3,
+        "id": "UI.BAR.FILL.LINH_LUC",
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      },
+      {
+        "cell": 4,
+        "id": "UI.BTN.PLUS",
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      },
+      {
+        "cell": 5,
+        "id": "UI.BTN.ROUND",
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      },
+      {
+        "cell": 6,
+        "id": null,
+        "edges": {
+          "top": true,
+          "bottom": true,
+          "left": true,
+          "right": true
+        },
+        "safe_zone_12pct_violating_pixels": 0,
+        "passed": true
+      }
+    ]
+  },
+  "cells": [
+    {
+      "id": "UI.FRAME.AVATAR",
+      "row": 1,
+      "column": 1,
+      "file": "UI.FRAME.AVATAR.png",
+      "w": 512,
+      "h": 512,
+      "bbox_nontransparent": [
+        80,
+        73,
+        431,
+        438
+      ],
+      "source_bbox": [
+        58,
+        45,
+        460,
+        463
+      ],
+      "recomposed_scale": 0.87321
+    },
+    {
+      "id": "UI.BADGE.LEVEL",
+      "row": 1,
+      "column": 2,
+      "file": "UI.BADGE.LEVEL.png",
+      "w": 512,
+      "h": 512,
+      "bbox_nontransparent": [
+        95,
+        81,
+        416,
+        430
+      ],
+      "source_bbox": [
+        98,
+        79,
+        419,
+        428
+      ],
+      "recomposed_scale": 1.0
+    },
+    {
+      "id": "UI.BAR.FILL.LINH_LUC",
+      "row": 1,
+      "column": 3,
+      "file": "UI.BAR.FILL.LINH_LUC.png",
+      "w": 512,
+      "h": 512,
+      "bbox_nontransparent": [
+        73,
+        228,
+        438,
+        283
+      ],
+      "source_bbox": [
+        40,
+        223,
+        473,
+        288
+      ],
+      "recomposed_scale": 0.84296
+    },
+    {
+      "id": "UI.BTN.PLUS",
+      "row": 2,
+      "column": 1,
+      "file": "UI.BTN.PLUS.png",
+      "w": 512,
+      "h": 512,
+      "bbox_nontransparent": [
+        93,
+        82,
+        418,
+        429
+      ],
+      "source_bbox": [
+        100,
+        69,
+        425,
+        416
+      ],
+      "recomposed_scale": 1.0
+    },
+    {
+      "id": "UI.BTN.ROUND",
+      "row": 2,
+      "column": 2,
+      "file": "UI.BTN.ROUND.png",
+      "w": 512,
+      "h": 512,
+      "bbox_nontransparent": [
+        92,
+        80,
+        419,
+        431
+      ],
+      "source_bbox": [
+        92,
+        69,
+        419,
+        420
+      ],
+      "recomposed_scale": 1.0
+    }
+  ],
+  "empty_cells": [
+    {
+      "index": 6,
+      "row": 2,
+      "column": 3
+    }
+  ]
+}
