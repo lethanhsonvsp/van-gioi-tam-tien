@@ -96,11 +96,11 @@
       "element": "HOA",
       "apparentAge": 32,
       "face": {
-        "shape": "soft square face, broad jaw with softened angles",
-        "forehead": "broad, slightly flat",
+        "shape": "soft square-oval face, gently defined jaw corners",
+        "forehead": "medium, smooth",
         "cheekbones": "medium-high",
-        "jaw": "wide soft-square jaw",
-        "chin": "broad rounded-square chin"
+        "jaw": "softly defined jaw, slightly wider than average",
+        "chin": "soft rounded chin"
       },
       "eyes": {
         "shape": "deep-set eyes with visible sockets",
@@ -255,8 +255,8 @@
         "shape": "angular face, defined bone structure",
         "forehead": "high, flat",
         "cheekbones": "prominent",
-        "jaw": "sharp angular jaw",
-        "chin": "square-angular chin"
+        "jaw": "clean defined jawline",
+        "chin": "small firm chin"
       },
       "eyes": {
         "shape": "phoenix eyes, long with lifted outer corners",
@@ -372,8 +372,8 @@
         "shape": "wide face with high prominent cheekbones",
         "forehead": "medium, flat",
         "cheekbones": "high and wide",
-        "jaw": "wide, slightly angular",
-        "chin": "broad chin"
+        "jaw": "wide soft jaw",
+        "chin": "soft rounded chin"
       },
       "eyes": {
         "shape": "deep-set eyes, heavy upper lids",
@@ -402,5 +402,6 @@
       "outfitKey": "one-shoulder drape with open panels"
     }
   ],
-  "outfitRule": "Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body."
+  "outfitRule": "Adult 18+ glamour, maximum skin: as revealing as possible (bare shoulders, back, midriff, cleavage, hips and legs; minimal coverage; sheer layers; deep slits and cutouts). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Mature adult woman's face and body.",
+  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse."
 }

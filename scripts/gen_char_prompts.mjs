@@ -15,8 +15,10 @@ for (const c of cs) {
   assert.ok(d.elementBackgrounds[c.element], c.id + ' unknown element');
 }
 
-const STYLE = 'High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.';
+/* STYLE depends on the element, so it is built per character. */
 const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.`;
+
+const style = c => `Chinese xianxia gacha card illustration matching the style reference docs/reference/tien_no_style_target.png: soft luminous semi-realistic 3D-rendered look, delicate beautiful feminine face, large expressive eyes with detailed lashes, glossy lips, flawless porcelain skin, ornate hair ornaments and gold jewelry, ${d.elementBackgrounds[c.element]} elemental glow, floating light particles and petals, dreamy cinematic lighting. Stylized game art, NOT a photograph. ${d.faceRule}`;
 
 const face = c => [
   `Apparent age ${c.apparentAge}.`,
@@ -28,27 +30,27 @@ const face = c => [
 const prompts = c => {
   const bg = d.elementBackgrounds[c.element];
   return {
-    id: `${STYLE}
-IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
+    id: `${style(c)}
+IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft flattering light, softly blurred ${d.elementBackgrounds[c.element]} atmospheric background.
 Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
 ${face(c)}
 Expression: neutral, ${c.expression}.
 Canvas 1024x1024.
 ${NEG}`,
-    full: `${STYLE}
-Full body, elegant glamorous standing pose, whole figure from head to feet visible with empty space around, plain light-grey background, three-quarter view (about 30 degrees), slightly low camera.
+    full: `${style(c)}
+Full body, elegant glamorous standing pose, whole figure from head to feet visible with empty space around, softly blurred ${d.elementBackgrounds[c.element]} atmospheric background, three-quarter view (about 30 degrees), slightly low camera.
 ${face(c)}
 Hair: ${c.hair}.
 Body: height about ${c.body.heightCm} cm, ${c.body.type}; shoulders ${c.body.shoulders}, waist ${c.body.waist}, hips ${c.body.hips}, muscle ${c.body.muscle}.
-Role: ${c.role}. Outfit: ${c.outfit}.
+Role: ${c.role}. Outfit: ${c.outfit}. Draw the outfit exactly as described: do not add extra fabric, long skirts or sleeves, and do not cover more skin than described.
 Aura: ${c.aura}. Expression: ${c.expression}. Posture: ${c.posture}.
 Same face as the identity sheet. Canvas 1024x1536.
 ${NEG}`,
-    card: `${STYLE}
+    card: `${style(c)}
 Character card art, portrait 2:3, waist-up to knee-up, dynamic but readable pose, ${bg} ${c.element.toLowerCase()} element atmosphere and light in the background.
 ${face(c)}
 Hair: ${c.hair}.
-Role: ${c.role}. Outfit: ${c.outfit}.
+Role: ${c.role}. Outfit: ${c.outfit}. Draw the outfit exactly as described: do not add extra fabric, long skirts or sleeves, and do not cover more skin than described.
 Aura: ${c.aura}. Expression: ${c.expression}. Posture: ${c.posture}.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
 ${NEG}`,
