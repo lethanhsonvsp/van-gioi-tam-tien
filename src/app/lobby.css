@@ -27,12 +27,15 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
               linear-gradient(0deg, rgba(5,6,20,.6) 0, transparent 18%); }
 
 /* Stand-ins for art that has not been generated yet. */
-.missing { border: 2px solid var(--gold-dim); background: linear-gradient(160deg, #2a3478, #141a44); border-radius: 12px; }
+:root { --gold-edge: linear-gradient(135deg, #fff1b8, #e0b04a 35%, #8a6420 65%, #f2cf6e); --indigo-glass: linear-gradient(160deg, #2c2f86 0, #191c5a 50%, #10123c 100%); }
+/* Stand-ins for art not generated yet: same gold trim + indigo glass as the approved feature cards. */
+.missing { border: 2px solid #d9ad52; background: var(--indigo-glass); border-radius: 12px;
+  box-shadow: inset 0 0 0 1px rgba(255,236,170,.25), inset 0 0 18px rgba(90,120,255,.25), 0 2px 6px rgba(0,0,0,.5); }
 
 /* Profile, top left */
 .profile { position: absolute; left: 12px; top: 8px; width: 520px; height: 150px; }
 .profile-panel { position: absolute; left: 70px; top: 18px; width: 440px; height: 118px; }
-.profile-panel.missing { border: 0; border-radius: 0 60px 60px 0; background: linear-gradient(90deg, rgba(14,20,58,.85), rgba(14,20,58,0)); }
+.profile-panel.missing { border: 0; box-shadow: none; border-radius: 0 60px 60px 0; background: linear-gradient(90deg, rgba(14,20,58,.85), rgba(14,20,58,0)); }
 .avatar { position: absolute; left: 0; top: 0; width: 146px; height: 146px; }
 .avatar img.fill { transform: scale(1.3); }
 .avatar .missing { border-radius: 50%; }
@@ -52,7 +55,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 /* Currencies, top centre-right */
 .currencies { position: absolute; top: 16px; right: 270px; display: flex; gap: 18px; }
 .pill { position: relative; width: 200px; height: 48px; display: flex; align-items: center; }
-.pill > .fill.missing { border-radius: 24px; background: var(--glass); }
+.pill > .fill.missing { border-radius: 24px; }
 .pill-icon { position: relative; width: 52px; height: 52px; margin-left: -8px; object-fit: contain; }
 .pill-icon.missing { border-radius: 50%; width: 36px; height: 36px; margin: 0 8px 0 4px; }
 .pill span { position: relative; flex: 1; text-align: right; font-size: 20px; font-weight: 700; padding-right: 6px; }
@@ -78,8 +81,9 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .feature { position: relative; text-align: right; }
 /* Card PNGs are 768x512 with the card at bbox 102,113-665,398 (safe-zone padding): scale the image so the card itself fills the button. */
 .feature img.card-art { inset: auto; left: -18.1%; top: -39.6%; width: 136.4%; height: 179.6%; object-fit: fill; }
-.card-art.missing { border-radius: 0; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0 50%);
-  background: linear-gradient(120deg, #3a4aa8 0, #1b2160 45%, #12173f 100%); border: 0; }
+.card-art.missing { --cut: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+  border: 0; border-radius: 0; box-shadow: none; clip-path: var(--cut); background: var(--gold-edge); }
+.card-art.missing::after { content: ''; position: absolute; inset: 3px; clip-path: var(--cut); background: var(--indigo-glass); }
 .feature-icon { position: absolute; left: 14px; top: 10%; height: 80%; width: 40%; object-fit: contain; }
 .feature-icon.missing { display: none; }
 .feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
@@ -88,7 +92,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 /* Bottom bar */
 .bottom { position: absolute; left: 380px; right: 330px; bottom: 6px; height: 120px; display: flex; justify-content: space-evenly; align-items: flex-end; padding-bottom: 14px; }
 .bottom-bar { object-fit: fill; }
-.bottom-bar.missing { border-radius: 20px 20px 0 0; background: linear-gradient(0deg, rgba(12,16,48,.95), rgba(24,30,80,.8)); }
+.bottom-bar.missing { border-radius: 20px 20px 0 0; border-bottom: 0; }
 .bottom-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .bottom-icon { width: 84px; height: 84px; object-fit: contain; transform: scale(1.25); transform-origin: bottom; }
 .bottom-icon.missing { border-radius: 50%; width: 56px; height: 56px; margin: 8px; }
