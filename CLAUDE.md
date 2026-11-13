@@ -72,3 +72,7 @@ Swap cooldown; death/revive; party size limit; reward sharing; offline auto; def
 - Initial Gacha roster: **10 female Tiên Nô**. **Male Tiên Nô: Coming Soon**, excluded from current Gacha pools and summon results. Do not interpret this as restricting the player's own protagonist gender.
 - Preserve unique face and closed-mouth portrait requirements. Keep nonpixel main UI; pixel art only for Thí Luyện and Bí Cảnh.
 - Two new general UI concepts were generated, but the owner has not selected a final revision; do not replace the approved Nguyệt Dạ Thanh Vân lobby without confirmation.
+
+## Mandatory art QA (2026-11-13)
+- Read and enforce `docs/ART_QUALITY_RULES.md` (RULE-ART-001 and RULE-CHAR-002) before generating, reviewing or integrating any character or UI assets.
+- Previous 10-character collage is NOT approved production art: faces are too similar. Rebuild portraits individually, verify dimensions, unique face anatomy and closed lips. Do not cut production portraits from collages.
