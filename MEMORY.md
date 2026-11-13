@@ -68,3 +68,7 @@
 - **Male Tiên Nô are Coming Soon**: do not include male recruits in launch Gacha pools, drop tables, promotional character rosters or playable recruit inventory. This restriction applies to **Tiên Nô**, not necessarily to the player protagonist; do not assume protagonist gender restrictions.
 - Each female Tiên Nô has a distinct face, identity, role and background; closed lips, no tooth-showing smile.
 - General lobby/UI design direction: use selected Nguyệt Dạ Thanh Vân moonlit blue-violet semi-realistic xianxia lobby; prominent character art, usable navigation to Tu Luyện, Tiên Nô/Gacha, Thí Luyện, Bí Cảnh, inventory and team systems. Two subsequent visual UI concepts are explorations, not a finalized replacement of the chosen lobby; owner has not yet picked between them.
+
+## Mandatory art QA (2026-11-13)
+- Read and enforce `docs/ART_QUALITY_RULES.md` (RULE-ART-001 and RULE-CHAR-002) before generating, reviewing or integrating any character or UI assets.
+- Previous 10-character collage is NOT approved production art: faces are too similar. Rebuild portraits individually, verify dimensions, unique face anatomy and closed lips. Do not cut production portraits from collages.
