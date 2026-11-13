@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "0.1",
+  "project": "Vạn Giới Tầm Tiên",
+  "status": "CONCEPT_PREVIEW_NOT_PRODUCTION_ASSETS",
+  "rules": [
+    "Only Thí Luyện and Bí Cảnh use pixel art",
+    "Tiên Nô launch roster female-only",
+    "Every interactive element must have a stable ID and real handler",
+    "Do not treat concept-sheet crops as transparent, production-ready assets"
+  ],
+  "assets": {
+    "UI_LOBBY_001": {
+      "path": "ui/screens/previews/ui_lobby_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_TIEN_NO_001": {
+      "path": "ui/screens/previews/ui_tien_no_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_CULTIVATION_001": {
+      "path": "ui/screens/previews/ui_cultivation_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_GACHA_001": {
+      "path": "ui/screens/previews/ui_gacha_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_TEAM_001": {
+      "path": "ui/screens/previews/ui_team_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_INVENTORY_001": {
+      "path": "ui/screens/previews/ui_inventory_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_BUTTON_STATES_001": {
+      "path": "ui/components/previews/ui_button_states_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_RARITY_FRAMES_001": {
+      "path": "ui/components/previews/ui_rarity_frames_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_ELEMENTS_001": {
+      "path": "ui/icons/previews/ui_elements_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_FUNCTION_ICONS_001": {
+      "path": "ui/icons/previews/ui_function_icons_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_RESOURCE_ICONS_001": {
+      "path": "ui/icons/previews/ui_resource_icons_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_ITEM_ICONS_001": {
+      "path": "ui/icons/previews/ui_item_icons_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_SKILL_ICONS_001": {
+      "path": "ui/icons/previews/ui_skill_icons_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_PROGRESS_BARS_001": {
+      "path": "ui/components/previews/ui_progress_bars_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_AVATAR_FRAMES_001": {
+      "path": "ui/components/previews/ui_avatar_frames_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_BACKGROUND_SET_001": {
+      "path": "ui/backgrounds/previews/ui_background_set_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_FX_SET_001": {
+      "path": "ui/components/previews/ui_fx_set_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    },
+    "UI_LOADING_SET_001": {
+      "path": "ui/components/previews/ui_loading_set_001.png",
+      "kind": "reference_crop",
+      "interactive": false,
+      "source": "concept/ui_overview.png"
+    }
+  },
+  "actions": {
+    "lobby.btn.cultivation": {
+      "target": "screen.cultivation",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.breakthrough": {
+      "target": "screen.breakthrough",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.tien_no": {
+      "target": "screen.tien_no",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.equipment": {
+      "target": "screen.equipment",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.gacha": {
+      "target": "screen.gacha",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.trial": {
+      "target": "screen.trial",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.secret_realm": {
+      "target": "screen.secret_realm",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.team": {
+      "target": "screen.team",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.inventory": {
+      "target": "screen.inventory",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.shop": {
+      "target": "screen.shop",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.guild": {
+      "target": "screen.guild",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.ranking": {
+      "target": "screen.ranking",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.mail": {
+      "target": "screen.mail",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.journal": {
+      "target": "screen.journal",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.quests": {
+      "target": "screen.quests",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.events": {
+      "target": "screen.events",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.benefits": {
+      "target": "screen.benefits",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.daily_login": {
+      "target": "screen.daily_login",
+      "status": "needs_implementation"
+    },
+    "lobby.btn.settings": {
+      "target": "screen.settings",
+      "status": "needs_implementation"
+    }
+  }
+}
