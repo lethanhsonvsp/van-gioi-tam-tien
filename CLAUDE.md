@@ -60,3 +60,10 @@ Swap cooldown; death/revive; party size limit; reward sharing; offline auto; def
 - All Gacha recruits are **Tiên Nô**, with distinct identities, backgrounds, social roles, personalities and abilities.
 - **Every Tiên Nô must have a unique face**. Hair/clothing changes alone do not establish uniqueness. Distinguish facial anatomy and proportions; compare new portraits against existing roster. **No smiles showing teeth, lips closed.** Maintain identity across 2D and pixel versions.
 - Ask owner whether the player protagonist counts within the six Bí Cảnh slots/lives before changing party mechanics.
+
+## Confirmed roster implementation — Option A (2026-11-13)
+- Bí Cảnh roster per player: **1 mandatory protagonist + up to 5 Tiên Nô**; total **6 slots and at most 6 lives**.
+- Reserve one slot for the protagonist. Do not allow a sixth Tiên Nô to replace the protagonist.
+- Render **exactly one active character per player** on the exploration map. Swapping does not reset HP/status of inactive characters.
+- Three co-op players: up to **18 lives**, exactly **3 visible characters** when all three are present.
+- Previous documentation question about protagonist vs six slots is RESOLVED: protagonist is included in the six.
