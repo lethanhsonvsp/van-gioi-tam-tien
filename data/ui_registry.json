@@ -270,7 +270,7 @@
     }
   ],
   "looks": {
-    "UI.PANEL.MAIN": "large ornate window panel, dark indigo glass interior, gold and jade trim",
+    "UI.PANEL.MAIN": "large ornate window panel, deep indigo glass interior, gold chamfered trim",
     "UI.PANEL.SMALL": "small square panel, same style, simpler trim",
     "UI.PANEL.POPUP": "dialog box panel with cloud-scroll corners",
     "UI.PANEL.HEADER_BAR": "long thin horizontal top bar, ornate ends",
@@ -281,7 +281,7 @@
     "UI.BAR.FILL.EXP": "horizontal bar fill, glowing gold, no frame",
     "UI.BAR.FILL.ENERGY": "horizontal bar fill, glowing cyan-blue, no frame",
     "UI.BADGE.NOTIFY": "small round red notification badge, empty",
-    "UI.PILL.CURRENCY": "rounded horizontal capsule frame for a currency counter, empty",
+    "UI.PILL.CURRENCY": "rounded horizontal capsule frame for a currency counter: thin gold rim, deep indigo glass body, empty",
     "ICON.RES.LINH_THACH": "spirit stone: faceted pale blue glowing crystal",
     "ICON.RES.TIEN_NGOC": "immortal jade: polished violet-white jade gem with inner light",
     "ICON.RES.XU": "round gold coin with square hole and cloud engraving",
@@ -318,13 +318,13 @@
     "ICON.FN.DAILY_LOGIN": "daily login: calendar tablet with sun",
     "ICON.FN.SETTINGS": "settings: bronze gear with cloud pattern",
     "BG.LOBBY.NGUYET_DA": "NIGHT scene under a large full moon: deep indigo and blue-violet night sky with stars, cool moonlight, NO daylight, NO blue day sky, NO sun. Immortal sect courtyard seen from the plaza: a large glowing blue spirit crystal on a round stone dais at the exact centre, emitting soft cyan light rings; stone stairs behind it rising to a lit main hall; several waterfalls on misty cliffs; a large VIOLET/LAVENDER blossom tree framing the left edge (purple, not pink); stone lanterns with warm glow; tall indigo banners carrying only an emblem. Match the lighting, palette and composition of docs/reference/lobby_target.png but with every UI element, label and person removed. No UI, no people, no text.",
-    "UI.FRAME.AVATAR": "round ornate avatar frame, patterned gold and jade ring, hollow flat-filled centre",
-    "UI.BADGE.LEVEL": "small shield-shaped level badge, gold trim, empty flat dark centre",
+    "UI.FRAME.AVATAR": "round ornate avatar frame: polished gold ring with engraved scrollwork, teal-cyan gem at top and bottom, thin indigo inner rim, hollow flat-filled centre",
+    "UI.BADGE.LEVEL": "small shield-shaped level badge, gold trim, teal-cyan gem on top, empty flat indigo centre",
     "UI.BAR.FILL.LINH_LUC": "horizontal bar fill, glowing green spirit-power, no frame",
-    "UI.BTN.PLUS": "round gold button with a plus sign symbol (a shape, not a text character)",
-    "UI.BTN.ROUND": "round dark button base with gold rim, empty centre, shared by mail, bell, settings and left icons",
-    "UI.PANEL.PROFILE": "dark wide player-name panel, gold trim on the left, fading transparent toward the right, empty",
-    "UI.NAV.BOTTOM_BAR": "carved bottom navigation bar, long ornate gold and jade trim, hollow dark interior",
+    "UI.BTN.PLUS": "small round button: gold rim, indigo glass body, raised gold plus-sign shape (a shape, not a text character)",
+    "UI.BTN.ROUND": "round button base: gold rim with small teal-cyan gem at top, deep indigo glass body, empty centre; shared by mail, bell, settings and left icons",
+    "UI.PANEL.PROFILE": "dark indigo glass player-name panel, gold trim on the left, fading transparent toward the right, empty",
+    "UI.NAV.BOTTOM_BAR": "carved bottom navigation bar, long gold chamfered trim with a teal-cyan gem in the top centre, hollow deep indigo glass interior",
     "ICON.FN.NOTIFICATIONS": "notifications: golden bell with jade clapper",
     "UI.FEATURE_CARD.CULTIVATION": "feature card, left illustration: lotus platform with meditation cushion and swirling qi",
     "UI.FEATURE_CARD.BREAKTHROUGH": "feature card, left illustration: glowing golden core cracking outward",
@@ -334,5 +334,6 @@
     "UI.FEATURE_CARD.TRIAL": "feature card, left illustration: multi-tier trial pagoda",
     "UI.FEATURE_CARD.SECRET_REALM": "feature card, left illustration: swirling portal gate in a mountain",
     "UI.FEATURE_CARD.TEAM": "feature card, left illustration: three command tokens and banners"
-  }
+  },
+  "material": "SHARED MATERIAL for every frame, button, panel, bar and badge (match the approved SHEET.FEATURE_CARDS frame): polished warm gold metal trim with fine engraved scrollwork and chamfered corners, deep indigo-violet glass body, small teal-cyan diamond gem accents. No green jade, no other trim colour, unless a rarity tier or a bar fill colour says otherwise."
 }

@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 const r = JSON.parse(readFileSync('data/ui_registry.json', 'utf8'));
 const rar = Object.entries(r.rarities).map(([k, v]) => `- ${k}: ${v}`).join('\n');
-const STYLE = 'Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect, gold and jade trim.';
+const STYLE = `Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect.\n${r.material}`;
 const NEG = 'No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.';
 const bgRule = bg => bg === '#000000'
   ? 'Pure solid black #000000 background (glows will be used with additive blending, so nothing but light on black).'
