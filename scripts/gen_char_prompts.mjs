@@ -9,13 +9,14 @@ const cs = d.characters;
 const faceKey = c => [c.face.shape, c.eyes.shape, c.nose, c.mouth].join('|');
 assert.equal(new Set(cs.map(c => c.id)).size, cs.length, 'duplicate character id');
 assert.equal(new Set(cs.map(faceKey)).size, cs.length, 'two characters share the same core face');
+assert.equal(new Set(cs.map(c => c.outfitKey)).size, cs.length, 'two characters share the same outfit silhouette');
 for (const c of cs) {
   assert.ok(c.apparentAge >= 18 && c.apparentAge <= 35, c.id + ' apparent age out of 18-35');
   assert.ok(d.elementBackgrounds[c.element], c.id + ' unknown element');
 }
 
-const STYLE = 'Semi-realistic xianxia fantasy character art, rendered like a high-quality 3D render then exported to 2D, sharp detailed face, clean eyes, natural skin, beautiful harmonious adult woman.';
-const NEG = 'Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.';
+const STYLE = 'High-end xianxia mobile game character illustration, glossy semi-realistic 3D-rendered look exported to 2D, idealized glamorous beautiful adult woman, luminous smooth skin, sharp detailed face and eyes, intricate gold jewelry, dramatic soft rim light. Stylized game art, NOT a photograph.';
+const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.`;
 
 const face = c => [
   `Apparent age ${c.apparentAge}.`,
@@ -28,14 +29,14 @@ const prompts = c => {
   const bg = d.elementBackgrounds[c.element];
   return {
     id: `${STYLE}
-IDENTITY SHEET, used only to check the face. Front view, head turned 0 degrees, camera at eye level, neutral studio light, plain mid-grey background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. No jewellery on the face, no heavy makeup.
+IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft even light, plain dark-grey background.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
 ${face(c)}
 Expression: neutral, ${c.expression}.
 Canvas 1024x1024.
 ${NEG}`,
     full: `${STYLE}
-Full body, standing, whole figure from head to feet visible with empty space around, plain light-grey background, three-quarter view (about 30 degrees), camera at eye level.
+Full body, elegant glamorous standing pose, whole figure from head to feet visible with empty space around, plain light-grey background, three-quarter view (about 30 degrees), slightly low camera.
 ${face(c)}
 Hair: ${c.hair}.
 Body: height about ${c.body.heightCm} cm, ${c.body.type}; shoulders ${c.body.shoulders}, waist ${c.body.waist}, hips ${c.body.hips}, muscle ${c.body.muscle}.
