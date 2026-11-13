@@ -62,3 +62,9 @@
 - Only **one active character per player** is visible on the Bí Cảnh map at any time; swapping selects from the player's six-member roster. Each member retains its own HP and status while inactive.
 - A 3-player co-op party can have up to **18 lives total**, but only **3 visible active characters** at once (one per player).
 - This replaces the previous open question about whether the protagonist counts among the six slots.
+
+## Locked content scope — launch Gacha (2026-11-13)
+- **Launch Gacha Tiên Nô roster is female-only.** Target **10 female Tiên Nô** for initial Alpha roster.
+- **Male Tiên Nô are Coming Soon**: do not include male recruits in launch Gacha pools, drop tables, promotional character rosters or playable recruit inventory. This restriction applies to **Tiên Nô**, not necessarily to the player protagonist; do not assume protagonist gender restrictions.
+- Each female Tiên Nô has a distinct face, identity, role and background; closed lips, no tooth-showing smile.
+- General lobby/UI design direction: use selected Nguyệt Dạ Thanh Vân moonlit blue-violet semi-realistic xianxia lobby; prominent character art, usable navigation to Tu Luyện, Tiên Nô/Gacha, Thí Luyện, Bí Cảnh, inventory and team systems. Two subsequent visual UI concepts are explorations, not a finalized replacement of the chosen lobby; owner has not yet picked between them.
