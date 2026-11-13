@@ -80,6 +80,8 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .feature img.card-art { inset: auto; left: -18.1%; top: -39.6%; width: 136.4%; height: 179.6%; object-fit: fill; }
 .card-art.missing { border-radius: 0; clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 14px 100%, 0 50%);
   background: linear-gradient(120deg, #3a4aa8 0, #1b2160 45%, #12173f 100%); border: 0; }
+.feature-icon { position: absolute; left: 14px; top: 10%; height: 80%; width: 40%; object-fit: contain; }
+.feature-icon.missing { display: none; }
 .feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
 .feature:hover .card-art, .side-item:hover .round, .bottom-item:hover .bottom-icon, .round:hover { filter: brightness(1.2); }
 
@@ -88,7 +90,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .bottom-bar { object-fit: fill; }
 .bottom-bar.missing { border-radius: 20px 20px 0 0; background: linear-gradient(0deg, rgba(12,16,48,.95), rgba(24,30,80,.8)); }
 .bottom-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.bottom-icon { width: 72px; height: 72px; object-fit: contain; }
+.bottom-icon { width: 84px; height: 84px; object-fit: contain; transform: scale(1.25); transform-origin: bottom; }
 .bottom-icon.missing { border-radius: 50%; width: 56px; height: 56px; margin: 8px; }
 .bottom-item .label { font-size: 19px; font-weight: 700; }
 
