@@ -34,3 +34,8 @@ Status: **MANDATORY**, owner feedback 2026-11-13. Applies to all game art for Vá
 
 ## Known problem
 The previous 10-character collage shows repetitive facial structure. **It is a concept draft, NOT approved final character art.** Redesign and individually produce unique faces before adding these to the release roster.
+
+## RULE-UI-003 â€” UI kit sheets may be cropped (owner decision 2026-11-13)
+- Exception to RULE-ART-001 for **UI elements only** (frames, buttons, panels, icons, FX), not characters or portraits: generate by sheet on a fixed grid and crop by cell. Prompts: `docs/UI_PROMPTS.md`, generated from `data/ui_registry.json`.
+- Rarity tiers N/R/SR/SSR/UR must differ visibly in material, ornament and glow; UR clearly above SSR.
+- **Every game entity and asset has one stable ID** (`DOMAIN.TYPE.NAME[.VARIANT]`, UPPER_SNAKE, dot separated), shared by art, data and backend. IDs are never renamed. `data/ui_registry.json` is the source of truth for UI IDs.

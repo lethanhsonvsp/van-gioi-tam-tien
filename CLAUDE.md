@@ -76,3 +76,8 @@ Swap cooldown; death/revive; party size limit; reward sharing; offline auto; def
 ## Mandatory art QA (2026-11-13)
 - Read and enforce `docs/ART_QUALITY_RULES.md` (RULE-ART-001 and RULE-CHAR-002) before generating, reviewing or integrating any character or UI assets.
 - Previous 10-character collage is NOT approved production art: faces are too similar. Rebuild portraits individually, verify dimensions, unique face anatomy and closed lips. Do not cut production portraits from collages.
+
+## UI frame phase / unified IDs (2026-11-13)
+- Current goal: game frame only, no characters. Follow RULE-UI-003 in `docs/ART_QUALITY_RULES.md`.
+- Use IDs from `data/ui_registry.json` everywhere (frontend, backend, data). Rarity tiers: N, R, SR, SSR, UR (assumed, confirm with owner).
+- Regenerate prompts with `node scripts/gen_ui_prompts.mjs` after editing the registry.
