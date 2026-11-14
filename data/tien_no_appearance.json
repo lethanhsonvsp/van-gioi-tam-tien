@@ -143,7 +143,7 @@
       "outfitKey": "plunging trailing gown",
       "lips": "wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined",
       "hairStyle": "FRONT: deep side part with a long dramatic side-swept fringe sweeping across the forehead over one brow; BACK: voluminous heavy wavy black hair with red undertone falling past the chest in big waves; silhouette wide and lush",
-      "skinTone": "warm ivory with a slight olive tone",
+      "skinTone": "warm ivory with a rosy undertone",
       "makeup": "smoky deep red eyeshadow, long dramatic eyeliner, thick curled lashes",
       "mark": "a beauty mole below the right corner of the mouth",
       "jewelry": "ruby teardrop earrings and a red spider-lily hair ornament",
@@ -235,7 +235,7 @@
       "outfitKey": "strappy crop top and wrap skirt",
       "lips": "wide medium lips, corners slightly turned down giving a stern look, matte dusty rose",
       "hairStyle": "FRONT: choppy uneven blunt bangs cut at brow level, hair tucked behind the ears; BACK: one long tight low braid down the back with a dark purple cord, nothing loose; silhouette close to the head, severe",
-      "skinTone": "slightly tanned olive, matte",
+      "skinTone": "pale neutral porcelain with a faint grey undertone, matte",
       "makeup": "grey smoke along the lower lash line, short straight lashes",
       "mark": "a thin pale scar crossing the tail of the left eyebrow",
       "jewelry": "no earrings, only a dark purple hair cord",
@@ -281,7 +281,7 @@
       "outfitKey": "corset dress with slipping overrobe",
       "lips": "full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed",
       "hairStyle": "FRONT: no bangs, centre part with soft loose strands falling at both cheeks; BACK: low loose messy bun at the nape with a wooden hairpin and small herb sprigs; silhouette low and relaxed",
-      "skinTone": "warm honey",
+      "skinTone": "warm peach ivory",
       "makeup": "earthy warm brown tones, no eyeliner",
       "mark": "a small mole on the left cheek",
       "jewelry": "jade bud earrings and a wooden hairpin, no gold",
@@ -327,7 +327,7 @@
       "outfitKey": "sculpted armor with bare midriff",
       "lips": "long thin firm horizontal lips, muted pale mauve, no gloss, very controlled",
       "hairStyle": "FRONT: no bangs, all hair pulled tight back and up, forehead and ears bare, small braids along both sides of the head; BACK: high warrior topknot with a metal crown; silhouette tall, tight and angular",
-      "skinTone": "tanned warm beige",
+      "skinTone": "light beige, clear and healthy",
       "makeup": "no makeup, only strong dark eyebrows",
       "mark": "a small silver lightning mark in the middle of the forehead",
       "jewelry": "plain small silver hoop earrings and a metal hair crown",
@@ -465,7 +465,7 @@
       "outfitKey": "one-shoulder drape with open panels",
       "lips": "wide thin lips with level corners, matte plum-brown, mature and composed",
       "hairStyle": "FRONT: side part with the hair brushed back off the forehead, no bangs, a few short strands at the temples; BACK: long straight ash-grey hair gathered in a low ponytail bound with bronze rings, falling over one shoulder; silhouette plain and mature",
-      "skinTone": "warm bronze brown, the deepest skin tone of the roster",
+      "skinTone": "light golden ivory, the warmest of the roster but still fair",
       "makeup": "soft bronze outline around the eyes, no shimmer",
       "mark": "three small earth-seal dots on the forehead",
       "jewelry": "heavy round bronze earrings on elongated lobes",
@@ -473,5 +473,5 @@
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character; how much skin shows varies with each character's style, from elegant with sheer layers, deep slits and plunging necklines to very revealing (bare shoulders, back, midriff, cleavage, hips and legs). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",
-  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. Each character has her own skin tone (see her Skin line); the element colour stays in the background and rim light, never tints the skin or floods the whole image."
+  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image."
 }
