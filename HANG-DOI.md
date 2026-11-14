@@ -130,8 +130,36 @@ Số cân bằng cần Chủ tịch duyệt (đều alpha-temporary): tỉ lệ 
 - Pages công khai và merge `main`: chờ lệnh người dùng, không tự làm.
 | # | Trạng thái | Việc |
 |---|---|---|
-| VS-11 | ready | Áp số trên. Merge origin/main vào nhánh trước (độ hiếm trong `data/tien_no_appearance.json` và `docs/ALPHA_TIEN_NO_ROSTER.md` đã đổi trên main). Chạy `gen_content.mjs`. Sửa `gacha.json` (N 0, R 58, SR 30, SSR 10, UR 2, urEvery 50), `balance.json` (hệ số hiếm, maxLevel 30, capBonus R 2, khóa Nguyên Anh), `rewards.json` (linh thạch 40 + 25/tầng), `trial.json` (levelPerFloor thử 1.4). Migrate save lên v4: gán lại rarity theo id từ nội dung, hạ cấp quá 30 xuống 30. Cập nhật test Gacha và climb. Tiêu chí (40 hạt giống): tầng 1-2 thắng >=90%; không kẹt trước tầng 10; tổng kẹt <=1/40; >=85% qua tầng 20; cấp chính ở tầng 20 khoảng 18-22; đội toàn UR vẫn qua nhưng tầng 16-20 thắng ngay lần đầu <=70% và >=50% hạt giống thua ít nhất một lần. Chạy sim từng thay đổi một, báo số trước và sau. |
+| VS-11 | done | Áp số trên. Merge origin/main vào nhánh trước (độ hiếm trong `data/tien_no_appearance.json` và `docs/ALPHA_TIEN_NO_ROSTER.md` đã đổi trên main). Chạy `gen_content.mjs`. Sửa `gacha.json` (N 0, R 58, SR 30, SSR 10, UR 2, urEvery 50), `balance.json` (hệ số hiếm, maxLevel 30, capBonus R 2, khóa Nguyên Anh), `rewards.json` (linh thạch 40 + 25/tầng), `trial.json` (levelPerFloor thử 1.4). Migrate save lên v4: gán lại rarity theo id từ nội dung, hạ cấp quá 30 xuống 30. Cập nhật test Gacha và climb. Tiêu chí (40 hạt giống): tầng 1-2 thắng >=90%; không kẹt trước tầng 10; tổng kẹt <=1/40; >=85% qua tầng 20; cấp chính ở tầng 20 khoảng 18-22; đội toàn UR vẫn qua nhưng tầng 16-20 thắng ngay lần đầu <=70% và >=50% hạt giống thua ít nhất một lần. Chạy sim từng thay đổi một, báo số trước và sau.  Xong 2026-11-14, xem mục "Kết quả VS-11". |
 | VS-7 | ready | Thí Luyện xem trước đội và quái trước khi Bắt đầu; Gacha tự xếp Tiên Nô mới vào ô đội trống (không đẩy ai ra); màn kết quả hiện hạt giống trận. |
 | VS-9 | ready (sau VS-11) | Trần cấp +1 mỗi bản trùng (tối đa 5), hiện trong hồ sơ, có test; bản thứ 6 trở đi chỉ đếm. |
 | VS-8 | ready (sau VS-9) | Bố cục điện thoại ngang riêng, chữ tối thiểu 13 px thật, nút chạm 44 px; kiểm bằng `playthrough.mjs` ở 844x390. |
 | VS-10 | blocked | Gắn ảnh chân dung theo ID khi ảnh đã duyệt. |
+
+## Kết quả VS-11 (2026-11-14, nhánh feature/vertical-slice, số alpha-temporary)
+
+Đã làm: merge origin/main, sinh lại `tien_no.json` (Tần Nguyệt Dao R); `gacha.json` N 0, R 58, SR 30, SSR 10, UR 2, pity SR+ 10, UR 50, 10 thẻ; `balance.json` hệ số 1.0/1.15/1.25/1.4/1.55, maxLevel 30, capBonus R 2 SR 2 SSR 4 UR 6, realms bỏ Nguyên Anh (ghi `realmsComingSoon`), validate maxLevel phải có nhãn cảnh giới; save v4 (rarity Tiên Nô theo id, cấp quá 30 hạ về 30, nhân vật chính giữ N). Sim sửa: người chơi mẫu thua khi cày tầng cũ thì xuống tầng thấp hơn (trước đây cày mãi một tầng thua tới hết 600 trận), hết số trận tính là kẹt; đo thêm linh thạch dư, thắng ngay lần đầu, số hạt giống thua.
+
+Đo 40 hạt giống (`src/sim/climb.test.ts`). Từng thay đổi đặt riêng lên nền sau merge, rồi cả gói:
+
+| Cấu hình | Kẹt | Qua 20 | Cấp chính | Thẻ | Tiên Nô | LT dư | UR: t16-20 thắng lần đầu | UR: thua >=1 |
+|---|---|---|---|---|---|---|---|---|
+| Gốc trước merge (Tần N) | 2 (t10) | 38/40 | 13.5 | 13.6 | 7.4 | 16% | 100% | 0% |
+| Nền sau merge (Tần R) | 0 | 40/40 | 13.2 | 14.0 | 8.8 | 18% | 100% | 0% |
+| + chỉ Gacha mới | 0 | 40/40 | 13.5 | 14.0 | 8.1 | 17% | 100% | 0% |
+| + chỉ hệ số hiếm | 0 | 40/40 | 13.6 | 14.0 | 8.8 | 16% | 94% | 30% |
+| + chỉ trần 30, capBonus | 0 | 40/40 | 13.2 | 14.0 | 8.8 | 18% | 100% | 0% |
+| + chỉ thưởng 40+25 | 0 | 40/40 | 13.6 | 14.0 | 8.8 | 13% | 100% | 0% |
+| + chỉ levelPerFloor 1.4 | 0 | 40/40 | 13.5 | 14.0 | 8.8 | 17% | 100% | 3% |
+| Cả gói, levelPerFloor 1.4 | 0 | 40/40 | 14.3 | 14.0 | 8.1 | 12% | 95% | 38% |
+| Cả gói, levelPerFloor 1.3 | 0 | 40/40 | 13.9 | 14.0 | 8.1 | 13% | 100% | 3% |
+| Cả gói, 1.6 | 5 (t15-20) | 35/40 | 15.1 | 13.6 | 8.1 | 10% | 60% | 100% |
+| Cả gói, 1.6, EXP +30% | 0 | 40/40 | 16.1 | 14.0 | 8.1 | 11% | 85% | 73% |
+| Cả gói, 1.6, linh thạch +30% | 1 (t18) | 39/40 | 15.2 | 13.9 | 8.1 | 10% | 67% | 88% |
+| **Chốt: cả gói, 1.6, bossMult 1.4, linh thạch +10% (44 + 28/tầng)** | **0** | **40/40** | **15.3 (13-20)** | **14.0** | **8.1** | **10%** | **66%** | **98%** |
+
+Tầng 1-2 thắng 100% ở mọi cấu hình. Số chốt: levelPerFloor 1.6 (1.4 và 1.3 để đội toàn UR thắng ngay 95-100%, không đạt), bossMult 1.4, linh thạch base 44 perFloor 28 (+10%, trong ±30%), EXP giữ 30 + 20. Không đổi giá tu luyện, không đổi công thức trận; nguồn tiền vẫn hữu hạn (thưởng lặp giảm dần, hết sau 5 lần; thẻ chỉ lần đầu).
+
+Độ hiếm khác nhau (`src/sim/rarity.test.ts`, cấp 15, 5 Tiên Nô cùng bậc, 200 trận mỗi ô): sức mạnh hiệu dụng (máu × công × tốc) R→SR 1.18, SR→SSR 1.25, SSR→UR 1.22 (đều >=1.15). Tỉ lệ thắng: tầng 13 R 69%, SR trở lên 100%; tầng 14 R 3%, SR 97%; tầng 15 SR 11%, SSR 95%; tầng 17 SSR 86%, UR 100%; tầng 18 SSR 1%, UR 100%; tầng 19 UR 60%; tầng 20 UR 16%. Tăng đơn điệu, chênh ở tầng có thắng bại đều >=8 điểm. Giữ bộ hệ số nén, không cần nới.
+
+Chưa đạt: cấp chính ở tầng 20 trung bình 15.3 (13-20), tiêu chí 18-22. Trong khoảng cho phép không với tới (EXP +30% cho 16.1 nhưng đội toàn UR thắng ngay 85%). Muốn 18-22 cần đổi giá tu luyện hoặc EXP vượt ±30%: việc VS-L3. Test climb đang giữ dải 14-22 (ghi `shortcut`). Rủi ro: vùng số nhạy, linh thạch +5% hay +15% đã làm 4 hạt giống kẹt hoặc đội UR thắng ngay 72%; 40 hạt giống chưa đủ coi là ổn định.
