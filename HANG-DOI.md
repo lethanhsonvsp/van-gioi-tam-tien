@@ -163,3 +163,8 @@ Tầng 1-2 thắng 100% ở mọi cấu hình. Số chốt: levelPerFloor 1.6 (1
 Độ hiếm khác nhau (`src/sim/rarity.test.ts`, cấp 15, 5 Tiên Nô cùng bậc, 200 trận mỗi ô): sức mạnh hiệu dụng (máu × công × tốc) R→SR 1.18, SR→SSR 1.25, SSR→UR 1.22 (đều >=1.15). Tỉ lệ thắng: tầng 13 R 69%, SR trở lên 100%; tầng 14 R 3%, SR 97%; tầng 15 SR 11%, SSR 95%; tầng 17 SSR 86%, UR 100%; tầng 18 SSR 1%, UR 100%; tầng 19 UR 60%; tầng 20 UR 16%. Tăng đơn điệu, chênh ở tầng có thắng bại đều >=8 điểm. Giữ bộ hệ số nén, không cần nới.
 
 Chưa đạt: cấp chính ở tầng 20 trung bình 15.3 (13-20), tiêu chí 18-22. Trong khoảng cho phép không với tới (EXP +30% cho 16.1 nhưng đội toàn UR thắng ngay 85%). Muốn 18-22 cần đổi giá tu luyện hoặc EXP vượt ±30%: việc VS-L3. Test climb đang giữ dải 14-22 (ghi `shortcut`). Rủi ro: vùng số nhạy, linh thạch +5% hay +15% đã làm 4 hạt giống kẹt hoặc đội UR thắng ngay 72%; 40 hạt giống chưa đủ coi là ổn định.
+
+## Sửa sảnh icon (Chủ tịch bảo 2026-11-14)
+| # | Trạng thái | Việc |
+|---|---|---|
+| FIX-LOBBY | done | Sảnh: nút tròn 64 thành 88 (sân khấu 1600x900), icon chiếm 70% nút; sáu icon thanh dưới 84 thành 76 hiển thị đúng phần vẽ (trước đây lệch do viền trong suốt), thanh dưới cắt đúng khung vẽ; bảng tên, thanh Linh Lực có hàng riêng, ô tiền cao 56. Màn Tiên Nô: thẻ 190x288, kết quả quay hiện cửa sổ lớn, nền chân dung gradient theo hệ, số bảo đảm lấy từ `gacha.json`, nút "Về sảnh", nút Quay có chi phí. Công cụ mới `src/ui/Icon.tsx` + `iconBox.ts` (bbox alpha sinh bằng Python, không sửa ảnh gốc). |

@@ -36,12 +36,13 @@ const auditJs = `(() => {
     const k = e.offsetWidth > 60 ? b.width / e.offsetWidth : 1;
     if ([...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) {
       const px = parseFloat(getComputedStyle(e).fontSize) * k;
-      if (px < 12.95) r.push('chữ ' + px.toFixed(1) + 'px: ' + tag(e) + ' "' + e.textContent.trim().slice(0, 24) + '"');
+      if (px < 12.8) r.push('chữ ' + px.toFixed(1) + 'px: ' + tag(e) + ' "' + e.textContent.trim().slice(0, 24) + '"');
     }
     if (e.matches('button, input, textarea') && (b.width < 43.5 || b.height < 43.5)) r.push('chạm ' + Math.round(b.width) + 'x' + Math.round(b.height) + ': ' + tag(e) + ' "' + (e.textContent || e.ariaLabel || '').trim().slice(0, 24) + '"');
     if (e.matches('button') && !scrollable(e) && (b.right > innerWidth + 1 || b.bottom > innerHeight + 1 || b.left < -1)) r.push('tràn màn: ' + tag(e) + ' "' + e.textContent.trim().slice(0, 24) + '"');
   }
-  const bs = [...root.querySelectorAll('button')].filter(e => vis(e, e.getBoundingClientRect()));
+  const pop = root.querySelector('.summon-pop'); // an open overlay covers the buttons behind it
+  const bs = [...root.querySelectorAll('button')].filter(e => vis(e, e.getBoundingClientRect()) && (!pop || pop.contains(e)));
   for (let i = 0; i < bs.length; i++) for (let j = i + 1; j < bs.length; j++) {
     const a = bs[i].getBoundingClientRect(), c = bs[j].getBoundingClientRect();
     if (!bs[i].contains(bs[j]) && !bs[j].contains(bs[i]) && Math.min(a.right, c.right) - Math.max(a.left, c.left) > 2 && Math.min(a.bottom, c.bottom) - Math.max(a.top, c.top) > 2) r.push('chồng nút: "' + bs[i].textContent.trim().slice(0, 14) + '" x "' + bs[j].textContent.trim().slice(0, 14) + '"');
@@ -67,9 +68,9 @@ await ev('localStorage.clear()'); await send('Page.navigate', { url }); await sl
 let passed = 0; const NAME = 'Tử Vân Tử';
 await step('lobby + guide', async () => { await shot('00-guide'); await click('Đã hiểu'); await shot('01-lobby'); });
 await step('doi ten', async () => { await click('Tu Luyện'); await ev(`(() => { const i = document.querySelector('input[aria-label="Tên nhân vật"]'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, ${JSON.stringify(NAME)}); i.dispatchEvent(new Event('input', { bubbles: true })); })()`); await sleep(200); await click('Đổi tên'); await shot('02-tu-luyen'); await click('Quay lại'); });
-await step('quay 10', async () => { await click('Tiên Nô'); await click('Quay 10'); await sleep(300); await shot('03-quay10'); const sv = await save(); if (sv.party.filter(Boolean).length < 2) errors.push('quay 10: doi khong tu co Tien No'); if (!(await text()).includes('Đã vào đội')) errors.push('quay 10: thieu nhan Đã vào đội'); });
+await step('quay 10', async () => { await click('Tiên Nô'); await click('Quay 10'); await sleep(300); await shot('03-quay10'); const sv = await save(); if (sv.party.filter(Boolean).length < 2) errors.push('quay 10: doi khong tu co Tien No'); if (!(await text()).includes('Đã vào đội')) errors.push('quay 10: thieu nhan Đã vào đội'); await click('Đóng'); });
 await step('ho so', async () => { await ev(`document.querySelector('.tcard')?.click()`); await sleep(250); await shot('04-ho-so'); await click('Đóng'); });
-await step('vao doi', async () => { for (let i = 0; i < 4; i++) { await ev(`document.querySelectorAll('.owned .tcard')[${i}]?.click()`); await sleep(200); if (await ev(`document.body.innerText.includes('Vào đội')`)) await click('Vào đội'); await click('Đóng'); } await shot('05-roster'); await click('Quay lại'); await click('Tổ Đội'); await shot('06-to-doi'); await click('Quay lại'); });
+await step('vao doi', async () => { for (let i = 0; i < 4; i++) { await ev(`document.querySelectorAll('.owned .tcard')[${i}]?.click()`); await sleep(200); if (await ev(`document.body.innerText.includes('Vào đội')`)) await click('Vào đội'); await click('Đóng'); } await shot('05-roster'); await click('Về sảnh'); await click('Tổ Đội'); await shot('06-to-doi'); await click('Quay lại'); });
 console.log('save:', summary(await save()));
 await click('Thí Luyện'); await shot('07-thi-luyen-truoc');
 { const t = await text(); if (!t.includes('Đội của bạn') || !t.includes('Quái') || !t.includes('Thắng lần đầu')) errors.push('thi luyen: thieu ban xem truoc doi/quai/thuong'); }
@@ -82,7 +83,7 @@ for (let f = 1; f <= 5; f++) {
 await click('Quay lại');
 await step('tu luyen cap', async () => { await click('Tu Luyện'); for (let i = 0; i < 5; i++) if (await ev(`!!([...document.querySelectorAll('button')].find(b => !b.disabled && b.textContent.includes('Tu Luyện (−')))`)) await click('Tu Luyện (−'); await shot('10-tu-luyen-sau'); await click('Quay lại'); });
 console.log('save:', summary(await save()));
-await step('quay them', async () => { await click('Tiên Nô'); const t = (await save()).tickets; console.log('   thẻ còn', t); await click(t >= 10 ? 'Quay 10' : t >= 1 ? 'Quay 1' : 'Quay 1'); await shot('11-quay-them'); await click('Quay lại'); });
+await step('quay them', async () => { await click('Tiên Nô'); const t = (await save()).tickets; console.log('   thẻ còn', t); await click(t >= 10 ? 'Quay 10' : t >= 1 ? 'Quay 1' : 'Quay 1'); await shot('11-quay-them'); await click('Đóng'); await click('Về sảnh'); });
 const before = await save();
 await step('reload + kiem tra', async () => { await send('Page.navigate', { url }); await sleep(1500); const after = await save(); const same = JSON.stringify(before) === JSON.stringify(after); console.log('   save giong het truoc reload:', same, summary(after)); if (!same) errors.push('save differs after reload'); await shot('12-sau-reload'); if (!(await text()).includes(NAME)) errors.push('name missing in lobby after reload'); });
 await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); });

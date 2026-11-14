@@ -5,6 +5,7 @@ import { capBonusOf, capOf, dupCapBonus } from '../core/progress';
 import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
+import { Icon } from '../ui/Icon';
 import { Card } from './Card';
 import { CultivatePanel } from './Cultivate';
 import { useGame } from './useGame';
@@ -17,7 +18,7 @@ function Profile({ id, close }: { id: string; close: () => void }) {
   return (
     <div className="modal" onClick={close}>
       <div className="profile-card" onClick={e => e.stopPropagation()}>
-        <div className={`portrait big el-${t.element}`}><span>Chân dung đang vẽ</span></div>
+        <div className={`portrait big el-${t.element}`}><Icon id={`ICON.ELEM.${t.element}`} className="pic" fill={0.6} /><span>Chân dung đang vẽ</span></div>
         <div className="info">
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
@@ -48,27 +49,36 @@ export function Roster({ back }: { back: () => void }) {
     setMsg(''); setResults(r.results); setState(r.state);
   };
   const toUR = GACHA.pity.urEvery - g.pity.sinceUR, toSR = GACHA.pity.srEvery - g.pity.sinceSR;
+  const pity = GACHA.pity;
+  const card = (r: PullResult, i: number) => <Card key={i} id={r.id} fresh={r.isNew} joined={r.joined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />;
   return (
     <div className="screen roster">
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
-      <section className="summon">
+      <section className="summon tight">
         <h1>Tiên Nô · Triệu hồi</h1>
-        <div className="tickets">Thẻ triệu hồi: <b>{g.tickets}</b> · Bảo đảm Tiên Nô SR+ sau {toSR} lần, UR sau {toUR} lần <code>tạm alpha</code></div>
+        <button className="back home" onClick={back}>Về sảnh</button>
+        <div className="tickets">Thẻ triệu hồi: <b>{g.tickets}</b></div>
+        <div className="pity">Bảo đảm Tiên Nô SR+ sau {pity.srEvery} lần, UR sau {pity.urEvery} lần (số tạm). Còn lại: SR+ {toSR}, UR {toUR}.</div>
         <div className="buttons">
-          <button className="back" onClick={roll(1)}>Quay 1</button>
-          <button className="back" onClick={roll(10)}>Quay 10</button>
-          <button className="back" onClick={back}>Quay lại</button>
+          <button className="back" onClick={roll(1)}>Quay 1<small>{GACHA.cost} thẻ</small></button>
+          <button className="back" onClick={roll(10)}>Quay 10<small>{GACHA.cost * 10} thẻ</small></button>
+          {msg && <span className="msg">{msg}</span>}
         </div>
-        {msg && <div className="msg">{msg}</div>}
-        <div className="results">{results.map((r, i) => <Card key={i} id={r.id} fresh={r.isNew} joined={r.joined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />)}</div>
       </section>
-      <section className="owned">
+      <section className="owned tall">
         <h2>Tiên Nô đã có ({g.tienNo.length}/{TIEN_NO.length}) · Tổ đội {g.party.filter(Boolean).length}/{g.party.length}</h2>
         <div className="grid">
           {g.tienNo.length === 0 && <p>Chưa có Tiên Nô nào. Hãy triệu hồi.</p>}
           {g.tienNo.map(c => <Card key={c.id} id={c.id} copies={c.copies} selected={inParty(g.party, c.id)} onClick={() => setOpen(c.id)} />)}
         </div>
       </section>
+      {results.length > 0 && (
+        <div className="summon-pop">
+          <h2>Kết quả triệu hồi</h2>
+          <div className="results">{results.map(card)}</div>
+          <button className="back" onClick={() => setResults([])}>Đóng</button>
+        </div>
+      )}
       {open && <Profile id={open} close={() => setOpen(null)} />}
     </div>
   );

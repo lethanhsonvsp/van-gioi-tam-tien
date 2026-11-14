@@ -33,8 +33,8 @@ await send('Runtime.enable'); await send('Page.enable'); await send('Emulation.s
 await send('Page.navigate', { url }); await sleep(1500);
 await ev('localStorage.clear()'); await send('Page.navigate', { url }); await sleep(1500);
 await check('Hướng dẫn', '0-guide'); await click('Đã hiểu');
-await click('Tiên Nô'); await check('Triệu hồi', '1-tien-no'); await click('Quay 10'); await check('Tiên Nô đã có', '1b-quay');
-await ev(`document.querySelector('.tcard')?.click()`); await sleep(250); await check('Ngoài chiến đấu', '1c-ho-so'); await click('Đóng'); await click('Quay lại');
+await click('Tiên Nô'); await check('Triệu hồi', '1-tien-no'); await click('Quay 10'); await check('Tiên Nô đã có', '1b-quay'); await click('Đóng');
+await ev(`document.querySelector('.tcard')?.click()`); await sleep(250); await check('Ngoài chiến đấu', '1c-ho-so'); await click('Đóng'); await click('Về sảnh');
 await click('Tổ Đội'); await check('Tổ', '2-to-doi'); await click('Quay lại');
 await click('Thí Luyện'); await check('Thí Luyện', '3-thi-luyen'); await sleep(500); await shot('3b-thi-luyen'); await click('Quay lại');
 await click('Tu Luyện'); await check('Đổi tên', '4-tu-luyen'); await click('Quay lại');
