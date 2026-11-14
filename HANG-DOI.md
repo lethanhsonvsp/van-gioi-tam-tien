@@ -64,8 +64,8 @@ Vòng chơi: Sảnh, Gacha, xem Tiên Nô, tổ đội 6 (1 chính + 5 Tiên Nô
 - Triển khai Pages (khi Chủ tịch duyệt): `base: '/van-gioi-tam-tien/'`, chỉ đẩy `dist`, không đưa `_sheet.png`, tách prompt 18+ khỏi bản phát hành. Nhánh `feature/lobby-frame` chậm main khoảng 20 commit: merge main trước.
 | # | Trạng thái | Việc |
 |---|---|---|
-| VS-0 | ready | Nhánh `feature/vertical-slice` từ lobby-frame, merge main, chạy được `npm run dev`; sửa `pages.yml` (build ra `dist`, bỏ `_sheet`, base path), chưa triển khai. |
-| VS-1 | ready | Lõi: model nhân vật chung, RNG theo hạt giống, lưu game có version, HUD số thật; test tất định. |
+| VS-0 | done | Nhánh `feature/vertical-slice` từ lobby-frame, merge main, chạy được `npm run dev`; sửa `pages.yml` (build ra `dist`, bỏ `_sheet`, base path), chưa triển khai.  Xong trên nhánh feature/vertical-slice: build xanh, dist không có `_sheet*`, base chỉ áp khi build, pages.yml build rồi đẩy `dist` (chưa triển khai, chỉ sửa trong nhánh). |
+| VS-1 | done | Lõi: model nhân vật chung, RNG theo hạt giống, lưu game có version, HUD số thật; test tất định.  Xong: `src/core` (rng, character, save, store), `src/content` (tien_no.json sinh bằng `scripts/gen_content.mjs`, balance.json alpha-temporary), HUD đọc store, 7 test vitest. Chưa có UI đổi tên nhân vật; nhãn cảnh giới tạm = `Luyện Khí <cấp>`. |
 | VS-2 | ready | Thí Luyện: lõi trận tick tất định, 3 khuôn chiêu, đội cố định, 3 tầng, bộ phát lại DOM. |
 | VS-3 | ready | Gacha có pity + màn Tiên Nô gộp + tổ đội 6. Số tỉ lệ và pity ghi "tạm alpha". |
 | VS-4 | ready | Thưởng, Tu Luyện, 20 tầng sinh theo công thức, vitest tìm tầng kẹt. |

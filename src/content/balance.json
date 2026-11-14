@@ -1,0 +1,5 @@
+{
+  "status": "alpha-temporary",
+  "rarityStatMultiplier": { "N": 1.0, "R": 1.15, "SR": 1.3, "SSR": 1.5, "UR": 1.75 },
+  "start": { "level": 1, "linhThach": 100, "tienNgoc": 0, "xu": 0, "linhLuc": 100, "hpBase": 100, "playerName": "Đạo hữu" }
+}

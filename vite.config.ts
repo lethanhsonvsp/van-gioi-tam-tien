@@ -1,4 +1,4 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-// base './' so the build also works from a GitHub Pages sub-path.
-export default defineConfig({ plugins: [react()], base: './' });
+// Build is served from the GitHub Pages sub-path; dev server stays at '/'.
+export default defineConfig(({ command }) => ({ plugins: [react()], base: command === 'build' ? '/van-gioi-tam-tien/' : '/' }));

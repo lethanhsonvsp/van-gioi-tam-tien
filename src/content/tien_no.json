@@ -1,0 +1,82 @@
+[
+  {
+    "id": "CHAR.TIEN_NO.LAC_THANH_Y",
+    "name": "Lạc Thanh Y",
+    "element": "MOC",
+    "rarity": "SR",
+    "title": "Thanh Vân Tông · Thánh Nữ",
+    "role": "Saintess of Thanh Van Sect"
+  },
+  {
+    "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
+    "name": "Mộ Dung Tuyết",
+    "element": "BANG",
+    "rarity": "SSR",
+    "title": "Bắc Vực · Kiếm Tiên",
+    "role": "Sword Immortal of the Northern Wastes"
+  },
+  {
+    "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
+    "name": "Diễm Vô Tâm",
+    "element": "HOA",
+    "rarity": "SSR",
+    "title": "U Minh Cung · Ma Nữ",
+    "role": "Demoness of U Minh Palace"
+  },
+  {
+    "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
+    "name": "Bạch Linh Nhi",
+    "element": "HUYEN",
+    "rarity": "R",
+    "title": "Cửu Vĩ Hồ · Yêu Tộc",
+    "role": "Nine-Tailed Fox Spirit"
+  },
+  {
+    "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
+    "name": "Tần Nguyệt Dao",
+    "element": "AM",
+    "rarity": "N",
+    "title": "Vô Ảnh Lâu · Sát Thủ",
+    "role": "Assassin of Shadowless Tower"
+  },
+  {
+    "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
+    "name": "Liễu Như Yên",
+    "element": "MOC",
+    "rarity": "R",
+    "title": "Dược Vương Cốc · Đan Sư",
+    "role": "Alchemist of Medicine King Valley"
+  },
+  {
+    "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
+    "name": "Hàn Nguyệt Sương",
+    "element": "LOI",
+    "rarity": "SR",
+    "title": "Bắc Minh · Nữ Tướng",
+    "role": "General of Bac Minh"
+  },
+  {
+    "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
+    "name": "Sở Hồng Liên",
+    "element": "HOA",
+    "rarity": "R",
+    "title": "Hỏa Quốc · Công Chúa",
+    "role": "Princess of the Fire Kingdom"
+  },
+  {
+    "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
+    "name": "Vân Mộng Dao",
+    "element": "THUY",
+    "rarity": "SR",
+    "title": "Thiên Cơ Các · Trận Pháp Sư",
+    "role": "Formation Master of Thien Co Pavilion"
+  },
+  {
+    "id": "CHAR.TIEN_NO.CO_U_LAN",
+    "name": "Cổ U Lan",
+    "element": "THO",
+    "rarity": "UR",
+    "title": "Tiên Cổ · Thủ Mộ Lão Tổ",
+    "role": "Keeper of the Ancient Immortal Tomb"
+  }
+]

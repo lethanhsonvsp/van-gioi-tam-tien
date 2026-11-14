@@ -9,7 +9,7 @@ export function Screen({ id, back }: { id: ScreenId; back: () => void }) {
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
       <div className="screen-panel">
         <h1>{TITLES[id] ?? id}</h1>
-        <p>Màn hình này chưa làm.</p>
+        <p>Sắp mở.</p>
         <code>{id}</code>
         <button className="back" onClick={back}>Quay lại</button>
       </div>
