@@ -67,11 +67,11 @@
       "element": "BANG",
       "apparentAge": 29,
       "face": {
-        "shape": "diamond face, wide cheekbones, narrow forehead and jaw",
+        "shape": "delicate diamond face with soft cheeks and high cheekbones",
         "forehead": "narrow, smooth",
-        "cheekbones": "high and prominent",
-        "jaw": "narrow tapered jaw",
-        "chin": "narrow pointed-medium chin"
+        "cheekbones": "high but softly padded",
+        "jaw": "softly tapered delicate jaw",
+        "chin": "small softly pointed chin"
       },
       "eyes": {
         "shape": "long narrow eyes, small opening",
@@ -80,8 +80,8 @@
         "eyelid": "hooded inner fold",
         "iris": "pale ice blue"
       },
-      "brows": "straight sword brows, thin, long, slight upward angle",
-      "nose": "tall straight nose, high root, narrow bridge, refined tip",
+      "brows": "slim graceful long brows with a soft gentle arch and a slight upward tail",
+      "nose": "slender straight nose with a refined small tip",
       "mouth": "straight horizontal mouth, both lips thin, flat cupid bow",
       "ears": "medium, thin rims",
       "hair": "long straight silver-white hair, high ponytail with ice crystal crown, no bangs",
@@ -214,11 +214,11 @@
       "element": "AM",
       "apparentAge": 27,
       "face": {
-        "shape": "narrow rectangular face, long and lean",
+        "shape": "long slim oval-rectangular face with soft cheeks, graceful not bony",
         "forehead": "medium, sloping slightly",
-        "cheekbones": "medium, defined",
-        "jaw": "straight narrow jaw",
-        "chin": "long narrow chin"
+        "cheekbones": "medium, softly padded",
+        "jaw": "soft straight narrow jaw",
+        "chin": "long narrow softly rounded chin"
       },
       "eyes": {
         "shape": "eyes with hidden inner fold (mono-hooded), medium opening",
@@ -227,8 +227,8 @@
         "eyelid": "hidden fold",
         "iris": "dark grey"
       },
-      "brows": "straight, thin, slightly lowered brows",
-      "nose": "long nose with a pointed tip, narrow bridge",
+      "brows": "thin softly arched brows, slightly lowered, delicate",
+      "nose": "long slender nose with a softly pointed tip and a narrow bridge",
       "mouth": "wide mouth with slightly downturned corners, medium lips",
       "ears": "small, close to head",
       "hair": "long straight black hair in a low tight braid, uneven bangs, dark purple hair cord",
@@ -253,7 +253,7 @@
       "jewelry": "no earrings, only a dark purple hair cord",
       "pose": "chin tucked, eyes looking up, shoulders slightly forward",
       "bust": "medium, firm and athletic",
-      "rarity": "N",
+      "rarity": "R",
       "title": "Vô Ảnh Lâu · Sát Thủ"
     },
     {
@@ -270,10 +270,10 @@
         "chin": "full rounded chin"
       },
       "eyes": {
-        "shape": "downturned eyes, outer corners lower",
+        "shape": "soft sweet gently downturned doe eyes, charming",
         "spacing": "average",
         "depth": "medium",
-        "eyelid": "heavy upper lid, double fold",
+        "eyelid": "soft double eyelid",
         "iris": "amber"
       },
       "brows": "soft natural sparse brows, gently downturned",
@@ -312,21 +312,21 @@
       "element": "LOI",
       "apparentAge": 30,
       "face": {
-        "shape": "angular face, defined bone structure",
+        "shape": "lightly angular feminine face with soft cheeks, strong but graceful",
         "forehead": "high, flat",
-        "cheekbones": "prominent",
-        "jaw": "clean defined jawline",
-        "chin": "small firm chin"
+        "cheekbones": "high with soft fullness",
+        "jaw": "clean soft jawline",
+        "chin": "small firm rounded chin"
       },
       "eyes": {
-        "shape": "phoenix eyes, long with lifted outer corners",
+        "shape": "elegant phoenix eyes, long with softly lifted outer corners, luminous",
         "spacing": "average",
         "depth": "medium-deep",
         "eyelid": "thin double eyelid",
         "iris": "steel grey with blue glint"
       },
-      "brows": "thick straight sword brows, strong",
-      "nose": "tall nose, narrow wings, straight bridge",
+      "brows": "elegant straight brows of medium thickness, gently tapered, neat and feminine, not heavy",
+      "nose": "slim nose with narrow wings and a refined bridge",
       "mouth": "long horizontal mouth, thin lips",
       "ears": "medium, close to head",
       "hair": "long black hair in a high warrior topknot with braided sides, metal hair crown",
@@ -410,7 +410,7 @@
       "element": "THUY",
       "apparentAge": 26,
       "face": {
-        "shape": "long face, slim lines",
+        "shape": "long slim face with soft cheeks, delicate",
         "forehead": "high, arched hairline",
         "cheekbones": "medium-low",
         "jaw": "slim jaw",
@@ -459,20 +459,20 @@
       "element": "THO",
       "apparentAge": 34,
       "face": {
-        "shape": "wide face with high prominent cheekbones",
+        "shape": "wide face with high cheekbones and full soft cheeks, never hollow or gaunt",
         "forehead": "medium, flat",
-        "cheekbones": "high and wide",
+        "cheekbones": "high and wide with full soft cheeks",
         "jaw": "wide soft jaw",
         "chin": "soft rounded chin"
       },
       "eyes": {
-        "shape": "deep-set eyes, heavy upper lids",
+        "shape": "calm almond eyes with softly hooded lids, serene and alluring",
         "spacing": "wide",
-        "depth": "deep",
-        "eyelid": "heavy hooded lid",
+        "depth": "softly set",
+        "eyelid": "soft double eyelid",
         "iris": "light gold-brown"
       },
-      "brows": "straight, medium-thick, natural",
+      "brows": "natural softly curved medium brows",
       "nose": "long nose with a rounded tip, medium width",
       "mouth": "wide mouth, thin lips, level corners",
       "ears": "large, long lobes",
@@ -503,5 +503,5 @@
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character, but always graceful and immortal, never vulgar or brothel-like. Sexy comes from elegant xianxia cuts: plunging necklines, bare shoulders and back, high slits, sheer layers, short skirts with stockings. Every outfit MUST carry tiên khí (immortal aura): long floating ribbons, sashes and sleeves, cloud, lotus, crane or phoenix motifs, jade, crystal or gold ornaments, a soft glow of her element qi, hem and hair drifting as if weightless, a poised refined posture. Forbidden: bikini, thong, lingerie or bra-like tops, tiny loincloths, stripper or street-walker look, harem or tribal look, cheap shiny plastic fabrics. No trousers or pants on any character: use slit gowns, qipao, robes or short skirts with stockings and footwear that fit her role. How much skin shows varies with each character's style. Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",
-  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image."
+  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image. Every face is a stunning, breathtaking beauty (mỹ nhân tuyệt sắc): the same high level of beauty for all ten, never plain, tired, stern, severe, aged, heavy-lidded or harsh. Tiên Nô are cultivators with immortal youth (trú nhan): skin is always flawless, no wrinkles. But the age impression must follow each character's apparent age: the youngest look girl-like and sweet, those around 30 and above must look like a mature beautiful woman (mỹ phụ nhân) with womanly allure, defined refined features, fuller lips and a poised gaze, never childish: no baby-round cheeks, no wide innocent eyes, no cute grin."
 }

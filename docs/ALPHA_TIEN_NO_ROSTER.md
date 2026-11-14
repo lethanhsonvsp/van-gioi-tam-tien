@@ -8,7 +8,7 @@
 | Mộ Dung Tuyết | Kiếm tiên Bắc Vực | Băng | Kiếm khí liên hoàn, đóng băng, kết liễu | Phát hiện kiếm ý, thử thách kiếm đạo | SSR |
 | Diễm Vô Tâm | Ma nữ U Minh Cung | Hỏa | Hiến tế HP, hút sinh lực | Mở tuyến sự kiện ma đạo | SSR |
 | Bạch Linh Nhi | Hồ yêu Cửu Vĩ | Huyễn | Phân thân, mê hoặc, đánh lạc hướng | Nhận biết ảo cảnh | R |
-| Tần Nguyệt Dao | Sát thủ Vô Ảnh Lâu | Ám | Ẩn thân, đánh dấu, ám sát tuyến sau | Trinh sát, phát hiện phục kích | N |
+| Tần Nguyệt Dao | Sát thủ Vô Ảnh Lâu | Ám | Ẩn thân, đánh dấu, ám sát tuyến sau | Trinh sát, phát hiện phục kích | R |
 | Liễu Như Yên | Đan sư Dược Vương Cốc | Mộc | Đan dược tức thời, độc, tăng ích | Luyện đan, nhận biết dược liệu | R |
 | Hàn Nguyệt Sương | Nữ tướng Bắc Minh | Lôi | Tích điện, phản kích, sát thương lan | Chỉ huy, xử lý sự kiện quân trận | SR |
 | Sở Hồng Liên | Công chúa Hỏa Quốc | Hỏa | Đấu sĩ cận chiến, tăng sức mạnh theo thời gian | Sự kiện vương triều | R |
@@ -28,4 +28,4 @@ Tách ba khái niệm:
 - **Độ hiếm** (N, R, SR, SSR, UR): khó quay đến đâu, quyết định viền thẻ, hệ số tiềm năng và bộ chiêu.
 - **Cấp bậc thân phận**: danh xưng riêng của từng người trong thế lực (`title` trong `data/tien_no_appearance.json`), chỉ để hiển thị và cốt truyện. UR kiểu lão tổ là TIỀM NĂNG: cùng cấp thì mạnh hơn đệ tử cùng cấp, không phải cấp cao hơn.
 - **Cấp (cảnh giới)**: sức mạnh hiện tại, tăng được. Khi quay ra, Tiên Nô có cùng cấp với người chơi. Về lâu dài Tiên Nô có thể vượt cấp người chơi (trần cao hơn theo độ hiếm). Bản chơi đầu chỉ có số cấp, cảnh giới là nhãn đổi theo mốc.
-Hệ số chỉ số mỗi cấp (tạm alpha, cần cân bằng bằng mô phỏng): N 1.0, R 1.15, SR 1.3, SSR 1.5, UR 1.75. UR cũng có bộ chiêu mạnh hơn và trần tiềm năng cao hơn. Cốt truyện UR: tu vi tụt nhưng đạo cơ và kinh nghiệm còn nguyên.
+Hệ số chỉ số mỗi cấp (tạm alpha, Phó chủ tịch và Cố vấn chốt 2026-11-14, cân bằng bằng mô phỏng): N 1.0, R 1.15, SR 1.25, SSR 1.4, UR 1.55 (hệ số nhân cả máu lẫn công nên sức mạnh xấp xỉ bình phương). Bậc N dành cho nhân vật chính, quái và trang bị cấp thấp; Tiên Nô chỉ dùng R, SR, SSR, UR. Tần Nguyệt Dao nâng từ N lên R. UR cũng có bộ chiêu mạnh hơn và trần tiềm năng cao hơn. Cốt truyện UR: tu vi tụt nhưng đạo cơ và kinh nghiệm còn nguyên.
