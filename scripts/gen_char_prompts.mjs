@@ -32,7 +32,7 @@ const prompts = c => {
   return {
     id: `${style(c)}
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft flattering light, softly blurred ${d.elementBackgrounds[c.element]} atmospheric background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Light makeup, no face jewellery. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
+Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Same glamorous makeup and hair ornaments as the card art, kept off the face outline. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
 ${face(c)}
 Expression: neutral, ${c.expression}.
 Canvas 1024x1024.
@@ -67,7 +67,7 @@ Status: ${d.status}
 3. **CARD** card art, same face.
 Pixel versions only after all three agree.
 
-Each character gets its own chat/image. Never make a group collage and never crop characters out of one.
+Upload \`docs/reference/tien_no_style_target.png\` into the chat with every prompt: the image model cannot see a file path. Each character gets its own chat/image. Never make a group collage and never crop characters out of one.
 Save files as \`<ID>.ID.png\`, \`<ID>.FULL.png\`, \`<ID>.CARD.png\` in \`assets/characters/<ID>/\`.
 
 | Tiên Nô | ID | Element | Age | Role |
