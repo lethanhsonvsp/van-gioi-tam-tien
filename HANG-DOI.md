@@ -171,3 +171,11 @@ Chưa đạt: cấp chính ở tầng 20 trung bình 15.3 (13-20), tiêu chí 18
 | # | Trạng thái | Việc |
 |---|---|---|
 | FIX-LOBBY | done | Sảnh: nút tròn 64 thành 88 (sân khấu 1600x900), icon chiếm 70% nút; sáu icon thanh dưới 84 thành 76 hiển thị đúng phần vẽ (trước đây lệch do viền trong suốt), thanh dưới cắt đúng khung vẽ; bảng tên, thanh Linh Lực có hàng riêng, ô tiền cao 56. Màn Tiên Nô: thẻ 190x288, kết quả quay hiện cửa sổ lớn, nền chân dung gradient theo hệ, số bảo đảm lấy từ `gacha.json`, nút "Về sảnh", nút Quay có chi phí. Công cụ mới `src/ui/Icon.tsx` + `iconBox.ts` (bbox alpha sinh bằng Python, không sửa ảnh gốc). |
+
+## Nghiệm thu bản chơi thử (2026-11-14, kiểm định độc lập lần ba)
+Kiểm định (38 ảnh) và Giám đốc Chất lượng (26 ảnh): ĐẠT có điều kiện, không còn lỗi cao hoặc trung. `npm test` 48, `npm run build`, `npm run qa` 0 vi phạm ở 3 khổ (Tổng giám đốc chạy lại độc lập). Bản chơi thử: `cd ~/wt/vgtt-vs && npm run dev`.
+| # | Trạng thái | Việc |
+|---|---|---|
+| VS-14 | ready | Lỗi thấp tồn: (1) nhãn "MỚI" và "Đã vào đội" đè lên emblem hệ trong thẻ ở màn Quay 10 (đặt hàng nhãn riêng dưới emblem hoặc góc thẻ); (2) chữ sát thương mờ nằm sát góc avatar và mép hàng trong trận giữa; (3) nút Quay 1/Quay 10 dính sát viền trên khung "Tiên Nô đã có"; (4) Thí Luyện trước trận 1920: cột "HP xxx" lơ lửng giữa hàng, phần phải trống; (5) Roster 1920 hàng cuối lẻ thẻ và trống. Sau khi sửa phải qua `npm run qa` 0 vi phạm, ảnh 3 khổ và kiểm định độc lập (kiem-dinh + gd-chat-luong) như quy trình. |
+| ĐH-1 | ask-codex | Cần đồ họa: cảnh chiến đấu Thí Luyện hiện chỉ là hàng huy chương, thanh máu và chữ "VS". Cần sprite pixel nhân vật, hiệu ứng chiêu và quái pixel (Thí Luyện dùng pixel theo luật). Chờ Phó chủ tịch và Cố vấn chốt hướng công cụ pixel. |
+| ĐH-2 | blocked | VS-10: ảnh chân dung theo ID khi ảnh nhân vật đã duyệt (xem `assets/characters/`). |
