@@ -5,23 +5,27 @@
 .compact .back.small { font-size: 13px; padding: 6px 10px; margin-left: 8px; }
 
 /* Lobby: top bar absolute, the rest is a grid (side | features) over the bottom bar. */
-.compact .lobby { display: grid; grid-template: 1fr auto / auto 1fr; grid-template-areas: 'side main' 'bottom bottom'; padding-top: 56px; gap: 0 8px; }
-.compact .profile { left: 8px; top: 4px; width: auto; height: 48px; display: flex; align-items: center; gap: 8px; }
-.compact .profile-panel, .compact .avatar, .compact .plus { display: none; }
-.compact .level { position: relative; inset: auto; left: auto; top: auto; width: 56px; height: 30px; flex: none; }
-.compact .level span { font-size: 14px; }
-.compact .who { position: relative; inset: auto; width: auto; display: grid; grid-template-columns: auto auto auto; column-gap: 8px; align-items: baseline; }
-.compact .game { font-size: 15px; line-height: 18px; color: var(--gold); }
-.compact .name { font-size: 15px; margin: 0; }
-.compact .realm { margin: 0; }
-.compact .realm { font-size: 13px; }
-.compact .bar { --bw: 170px; grid-column: 1 / -1; margin: 0; }
+.compact .lobby { display: grid; grid-template: 1fr auto / auto 1fr; grid-template-areas: 'side main' 'bottom bottom'; padding-top: 74px; gap: 0 8px; }
+.compact .profile { left: 8px; top: 4px; width: auto; height: 68px; display: flex; align-items: flex-start; gap: 10px; }
+.compact .profile-panel, .compact .plus { display: none; }
+/* Avatar frame with the level badge below it (not on it); three text lines: game, name · realm, Linh Lực. */
+.compact .avatar { position: relative; left: auto; top: auto; width: 46px; height: 46px; flex: none; }
+.compact .level { left: 0; top: 47px; width: 46px; height: 21px; }
+.compact .level span { font-size: 13px; }
+.compact .who { position: relative; inset: auto; width: auto; display: block; }
+.compact .game { font-size: 15px; line-height: 19px; color: var(--gold); }
+.compact .name { font-size: 14px; line-height: 19px; margin: 0; }
+.compact .realm { margin: 0 0 0 10px; font-size: 13px; line-height: 19px; }
+.compact .bar { --bw: 110px; margin: 1px 0 0; width: auto; display: flex; align-items: center; gap: 8px; }
+.compact .bar-track { width: var(--bw); flex: none; }
 .compact .bar-text { font-size: 13px; line-height: 16px; }
 .compact .bar-track { height: 10px; border-radius: 5px; }
 .compact .currencies { top: 6px; right: 160px; gap: 4px; }
-.compact .pill { width: auto; min-width: 84px; height: 40px; padding: 0 10px 0 4px; }
+.compact .pill { width: auto; min-width: 84px; height: 44px; padding: 0 12px 0 4px; }
+.compact .pill-text { padding-right: 0; }
+.compact .pill-text small { font-size: 13px; line-height: 15px; }
+.compact .pill-text b { font-size: 14px; line-height: 17px; }
 .compact .pill-icon { width: 30px; height: 30px; margin: 0 4px 0 0; }
-.compact .pill span { font-size: 14px; padding-right: 0; }
 .compact .top-buttons { top: 4px; right: 8px; gap: 4px; }
 .compact .round { width: 44px; height: 44px; }
 
@@ -33,10 +37,10 @@
 .compact .feature-icon { left: 4px; top: 8%; height: 84%; width: 38%; }
 .compact .card-art.missing { --cut: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px); }
 
-.compact .bottom { position: relative; inset: auto; grid-area: bottom; left: auto; right: auto; bottom: auto; height: 62px; margin: 2px 8px calc(8px + env(safe-area-inset-bottom)); padding: 4px 28px; align-items: center; }
+.compact .bottom { position: relative; inset: auto; grid-area: bottom; left: auto; right: auto; bottom: auto; height: 70px; margin: 2px 8px calc(6px + env(safe-area-inset-bottom)); padding: 4px 28px 14px; align-items: center; }
 .compact .bottom-bar.missing { border-radius: 14px 14px 0 0; }
-.compact .bottom-item { min-width: 56px; min-height: 44px; justify-content: center; }
-.compact .bottom-icon { width: 28px; height: 28px; transform: none; }
+.compact .bottom-item { min-width: 56px; min-height: 52px; justify-content: center; }
+.compact .bottom-icon { width: 32px; height: 32px; transform: none; }
 .compact .bottom-icon.missing { width: 24px; height: 24px; margin: 0; }
 .compact .bottom-item .label { font-size: 13px; }
 

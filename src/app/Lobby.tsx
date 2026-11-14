@@ -5,6 +5,8 @@ import { Icon } from '../ui/Icon';
 import { BOTTOM, CARD_HAS_ICON, FEATURES, SIDE, TOP, cardId, iconId } from './menu';
 
 const CURRENCIES: CurrencyId[] = ['LINH_THACH', 'TIEN_NGOC', 'XU'];
+// Player-facing names: the currency IDs read aloud (linh thạch is the name used in rewards and Tu Luyện).
+const CURRENCY_VI: Record<CurrencyId, string> = { LINH_THACH: 'Linh Thạch', TIEN_NGOC: 'Tiên Ngọc', XU: 'Xu' };
 
 export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) => void }) {
   const open = (a: UIActionId) => () => go(resolveAction(a));
@@ -33,11 +35,11 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
 
       <div className="currencies">
         {CURRENCIES.map(c => (
-          <div className="pill" key={c}>
+          <div className="pill" key={c} title={CURRENCY_VI[c]}>
             <Icon id="UI.PILL.CURRENCY" className="fill" stretch />
             <Icon id={`ICON.RES.${c}`} className="pill-icon" fill={0.9} />
-            <span>{player.currency[c].toLocaleString('vi-VN')}</span>
-            <button className="plus" aria-label="Nạp" onClick={open('lobby.btn.shop')}><Icon id="UI.BTN.PLUS" className="fill" /></button>
+            <span className="pill-text"><small>{CURRENCY_VI[c]}</small><b>{player.currency[c].toLocaleString('vi-VN')}</b></span>
+            <button className="plus" aria-label={`Nạp ${CURRENCY_VI[c]}`} onClick={open('lobby.btn.shop')}><Icon id="UI.BTN.PLUS" className="fill" /></button>
           </div>
         ))}
       </div>
