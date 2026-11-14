@@ -11,7 +11,8 @@ export const scanJs = phone => `(() => {
   const seen = e => e.checkVisibility({ opacityProperty: true, visibilityProperty: true }) && !e.closest('.float');
   const tag = e => e.tagName.toLowerCase() + (typeof e.className === 'string' && e.className.trim() ? '.' + e.className.trim().split(/\\s+/).join('.') : '');
   const say = (e, s) => tag(e) + ' "' + (s ?? e.textContent).trim().slice(0, 28) + '"';
-  const cut = e => { for (let p = e; p && p !== document.body; p = p.parentElement) { const s = getComputedStyle(p); if (s.textOverflow === 'ellipsis' || s.webkitLineClamp !== 'none') return true; } return false; };
+  // Intended cut: only the text element itself or its direct parent may carry the ellipsis / line-clamp (a far ancestor must not excuse clipped text).
+  const cut = e => [e, e.parentElement].some(p => { const s = p && getComputedStyle(p); return s && (s.textOverflow === 'ellipsis' || s.webkitLineClamp !== 'none'); });
   const scrolls = e => { for (let p = e.parentElement; p; p = p.parentElement) { const o = getComputedStyle(p); if (/auto|scroll/.test(o.overflowY + o.overflowX)) return true; } return false; };
   // False when the text's centre is scrolled out of view inside a scroll container (scroll clipping) or in the lines cut off by an intended line-clamp / ellipsis.
   const shown = (e, b) => { for (let p = e; p; p = p.parentElement) { const o = getComputedStyle(p); if (/auto|scroll/.test(o.overflowY + o.overflowX) || (o.webkitLineClamp !== 'none' || o.textOverflow === 'ellipsis') && /hidden|clip/.test(o.overflow)) { const c = p.getBoundingClientRect(); const x = (b.left + b.right) / 2, y = (b.top + b.bottom) / 2; if (y < c.top || y > c.bottom || x < c.left || x > c.right) return false; } } return true; };
@@ -71,6 +72,18 @@ export const scanJs = phone => `(() => {
     // A box that scrolls vertically cuts its content at the top / bottom by design: only the side gaps count there.
     const vs = box && /auto|scroll/.test(getComputedStyle(box).overflowY) && box.scrollHeight > box.clientHeight + 1, sides = (b, c) => Math.min(b.left - c.left, c.right - b.right);
     if (box) { const need = 4 * ks(box), g = (vs ? sides : gap)(b, box.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát mép ' + tag(box).split('.').slice(0, 2).join('.') + ' (' + g.toFixed(1) + ' px): ' + say(e, s)); }
+  }
+  // Tien No cards: name / title text at least 4 stage px from the element emblem and from the labels (MỚI, copies, in party).
+  const sep = (a, c) => Math.max(c.left - a.right, a.left - c.right, c.top - a.bottom, a.top - c.bottom);
+  for (const card of root.querySelectorAll('.tcard')) {
+    if (!seen(card)) continue;
+    const need = 4 * ks(card), em = card.querySelector('.portrait .pic')?.getBoundingClientRect();
+    const labels = [...card.querySelectorAll('.new, .badges span')].filter(seen).map(e => ({ e, b: e.getBoundingClientRect() }));
+    for (const { e, s, b } of texts) {
+      if (!e.closest('.tinfo') || e.closest('.tcard') !== card) continue;
+      if (em && sep(b, em) < need - 0.5) r.push('chữ sát huy hiệu hệ (' + sep(b, em).toFixed(1) + ' < ' + need.toFixed(1) + '): ' + say(e, s));
+      for (const l of labels) if (sep(b, l.b) < need - 0.5) r.push('chữ sát nhãn (' + sep(b, l.b).toFixed(1) + '): ' + say(e, s) + ' x ' + say(l.e));
+    }
   }
   // Nested scrolling: a scroll area that really scrolls inside another one (or inside a scrolling page).
   const scroller = e => { const o = getComputedStyle(e); return /auto|scroll/.test(o.overflowY) && e.scrollHeight > e.clientHeight + 1 && e.clientHeight > 0 && e.checkVisibility(); };

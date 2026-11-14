@@ -58,8 +58,9 @@
 .compact .tcard .badges { gap: 2px; }
 .compact .tcard .badges span, .compact .tcard .new { font-size: 13px; line-height: 16px; padding: 0 5px; }
 .compact .tcard .tinfo { padding-top: 10px; gap: 1px; }
-.compact .tcard .tname { font-size: 14px; }
-.compact .tcard .ttitle { font-size: 13px; }
+.compact .tcard .tname { font-size: 14px; line-height: 1.05; min-height: 2.1em; }
+.compact .tcard .portrait .pic { top: 34%; height: 14%; }
+.compact .tcard .ttitle { font-size: 13px; letter-spacing: -.02em; }
 .compact .tcard.hero .portrait { inset: 4px; }
 
 /* Summon results: full-screen window, 5 x 2 grid that scrolls inside, "Đóng" fixed in the header. */
