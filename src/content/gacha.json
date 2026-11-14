@@ -2,6 +2,6 @@
   "status": "alpha-temporary",
   "cost": 1,
   "startTickets": 10,
-  "rates": { "N": 40, "R": 30, "SR": 20, "SSR": 8, "UR": 2 },
-  "pity": { "srEvery": 10, "urEvery": 60 }
+  "rates": { "N": 0, "R": 58, "SR": 30, "SSR": 10, "UR": 2 },
+  "pity": { "srEvery": 10, "urEvery": 50 }
 }

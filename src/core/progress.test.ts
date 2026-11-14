@@ -26,14 +26,14 @@ describe('levels', () => {
     expect(addExp(c, 0, 10)).toBe(c);
   });
   it('Tien No cap = player level + rarity bonus; protagonist cap = max', () => {
-    expect(P.capBonus).toEqual({ N: 0, R: 0, SR: 2, SSR: 4, UR: 6 });
+    expect(P.capBonus).toEqual({ N: 0, R: 2, SR: 2, SSR: 4, UR: 6 });
     const t = makeCharacter({ ...TIEN_NO[0], rarity: 'UR' });
     expect(levelCap(t, 5, false)).toBe(11);
     expect(levelCap(t, MAX_LEVEL, false)).toBe(MAX_LEVEL);
     expect(levelCap(t, 5, true)).toBe(MAX_LEVEL);
   });
   it('realm labels change every 10 levels', () => {
-    expect([1, 10, 11, 25, 40].map(realmLabel)).toEqual(['Luyện Khí 1', 'Luyện Khí 10', 'Trúc Cơ 1', 'Kim Đan 5', 'Nguyên Anh 10']);
+    expect([1, 10, 11, 25, 30].map(realmLabel)).toEqual(['Luyện Khí 1', 'Luyện Khí 10', 'Trúc Cơ 1', 'Kim Đan 5', 'Kim Đan 10']);
     expect(viewOf({ ...newGame(1), player: { ...newGame(1).player, level: 12 } }).realm).toBe('Trúc Cơ 2');
   });
   it('cultivate spends linh thach; blocked when poor or at the cap', () => {

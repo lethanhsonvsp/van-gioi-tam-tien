@@ -80,6 +80,7 @@ export function validateBalance(data: unknown): Balance {
   const p = b.progression;
   if (!p || !(p.maxLevel >= 1) || !(p.realmSize >= 1) || !p.realms?.length || !(p.expToNext?.base > 0) || !(p.cultivateCost?.base > 0)) throw new Error('balance: bad "progression"');
   for (const r of RARITIES) if (!(p.capBonus?.[r] >= 0)) throw new Error(`balance: bad capBonus for ${r}`);
+  if (p.maxLevel > p.realms.length * p.realmSize) throw new Error('balance: maxLevel has no realm label');
   return b;
 }
 

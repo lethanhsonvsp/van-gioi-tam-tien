@@ -14,7 +14,7 @@ import type { GameState } from '../core/save';
 // spend linh thach levelling the lowest-level party member, fight the next floor; on a loss farm the highest
 // cleared floor that still pays, else retry. Stuck = `stuckLosses` losses in a row on one floor with nothing left to farm.
 export interface FloorStat { attempts: number; wins: number }
-export interface ClimbResult { cleared: number; battles: number; stuckAt: number | null; floors: FloorStat[]; ticketsEarned: number; pulls: number; rarity: Record<Rarity, number>; levels: number[] }
+export interface ClimbResult { cleared: number; battles: number; stuckAt: number | null; floors: FloorStat[]; ticketsEarned: number; pulls: number; lsEarned: number; lsLeft: number; rarity: Record<Rarity, number>; levels: number[] }
 
 const power = (c: Character) => rarityMultiplier(c.rarity) * c.level;
 
@@ -47,7 +47,7 @@ export function climb(start: GameState, seed: number, opts: { maxBattles?: numbe
   const { maxBattles = 600, stuckLosses = 25, gacha = true } = opts;
   const rng = newRng(seed * 7919 + 1);
   const floors: FloorStat[] = Array.from({ length: TRIAL.floors }, () => ({ attempts: 0, wins: 0 }));
-  let s = start, battles = 0, streak = 0, ticketsEarned = 0, pulls = 0, stuckAt: number | null = null;
+  let s = start, farmBelow = Infinity, battles = 0, streak = 0, ticketsEarned = 0, lsEarned = 0, pulls = 0, stuckAt: number | null = null;
 
   const fight = (floor: number): boolean => {
     battles++;
@@ -55,7 +55,7 @@ export function climb(start: GameState, seed: number, opts: { maxBattles?: numbe
     const won = runBattle(team, floorMonsters(floor), nextInt(rng, 2 ** 31)).winner === 'A';
     if (won) {
       const r = claimWin(s, floor, team.map(f => f.charId));
-      s = r.state; ticketsEarned += r.reward.tickets;
+      s = r.state; ticketsEarned += r.reward.tickets; lsEarned += r.reward.linhThach;
     }
     return won;
   };
@@ -65,13 +65,15 @@ export function climb(start: GameState, seed: number, opts: { maxBattles?: numbe
     s = spend(bestParty(s));
     const f = s.trial.cleared + 1;
     floors[f - 1].attempts++;
-    if (fight(f)) { floors[f - 1].wins++; streak = 0; continue; }
+    if (fight(f)) { floors[f - 1].wins++; streak = 0; farmBelow = Infinity; continue; }
     streak++;
-    const farm = Array.from({ length: s.trial.cleared }, (_, i) => s.trial.cleared - i).find(x => (s.trial.repeats[x] ?? 0) < REWARDS.repeat.cap);
-    if (farm) { fight(farm); continue; }
+    // Farm the highest cleared floor that still pays; a farm loss moves down one floor (a real player would not retry a losing farm forever).
+    const farm = Array.from({ length: s.trial.cleared }, (_, i) => s.trial.cleared - i).find(x => x < farmBelow && (s.trial.repeats[x] ?? 0) < REWARDS.repeat.cap);
+    if (farm) { if (!fight(farm)) farmBelow = farm; continue; }
     if (streak >= stuckLosses) { stuckAt = f; break; }
   }
+  if (stuckAt === null && s.trial.cleared < TRIAL.floors) stuckAt = s.trial.cleared + 1; // ran out of battles: count as stuck
   const rarity = Object.fromEntries(RARITIES.map(r => [r, s.tienNo.filter(c => c.rarity === r).length])) as Record<Rarity, number>;
   const levels = [s.player.level, ...s.party.slice(1).map(id => s.tienNo.find(c => c.id === id)?.level ?? 0)];
-  return { cleared: s.trial.cleared, battles, stuckAt, floors, ticketsEarned, pulls, rarity, levels };
+  return { cleared: s.trial.cleared, battles, stuckAt, floors, ticketsEarned, pulls, lsEarned, lsLeft: s.currency.LINH_THACH, rarity, levels };
 }

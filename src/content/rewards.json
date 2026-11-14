@@ -1,6 +1,6 @@
 {
   "status": "alpha-temporary",
-  "linhThach": { "base": 30, "perFloor": 15 },
+  "linhThach": { "base": 44, "perFloor": 28 },
   "exp": { "base": 30, "perFloor": 20 },
   "firstClearTickets": { "every": 3, "amount": 1, "boss": 2 },
   "repeat": { "mult": 0.5, "decay": 0.7, "cap": 5 }

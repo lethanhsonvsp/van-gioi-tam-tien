@@ -1,6 +1,6 @@
 {
   "status": "alpha-temporary",
-  "rarityStatMultiplier": { "N": 1.0, "R": 1.15, "SR": 1.3, "SSR": 1.5, "UR": 1.75 },
+  "rarityStatMultiplier": { "N": 1.0, "R": 1.15, "SR": 1.25, "SSR": 1.4, "UR": 1.55 },
   "start": { "level": 1, "linhThach": 100, "tienNgoc": 0, "xu": 0, "linhLuc": 100, "hpBase": 100, "playerName": "Đạo hữu" },
   "battle": {
     "status": "alpha-temporary",
@@ -24,11 +24,12 @@
   },
   "progression": {
     "status": "alpha-temporary",
-    "maxLevel": 40,
+    "maxLevel": 30,
     "expToNext": { "base": 40, "pow": 1.3 },
     "cultivateCost": { "base": 15, "pow": 1.4 },
-    "capBonus": { "N": 0, "R": 0, "SR": 2, "SSR": 4, "UR": 6 },
+    "capBonus": { "N": 0, "R": 2, "SR": 2, "SSR": 4, "UR": 6 },
     "realmSize": 10,
-    "realms": ["Luyện Khí", "Trúc Cơ", "Kim Đan", "Nguyên Anh"]
+    "realms": ["Luyện Khí", "Trúc Cơ", "Kim Đan"],
+    "realmsComingSoon": ["Nguyên Anh"]
   }
 }
