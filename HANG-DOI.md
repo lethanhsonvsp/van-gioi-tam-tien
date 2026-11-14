@@ -28,8 +28,8 @@ Việc 10, 11: một ảnh một lần chạy Codex (task brief tương tự `_c
 | 1-4 | done | BUTTONS_2, RARITY_PLATE, UI.PANEL.PROFILE, ICON_FUNCTION_2 |
 | 5-8 | done | Đã quyết, xem mục trên |
 | 9 | done | Tạo lại SHEET.ICON_FUNCTION theo kiểu ICON_FUNCTION_2, giữ 12 ID, lưới 4×3, cách mép ô ít nhất 62 px. Hỏng một lần thì tách thành 6+6 (`SHEET.ICON_FUNCTION_3`), ID icon giữ nguyên. Xem ghép cả 20 icon cạnh nhau trước khi nhận. |
-| 10 | done | Tạo lại ảnh ID Diễm Vô Tâm (câu lệnh đã sửa tóc). |
-| 11 | done | Tạo ảnh ID 9 Tiên Nô còn lại theo thứ tự `CHAR_PROMPTS.md`, từng ảnh, so với mọi mặt đã duyệt. |
+| 10 | redo | Tạo lại ảnh ID Diễm Vô Tâm (câu lệnh đã sửa tóc). |
+| 11 | redo | Tạo ảnh ID 9 Tiên Nô còn lại theo thứ tự `CHAR_PROMPTS.md`, từng ảnh, so với mọi mặt đã duyệt. |
 | 12 | ask | Bảng ghép 10 mặt (che tóc) đã dựng ở `_codex_out/CHAR/contact_faces.png` (không nằm trong git). Nhận xét của Claude: ảnh đẹp nhưng 10 mặt cùng một khuôn (mặt trái xoan cằm nhọn, mũi, môi giống nhau), chỉ khác màu mắt, lông mày, tóc: KHÔNG đạt RULE-CHAR-002. Bạch Linh Nhi mọc tai cáo không có trong hồ sơ. Cần Chủ tịch xem và quyết hướng sửa. |
 | 13 | ask | FULL rồi CARD cho 10 Tiên Nô, ảnh ID làm tham chiếu (chờ việc 12). |
 | 14 | ready | Nhánh `feature/lobby-frame`: React + Vite + TS, ráp sảnh từ sheet UI đã đạt, không nhân vật, build và smoke test. |
@@ -40,3 +40,6 @@ Việc 10, 11: một ảnh một lần chạy Codex (task brief tương tự `_c
 ```text
 /loop Đọc HANG-DOI.md và làm đúng một vòng theo mục "Quy trình một vòng". Dừng khi hết việc ready hoặc gặp việc ask/blocked.
 ```
+
+## Ghi chú 2026-11-14
+Ảnh nhân vật do Codex tạo (ảnh ID Diễm Vô Tâm trong `assets/characters/` và 10 ảnh ID thử trong `_codex_out/`) đã bị xóa theo lệnh Chủ tịch: mặt cùng khuôn, tóc, môi, áo cổ cao không đạt. Việc 10, 11 làm lại bằng ChatGPT theo `docs/CHAR_ID_CHATGPT.md`.
