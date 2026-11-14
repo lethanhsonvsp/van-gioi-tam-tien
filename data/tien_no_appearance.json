@@ -48,7 +48,8 @@
       "expression": "calm soft gaze, lips closed with a faint gentle curve",
       "posture": "upright, hands folded in front",
       "outfit": "minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates, bare midriff and back, low-slung sheer white loincloth skirt with thigh-high slits to the hip, gold leaf body chains, detached translucent long sleeves",
-      "outfitKey": "halter saintess gown"
+      "outfitKey": "halter saintess gown",
+      "lips": "small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow"
     },
     {
       "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
@@ -87,7 +88,8 @@
       "expression": "neutral, sharp level gaze, lips firmly closed",
       "posture": "straight, sword held vertically at side",
       "outfit": "frost-silver high-leg combat leotard with deep plunging neckline and open sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape",
-      "outfitKey": "short combat dress with boots"
+      "outfitKey": "short combat dress with boots",
+      "lips": "razor-thin, perfectly straight lips like a drawn line, no cupid bow, pale cool rose, almost colourless"
     },
     {
       "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
@@ -126,7 +128,8 @@
       "expression": "half-lidded knowing gaze, lips closed, faint asymmetric curve",
       "posture": "weight on one hip, one hand raised with crimson flame",
       "outfit": "black and crimson gown with a plunging neckline open to the navel, sideboob, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels, gold body chains with rubies",
-      "outfitKey": "plunging trailing gown"
+      "outfitKey": "plunging trailing gown",
+      "lips": "wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined"
     },
     {
       "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
@@ -152,7 +155,7 @@
       "nose": "short nose, slightly upturned tip, low bridge",
       "mouth": "small mouth, heart-shaped lips, defined cupid bow",
       "ears": "white fox ears on top of head (spirit race), small human ears hidden",
-      "hair": "shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon",
+      "hair": "shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon, human ears only, no animal ears",
       "body": {
         "heightCm": 153,
         "type": "petite, small frame",
@@ -165,7 +168,8 @@
       "expression": "lively eyes, lips closed with a playful slight curve",
       "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
       "outfit": "off-shoulder lavender micro wrap top tied under the bust, bare midriff, very short layered ruffle skirt, sheer pink detached sleeves, bells and tassels, ribbon thigh garters",
-      "outfitKey": "off-shoulder short wrap"
+      "outfitKey": "off-shoulder short wrap",
+      "lips": "tiny heart-shaped lips with a strong pointed cupid bow and glossy bright pink colour"
     },
     {
       "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
@@ -204,7 +208,8 @@
       "expression": "unreadable, watchful, lips closed",
       "posture": "crouched-ready stance, dagger held reverse grip",
       "outfit": "black strappy bandeau bra with criss-cross straps across the bare torso, bare midriff, tiny black thong-cut briefs under a single open side loincloth sash in deep violet, arm wraps, thigh dagger holsters, purple veil lowered around the neck",
-      "outfitKey": "strappy crop top and wrap skirt"
+      "outfitKey": "strappy crop top and wrap skirt",
+      "lips": "wide medium lips, corners slightly turned down giving a stern look, matte dusty rose"
     },
     {
       "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
@@ -243,7 +248,8 @@
       "expression": "calm knowing gaze, lips closed, at ease",
       "posture": "relaxed, holding a small green elixir vial",
       "outfit": "emerald silk underbust corset with a tiny sweetheart cup top, bare shoulders and cleavage, very short emerald silk skirt, sheer cream overrobe slipping off both shoulders down to the elbows, herb pouches on a gold waist chain",
-      "outfitKey": "corset dress with slipping overrobe"
+      "outfitKey": "corset dress with slipping overrobe",
+      "lips": "full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed"
     },
     {
       "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
@@ -282,7 +288,8 @@
       "expression": "direct steady gaze, lips firmly closed",
       "posture": "squared stance, hand on halberd",
       "outfit": "bikini armor: sculpted navy and silver metal bra plates, bare shoulders, arms and midriff, armored loincloth tassets over a high-cut metal bottom, thigh-high armored greaves, short cape with lightning engravings",
-      "outfitKey": "sculpted armor with bare midriff"
+      "outfitKey": "sculpted armor with bare midriff",
+      "lips": "long thin firm horizontal lips, muted pale mauve, no gloss, very controlled"
     },
     {
       "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
@@ -321,7 +328,8 @@
       "expression": "chin slightly raised, confident gaze, lips closed",
       "posture": "upright royal stance, one hand on sword hilt",
       "outfit": "crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides fully open to the hip, gold phoenix shoulder guards",
-      "outfitKey": "collared slit royal gown"
+      "outfitKey": "collared slit royal gown",
+      "lips": "prominent full upper lip with sharp crisp corners and a bold saturated red lipstick"
     },
     {
       "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
@@ -360,7 +368,8 @@
       "expression": "focused thoughtful gaze, lips closed",
       "posture": "standing still, glowing water formation array floating at her hand",
       "outfit": "deep blue sheer silk wrap draped over one breast and shoulder only, fully backless and open on the other side down to the hip, tiny opaque blue underlayer, translucent water-ribbon skirt panels revealing the legs",
-      "outfitKey": "one-shoulder backless flowing robe"
+      "outfitKey": "one-shoulder backless flowing robe",
+      "lips": "small delicate thin straight lips, pale natural peach, understated and quiet"
     },
     {
       "id": "CHAR.TIEN_NO.CO_U_LAN",
@@ -399,7 +408,8 @@
       "expression": "still, quiet steady gaze, lips closed",
       "posture": "standing firm, staff planted, small stone guardian beside her",
       "outfit": "ochre one-shoulder bandeau drape with a wide bronze belt low on the hips, bare midriff and arms with bronze arm bands, two narrow front and back cloth panels with fully open sides, heavy stone-bead necklace",
-      "outfitKey": "one-shoulder drape with open panels"
+      "outfitKey": "one-shoulder drape with open panels",
+      "lips": "wide thin lips with level corners, matte plum-brown, mature and composed"
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character; how much skin shows varies with each character's style, from elegant with sheer layers, deep slits and plunging necklines to very revealing (bare shoulders, back, midriff, cleavage, hips and legs). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",
