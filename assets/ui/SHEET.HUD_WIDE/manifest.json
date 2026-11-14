@@ -1,6 +1,6 @@
 {
   "sheet_id": "SHEET.HUD_WIDE",
-  "status": "PARTIAL: UI.NAV.BOTTOM_BAR accepted; UI.PANEL.PROFILE held back (green chroma cast in the fade, hard cut at right end), redraw pending",
+  "status": "PASS: UI.NAV.BOTTOM_BAR (_sheet.png); UI.PANEL.PROFILE redrawn (_sheet_profile.png, manifest_profile.json), 0 band pixels, 0 green cast",
   "generation_method": "image_gen.imagegen",
   "attempts": 3,
   "kept_attempt": 3,
