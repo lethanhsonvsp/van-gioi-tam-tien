@@ -7,7 +7,7 @@ import rewardsJson from './rewards.json';
 
 export const RARITIES = ['N', 'R', 'SR', 'SSR', 'UR'] as const;
 export type Rarity = (typeof RARITIES)[number];
-export interface TienNo { id: string; name: string; element: string; rarity: Rarity; title: string; role: string }
+export interface TienNo { id: string; name: string; element: string; rarity: Rarity; title: string; role: string; roleVi: string; combatVi: string }
 export interface Balance {
   status: string;
   rarityStatMultiplier: Record<Rarity, number>;
@@ -61,7 +61,7 @@ export function validateTienNo(data: unknown): TienNo[] {
   data.forEach((c, i) => {
     const at = `tien_no[${i}]`;
     if (typeof c !== 'object' || c === null) throw new Error(`${at}: not an object`);
-    for (const k of ['id', 'name', 'element', 'title', 'role']) if (!isStr((c as Record<string, unknown>)[k])) throw new Error(`${at}: missing or empty "${k}"`);
+    for (const k of ['id', 'name', 'element', 'title', 'role', 'roleVi', 'combatVi']) if (!isStr((c as Record<string, unknown>)[k])) throw new Error(`${at}: missing or empty "${k}"`);
     if (!/^CHAR\.TIEN_NO\.[A-Z_]+$/.test(c.id)) throw new Error(`${at}: bad id "${c.id}"`);
     if (!(RARITIES as readonly string[]).includes(c.rarity)) throw new Error(`${at}: bad rarity "${c.rarity}"`);
     if (ids.has(c.id)) throw new Error(`${at}: duplicate id "${c.id}"`);

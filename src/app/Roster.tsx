@@ -21,6 +21,7 @@ function Profile({ id, close }: { id: string; close: () => void }) {
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
           <p>Hệ: {t.element} · Độ hiếm: {t.rarity} · Bản sao {own.copies}</p>
+          <p><b>Chiến đấu:</b> {t.combatVi}<br /><b>Ngoài chiến đấu:</b> {t.roleVi}</p>
           <CultivatePanel id={id} />
           {kit && <p><b>{kit.name}</b> ({kit.tag}): {kit.kind === 'damage' ? 'sát thương' : kit.kind === 'support' ? 'hỗ trợ' : 'khống chế'}, mỗi {kit.every} lượt.</p>}
           <button className="back" onClick={() => setState(toggleInParty(g, id))} disabled={!inTeam && !g.party.includes(null)}>

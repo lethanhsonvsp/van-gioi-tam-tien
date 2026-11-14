@@ -5,7 +5,9 @@
     "element": "MOC",
     "rarity": "SR",
     "title": "Thanh Vân Tông · Thánh Nữ",
-    "role": "Saintess of Thanh Van Sect"
+    "role": "Saintess of Thanh Van Sect",
+    "roleVi": "Hỗ trợ trị thương, sự kiện tông môn",
+    "combatVi": "Hồi máu, thanh tẩy, bảo vệ"
   },
   {
     "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
@@ -13,7 +15,9 @@
     "element": "BANG",
     "rarity": "SSR",
     "title": "Bắc Vực · Kiếm Tiên",
-    "role": "Sword Immortal of the Northern Wastes"
+    "role": "Sword Immortal of the Northern Wastes",
+    "roleVi": "Phát hiện kiếm ý, thử thách kiếm đạo",
+    "combatVi": "Kiếm khí liên hoàn, đóng băng, kết liễu"
   },
   {
     "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
@@ -21,7 +25,9 @@
     "element": "HOA",
     "rarity": "SSR",
     "title": "U Minh Cung · Ma Nữ",
-    "role": "Demoness of U Minh Palace"
+    "role": "Demoness of U Minh Palace",
+    "roleVi": "Mở tuyến sự kiện ma đạo",
+    "combatVi": "Hiến tế HP, hút sinh lực"
   },
   {
     "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
@@ -29,7 +35,9 @@
     "element": "HUYEN",
     "rarity": "R",
     "title": "Cửu Vĩ Hồ · Yêu Tộc",
-    "role": "Nine-Tailed Fox Spirit"
+    "role": "Nine-Tailed Fox Spirit",
+    "roleVi": "Nhận biết ảo cảnh",
+    "combatVi": "Phân thân, mê hoặc, đánh lạc hướng"
   },
   {
     "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
@@ -37,7 +45,9 @@
     "element": "AM",
     "rarity": "N",
     "title": "Vô Ảnh Lâu · Sát Thủ",
-    "role": "Assassin of Shadowless Tower"
+    "role": "Assassin of Shadowless Tower",
+    "roleVi": "Trinh sát, phát hiện phục kích",
+    "combatVi": "Ẩn thân, đánh dấu, ám sát tuyến sau"
   },
   {
     "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
@@ -45,7 +55,9 @@
     "element": "MOC",
     "rarity": "R",
     "title": "Dược Vương Cốc · Đan Sư",
-    "role": "Alchemist of Medicine King Valley"
+    "role": "Alchemist of Medicine King Valley",
+    "roleVi": "Luyện đan, nhận biết dược liệu",
+    "combatVi": "Đan dược tức thời, độc, tăng ích"
   },
   {
     "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
@@ -53,7 +65,9 @@
     "element": "LOI",
     "rarity": "SR",
     "title": "Bắc Minh · Nữ Tướng",
-    "role": "General of Bac Minh"
+    "role": "General of Bac Minh",
+    "roleVi": "Chỉ huy, xử lý sự kiện quân trận",
+    "combatVi": "Tích điện, phản kích, sát thương lan"
   },
   {
     "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
@@ -61,7 +75,9 @@
     "element": "HOA",
     "rarity": "R",
     "title": "Hỏa Quốc · Công Chúa",
-    "role": "Princess of the Fire Kingdom"
+    "role": "Princess of the Fire Kingdom",
+    "roleVi": "Sự kiện vương triều",
+    "combatVi": "Đấu sĩ cận chiến, tăng sức mạnh theo thời gian"
   },
   {
     "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
@@ -69,7 +85,9 @@
     "element": "THUY",
     "rarity": "SR",
     "title": "Thiên Cơ Các · Trận Pháp Sư",
-    "role": "Formation Master of Thien Co Pavilion"
+    "role": "Formation Master of Thien Co Pavilion",
+    "roleVi": "Giải trận, phát hiện cơ quan",
+    "combatVi": "Dựng trận, dịch chuyển vị trí, khống chế vùng"
   },
   {
     "id": "CHAR.TIEN_NO.CO_U_LAN",
@@ -77,6 +95,8 @@
     "element": "THO",
     "rarity": "UR",
     "title": "Tiên Cổ · Thủ Mộ Lão Tổ",
-    "role": "Keeper of the Ancient Immortal Tomb"
+    "role": "Keeper of the Ancient Immortal Tomb",
+    "roleVi": "Khám phá di tích, giải bí ẩn cổ mộ",
+    "combatVi": "Triệu hồi hộ vệ đá, kết giới, chống chịu"
   }
 ]
