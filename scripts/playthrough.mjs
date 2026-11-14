@@ -4,7 +4,9 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { scanJs } from './dom-scan.mjs';
-const url = process.argv[2] ?? 'http://localhost:5199/', out = process.argv[3] ?? '/tmp/vgtt-play';
+// VGTT_SEED fixes the gacha and battle seeds (page reads ?seed=), so a run repeats exactly.
+const base = process.argv[2] ?? 'http://localhost:5199/';
+const url = process.env.VGTT_SEED ? `${base}?seed=${process.env.VGTT_SEED}` : base, out = process.argv[3] ?? '/tmp/vgtt-play';
 const [W, H] = (process.argv[4] ?? '1280x720').split('x').map(Number);
 mkdirSync(out, { recursive: true });
 const pw = `${homedir()}/.cache/ms-playwright`;
@@ -62,7 +64,7 @@ await click('Thí Luyện'); await shot('07-thi-luyen-truoc');
 { const t = await text(); if (!t.includes('Đội của bạn') || !t.includes('Quái') || !t.includes('Thắng lần đầu')) errors.push('thi luyen: thieu ban xem truoc doi/quai/thuong'); }
 for (let f = 1; f <= 5; f++) {
   let verdict;
-  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); if (f === 1) await midBattle(); else if (f === 2) await click('Bỏ qua'); else if (f === 3) await click('Tua nhanh'); else await sleep(1500); verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1) { if (!(await click('Chi tiết kỹ thuật'))) errors.push('thieu nut Chi tiet ky thuat'); else if (!(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); await click('Chi tiết kỹ thuật'); } });
+  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); if (f === 1) await midBattle(); else if (f === 2) await click('Bỏ qua'); else if (f === 3) await click('Tua nhanh'); else await sleep(1500); verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1) { if (await click('Chiến báo')) { const t = await text(); if (!t.includes('Khiên đỡ') || !t.includes('Quái')) errors.push('chien bao: thieu bang chi tiet'); await shot('09b-chien-bao-mo'); await click('Chiến báo'); } else errors.push('thieu nut Chien bao'); if (!(await click('Chi tiết kỹ thuật'))) errors.push('thieu nut Chi tiet ky thuat'); else if (!(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); await click('Chi tiết kỹ thuật'); } });
   console.log('   ->', verdict, summary(await save()));
   if (verdict === 'Thắng') { passed = f; if (f < 5) await click('Tầng kế'); } else break;
 }
@@ -73,6 +75,7 @@ await step('quay them', async () => { await click('Tiên Nô'); const t = (await
 const before = await save();
 await step('reload + kiem tra', async () => { await send('Page.navigate', { url }); await sleep(1500); const after = await save(); const same = JSON.stringify(before) === JSON.stringify(after); console.log('   save giong het truoc reload:', same, summary(after)); if (!same) errors.push('save differs after reload'); await shot('12-sau-reload'); if (!(await text()).includes(NAME)) errors.push('name missing in lobby after reload'); });
 await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); if (!(await text()).includes('Đã xóa save')) errors.push('xoa save: thieu thong bao da xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); if (s.tienNo.length || s.trial.cleared) errors.push('xoa save: chua ve game moi'); await click('Về sảnh'); await shot('14-sanh-moi'); if ((await text()).includes(NAME)) errors.push('sanh sau xoa van con ten cu'); });
+console.log(`\nhạt giống: ${process.env.VGTT_SEED ?? 'ngẫu nhiên'}`);
 console.log(`\ntầng qua được: ${passed}/5 | tổng ${(steps.reduce((a, s) => a + s[1], 0) / 1000).toFixed(0)}s | viewport ${W}x${H}`);
 ws.close(); proc.kill();
 console.log(bad.size ? `VI PHẠM DOM ${W}x${H} (${bad.size}):\n${[...bad.keys()].join('\n')}\n` : `DOM ${W}x${H}: 0 vi phạm\n`);

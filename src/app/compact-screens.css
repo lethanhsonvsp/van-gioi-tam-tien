@@ -61,6 +61,8 @@
 .compact .tcard .tname { font-size: 14px; line-height: 1.05; min-height: 2.1em; }
 .compact .tcard .portrait .pic { top: 34%; height: 14%; }
 .compact .tcard .ttitle { font-size: 13px; letter-spacing: -.02em; }
+/* UR frame has the narrowest window: its 4-word title wraps to 3 lines, so the emblem sits higher to stay clear of the band. */
+.compact .tcard.r-UR .portrait .pic { top: 30%; }
 .compact .tcard.hero .portrait { inset: 4px; }
 
 /* Summon results: full-screen window, 5 x 2 grid that scrolls inside, "Đóng" fixed in the header. */

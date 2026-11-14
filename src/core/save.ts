@@ -3,6 +3,7 @@ import { hpMaxFor, makeCharacter, type Character } from './character';
 import { emptyParty, PARTY_SIZE, type OwnedTienNo, type Pity } from './roster';
 import { newRng, type Rng } from './rng';
 import { newTrial, type TrialProgress } from './rewards';
+import { testSeed } from './seed';
 
 export const SAVE_KEY = 'vgtt.save';
 export const SAVE_VERSION = 4;
@@ -20,7 +21,7 @@ export interface GameState {
   currency: { LINH_THACH: number; TIEN_NGOC: number; XU: number };
 }
 
-export function newGame(seed = Date.now()): GameState {
+export function newGame(seed = testSeed() ?? Date.now()): GameState {
   const s = BALANCE.start;
   return {
     version: SAVE_VERSION,
