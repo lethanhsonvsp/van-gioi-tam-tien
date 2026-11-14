@@ -8,6 +8,14 @@ Why: the Codex batch (2026-11-14) gave all ten faces the same template (oval fac
 3. Check each result: lips shape and colour differ from every approved face, closed lips, whole head and ornaments inside the frame, no animal ears unless the profile says so. Redo the whole image if it fails.
 4. Save `<ID>.ID.png` (1024x1024) in `assets/characters/<ID>/`. Approval needs the face-only contact sheet of all ten.
 
+## Quy tắc chung (bắt buộc cho cả 10 nhân vật)
+- Phong cách: tranh game gacha tiên hiệp, render CG bán hiện thực, đã lý tưởng hóa. Không phải ảnh chụp, không phải người thật. Ảnh mẫu `docs/reference/tien_no_style_target.png` chỉ lấy phong cách render và ánh sáng, không sao chép mặt, màu da, trang sức.
+- Mọi nhân vật SEXY 100%, gợi cảm và quyến rũ; mức hở tùy phong cách từng người (từ thanh lịch với lớp voan mỏng, xẻ sâu, cổ khoét sâu, đến rất hở), đúng dòng Outfit của nhân vật. Giới hạn cứng: không khỏa thân, vùng nhạy cảm luôn che bằng vải hoặc kim loại đặc, không xuyên thấu ở chỗ đó. Người lớn, tuổi 18-35.
+- Mỗi người một khuôn mặt, kiểu tóc, màu da sáng (khác sắc ngầm, không da sẫm hay rám), dấu riêng, trang sức riêng, dáng đầu riêng; môi khác hẳn nhau. Môi khép, không lộ răng, không cười.
+- Thứ tự mỗi nhân vật: ảnh ID, chờ Chủ tịch duyệt mặt, rồi FULL, rồi CARD (khối trong `docs/CHAR_PROMPTS.md`). Chưa làm FULL và CARD khi chưa có "đã duyệt ID".
+- Làm tuần tự từng người, mỗi người một chat. Tự kiểm 5 điểm: môi, khung mặt, mặt đẹp nữ tính, cả đầu và trâm trong khung, một người duy nhất. Hỏng thì tạo lại cả ảnh, không vá.
+- Nếu công cụ tạo ảnh từ chối, báo lại, không sửa chữ để lách.
+
 | Tiên Nô | ID | Lips |
 |---|---|---|
 | Lạc Thanh Y | CHAR.TIEN_NO.LAC_THANH_Y | small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow |
