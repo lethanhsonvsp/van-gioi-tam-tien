@@ -39,6 +39,14 @@ const summary = s => s && `${s.player.name} Lv${s.player.level} cleared=${s.tria
 const step = async (name, fn) => { const t = Date.now(); await fn(); const ms = Date.now() - t; steps.push([name, ms]); console.log(`${(ms / 1000).toFixed(1).padStart(6)}s  ${name}`); };
 const waitEnd = async (max = 120000) => { const t = Date.now(); while (Date.now() - t < max) { if (await ev(`!!document.querySelector('.verdict')`)) return await ev(`document.querySelector('.verdict').textContent`); await sleep(200); } return 'TIMEOUT'; };
 
+// Mid-battle shot: pause the replay, scrub to the middle tick, check no verdict is shown yet, then resume.
+const midBattle = async () => {
+  await click('Tạm dừng');
+  const mid = await ev(`(() => { const i = document.querySelector('input[aria-label="Tua trận"]'); if (!i) return -1; const v = Math.floor(Number(i.max) / 2); Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set.call(i, String(v)); i.dispatchEvent(new Event('input', { bubbles: true })); return v; })()`);
+  await sleep(250);
+  if (mid < 1 || await ev(`!!document.querySelector('.verdict')`)) errors.push('tran giua: khong dung duoc giua tran');
+  await shot('08-tran-giua'); await click('Tiếp tục');
+};
 await send('Runtime.enable'); await send('Page.enable');
 await send('Emulation.setDeviceMetricsOverride', { width: W, height: H, deviceScaleFactor: 1, mobile: W < 600 });
 await send('Page.navigate', { url }); await sleep(1500);
@@ -54,7 +62,7 @@ await click('Thí Luyện'); await shot('07-thi-luyen-truoc');
 { const t = await text(); if (!t.includes('Đội của bạn') || !t.includes('Quái') || !t.includes('Thắng lần đầu')) errors.push('thi luyen: thieu ban xem truoc doi/quai/thuong'); }
 for (let f = 1; f <= 5; f++) {
   let verdict;
-  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); await sleep(1500); if (f === 1) await shot('08-tran-giua'); if (!(await ev(`!!document.querySelector('.verdict')`))) { if (f === 2) await click('Bỏ qua'); if (f === 3) await click('Tua nhanh'); } verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1) { if (!(await click('Chi tiết kỹ thuật'))) errors.push('thieu nut Chi tiet ky thuat'); else if (!(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); await click('Chi tiết kỹ thuật'); } });
+  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); if (f === 1) await midBattle(); else if (f === 2) await click('Bỏ qua'); else if (f === 3) await click('Tua nhanh'); else await sleep(1500); verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1) { if (!(await click('Chi tiết kỹ thuật'))) errors.push('thieu nut Chi tiet ky thuat'); else if (!(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); await click('Chi tiết kỹ thuật'); } });
   console.log('   ->', verdict, summary(await save()));
   if (verdict === 'Thắng') { passed = f; if (f < 5) await click('Tầng kế'); } else break;
 }
@@ -64,7 +72,7 @@ console.log('save:', summary(await save()));
 await step('quay them', async () => { await click('Tiên Nô'); const t = (await save()).tickets; console.log('   thẻ còn', t); await click(t >= 10 ? 'Quay 10' : t >= 1 ? 'Quay 1' : 'Quay 1'); await shot('11-quay-them'); await click('Đóng'); await click('Về sảnh'); });
 const before = await save();
 await step('reload + kiem tra', async () => { await send('Page.navigate', { url }); await sleep(1500); const after = await save(); const same = JSON.stringify(before) === JSON.stringify(after); console.log('   save giong het truoc reload:', same, summary(after)); if (!same) errors.push('save differs after reload'); await shot('12-sau-reload'); if (!(await text()).includes(NAME)) errors.push('name missing in lobby after reload'); });
-await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); if (s.tienNo.length || s.trial.cleared) errors.push('xoa save: chua ve game moi'); await click('Về sảnh'); await shot('14-sanh-moi'); if ((await text()).includes(NAME)) errors.push('sanh sau xoa van con ten cu'); });
+await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); if (!(await text()).includes('Đã xóa save')) errors.push('xoa save: thieu thong bao da xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); if (s.tienNo.length || s.trial.cleared) errors.push('xoa save: chua ve game moi'); await click('Về sảnh'); await shot('14-sanh-moi'); if ((await text()).includes(NAME)) errors.push('sanh sau xoa van con ten cu'); });
 console.log(`\ntầng qua được: ${passed}/5 | tổng ${(steps.reduce((a, s) => a + s[1], 0) / 1000).toFixed(0)}s | viewport ${W}x${H}`);
 ws.close(); proc.kill();
 console.log(bad.size ? `VI PHẠM DOM ${W}x${H} (${bad.size}):\n${[...bad.keys()].join('\n')}\n` : `DOM ${W}x${H}: 0 vi phạm\n`);

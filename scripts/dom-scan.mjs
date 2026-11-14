@@ -1,10 +1,12 @@
 // DOM audit run in the page (via Runtime.evaluate) at every screenshot of scripts/playthrough.mjs. Returns a list of violations (strings).
 // Only the top layer is scanned: an open .modal / .summon-pop hides everything behind it. Text inside `.tech` (collapsed technical details) is exempt from the word list.
-// phone = viewport height < 480: text >= 13 px and tap targets >= 44 px; otherwise text >= 12 px. Sizes are effective (after the stage scale).
+// phone = viewport height < 480: text >= 13 px and tap targets >= 44 px; otherwise text >= 12 px. Sizes are effective: each element's own rendered/layout width ratio, so every ancestor transform (stage scale, scale() effects) counts.
+// Also: card text inside the frame window (.tcard .win): name/title band >= 10 stage px from it, other labels >= 4; text >= 4 px from the edge of its card/row/window; no scroll area inside another scrolling area.
 export const scanJs = phone => `(() => {
   const MIN = ${phone ? 13 : 12}, PHONE = ${phone}, r = [];
   const root = document.querySelector('.summon-pop') ?? document.querySelector('.modal') ?? document.body;
   const stage = document.querySelector('.stage'), k = stage && stage.offsetWidth ? stage.getBoundingClientRect().width / stage.offsetWidth : 1;
+  const ks = e => { const w = e.offsetWidth; return w ? e.getBoundingClientRect().width / w : k; };
   const seen = e => e.checkVisibility({ opacityProperty: true, visibilityProperty: true }) && !e.closest('.float');
   const tag = e => e.tagName.toLowerCase() + (typeof e.className === 'string' && e.className.trim() ? '.' + e.className.trim().split(/\\s+/).join('.') : '');
   const say = (e, s) => tag(e) + ' "' + (s ?? e.textContent).trim().slice(0, 28) + '"';
@@ -56,6 +58,20 @@ export const scanJs = phone => `(() => {
       if (top && top !== e && !e.contains(top) && !top.contains(e) && !top.closest('.float')) r.push('chữ bị che bởi ' + tag(top) + ': ' + say(e, s));
     }
   }
+  // Card text inside the frame window; text clear of the edges of its card / row / window.
+  const BOX = '.tcard, .pv-row, .unit, .pill, .profile-card, .pop-window, .screen-panel, .owned';
+  const gap = (b, c) => Math.min(b.left - c.left, c.right - b.right, b.top - c.top, c.bottom - b.bottom);
+  for (const { e, s, b } of texts) {
+    const card = e.closest('.tcard'), win = card?.querySelector(':scope > .win');
+    if (win) { const need = (e.closest('.tinfo') ? 10 : 4) * ks(card), g = gap(b, win.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát viền khung thẻ (' + g.toFixed(1) + ' < ' + need.toFixed(1) + '): ' + say(e, s)); }
+    const box = e.closest(BOX);
+    if (box) { const need = 4 * ks(box), g = gap(b, box.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát mép ' + tag(box).split('.').slice(0, 2).join('.') + ' (' + g.toFixed(1) + ' px): ' + say(e, s)); }
+  }
+  // Nested scrolling: a scroll area that really scrolls inside another one (or inside a scrolling page).
+  const scroller = e => { const o = getComputedStyle(e); return /auto|scroll/.test(o.overflowY) && e.scrollHeight > e.clientHeight + 1 && e.clientHeight > 0 && e.checkVisibility(); };
+  const sc = [...document.querySelectorAll('*')].filter(e => (root.contains(e) || e.contains(root)) && scroller(e));
+  for (const a of sc) for (const c of sc) if (a !== c && a.contains(c)) r.push('cuộn lồng nhau: ' + tag(a) + ' > ' + tag(c));
+  if (sc.length && document.documentElement.scrollHeight > innerHeight + 1) r.push('cuộn lồng nhau: trang > ' + tag(sc[0]));
   // Text over text, text under a button it does not belong to, button over button.
   const btns = [...root.querySelectorAll('button, input, textarea')].filter(seen).map(e => ({ e, b: e.getBoundingClientRect() })).filter(({ e, b }) => shown(e, b));
   for (let i = 0; i < texts.length; i++) for (let j = i + 1; j < texts.length; j++) {
