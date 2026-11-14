@@ -16,7 +16,7 @@ Một phiên Claude Code mở tại thư mục này, chạy `/loop` với câu l
 | # | Trạng thái | Việc |
 |---|---|---|
 | 1 | done | SHEET.BUTTONS_2: lần trước ra nút mobile phổ thông có chữ tiếng Anh. Tạo lại đúng khung vàng chạm, kính chàm, đá teal, không chữ. |
-| 2 | ready | SHEET.RARITY_PLATE: lần trước khung lấn mép ô, cánh UR chạm mép. Vẽ nhỏ hơn, mọi thứ trong 389×(vùng an toàn) mỗi ô. |
+| 2 | done | SHEET.RARITY_PLATE: lần trước khung lấn mép ô, cánh UR chạm mép. Vẽ nhỏ hơn, mọi thứ trong 389×(vùng an toàn) mỗi ô. |
 | 3 | ready | UI.PANEL.PROFILE (SHEET.HUD_WIDE, ô 1): ám xanh lá ở đoạn mờ, cuối bị cắt. Tạo lại; `UI.NAV.BOTTOM_BAR` đã nhận, giữ nguyên. |
 | 4 | ready | SHEET.ICON_FUNCTION_2: hình đẹp nhưng lấn ~1070 px mỗi biểu tượng (sát hai bên). Tạo lại với biểu tượng nhỏ hơn, cách mép ô ít nhất 62 px. Hỏng thì giữ bản hiện có ở `_codex_out/` và báo chủ. |
 | 5 | ask | SHEET.ICON_FUNCTION (bộ cũ, `REJECTED_NOT_PRODUCTION_READY`): thay bằng ICON_FUNCTION_2 hay tạo lại. Chủ quyết. |
