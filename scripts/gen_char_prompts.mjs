@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert';
 
 const d = JSON.parse(readFileSync('data/tien_no_appearance.json', 'utf8'));
+const ageLook = a => a <= 22 ? 'youthful, sweet, girl-like beauty (about 20)' : a <= 27 ? `young woman beauty (about ${a})` : a <= 31 ? `mature alluring beauty, a poised young mỹ phụ (about ${a}), refined defined features and a womanly composed gaze` : `elegant mature beauty, a graceful mỹ phụ nhân (about ${a}) with flawless ageless skin but unmistakably womanly: defined refined features, fuller lips, a serene knowing gaze, NOT girlish`;
 const cs = d.characters;
 
 // RULE-CHAR-002: faces must differ structurally; hair, colour and outfit do not count.
@@ -21,7 +22,7 @@ const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not 
 const style = c => `Chinese xianxia gacha card illustration matching the style reference docs/reference/tien_no_style_target.png: soft luminous semi-realistic 3D-rendered look, delicate beautiful feminine face, large expressive eyes with detailed lashes, glossy lips, flawless porcelain skin, ornate hair ornaments and gold jewelry, ${d.elementBackgrounds[c.element]} elemental glow, floating light particles and petals, dreamy cinematic lighting. Stylized game art, NOT a photograph. ${d.faceRule}`;
 
 const face = c => [
-  `The face looks about ${Math.min(Math.max(c.apparentAge,20),27)} years old (immortal youth; any older apparent age shows only in poise and gaze).`,
+  `Age impression: ${ageLook(c.apparentAge)}.`,
   `Face: ${c.face.shape}; forehead ${c.face.forehead}; cheekbones ${c.face.cheekbones}; jaw ${c.face.jaw}; chin ${c.face.chin}.`,
   `Eyes: ${c.eyes.shape}, ${c.eyes.spacing} spacing, ${c.eyes.depth} sockets, ${c.eyes.eyelid}, ${c.eyes.iris} iris.`,
   `Brows: ${c.brows}. Nose: ${c.nose}. Mouth: ${c.mouth}. Ears: ${c.ears}.`,
