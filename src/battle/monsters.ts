@@ -7,7 +7,7 @@ export const FLOOR_COUNT = TRIAL.floors;
 // Monsters per floor come from a formula (trial.json, alpha-temporary), so more floors only need a bigger `floors`.
 export function floorMonsters(floor: number): Fighter[] {
   const m = TRIAL.monster;
-  const level = Math.max(1, floor * m.levelPerFloor);
+  const level = 1 + Math.round((floor - 1) * m.levelPerFloor);
   const count = Math.min(m.countMax, m.countBase + Math.floor((floor - 1) * m.countPerFloor));
   return Array.from({ length: count }, (_, i) => {
     const element = TRIAL.elements[(floor * 3 + i) % TRIAL.elements.length];

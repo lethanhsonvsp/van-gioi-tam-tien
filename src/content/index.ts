@@ -3,6 +3,7 @@ import balanceJson from './balance.json';
 import skillsJson from './skills.json';
 import trialJson from './trial.json';
 import gachaJson from './gacha.json';
+import rewardsJson from './rewards.json';
 
 export const RARITIES = ['N', 'R', 'SR', 'SSR', 'UR'] as const;
 export type Rarity = (typeof RARITIES)[number];
@@ -22,6 +23,10 @@ export interface Balance {
     damageVariance: number;
     defenseK: number;
   };
+  progression: {
+    status: string; maxLevel: number; realmSize: number; realms: string[];
+    expToNext: { base: number; pow: number }; cultivateCost: { base: number; pow: number }; capBonus: Record<Rarity, number>;
+  };
 }
 
 // One skill = one of 3 templates plus parameters; the per-character "tag" is only these numbers.
@@ -38,6 +43,12 @@ export interface Trial {
   status: string; floors: number; team: string[];
   monster: { levelPerFloor: number; statMult: Record<'hp' | 'atk' | 'def' | 'spd', number>; countBase: number; countPerFloor: number; countMax: number; bossEvery: number; bossMult: number };
   elements: string[]; names: Record<string, string>;
+}
+
+// Trial win rewards (alpha-temporary). First clear pays full; repeats pay mult*decay^k and stop after `cap` repeats per floor.
+export interface Rewards {
+  status: string; linhThach: { base: number; perFloor: number }; exp: { base: number; perFloor: number };
+  firstClearTickets: { every: number; amount: number; boss: number }; repeat: { mult: number; decay: number; cap: number };
 }
 
 export interface Gacha { status: string; cost: number; startTickets: number; rates: Record<Rarity, number>; pity: { srEvery: number; urEvery: number } }
@@ -66,6 +77,9 @@ export function validateBalance(data: unknown): Balance {
   if (!b.start || typeof b.start.level !== 'number' || !isStr(b.start.playerName)) throw new Error('balance: bad "start"');
   const bt = b.battle;
   if (!bt || !(bt.actGauge > 0) || !(bt.maxTicks > 0) || !(bt.statBase?.spd > 0)) throw new Error('balance: bad "battle"');
+  const p = b.progression;
+  if (!p || !(p.maxLevel >= 1) || !(p.realmSize >= 1) || !p.realms?.length || !(p.expToNext?.base > 0) || !(p.cultivateCost?.base > 0)) throw new Error('balance: bad "progression"');
+  for (const r of RARITIES) if (!(p.capBonus?.[r] >= 0)) throw new Error(`balance: bad capBonus for ${r}`);
   return b;
 }
 
@@ -96,8 +110,16 @@ export function validateGacha(data: unknown): Gacha {
   return g;
 }
 
+export function validateRewards(data: unknown): Rewards {
+  const r = data as Rewards;
+  if (!r || !isStr(r.status) || !(r.linhThach?.base >= 0) || !(r.exp?.base >= 0) || !(r.firstClearTickets?.every >= 1)) throw new Error('rewards: bad data');
+  if (!(r.repeat?.mult >= 0 && r.repeat.mult <= 1 && r.repeat.decay >= 0 && r.repeat.decay < 1 && r.repeat.cap >= 0)) throw new Error('rewards: repeat must shrink and be capped');
+  return r;
+}
+
 export const TIEN_NO: TienNo[] = validateTienNo(tienNoJson);
 export const BALANCE: Balance = validateBalance(balanceJson);
 export const SKILLS: Skills = validateSkills(skillsJson);
 export const TRIAL: Trial = validateTrial(trialJson, TIEN_NO);
 export const GACHA: Gacha = validateGacha(gachaJson);
+export const REWARDS: Rewards = validateRewards(rewardsJson);

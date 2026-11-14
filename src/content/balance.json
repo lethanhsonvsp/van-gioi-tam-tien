@@ -21,5 +21,14 @@
     "maxTicks": 3000,
     "damageVariance": 0.1,
     "defenseK": 100
+  },
+  "progression": {
+    "status": "alpha-temporary",
+    "maxLevel": 40,
+    "expToNext": { "base": 40, "pow": 1.3 },
+    "cultivateCost": { "base": 15, "pow": 1.4 },
+    "capBonus": { "N": 0, "R": 0, "SR": 2, "SSR": 4, "UR": 6 },
+    "realmSize": 10,
+    "realms": ["Luyện Khí", "Trúc Cơ", "Kim Đan", "Nguyên Anh"]
   }
 }

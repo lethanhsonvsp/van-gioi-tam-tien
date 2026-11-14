@@ -3,9 +3,10 @@ import { GACHA } from '../content';
 import { makeCharacter, type Character } from './character';
 import { emptyParty, PARTY_SIZE, type OwnedTienNo, type Pity } from './roster';
 import { newRng, type Rng } from './rng';
+import { newTrial, type TrialProgress } from './rewards';
 
 export const SAVE_KEY = 'vgtt.save';
-export const SAVE_VERSION = 2;
+export const SAVE_VERSION = 3;
 
 export interface GameState {
   version: number;
@@ -15,6 +16,7 @@ export interface GameState {
   tickets: number; // summon tickets (alpha-temporary start amount in gacha.json)
   pity: Pity;
   party: (string | null)[]; // 6 slots; slot 0 is always the protagonist
+  trial: TrialProgress; // Thi Luyen floors cleared, current floor, paid repeats
   linhLuc: { cur: number; max: number };
   currency: { LINH_THACH: number; TIEN_NGOC: number; XU: number };
 }
@@ -29,6 +31,7 @@ export function newGame(seed = Date.now()): GameState {
     tickets: GACHA.startTickets,
     pity: { sinceSR: 0, sinceUR: 0 },
     party: emptyParty('CHAR.PLAYER.MAIN'),
+    trial: newTrial(),
     linhLuc: { cur: s.linhLuc, max: s.linhLuc },
     currency: { LINH_THACH: s.linhThach, TIEN_NGOC: s.tienNgoc, XU: s.xu },
   };
@@ -43,6 +46,7 @@ const STEPS: Record<number, (s: Record<string, unknown>) => Record<string, unkno
     pity: { sinceSR: 0, sinceUR: 0 },
     party: emptyParty('CHAR.PLAYER.MAIN'),
   }),
+  2: s => ({ ...s, version: 3, trial: newTrial() }),
 };
 export function migrate(raw: { version: number }): GameState | null {
   let s = raw as Record<string, unknown>;
@@ -57,7 +61,8 @@ export function migrate(raw: { version: number }): GameState | null {
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null;
 const looksValid = (s: unknown): s is GameState =>
   isObj(s) && isObj(s.rng) && typeof s.rng.state === 'number' && isObj(s.player) && typeof s.player.level === 'number'
-  && Array.isArray(s.tienNo) && typeof s.tickets === 'number' && isObj(s.pity) && Array.isArray(s.party) && s.party.length === PARTY_SIZE && isObj(s.linhLuc) && isObj(s.currency);
+  && Array.isArray(s.tienNo) && typeof s.tickets === 'number' && isObj(s.pity) && Array.isArray(s.party) && s.party.length === PARTY_SIZE
+  && isObj(s.trial) && typeof s.trial.cleared === 'number' && typeof s.trial.floor === 'number' && isObj(s.trial.repeats) && isObj(s.linhLuc) && isObj(s.currency);
 
 export const serialize = (s: GameState): string => JSON.stringify(s);
 

@@ -60,11 +60,18 @@ describe('battle', () => {
     expect(f.units.filter(u => !u.dead)).toHaveLength(r.survivors.length);
   });
 
-  it('win rate over 200 seeds, floors 1-3 (alpha-temporary numbers)', () => {
-    const rates = Array.from({ length: FLOOR_COUNT }, (_, i) => winRate(i + 1));
-    console.log('win rates floor 1..3:', rates.map(r => `${(r * 100).toFixed(1)}%`).join(', '));
+  it('level-1 sample team: floor 1 easy, top floor out of reach (alpha-temporary numbers)', () => {
+    const rates = [1, 2, 3, FLOOR_COUNT].map(f => winRate(f));
+    console.log(`level-1 win rates floors 1,2,3,${FLOOR_COUNT}:`, rates.map(r => `${(r * 100).toFixed(1)}%`).join(', '));
     expect(rates[0]).toBeGreaterThanOrEqual(0.95);
-    expect(rates[FLOOR_COUNT - 1]).toBeGreaterThan(0.05);
-    expect(rates[FLOOR_COUNT - 1]).toBeLessThan(1);
+    expect(rates[3]).toBeLessThan(0.05);
+  });
+
+  it('20 floors, boss floors carry a Thu Linh and are stronger than the floor before', () => {
+    expect(FLOOR_COUNT).toBe(20);
+    for (let f = 1; f <= FLOOR_COUNT; f++) expect(floorMonsters(f).some(m => m.charId.endsWith('.BOSS')), `floor ${f}`).toBe(f % TRIAL.monster.bossEvery === 0);
+    const hp = (f: number) => floorMonsters(f).reduce((a, m) => a + m.hpMax, 0);
+    for (let f = TRIAL.monster.bossEvery; f <= FLOOR_COUNT; f += TRIAL.monster.bossEvery) expect(hp(f)).toBeGreaterThan(hp(f - 1));
+    expect(hp(FLOOR_COUNT)).toBeGreaterThan(hp(1) * 5);
   });
 });

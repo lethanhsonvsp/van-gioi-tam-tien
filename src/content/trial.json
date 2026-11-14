@@ -1,15 +1,15 @@
 {
   "status": "alpha-temporary",
-  "floors": 3,
+  "floors": 20,
   "team": ["CHAR.TIEN_NO.LAC_THANH_Y", "CHAR.TIEN_NO.MO_DUNG_TUYET", "CHAR.TIEN_NO.DIEM_VO_TAM"],
   "monster": {
-    "levelPerFloor": 1,
+    "levelPerFloor": 1.3,
     "statMult": { "hp": 1.1, "atk": 0.9, "def": 1.0, "spd": 0.9 },
     "countBase": 2,
-    "countPerFloor": 1,
+    "countPerFloor": 0.5,
     "countMax": 6,
-    "bossEvery": 3,
-    "bossMult": 2.0
+    "bossEvery": 5,
+    "bossMult": 1.5
   },
   "elements": ["MOC", "BANG", "HOA", "HUYEN", "AM", "THUY", "LOI", "THO"],
   "names": { "MOC": "Mộc Yêu", "BANG": "Băng Lang", "HOA": "Hỏa Hồ", "HUYEN": "Huyễn Điệp", "AM": "Ám Ảnh", "THUY": "Thủy Mãng", "LOI": "Lôi Ưng", "THO": "Thạch Quỷ" }
