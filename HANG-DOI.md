@@ -52,3 +52,21 @@ Khi cần: icon công pháp (285, 128 px) và icon chiêu (488, 256 px) hợp ph
 | 17 | ask | Chủ tịch quyết: (a) giữ ảnh TuTien riêng, VGTT tạo bộ ảnh riêng theo cùng quy trình (đề xuất); (b) chuyển VGTT sang repo riêng tư; (c) dùng chung ảnh, có văn bản của Chủ tịch. |
 | 18 | ask | VFX trong Bí Cảnh là pixel hay độ phân giải cao (chốt cùng engine, việc 16). |
 | 19 | ready | Phác tài liệu miền ID cho chiêu, công pháp, quái (không kèm ảnh). |
+
+## Kế hoạch bản chơi sớm (Phó chủ tịch lập, Cố vấn soát, 2026-11-14)
+Mục tiêu Chủ tịch: chơi được sớm nhất. Chơi trên máy bằng `npm run dev` (hoặc `vite preview`), chưa lên Pages khi Chủ tịch chưa duyệt công khai.
+Vòng chơi: Sảnh, Gacha, xem Tiên Nô, tổ đội 6 (1 chính + 5 Tiên Nô), Thí Luyện tự đánh 20 tầng, thưởng, Tu Luyện (nút lên cấp trong hồ sơ), lặp; lưu `localStorage` có version. Cắt khỏi bản đầu: Bí Cảnh, mạng, offline, chợ, bang hội, xếp hạng, thư, trang bị, Đột Phá phức tạp (nút ghi "Sắp mở").
+Điều chỉnh sau soát của Cố vấn:
+- Làm lát dọc trước: trận đánh với đội cố định (nhân vật chính + 3 Tiên Nô) 3 tầng, rồi mới Gacha, vì Gacha không có trận thì không có lý do quay. Chủ tịch đánh được từ ngày 2, quay Gacha ngày 3, trọn vòng ngày 4-5 (ước lượng chưa đo, đo lại sau M1).
+- Trận: tick tất định, 3 khuôn chiêu có tham số (sát thương, hồi máu và khiên, khống chế), mỗi người thêm 1 nhãn đặc trưng; 10 cơ chế riêng hoãn; khắc hệ tạm 1.0. Quái sinh theo công thức theo tầng, vitest chạy 20 tầng tìm tầng kẹt.
+- Bộ phát lại trận bằng DOM/CSS, Pixi chờ sprite (M6). Lõi giữ HP và trạng thái riêng từng người (chuẩn bị Bí Cảnh).
+- Gộp màn Gacha và danh sách Tiên Nô; thẻ có tên, thân phận, hệ, một câu tiểu sử; chân dung để khối màu "đang vẽ", ảnh thật thả đúng ID.
+- Triển khai Pages (khi Chủ tịch duyệt): `base: '/van-gioi-tam-tien/'`, chỉ đẩy `dist`, không đưa `_sheet.png`, tách prompt 18+ khỏi bản phát hành. Nhánh `feature/lobby-frame` chậm main khoảng 20 commit: merge main trước.
+| # | Trạng thái | Việc |
+|---|---|---|
+| VS-0 | ready | Nhánh `feature/vertical-slice` từ lobby-frame, merge main, chạy được `npm run dev`; sửa `pages.yml` (build ra `dist`, bỏ `_sheet`, base path), chưa triển khai. |
+| VS-1 | ready | Lõi: model nhân vật chung, RNG theo hạt giống, lưu game có version, HUD số thật; test tất định. |
+| VS-2 | ready | Thí Luyện: lõi trận tick tất định, 3 khuôn chiêu, đội cố định, 3 tầng, bộ phát lại DOM. |
+| VS-3 | ready | Gacha có pity + màn Tiên Nô gộp + tổ đội 6. Số tỉ lệ và pity ghi "tạm alpha". |
+| VS-4 | ready | Thưởng, Tu Luyện, 20 tầng sinh theo công thức, vitest tìm tầng kẹt. |
+| VS-L3 | ask | Chủ tịch duyệt: số gacha và bậc hiếm chính thức; lên Pages công khai; merge vào `main` (việc 15). |
