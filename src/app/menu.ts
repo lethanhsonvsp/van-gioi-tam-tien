@@ -12,6 +12,8 @@ export const FEATURES: Entry[] = [
   ['lobby.btn.gacha', 'Gacha'], ['lobby.btn.trial', 'Thí Luyện'],
   ['lobby.btn.secret_realm', 'Bí Cảnh'], ['lobby.btn.team', 'Tổ Đội'],
 ];
+// Feature card art that already shows its own object; the others get the function icon on top (same look across both rows).
+export const CARD_HAS_ICON: UIActionId[] = ['lobby.btn.cultivation', 'lobby.btn.breakthrough', 'lobby.btn.tien_no', 'lobby.btn.equipment'];
 export const SIDE: Entry[] = [
   ['lobby.btn.quests', 'Nhiệm Vụ'], ['lobby.btn.events', 'Sự Kiện'],
   ['lobby.btn.benefits', 'Phúc Lợi'], ['lobby.btn.daily_login', 'Đăng Nhập'],

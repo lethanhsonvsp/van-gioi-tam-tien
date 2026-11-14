@@ -40,10 +40,10 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .profile-panel.missing { border: 0; box-shadow: none; border-radius: 0 60px 60px 0; background: linear-gradient(90deg, rgba(14,20,58,.85), rgba(14,20,58,0)); }
 .avatar { position: absolute; left: 0; top: 0; width: 150px; height: 150px; }
 .avatar .missing { border-radius: 50%; }
-.level { position: absolute; left: 38px; top: 118px; width: 74px; height: 38px; display: grid; place-items: center; }
+.level { position: absolute; left: 38px; top: 150px; width: 74px; height: 38px; display: grid; place-items: center; }
 .level .fill { object-fit: fill; }
 .level span { position: relative; font-weight: 700; font-size: 17px; text-shadow: 0 1px 2px #000; }
-.who { position: absolute; left: 176px; top: 36px; width: 360px; }
+.who { position: absolute; left: 200px; top: 34px; width: 380px; }
 .game { font-size: 24px; font-weight: 700; color: #fff; text-shadow: 0 2px 4px #000; line-height: 1.2; }
 .name { display: inline; font-size: 20px; color: var(--gold); text-shadow: 0 1px 3px #000; }
 .realm { display: inline; margin-left: 12px; font-size: 17px; color: #f0d58c; text-shadow: 0 1px 3px #000; }
@@ -71,7 +71,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .top-buttons { position: absolute; top: 6px; right: 16px; display: flex; gap: 10px; }
 
 /* Left column */
-.side { position: absolute; left: 22px; top: 176px; display: flex; flex-direction: column; gap: 12px; }
+.side { position: absolute; left: 22px; top: 204px; display: flex; flex-direction: column; gap: 12px; }
 .side-item { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 112px; }
 .side-item .label { font-size: 18px; font-weight: 700; white-space: nowrap; }
 
@@ -83,7 +83,7 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .card-art.missing { --cut: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
   border: 0; border-radius: 0; box-shadow: none; clip-path: var(--cut); background: var(--gold-edge); }
 .card-art.missing::after { content: ''; position: absolute; inset: 3px; clip-path: var(--cut); background: var(--indigo-glass); }
-.feature-icon { position: absolute; left: 14px; top: 10%; height: 80%; width: 40%; object-fit: contain; }
+.feature-icon { position: absolute; left: 14px; top: 8%; height: 84%; width: 40%; filter: drop-shadow(0 3px 6px rgba(0,0,0,.7)); }
 .feature-icon.missing { display: none; }
 .feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
 .feature:hover .card-art, .side-item:hover .round, .bottom-item:hover .bottom-icon, .round:hover { filter: brightness(1.2); }

@@ -2,8 +2,7 @@ import { resolveAction, type ScreenId, type UIActionId } from '../ui_ids';
 import type { CurrencyId, PlayerView } from '../core/player';
 import { Art } from '../ui/Art';
 import { Icon } from '../ui/Icon';
-import { assetUrl } from '../ui/assets';
-import { BOTTOM, FEATURES, SIDE, TOP, cardId, iconId } from './menu';
+import { BOTTOM, CARD_HAS_ICON, FEATURES, SIDE, TOP, cardId, iconId } from './menu';
 
 const CURRENCIES: CurrencyId[] = ['LINH_THACH', 'TIEN_NGOC', 'XU'];
 
@@ -64,7 +63,7 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
         {FEATURES.map(([a, label]) => (
           <button key={a} className="feature" onClick={open(a)}>
             <Art id={cardId(a)} className="fill card-art" />
-            {!assetUrl(cardId(a)) && <Art id={iconId(a)} className="feature-icon" />}
+            {!CARD_HAS_ICON.includes(a) && <Icon id={iconId(a)} className="feature-icon" fill={0.92} />}
             <span className="label">{label}</span>
           </button>
         ))}

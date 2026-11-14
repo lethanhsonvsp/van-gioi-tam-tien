@@ -3,6 +3,7 @@ import { validateName, NAME_MAX } from '../core/name';
 import { capOf, cultivate, cultivateBlock, cultivateCost, expToNext, realmLabel } from '../core/progress';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
+import { Home } from './Home';
 import { useGame } from './useGame';
 import './roster.css';
 
@@ -43,11 +44,11 @@ export function Cultivation({ back }: { back: () => void }) {
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
       <div className="screen-panel">
         <h1>Tu Luyện · {g.player.name}</h1>
-        <p>Nhân vật chính. Cấp càng cao thì trần cấp Tiên Nô càng cao. <code>tạm alpha</code></p>
+        <p>Nhân vật chính. Cấp càng cao thì trần cấp Tiên Nô càng cao.</p>
         <Rename />
         <CultivatePanel id={g.player.id} />
-        <button className="back" onClick={back}>Quay lại</button>
       </div>
+      <Home back={back} />
     </div>
   );
 }

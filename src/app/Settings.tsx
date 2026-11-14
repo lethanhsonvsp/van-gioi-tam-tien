@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { newGame, serialize } from '../core/save';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
+import { Home } from './Home';
 import { useGame } from './useGame';
 import './roster.css';
 
@@ -14,7 +15,7 @@ export function Settings({ back, guide }: { back: () => void; guide: () => void 
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
       <div className="screen-panel">
         <h1>Cài Đặt</h1>
-        <p>Phiên bản save: <b>v{g.version}</b></p>
+        <p>Bản thử nghiệm · Phiên bản save: <b>v{g.version}</b></p>
         <div className="buttons">
           <button className="back" onClick={guide}>Hướng dẫn</button>
           <button className="back" onClick={() => setDump(dump === null ? serialize(g) : null)}>{dump === null ? 'Xuất save' : 'Ẩn save'}</button>
@@ -22,9 +23,9 @@ export function Settings({ back, guide }: { back: () => void; guide: () => void 
             {armed ? 'Bấm lần nữa để xóa' : 'Xóa save và chơi lại'}
           </button>
         </div>
-        {dump !== null && <textarea className="dump" readOnly value={dump} onFocus={e => e.currentTarget.select()} />}
-        <button className="back" onClick={back}>Quay lại</button>
+        {dump !== null && <textarea className="dump tech" readOnly value={dump} onFocus={e => e.currentTarget.select()} />}
       </div>
+      <Home back={back} />
     </div>
   );
 }
