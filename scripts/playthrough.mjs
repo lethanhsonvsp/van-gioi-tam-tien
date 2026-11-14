@@ -3,6 +3,7 @@
 import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
+import { scanJs } from './dom-scan.mjs';
 const url = process.argv[2] ?? 'http://localhost:5199/', out = process.argv[3] ?? '/tmp/vgtt-play';
 const [W, H] = (process.argv[4] ?? '1280x720').split('x').map(Number);
 mkdirSync(out, { recursive: true });
@@ -25,37 +26,14 @@ ws.onmessage = ({ data }) => {
 };
 const send = (method, params = {}) => new Promise(r => { pending.set(++id, r); ws.send(JSON.stringify({ id, method, params })); });
 const ev = async expr => (await send('Runtime.evaluate', { expression: expr, returnByValue: true })).result.result.value;
-// Phone sizes (H <= 480): every shot also audits text >= 13 px and tap targets >= 44 px (effective, after any scale), horizontal scroll, button overlap.
-const AUDIT = H <= 480, bad = new Map();
-const auditJs = `(() => {
-  const r = [], root = document.querySelector('.modal') ?? document.body, vis = (e, b) => b.width > 0 && b.height > 0 && getComputedStyle(e).visibility !== 'hidden';
-  const tag = e => e.tagName.toLowerCase() + (e.className && typeof e.className === 'string' ? '.' + e.className.trim().split(/\\s+/).join('.') : '');
-  const scrollable = e => { for (let p = e; p; p = p.parentElement) { const o = getComputedStyle(p).overflowX; if (o === 'auto' || o === 'scroll') return true; } return false; };
-  for (const e of root.querySelectorAll('*')) {
-    const b = e.getBoundingClientRect(); if (!vis(e, b)) continue;
-    const k = e.offsetWidth > 60 ? b.width / e.offsetWidth : 1;
-    if ([...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())) {
-      const px = parseFloat(getComputedStyle(e).fontSize) * k;
-      if (px < 12.8) r.push('chữ ' + px.toFixed(1) + 'px: ' + tag(e) + ' "' + e.textContent.trim().slice(0, 24) + '"');
-    }
-    if (e.matches('button, input, textarea') && (b.width < 43.5 || b.height < 43.5)) r.push('chạm ' + Math.round(b.width) + 'x' + Math.round(b.height) + ': ' + tag(e) + ' "' + (e.textContent || e.ariaLabel || '').trim().slice(0, 24) + '"');
-    if (e.matches('button') && !scrollable(e) && (b.right > innerWidth + 1 || b.bottom > innerHeight + 1 || b.left < -1)) r.push('tràn màn: ' + tag(e) + ' "' + e.textContent.trim().slice(0, 24) + '"');
-  }
-  const pop = root.querySelector('.summon-pop'); // an open overlay covers the buttons behind it
-  const bs = [...root.querySelectorAll('button')].filter(e => vis(e, e.getBoundingClientRect()) && (!pop || pop.contains(e)));
-  for (let i = 0; i < bs.length; i++) for (let j = i + 1; j < bs.length; j++) {
-    const a = bs[i].getBoundingClientRect(), c = bs[j].getBoundingClientRect();
-    if (!bs[i].contains(bs[j]) && !bs[j].contains(bs[i]) && Math.min(a.right, c.right) - Math.max(a.left, c.left) > 2 && Math.min(a.bottom, c.bottom) - Math.max(a.top, c.top) > 2) r.push('chồng nút: "' + bs[i].textContent.trim().slice(0, 14) + '" x "' + bs[j].textContent.trim().slice(0, 14) + '"');
-  }
-  if (document.documentElement.scrollWidth > innerWidth + 1) r.push('cuộn ngang trang: ' + document.documentElement.scrollWidth + ' > ' + innerWidth);
-  return [...new Set(r)];
-})()`;
+// Every shot runs the DOM audit (scripts/dom-scan.mjs): banned words, clipped/overlapping/covered text, text size, tap size (phone).
+const bad = new Map();
 const shot = async name => {
-  if (AUDIT) for (const v of (await ev(auditJs)) ?? []) bad.set(`${name}: ${v}`, 1);
+  for (const v of (await ev(scanJs(H < 480))) ?? []) bad.set(`${name}: ${v}`, 1);
   writeFileSync(`${out}/${W}x${H}-${name}.png`, Buffer.from((await send('Page.captureScreenshot')).result.data, 'base64'));
 };
 const text = () => ev('document.body.innerText');
-const click = async label => { const ok = await ev(`(() => { const b = [...document.querySelectorAll('button')].find(b => !b.disabled && b.textContent.includes(${JSON.stringify(label)})); if (b) b.click(); return !!b; })()`); if (!ok) errors.push(`button missing/disabled: ${label}`); await sleep(250); return ok; };
+const click = async label => { const ok = await ev(`(() => { const b = [...document.querySelectorAll('button')].find(b => !b.disabled && (b.textContent.includes(${JSON.stringify(label)}) || b.ariaLabel === ${JSON.stringify(label)})); if (b) b.click(); return !!b; })()`); if (!ok) errors.push(`button missing/disabled: ${label}`); await sleep(250); return ok; };
 const save = () => ev(`JSON.parse(localStorage.getItem('vgtt.save'))`);
 const summary = s => s && `${s.player.name} Lv${s.player.level} cleared=${s.trial.cleared} floor=${s.trial.floor} LT=${s.currency.LINH_THACH} thẻ=${s.tickets} TN=${s.tienNo.length} party=${s.party.filter(Boolean).length}`;
 const step = async (name, fn) => { const t = Date.now(); await fn(); const ms = Date.now() - t; steps.push([name, ms]); console.log(`${(ms / 1000).toFixed(1).padStart(6)}s  ${name}`); };
@@ -67,28 +45,28 @@ await send('Page.navigate', { url }); await sleep(1500);
 await ev('localStorage.clear()'); await send('Page.navigate', { url }); await sleep(1500);
 let passed = 0; const NAME = 'Tử Vân Tử';
 await step('lobby + guide', async () => { await shot('00-guide'); await click('Đã hiểu'); await shot('01-lobby'); });
-await step('doi ten', async () => { await click('Tu Luyện'); await ev(`(() => { const i = document.querySelector('input[aria-label="Tên nhân vật"]'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, ${JSON.stringify(NAME)}); i.dispatchEvent(new Event('input', { bubbles: true })); })()`); await sleep(200); await click('Đổi tên'); await shot('02-tu-luyen'); await click('Quay lại'); });
+await step('doi ten', async () => { await click('Tu Luyện'); await ev(`(() => { const i = document.querySelector('input[aria-label="Tên nhân vật"]'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, ${JSON.stringify(NAME)}); i.dispatchEvent(new Event('input', { bubbles: true })); })()`); await sleep(200); await click('Đổi tên'); await shot('02-tu-luyen'); await click('Về sảnh'); });
 await step('quay 10', async () => { await click('Tiên Nô'); await click('Quay 10'); await sleep(300); await shot('03-quay10'); const sv = await save(); if (sv.party.filter(Boolean).length < 2) errors.push('quay 10: doi khong tu co Tien No'); if (!(await text()).includes('Đã vào đội')) errors.push('quay 10: thieu nhan Đã vào đội'); await click('Đóng'); });
 await step('ho so', async () => { await ev(`document.querySelector('.tcard')?.click()`); await sleep(250); await shot('04-ho-so'); await click('Đóng'); });
-await step('vao doi', async () => { for (let i = 0; i < 4; i++) { await ev(`document.querySelectorAll('.owned .tcard')[${i}]?.click()`); await sleep(200); if (await ev(`document.body.innerText.includes('Vào đội')`)) await click('Vào đội'); await click('Đóng'); } await shot('05-roster'); await click('Về sảnh'); await click('Tổ Đội'); await shot('06-to-doi'); await click('Quay lại'); });
+await step('vao doi', async () => { for (let i = 0; i < 4; i++) { await ev(`document.querySelectorAll('.owned .tcard')[${i}]?.click()`); await sleep(200); if (await ev(`document.body.innerText.includes('Vào đội')`)) await click('Vào đội'); await click('Đóng'); } await shot('05-roster'); await click('Về sảnh'); await click('Tổ Đội'); await shot('06-to-doi'); await click('Về sảnh'); });
 console.log('save:', summary(await save()));
 await click('Thí Luyện'); await shot('07-thi-luyen-truoc');
 { const t = await text(); if (!t.includes('Đội của bạn') || !t.includes('Quái') || !t.includes('Thắng lần đầu')) errors.push('thi luyen: thieu ban xem truoc doi/quai/thuong'); }
 for (let f = 1; f <= 5; f++) {
   let verdict;
-  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); await sleep(1500); if (f === 1) await shot('08-tran-giua'); if (!(await ev(`!!document.querySelector('.verdict')`))) { if (f === 2) await click('Bỏ qua'); if (f === 3) await click('Tua nhanh'); } verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1 && !(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); });
+  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); await sleep(1500); if (f === 1) await shot('08-tran-giua'); if (!(await ev(`!!document.querySelector('.verdict')`))) { if (f === 2) await click('Bỏ qua'); if (f === 3) await click('Tua nhanh'); } verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1) { if (!(await click('Chi tiết kỹ thuật'))) errors.push('thieu nut Chi tiet ky thuat'); else if (!(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); await click('Chi tiết kỹ thuật'); } });
   console.log('   ->', verdict, summary(await save()));
   if (verdict === 'Thắng') { passed = f; if (f < 5) await click('Tầng kế'); } else break;
 }
-await click('Quay lại');
-await step('tu luyen cap', async () => { await click('Tu Luyện'); for (let i = 0; i < 5; i++) if (await ev(`!!([...document.querySelectorAll('button')].find(b => !b.disabled && b.textContent.includes('Tu Luyện (−')))`)) await click('Tu Luyện (−'); await shot('10-tu-luyen-sau'); await click('Quay lại'); });
+await click('Về sảnh');
+await step('tu luyen cap', async () => { await click('Tu Luyện'); for (let i = 0; i < 5; i++) if (await ev(`!!([...document.querySelectorAll('button')].find(b => !b.disabled && b.textContent.includes('Tu Luyện (−')))`)) await click('Tu Luyện (−'); await shot('10-tu-luyen-sau'); await click('Về sảnh'); });
 console.log('save:', summary(await save()));
 await step('quay them', async () => { await click('Tiên Nô'); const t = (await save()).tickets; console.log('   thẻ còn', t); await click(t >= 10 ? 'Quay 10' : t >= 1 ? 'Quay 1' : 'Quay 1'); await shot('11-quay-them'); await click('Đóng'); await click('Về sảnh'); });
 const before = await save();
 await step('reload + kiem tra', async () => { await send('Page.navigate', { url }); await sleep(1500); const after = await save(); const same = JSON.stringify(before) === JSON.stringify(after); console.log('   save giong het truoc reload:', same, summary(after)); if (!same) errors.push('save differs after reload'); await shot('12-sau-reload'); if (!(await text()).includes(NAME)) errors.push('name missing in lobby after reload'); });
-await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); });
+await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); if (s.tienNo.length || s.trial.cleared) errors.push('xoa save: chua ve game moi'); await click('Về sảnh'); await shot('14-sanh-moi'); if ((await text()).includes(NAME)) errors.push('sanh sau xoa van con ten cu'); });
 console.log(`\ntầng qua được: ${passed}/5 | tổng ${(steps.reduce((a, s) => a + s[1], 0) / 1000).toFixed(0)}s | viewport ${W}x${H}`);
 ws.close(); proc.kill();
-if (AUDIT) console.log(bad.size ? `VI PHẠM CHỮ/CHẠM (${bad.size}):\n${[...bad.keys()].join('\n')}\n` : 'chữ >= 13px, nút >= 44px: đạt ở mọi màn\n');
+console.log(bad.size ? `VI PHẠM DOM ${W}x${H} (${bad.size}):\n${[...bad.keys()].join('\n')}\n` : `DOM ${W}x${H}: 0 vi phạm\n`);
 console.log(errors.length ? `LỖI/CẢNH BÁO:\n${errors.join('\n')}` : 'không có lỗi console');
 process.exit(errors.length || bad.size ? 1 : 0);

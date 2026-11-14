@@ -6,7 +6,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "test": "vitest run",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "qa": "node scripts/qa.mjs"
   },
   "dependencies": {
     "react": "18.3.1",
