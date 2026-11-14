@@ -80,11 +80,11 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .side-item { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 112px; }
 .side-item .label { font-size: 18px; font-weight: 700; white-space: nowrap; }
 
-/* Feature cards, right: 2 columns x 4 rows */
-.features { position: absolute; right: 16px; top: 180px; display: grid; grid-template-columns: repeat(2, 256px); grid-auto-rows: 130px; gap: 10px 14px; }
+/* Feature cards, right: 2 columns x 4 rows, every button = the card's frame body (cardFit in menu.ts), equal gaps across and down.
+   Right edge = drawn edge of the round buttons above (UI.BTN.ROUND is drawn 330 of 356 px wide: 16 + 88 * 13 / 356 = 19 px in). */
+.features { position: absolute; right: 19px; top: 170px; display: grid; grid-template-columns: repeat(2, 264px); grid-auto-rows: 120px; gap: 16px; }
 .feature { position: relative; text-align: right; }
-/* Card PNGs are 768x512 with the card at bbox 102,113-665,398 (safe-zone padding): scale the image so the card itself fills the button. */
-.feature img.card-art { inset: auto; left: -18.1%; top: -39.6%; width: 136.4%; height: 179.6%; object-fit: fill; }
+.feature img.card-art { inset: auto; object-fit: fill; }
 .card-art.missing { --cut: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
   border: 0; border-radius: 0; box-shadow: none; clip-path: var(--cut); background: var(--gold-edge); }
 .card-art.missing::after { content: ''; position: absolute; inset: 3px; clip-path: var(--cut); background: var(--indigo-glass); }
@@ -93,8 +93,8 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
 .feature:hover .card-art, .side-item:hover .round, .bottom-item:hover .bottom-icon, .round:hover { filter: brightness(1.2); }
 
-/* Bottom bar: the bar art is cropped to its drawn part (about 5:1), icons sit on it, labels below the icons. */
-.bottom { position: absolute; left: 360px; right: 400px; bottom: 4px; height: 168px; display: flex; justify-content: space-between; align-items: center; padding: 22px 64px 8px; }
+/* Bottom bar: six equal columns so the icons are evenly spaced whatever the label width; the bar art is cropped to its drawn part (about 5:1), icons sit on it, labels below the icons. */
+.bottom { position: absolute; left: 360px; right: 400px; bottom: 4px; height: 168px; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); justify-items: center; align-items: center; padding: 22px 48px 8px; }
 .bottom-bar.missing { border-radius: 20px 20px 0 0; border-bottom: 0; }
 .bottom-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0; }
 .bottom-icon { position: relative; width: 76px; height: 76px; }

@@ -2,7 +2,7 @@ import { resolveAction, type ScreenId, type UIActionId } from '../ui_ids';
 import type { CurrencyId, PlayerView } from '../core/player';
 import { Art } from '../ui/Art';
 import { Icon } from '../ui/Icon';
-import { BOTTOM, CARD_HAS_ICON, FEATURES, SIDE, TOP, cardId, iconId } from './menu';
+import { BOTTOM, CARD_HAS_ICON, FEATURES, SIDE, TOP, cardFit, cardId, iconId } from './menu';
 
 const CURRENCIES: CurrencyId[] = ['LINH_THACH', 'TIEN_NGOC', 'XU'];
 // Player-facing names: the currency IDs read aloud (linh thạch is the name used in rewards and Tu Luyện).
@@ -64,7 +64,7 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       <nav className="features">
         {FEATURES.map(([a, label]) => (
           <button key={a} className="feature" onClick={open(a)}>
-            <Art id={cardId(a)} className="fill card-art" />
+            <Art id={cardId(a)} className="fill card-art" style={cardFit(a)} />
             {!CARD_HAS_ICON.includes(a) && <Icon id={iconId(a)} className="feature-icon" fill={0.92} />}
             <span className="label">{label}</span>
           </button>

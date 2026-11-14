@@ -1,6 +1,7 @@
 // DOM audit run in the page (via Runtime.evaluate) at every screenshot of scripts/playthrough.mjs. Returns a list of violations (strings).
 // Only the top layer is scanned: an open .modal / .summon-pop hides everything behind it. Text inside `.tech` (collapsed technical details) is exempt from the word list.
 // phone = viewport height < 480: text >= 13 px and tap targets >= 44 px; otherwise text >= 12 px. Sizes are effective: each element's own rendered/layout width ratio, so every ancestor transform (stage scale, scale() effects) counts.
+// Lobby: feature cards, left buttons, top buttons and bottom-bar icons on even grids (see the lobby block below).
 // Also: card text inside the frame window (.tcard .win): name/title band >= 10 stage px from it, other labels >= 4; text >= 4 px from the edge of its card/row/window; no scroll area inside another scrolling area.
 export const scanJs = phone => `(() => {
   const MIN = ${phone ? 13 : 12}, PHONE = ${phone}, r = [];
@@ -31,6 +32,8 @@ export const scanJs = phone => `(() => {
       if (g.width <= 1 || g.height <= 1) continue;
       // Glyph boxes are taller than the line box; compare line boxes so tight line-heights do not count as overlap.
       const h = Math.min(g.height, lh), m = (g.top + g.bottom) / 2, b = { left: g.left, right: g.right, top: m - h / 2, bottom: m + h / 2 };
+      // Ellipsis text is painted only inside its own box: measure that part.
+      if (cut(e)) { const c = e.getBoundingClientRect(); b.left = Math.max(b.left, c.left); b.right = Math.min(b.right, c.right); }
       if (shown(e, b)) texts.push({ e, s, b });
     }
   }
@@ -65,7 +68,9 @@ export const scanJs = phone => `(() => {
     const card = e.closest('.tcard'), win = card?.querySelector(':scope > .win');
     if (win) { const need = (e.closest('.tinfo') ? 10 : 4) * ks(card), g = gap(b, win.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát viền khung thẻ (' + g.toFixed(1) + ' < ' + need.toFixed(1) + '): ' + say(e, s)); }
     const box = e.closest(BOX);
-    if (box) { const need = 4 * ks(box), g = gap(b, box.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát mép ' + tag(box).split('.').slice(0, 2).join('.') + ' (' + g.toFixed(1) + ' px): ' + say(e, s)); }
+    // A box that scrolls vertically cuts its content at the top / bottom by design: only the side gaps count there.
+    const vs = box && /auto|scroll/.test(getComputedStyle(box).overflowY) && box.scrollHeight > box.clientHeight + 1, sides = (b, c) => Math.min(b.left - c.left, c.right - b.right);
+    if (box) { const need = 4 * ks(box), g = (vs ? sides : gap)(b, box.getBoundingClientRect()); if (g < need - 0.5) r.push('chữ sát mép ' + tag(box).split('.').slice(0, 2).join('.') + ' (' + g.toFixed(1) + ' px): ' + say(e, s)); }
   }
   // Nested scrolling: a scroll area that really scrolls inside another one (or inside a scrolling page).
   const scroller = e => { const o = getComputedStyle(e); return /auto|scroll/.test(o.overflowY) && e.scrollHeight > e.clientHeight + 1 && e.clientHeight > 0 && e.checkVisibility(); };
@@ -86,6 +91,27 @@ export const scanJs = phone => `(() => {
   for (const { e, b } of btns) {
     if (PHONE && (b.width < 43.5 || b.height < 43.5)) r.push('chạm ' + Math.round(b.width) + 'x' + Math.round(b.height) + ' < 44: ' + say(e, e.textContent || e.ariaLabel || ''));
     if (!scrolls(e) && (b.right > innerWidth + 1 || b.bottom > innerHeight + 1 || b.left < -1 || b.top < -1)) r.push('nút ra ngoài màn: ' + say(e, e.textContent || e.ariaLabel || ''));
+  }
+  // Lobby grids: same size, same step across and down (<= 1 px). Feature cards also: gap across = gap down, right edge on the drawn edge of the
+  // last round button (UI.BTN.ROUND drawn part ends at 421/512 of its image), bottom row clear of the bottom bar by at least that gap.
+  const lobby = root === document.body && document.querySelector('.lobby');
+  const near = (a, b) => Math.abs(a - b) <= 1;
+  const steps = v => { const c = [...v].sort((a, b) => a - b).filter((x, i, s) => !i || x - s[i - 1] > 1); return c.slice(1).map((x, i) => x - c[i]); };
+  const even = (name, sel) => {
+    const bs = [...lobby.querySelectorAll(sel)].map(e => e.getBoundingClientRect()), f = n => n.toFixed(1);
+    if (!bs.every(b => near(b.width, bs[0].width) && near(b.height, bs[0].height))) r.push('lưới ' + name + ' lệch cỡ: ' + bs.map(b => f(b.width) + 'x' + f(b.height)).join(' '));
+    for (const k of ['left', 'top']) { const s = steps(bs.map(b => b[k])); if (!s.every(x => near(x, s[0]))) r.push('lưới ' + name + ' bước ' + k + ' lệch: ' + s.map(f).join(' ')); }
+    return bs;
+  };
+  if (lobby) {
+    even('nút trái', '.side-item .round'); even('nút trên', '.top-buttons .round'); even('icon thanh dưới', '.bottom-icon');
+    const bs = even('thẻ chức năng', '.feature'), w = bs[0].width, h = bs[0].height;
+    const gx = steps(bs.map(b => b.left))[0] - w, gy = steps(bs.map(b => b.top))[0] - h;
+    if (!near(gx, gy)) r.push('thẻ chức năng: khe ngang ' + gx.toFixed(1) + ' khác khe dọc ' + gy.toFixed(1));
+    const img = lobby.querySelector('.top-buttons .round:last-child img'), ri = img && img.getBoundingClientRect(), right = Math.max(...bs.map(b => b.right));
+    if (ri && !near(right, ri.left + ri.width * 421 / 512)) r.push('thẻ chức năng: lề phải ' + right.toFixed(1) + ' không thẳng nút tròn ' + (ri.left + ri.width * 421 / 512).toFixed(1));
+    const bar = lobby.querySelector('.bottom').getBoundingClientRect(), low = Math.max(...bs.map(b => b.bottom));
+    if (bar.top - low < gy - 1) r.push('thẻ chức năng: hàng cuối cách thanh dưới ' + (bar.top - low).toFixed(1) + ' < khe ' + gy.toFixed(1));
   }
   if (document.documentElement.scrollWidth > innerWidth + 1) r.push('cuộn ngang trang: ' + document.documentElement.scrollWidth + ' > ' + innerWidth);
   return [...new Set(r)];
