@@ -10,7 +10,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: ${c.eyes.shape}, ${c.eyes.spacing} spacing, ${c.eyes.depth}, ${c.eyes.eyelid}, ${c.eyes.iris} iris. Brows: ${c.brows}.
 - Nose: ${c.nose}.
 - LIPS (most important, must not look like any other character's lips): ${c.lips}. Lips closed, no teeth, no smile. Mouth: ${c.mouth}.
-- Ears: ${c.ears}. Hair: ${c.hair}.
+- Ears: ${c.ears}.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): ${c.hairStyle}. Hair colour and ornaments: ${c.hair}.
 Expression: ${c.expression}.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.`;
 let md = `# Tiên Nô ID sheet prompts for ChatGPT (generated, do not edit: edit data/tien_no_appearance.json)

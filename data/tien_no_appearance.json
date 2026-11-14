@@ -49,7 +49,8 @@
       "posture": "upright, hands folded in front",
       "outfit": "minimal saintess outfit: tiny white-jade halter bra top of leaf-shaped gold plates, bare midriff and back, low-slung sheer white loincloth skirt with thigh-high slits to the hip, gold leaf body chains, detached translucent long sleeves",
       "outfitKey": "halter saintess gown",
-      "lips": "small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow"
+      "lips": "small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow",
+      "hairStyle": "FRONT: soft see-through air bangs (thin wispy fringe) over the forehead, two long face-framing strands; BACK: straight black hair falling to the waist, upper half gathered in a round bun with a white jade flower; silhouette tall and narrow"
     },
     {
       "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
@@ -89,7 +90,8 @@
       "posture": "straight, sword held vertically at side",
       "outfit": "frost-silver high-leg combat leotard with deep plunging neckline and open sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape",
       "outfitKey": "short combat dress with boots",
-      "lips": "razor-thin, perfectly straight lips like a drawn line, no cupid bow, pale cool rose, almost colourless"
+      "lips": "razor-thin, perfectly straight lips like a drawn line, no cupid bow, pale cool rose, almost colourless",
+      "hairStyle": "FRONT: no bangs, forehead fully bare, hair swept sleekly back from a sharp hairline, two thin long strands in front of the ears; BACK: one very high tight ponytail of silver-white hair falling to the hips, ice-crystal crown; silhouette sharp and vertical"
     },
     {
       "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
@@ -129,7 +131,8 @@
       "posture": "weight on one hip, one hand raised with crimson flame",
       "outfit": "black and crimson gown with a plunging neckline open to the navel, sideboob, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels, gold body chains with rubies",
       "outfitKey": "plunging trailing gown",
-      "lips": "wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined"
+      "lips": "wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined",
+      "hairStyle": "FRONT: deep side part with a long dramatic side-swept fringe sweeping across the forehead over one brow; BACK: voluminous heavy wavy black hair with red undertone falling past the chest in big waves; silhouette wide and lush"
     },
     {
       "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
@@ -169,7 +172,8 @@
       "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
       "outfit": "off-shoulder lavender micro wrap top tied under the bust, bare midriff, very short layered ruffle skirt, sheer pink detached sleeves, bells and tassels, ribbon thigh garters",
       "outfitKey": "off-shoulder short wrap",
-      "lips": "tiny heart-shaped lips with a strong pointed cupid bow and glossy bright pink colour"
+      "lips": "tiny heart-shaped lips with a strong pointed cupid bow and glossy bright pink colour",
+      "hairStyle": "FRONT: short fluffy side-swept bangs, round full fringe above large eyes; BACK: white hair to mid-back with bouncy soft waves and curled ends, lavender ribbon tied at one side; silhouette round and soft"
     },
     {
       "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
@@ -209,7 +213,8 @@
       "posture": "crouched-ready stance, dagger held reverse grip",
       "outfit": "black strappy bandeau bra with criss-cross straps across the bare torso, bare midriff, tiny black thong-cut briefs under a single open side loincloth sash in deep violet, arm wraps, thigh dagger holsters, purple veil lowered around the neck",
       "outfitKey": "strappy crop top and wrap skirt",
-      "lips": "wide medium lips, corners slightly turned down giving a stern look, matte dusty rose"
+      "lips": "wide medium lips, corners slightly turned down giving a stern look, matte dusty rose",
+      "hairStyle": "FRONT: choppy uneven blunt bangs cut at brow level, hair tucked behind the ears; BACK: one long tight low braid down the back with a dark purple cord, nothing loose; silhouette close to the head, severe"
     },
     {
       "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
@@ -249,7 +254,8 @@
       "posture": "relaxed, holding a small green elixir vial",
       "outfit": "emerald silk underbust corset with a tiny sweetheart cup top, bare shoulders and cleavage, very short emerald silk skirt, sheer cream overrobe slipping off both shoulders down to the elbows, herb pouches on a gold waist chain",
       "outfitKey": "corset dress with slipping overrobe",
-      "lips": "full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed"
+      "lips": "full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed",
+      "hairStyle": "FRONT: no bangs, centre part with soft loose strands falling at both cheeks; BACK: low loose messy bun at the nape with a wooden hairpin and small herb sprigs; silhouette low and relaxed"
     },
     {
       "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
@@ -289,7 +295,8 @@
       "posture": "squared stance, hand on halberd",
       "outfit": "bikini armor: sculpted navy and silver metal bra plates, bare shoulders, arms and midriff, armored loincloth tassets over a high-cut metal bottom, thigh-high armored greaves, short cape with lightning engravings",
       "outfitKey": "sculpted armor with bare midriff",
-      "lips": "long thin firm horizontal lips, muted pale mauve, no gloss, very controlled"
+      "lips": "long thin firm horizontal lips, muted pale mauve, no gloss, very controlled",
+      "hairStyle": "FRONT: no bangs, all hair pulled tight back and up, forehead and ears bare, small braids along both sides of the head; BACK: high warrior topknot with a metal crown; silhouette tall, tight and angular"
     },
     {
       "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
@@ -329,7 +336,8 @@
       "posture": "upright royal stance, one hand on sword hilt",
       "outfit": "crimson and gold royal gown with high mandarin collar but a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides fully open to the hip, gold phoenix shoulder guards",
       "outfitKey": "collared slit royal gown",
-      "lips": "prominent full upper lip with sharp crisp corners and a bold saturated red lipstick"
+      "lips": "prominent full upper lip with sharp crisp corners and a bold saturated red lipstick",
+      "hairStyle": "FRONT: thick blunt straight full bangs cut straight across the brows (hime cut) with long cheek-length side locks; BACK: very long straight black hair to the hips, gold phoenix crown on top; silhouette a heavy straight curtain"
     },
     {
       "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
@@ -369,7 +377,8 @@
       "posture": "standing still, glowing water formation array floating at her hand",
       "outfit": "deep blue sheer silk wrap draped over one breast and shoulder only, fully backless and open on the other side down to the hip, tiny opaque blue underlayer, translucent water-ribbon skirt panels revealing the legs",
       "outfitKey": "one-shoulder backless flowing robe",
-      "lips": "small delicate thin straight lips, pale natural peach, understated and quiet"
+      "lips": "small delicate thin straight lips, pale natural peach, understated and quiet",
+      "hairStyle": "FRONT: long curtain bangs parted in the centre and swept to both sides of the face; BACK: extremely long straight blue-black hair to the knees, upper section tied half-up with a jade formation-disc hairpin; silhouette extremely long and thin"
     },
     {
       "id": "CHAR.TIEN_NO.CO_U_LAN",
@@ -409,7 +418,8 @@
       "posture": "standing firm, staff planted, small stone guardian beside her",
       "outfit": "ochre one-shoulder bandeau drape with a wide bronze belt low on the hips, bare midriff and arms with bronze arm bands, two narrow front and back cloth panels with fully open sides, heavy stone-bead necklace",
       "outfitKey": "one-shoulder drape with open panels",
-      "lips": "wide thin lips with level corners, matte plum-brown, mature and composed"
+      "lips": "wide thin lips with level corners, matte plum-brown, mature and composed",
+      "hairStyle": "FRONT: side part with the hair brushed back off the forehead, no bangs, a few short strands at the temples; BACK: long straight ash-grey hair gathered in a low ponytail bound with bronze rings, falling over one shoulder; silhouette plain and mature"
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character; how much skin shows varies with each character's style, from elegant with sheer layers, deep slits and plunging necklines to very revealing (bare shoulders, back, midriff, cleavage, hips and legs). Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",

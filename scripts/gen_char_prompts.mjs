@@ -41,7 +41,7 @@ ${NEG}`,
     full: `${style(c)}
 Full body, elegant glamorous standing pose, whole figure from head to feet visible with empty space around, softly blurred ${d.elementBackgrounds[c.element]} atmospheric background, three-quarter view (about 30 degrees), slightly low camera.
 ${face(c)}
-Hair: ${c.hair}.
+Hair: ${c.hair}. Hairstyle (unique to her, do not reuse another character's style): ${c.hairStyle}.
 Body: height about ${c.body.heightCm} cm, ${c.body.type}; shoulders ${c.body.shoulders}, waist ${c.body.waist}, hips ${c.body.hips}, muscle ${c.body.muscle}.
 Role: ${c.role}. Outfit: ${c.outfit}. Draw the outfit exactly as described: do not add extra fabric, long skirts or sleeves, and do not cover more skin than described.
 Aura: ${c.aura}. Expression: ${c.expression}. Posture: ${c.posture}.
@@ -50,7 +50,7 @@ ${NEG}`,
     card: `${style(c)}
 Character card art, portrait 2:3, waist-up to knee-up, dynamic but readable pose, ${bg} ${c.element.toLowerCase()} element atmosphere and light in the background.
 ${face(c)}
-Hair: ${c.hair}.
+Hair: ${c.hair}. Hairstyle (unique to her, do not reuse another character's style): ${c.hairStyle}.
 Role: ${c.role}. Outfit: ${c.outfit}. Draw the outfit exactly as described: do not add extra fabric, long skirts or sleeves, and do not cover more skin than described.
 Aura: ${c.aura}. Expression: ${c.expression}. Posture: ${c.posture}.
 Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. The whole head, hair and hair ornaments stay inside the frame, never cropped at the top. No card border (the game draws the rarity frame). Canvas 1024x1536.

@@ -31,7 +31,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: almond eyes, average spacing, shallow, thin double eyelid, warm brown iris. Brows: softly curved, medium thickness, gently arched.
 - Nose: small nose, low-medium bridge, round tip, narrow wings.
 - LIPS (most important, must not look like any other character's lips): small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow. Lips closed, no teeth, no smile. Mouth: small mouth, thin upper lip, slightly fuller lower lip, corners very slightly lifted.
-- Ears: small, close to head, attached lobes. Hair: long straight black hair to the waist, half-up bun with white jade flower pin, middle part.
+- Ears: small, close to head, attached lobes.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: soft see-through air bangs (thin wispy fringe) over the forehead, two long face-framing strands; BACK: straight black hair falling to the waist, upper half gathered in a round bun with a white jade flower; silhouette tall and narrow. Hair colour and ornaments: long straight black hair to the waist, half-up bun with white jade flower pin, middle part.
 Expression: calm soft gaze, lips closed with a faint gentle curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -46,7 +47,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: long narrow eyes, small opening, average spacing, medium, hooded inner fold, pale ice blue iris. Brows: straight sword brows, thin, long, slight upward angle.
 - Nose: tall straight nose, high root, narrow bridge, refined tip.
 - LIPS (most important, must not look like any other character's lips): razor-thin, perfectly straight lips like a drawn line, no cupid bow, pale cool rose, almost colourless. Lips closed, no teeth, no smile. Mouth: straight horizontal mouth, both lips thin, flat cupid bow.
-- Ears: medium, thin rims. Hair: long straight silver-white hair, high ponytail with ice crystal crown, no bangs.
+- Ears: medium, thin rims.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, forehead fully bare, hair swept sleekly back from a sharp hairline, two thin long strands in front of the ears; BACK: one very high tight ponytail of silver-white hair falling to the hips, ice-crystal crown; silhouette sharp and vertical. Hair colour and ornaments: long straight silver-white hair, high ponytail with ice crystal crown, no bangs.
 Expression: neutral, sharp level gaze, lips firmly closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -61,7 +63,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: deep-set eyes with visible sockets, slightly close spacing, deep, deep double eyelid, dark crimson iris. Brows: thick, low, slightly angled brows.
 - Nose: nose with a gentle convex curve on the bridge, medium width, defined tip.
 - LIPS (most important, must not look like any other character's lips): wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined. Lips closed, no teeth, no smile. Mouth: wide mouth, thin upper lip, full lower lip, corners level.
-- Ears: medium, detached lobes with ruby earrings. Hair: long thick wavy black hair with red undertone, side part, red spider-lily ornament.
+- Ears: medium, detached lobes with ruby earrings.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: deep side part with a long dramatic side-swept fringe sweeping across the forehead over one brow; BACK: voluminous heavy wavy black hair with red undertone falling past the chest in big waves; silhouette wide and lush. Hair colour and ornaments: long thick wavy black hair with red undertone, side part, red spider-lily ornament.
 Expression: half-lidded knowing gaze, lips closed, faint asymmetric curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -76,7 +79,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: large round eyes, wide opening, slightly wide spacing, shallow, double eyelid, violet with gold ring iris. Brows: short, softly curved, light brows.
 - Nose: short nose, slightly upturned tip, low bridge.
 - LIPS (most important, must not look like any other character's lips): tiny heart-shaped lips with a strong pointed cupid bow and glossy bright pink colour. Lips closed, no teeth, no smile. Mouth: small mouth, heart-shaped lips, defined cupid bow.
-- Ears: white fox ears on top of head (spirit race), small human ears hidden. Hair: shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon, human ears only, no animal ears.
+- Ears: white fox ears on top of head (spirit race), small human ears hidden.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: short fluffy side-swept bangs, round full fringe above large eyes; BACK: white hair to mid-back with bouncy soft waves and curled ends, lavender ribbon tied at one side; silhouette round and soft. Hair colour and ornaments: shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon, human ears only, no animal ears.
 Expression: lively eyes, lips closed with a playful slight curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -91,7 +95,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: eyes with hidden inner fold (mono-hooded), medium opening, average spacing, medium, hidden fold, dark grey iris. Brows: straight, thin, slightly lowered brows.
 - Nose: long nose with a pointed tip, narrow bridge.
 - LIPS (most important, must not look like any other character's lips): wide medium lips, corners slightly turned down giving a stern look, matte dusty rose. Lips closed, no teeth, no smile. Mouth: wide mouth with slightly downturned corners, medium lips.
-- Ears: small, close to head. Hair: long straight black hair in a low tight braid, uneven bangs, dark purple hair cord.
+- Ears: small, close to head.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: choppy uneven blunt bangs cut at brow level, hair tucked behind the ears; BACK: one long tight low braid down the back with a dark purple cord, nothing loose; silhouette close to the head, severe. Hair colour and ornaments: long straight black hair in a low tight braid, uneven bangs, dark purple hair cord.
 Expression: unreadable, watchful, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -106,7 +111,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: downturned eyes, outer corners lower, average spacing, medium, heavy upper lid, double fold, amber iris. Brows: soft natural sparse brows, gently downturned.
 - Nose: low soft nose, rounded wide tip.
 - LIPS (most important, must not look like any other character's lips): full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed. Lips closed, no teeth, no smile. Mouth: full lips, flat cupid bow, medium width.
-- Ears: medium, detached lobes with jade studs. Hair: long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part.
+- Ears: medium, detached lobes with jade studs.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, centre part with soft loose strands falling at both cheeks; BACK: low loose messy bun at the nape with a wooden hairpin and small herb sprigs; silhouette low and relaxed. Hair colour and ornaments: long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part.
 Expression: calm knowing gaze, lips closed, at ease.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -121,7 +127,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: phoenix eyes, long with lifted outer corners, average spacing, medium-deep, thin double eyelid, steel grey with blue glint iris. Brows: thick straight sword brows, strong.
 - Nose: tall nose, narrow wings, straight bridge.
 - LIPS (most important, must not look like any other character's lips): long thin firm horizontal lips, muted pale mauve, no gloss, very controlled. Lips closed, no teeth, no smile. Mouth: long horizontal mouth, thin lips.
-- Ears: medium, close to head. Hair: long black hair in a high warrior topknot with braided sides, metal hair crown.
+- Ears: medium, close to head.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, all hair pulled tight back and up, forehead and ears bare, small braids along both sides of the head; BACK: high warrior topknot with a metal crown; silhouette tall, tight and angular. Hair colour and ornaments: long black hair in a high warrior topknot with braided sides, metal hair crown.
 Expression: direct steady gaze, lips firmly closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -136,7 +143,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: upturned eyes, outer corners higher, average spacing, medium, double eyelid, golden amber iris. Brows: high arched brows with sharp tails.
 - Nose: straight nose with a fuller tip.
 - LIPS (most important, must not look like any other character's lips): prominent full upper lip with sharp crisp corners and a bold saturated red lipstick. Lips closed, no teeth, no smile. Mouth: fuller upper lip, sharp defined corners, medium width.
-- Ears: medium, gold phoenix earrings. Hair: long black hair with blunt straight bangs, side locks, gold phoenix crown.
+- Ears: medium, gold phoenix earrings.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: thick blunt straight full bangs cut straight across the brows (hime cut) with long cheek-length side locks; BACK: very long straight black hair to the hips, gold phoenix crown on top; silhouette a heavy straight curtain. Hair colour and ornaments: long black hair with blunt straight bangs, side locks, gold phoenix crown.
 Expression: chin slightly raised, confident gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -151,7 +159,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: monolid eyes, no visible crease, medium-narrow opening, slightly wide spacing, shallow, monolid, dark blue-black iris. Brows: thin long gently curved brows.
 - Nose: small nose with a low bridge, small tip.
 - LIPS (most important, must not look like any other character's lips): small delicate thin straight lips, pale natural peach, understated and quiet. Lips closed, no teeth, no smile. Mouth: small mouth, straight horizontal lips, thin.
-- Ears: small, detached lobes, pearl drops. Hair: very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part.
+- Ears: small, detached lobes, pearl drops.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: long curtain bangs parted in the centre and swept to both sides of the face; BACK: extremely long straight blue-black hair to the knees, upper section tied half-up with a jade formation-disc hairpin; silhouette extremely long and thin. Hair colour and ornaments: very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part.
 Expression: focused thoughtful gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
@@ -166,7 +175,8 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eyes: deep-set eyes, heavy upper lids, wide spacing, deep, heavy hooded lid, light gold-brown iris. Brows: straight, medium-thick, natural.
 - Nose: long nose with a rounded tip, medium width.
 - LIPS (most important, must not look like any other character's lips): wide thin lips with level corners, matte plum-brown, mature and composed. Lips closed, no teeth, no smile. Mouth: wide mouth, thin lips, level corners.
-- Ears: large, long lobes. Hair: long straight ash-grey hair, low ponytail bound with bronze rings, no bangs.
+- Ears: large, long lobes.
+- HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: side part with the hair brushed back off the forehead, no bangs, a few short strands at the temples; BACK: long straight ash-grey hair gathered in a low ponytail bound with bronze rings, falling over one shoulder; silhouette plain and mature. Hair colour and ornaments: long straight ash-grey hair, low ponytail bound with bronze rings, no bangs.
 Expression: still, quiet steady gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Symmetric eyes, correct anatomy.
 ```
