@@ -55,7 +55,8 @@
       "makeup": "almost bare face, peach blush, sparse natural lashes, no eyeliner",
       "mark": "no mark, bare smooth forehead",
       "jewelry": "white jade flower hairpin and small jade stud earrings only",
-      "pose": "neck medium length, head slightly lowered, gentle kind gaze"
+      "pose": "neck medium length, head slightly lowered, gentle kind gaze",
+      "bust": "medium, natural and soft"
     },
     {
       "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
@@ -101,7 +102,8 @@
       "makeup": "no makeup; eyebrows and lashes silver-white like her hair",
       "mark": "no mark",
       "jewelry": "ice-crystal crown and a single long ice-crystal earring on one ear only",
-      "pose": "long neck, three-quarter view, chin level, cold distant gaze"
+      "pose": "long neck, three-quarter view, chin level, cold distant gaze",
+      "bust": "small to medium, slender and refined"
     },
     {
       "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
@@ -147,7 +149,8 @@
       "makeup": "smoky deep red eyeshadow, long dramatic eyeliner, thick curled lashes",
       "mark": "a beauty mole below the right corner of the mouth",
       "jewelry": "ruby teardrop earrings and a red spider-lily hair ornament",
-      "pose": "head tilted about 10 degrees, sideways glance from the corner of the eyes"
+      "pose": "head tilted about 10 degrees, sideways glance from the corner of the eyes",
+      "bust": "full and curvy, the most voluptuous of the roster"
     },
     {
       "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
@@ -193,7 +196,8 @@
       "makeup": "pink-violet glitter on the lids, short round eyeliner, clear lower lashes",
       "mark": "two thin pink fox-style streaks at the outer eye corners",
       "jewelry": "tiny bells and lavender ribbon, no dangling earrings",
-      "pose": "head tilted about 15 degrees, looking up playfully"
+      "pose": "head tilted about 15 degrees, looking up playfully",
+      "bust": "small and petite, youthful"
     },
     {
       "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
@@ -239,7 +243,8 @@
       "makeup": "grey smoke along the lower lash line, short straight lashes",
       "mark": "a thin pale scar crossing the tail of the left eyebrow",
       "jewelry": "no earrings, only a dark purple hair cord",
-      "pose": "chin tucked, eyes looking up, shoulders slightly forward"
+      "pose": "chin tucked, eyes looking up, shoulders slightly forward",
+      "bust": "medium, firm and athletic"
     },
     {
       "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
@@ -285,7 +290,8 @@
       "makeup": "earthy warm brown tones, no eyeliner",
       "mark": "a small mole on the left cheek",
       "jewelry": "jade bud earrings and a wooden hairpin, no gold",
-      "pose": "relaxed shoulders, eyelids slightly lowered"
+      "pose": "relaxed shoulders, eyelids slightly lowered",
+      "bust": "full and soft, generous"
     },
     {
       "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
@@ -331,7 +337,8 @@
       "makeup": "no makeup, only strong dark eyebrows",
       "mark": "a small silver lightning mark in the middle of the forehead",
       "jewelry": "plain small silver hoop earrings and a metal hair crown",
-      "pose": "strong neck, square shoulders, looking straight into the camera"
+      "pose": "strong neck, square shoulders, looking straight into the camera",
+      "bust": "medium, firm, sculpted by training"
     },
     {
       "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
@@ -377,7 +384,8 @@
       "makeup": "gold shimmer on the lids, red eyeliner flicked upward at the tail",
       "mark": "a red phoenix flower decal in the middle of the forehead",
       "jewelry": "large gold phoenix earrings and a gold phoenix crown",
-      "pose": "chin raised, looking down at the viewer"
+      "pose": "chin raised, looking down at the viewer",
+      "bust": "medium to full, elegant"
     },
     {
       "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
@@ -423,7 +431,8 @@
       "makeup": "nearly bare, a faint light-blue streak at the outer eye corners",
       "mark": "a tear mole under the left eye",
       "jewelry": "pearl drop earrings and a jade formation-disc hairpin",
-      "pose": "head bowed, distant gaze not looking at the viewer"
+      "pose": "head bowed, distant gaze not looking at the viewer",
+      "bust": "small to medium, delicate"
     },
     {
       "id": "CHAR.TIEN_NO.CO_U_LAN",
@@ -469,7 +478,8 @@
       "makeup": "soft bronze outline around the eyes, no shimmer",
       "mark": "three small earth-seal dots on the forehead",
       "jewelry": "heavy round bronze earrings on elongated lobes",
-      "pose": "head perfectly upright and still, looking into the distance"
+      "pose": "head perfectly upright and still, looking into the distance",
+      "bust": "medium to full, solid and mature"
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character, but always graceful and immortal, never vulgar or brothel-like. Sexy comes from elegant xianxia cuts: plunging necklines, bare shoulders and back, high slits, sheer layers, short skirts with stockings. Every outfit MUST carry tiên khí (immortal aura): long floating ribbons, sashes and sleeves, cloud, lotus, crane or phoenix motifs, jade, crystal or gold ornaments, a soft glow of her element qi, hem and hair drifting as if weightless, a poised refined posture. Forbidden: bikini, thong, lingerie or bra-like tops, tiny loincloths, stripper or street-walker look, harem or tribal look, cheap shiny plastic fabrics. No trousers or pants on any character: use slit gowns, qipao, robes or short skirts with stockings and footwear that fit her role. How much skin shows varies with each character's style. Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",

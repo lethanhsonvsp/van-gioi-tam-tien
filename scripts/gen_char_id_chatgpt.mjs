@@ -14,6 +14,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: ${c.makeup}. Distinguishing mark: ${c.mark}.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): ${c.jewelry}.
 - Head and gaze: ${c.pose}.
+- Body (visible from the shoulders to the chest): ${c.body.type}; shoulders ${c.body.shoulders}; bust ${c.bust} (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): ${c.hairStyle}. Hair colour and ornaments: ${c.hair}.
 Expression: ${c.expression}.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.`;

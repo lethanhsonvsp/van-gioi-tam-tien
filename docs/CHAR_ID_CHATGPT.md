@@ -43,6 +43,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: almost bare face, peach blush, sparse natural lashes, no eyeliner. Distinguishing mark: no mark, bare smooth forehead.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): white jade flower hairpin and small jade stud earrings only.
 - Head and gaze: neck medium length, head slightly lowered, gentle kind gaze.
+- Body (visible from the shoulders to the chest): graceful balanced build, soft lines; shoulders narrow; bust medium, natural and soft (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: soft see-through air bangs (thin wispy fringe) over the forehead, two long face-framing strands; BACK: straight black hair falling to the waist, upper half gathered in a round bun with a white jade flower; silhouette tall and narrow. Hair colour and ornaments: long straight black hair to the waist, half-up bun with white jade flower pin, middle part.
 Expression: calm soft gaze, lips closed with a faint gentle curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -62,6 +63,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: no makeup; eyebrows and lashes silver-white like her hair. Distinguishing mark: no mark.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): ice-crystal crown and a single long ice-crystal earring on one ear only.
 - Head and gaze: long neck, three-quarter view, chin level, cold distant gaze.
+- Body (visible from the shoulders to the chest): tall and slender, long limbs; shoulders medium; bust small to medium, slender and refined (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, forehead fully bare, hair swept sleekly back from a sharp hairline, two thin long strands in front of the ears; BACK: one very high tight ponytail of silver-white hair falling to the hips, ice-crystal crown; silhouette sharp and vertical. Hair colour and ornaments: long straight silver-white hair, high ponytail with ice crystal crown, no bangs.
 Expression: neutral, sharp level gaze, lips firmly closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -81,6 +83,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: smoky deep red eyeshadow, long dramatic eyeliner, thick curled lashes. Distinguishing mark: a beauty mole below the right corner of the mouth.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): ruby teardrop earrings and a red spider-lily hair ornament.
 - Head and gaze: head tilted about 10 degrees, sideways glance from the corner of the eyes.
+- Body (visible from the shoulders to the chest): hourglass figure; shoulders medium; bust full and curvy, the most voluptuous of the roster (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: deep side part with a long dramatic side-swept fringe sweeping across the forehead over one brow; BACK: voluminous heavy wavy black hair with red undertone falling past the chest in big waves; silhouette wide and lush. Hair colour and ornaments: long thick wavy black hair with red undertone, side part, red spider-lily ornament.
 Expression: half-lidded knowing gaze, lips closed, faint asymmetric curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -100,6 +103,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: pink-violet glitter on the lids, short round eyeliner, clear lower lashes. Distinguishing mark: two thin pink fox-style streaks at the outer eye corners.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): tiny bells and lavender ribbon, no dangling earrings.
 - Head and gaze: head tilted about 15 degrees, looking up playfully.
+- Body (visible from the shoulders to the chest): petite, small frame; shoulders narrow; bust small and petite, youthful (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: short fluffy side-swept bangs, round full fringe above large eyes; BACK: white hair to mid-back with bouncy soft waves and curled ends, lavender ribbon tied at one side; silhouette round and soft. Hair colour and ornaments: shoulder-to-back length white hair with soft waves, side bangs, lavender ribbon.
 Expression: lively eyes, lips closed with a playful slight curve.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -119,6 +123,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: grey smoke along the lower lash line, short straight lashes. Distinguishing mark: a thin pale scar crossing the tail of the left eyebrow.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): no earrings, only a dark purple hair cord.
 - Head and gaze: chin tucked, eyes looking up, shoulders slightly forward.
+- Body (visible from the shoulders to the chest): toned athletic build; shoulders medium; bust medium, firm and athletic (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: choppy uneven blunt bangs cut at brow level, hair tucked behind the ears; BACK: one long tight low braid down the back with a dark purple cord, nothing loose; silhouette close to the head, severe. Hair colour and ornaments: long straight black hair in a low tight braid, uneven bangs, dark purple hair cord.
 Expression: unreadable, watchful, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -138,6 +143,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: earthy warm brown tones, no eyeliner. Distinguishing mark: a small mole on the left cheek.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): jade bud earrings and a wooden hairpin, no gold.
 - Head and gaze: relaxed shoulders, eyelids slightly lowered.
+- Body (visible from the shoulders to the chest): soft full figure; shoulders medium; bust full and soft, generous (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, centre part with soft loose strands falling at both cheeks; BACK: low loose messy bun at the nape with a wooden hairpin and small herb sprigs; silhouette low and relaxed. Hair colour and ornaments: long black hair in a low loose bun with wooden hairpin and small herb sprigs, middle part.
 Expression: calm knowing gaze, lips closed, at ease.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -157,6 +163,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: no makeup, only strong dark eyebrows. Distinguishing mark: a small silver lightning mark in the middle of the forehead.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): plain small silver hoop earrings and a metal hair crown.
 - Head and gaze: strong neck, square shoulders, looking straight into the camera.
+- Body (visible from the shoulders to the chest): martial build, developed shoulders and back; shoulders broad; bust medium, firm, sculpted by training (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: no bangs, all hair pulled tight back and up, forehead and ears bare, small braids along both sides of the head; BACK: high warrior topknot with a metal crown; silhouette tall, tight and angular. Hair colour and ornaments: long black hair in a high warrior topknot with braided sides, metal hair crown.
 Expression: direct steady gaze, lips firmly closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -176,6 +183,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: gold shimmer on the lids, red eyeliner flicked upward at the tail. Distinguishing mark: a red phoenix flower decal in the middle of the forehead.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): large gold phoenix earrings and a gold phoenix crown.
 - Head and gaze: chin raised, looking down at the viewer.
+- Body (visible from the shoulders to the chest): tall balanced build; shoulders medium; bust medium to full, elegant (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: thick blunt straight full bangs cut straight across the brows (hime cut) with long cheek-length side locks; BACK: very long straight black hair to the hips, gold phoenix crown on top; silhouette a heavy straight curtain. Hair colour and ornaments: long black hair with blunt straight bangs, side locks, gold phoenix crown.
 Expression: chin slightly raised, confident gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -195,6 +203,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: nearly bare, a faint light-blue streak at the outer eye corners. Distinguishing mark: a tear mole under the left eye.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): pearl drop earrings and a jade formation-disc hairpin.
 - Head and gaze: head bowed, distant gaze not looking at the viewer.
+- Body (visible from the shoulders to the chest): slender, narrow shoulders, long limbs; shoulders narrow; bust small to medium, delicate (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: long curtain bangs parted in the centre and swept to both sides of the face; BACK: extremely long straight blue-black hair to the knees, upper section tied half-up with a jade formation-disc hairpin; silhouette extremely long and thin. Hair colour and ornaments: very long straight blue-black hair, half-up with a jade formation-disc hairpin, middle part.
 Expression: focused thoughtful gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
@@ -214,6 +223,7 @@ THIS FACE MUST LOOK CLEARLY DIFFERENT FROM EVERY OTHER CHARACTER. Do NOT use the
 - Eye makeup: soft bronze outline around the eyes, no shimmer. Distinguishing mark: three small earth-seal dots on the forehead.
 - Jewelry (ONLY this, nothing else; no forehead jewel and no long dangling earrings unless listed): heavy round bronze earrings on elongated lobes.
 - Head and gaze: head perfectly upright and still, looking into the distance.
+- Body (visible from the shoulders to the chest): tall and firm build; shoulders broad; bust medium to full, solid and mature (adult natural proportions; her bust size must differ from the other characters).
 - HAIRSTYLE (every character has her own: do NOT use the generic long dark hair with a centre part and a plain updo; the front fringe and the back must follow this): FRONT: side part with the hair brushed back off the forehead, no bangs, a few short strands at the temples; BACK: long straight ash-grey hair gathered in a low ponytail bound with bronze rings, falling over one shoulder; silhouette plain and mature. Hair colour and ornaments: long straight ash-grey hair, low ponytail bound with bronze rings, no bangs.
 Expression: still, quiet steady gaze, lips closed.
 Draw exactly one person. Stylized CG game art, not a photograph, not photoreal skin texture, not a real person. Adult woman's face. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy.
