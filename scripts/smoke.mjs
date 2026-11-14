@@ -4,12 +4,13 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync, readdirSync } from 'node:fs';
 import { homedir } from 'node:os';
 const url = process.argv[2] ?? 'http://localhost:4173/', out = process.argv[3] ?? '/tmp/vgtt-smoke';
+const [W, H] = (process.argv[4] ?? '1600x900').split('x').map(Number); // optional WxH, e.g. 844x390
 mkdirSync(out, { recursive: true });
 const pw = `${homedir()}/.cache/ms-playwright`;
 const shell = readdirSync(pw).find(d => d.startsWith('chromium_headless_shell'));
 const chrome = process.env.CHROME ?? `${pw}/${shell}/chrome-headless-shell-linux64/chrome-headless-shell`;
 const port = 9300 + Math.floor(Math.random() * 500);
-const proc = spawn(chrome, [`--remote-debugging-port=${port}`, '--no-sandbox', '--window-size=1600,900', `--user-data-dir=/tmp/vgtt-smoke-profile-${port}`, 'about:blank'], { stdio: 'ignore' });
+const proc = spawn(chrome, [`--remote-debugging-port=${port}`, '--no-sandbox', `--window-size=${W},${H}`, `--user-data-dir=/tmp/vgtt-smoke-profile-${port}`, 'about:blank'], { stdio: 'ignore' });
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 let targets;
 for (let i = 0; i < 50 && !targets; i++) { await sleep(200); try { targets = await (await fetch(`http://127.0.0.1:${port}/json`)).json(); } catch { /* retry */ } }
@@ -28,7 +29,7 @@ const shot = async name => writeFileSync(`${out}/${name}.png`, Buffer.from((awai
 const click = async text => { const ok = await ev(`(() => { const b = [...document.querySelectorAll('button')].find(b => b.textContent.includes(${JSON.stringify(text)})); if (b) b.click(); return !!b; })()`); if (!ok) errors.push(`button not found: ${text}`); await sleep(250); };
 const has = async text => ev(`document.body.innerText.includes(${JSON.stringify(text)})`);
 const check = async (text, label) => { if (!(await has(text))) errors.push(`missing "${text}" on ${label}`); await shot(label); };
-await send('Runtime.enable'); await send('Page.enable'); await send('Emulation.setDeviceMetricsOverride', { width: 1600, height: 900, deviceScaleFactor: 1, mobile: false });
+await send('Runtime.enable'); await send('Page.enable'); await send('Emulation.setDeviceMetricsOverride', { width: W, height: H, deviceScaleFactor: 1, mobile: false });
 await send('Page.navigate', { url }); await sleep(1500);
 await ev('localStorage.clear()'); await send('Page.navigate', { url }); await sleep(1500);
 await check('Hướng dẫn', '0-guide'); await click('Đã hiểu');
