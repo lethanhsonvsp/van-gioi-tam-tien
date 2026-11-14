@@ -2,13 +2,13 @@ import { TRIAL } from '../content';
 import { FLOOR_COUNT, floorMonsters } from '../battle/monsters';
 import { playerTeam } from '../battle/team';
 import type { Fighter } from '../battle/types';
-import { elementVi } from '../content/elements';
+import { elementLabel } from '../content/elements';
 import { useGame } from './useGame';
 
 const Row = ({ f, boss }: { f: Fighter; boss?: boolean }) => (
   <div className="pv-row">
     <b className={boss ? 'boss' : ''}>{f.name}{boss ? ' (Thủ lĩnh)' : ''}</b><span>HP {f.hpMax}</span>
-    <small>Hệ {elementVi(f.element)} · Cấp {f.level} · Độ hiếm {f.rarity}</small>
+    <small>{elementLabel(f.element)} · Cấp {f.level} · Độ hiếm {f.rarity}</small>
   </div>
 );
 

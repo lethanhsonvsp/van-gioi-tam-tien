@@ -20,7 +20,7 @@ const RESULT = { A: 'Thắng', B: 'Thua', draw: 'Hòa (hết giờ)' } as const;
 
 function UnitCard({ u, floats }: { u: UnitView; floats: { key: number; text: string; kind: string }[] }) {
   return (
-    <div className={`unit${u.dead ? ' dead' : ''}${u.acting ? ' acting' : ''}`}>
+    <div className={`unit el-${u.element}${u.dead ? ' dead' : ''}${u.acting && !u.dead ? ' acting' : ''}`}>
       <Medal u={u} />
       <div className="unit-name">{u.name}</div>
       <div className="hp"><div className="hp-fill" style={{ width: `${(u.hp / u.hpMax) * 100}%` }} /><span>{u.hp}/{u.hpMax}</span></div>
@@ -50,13 +50,14 @@ export function Trial({ back }: { back: () => void }) {
   const [result, setResult] = useState<BattleResult | null>(null);
   const [tick, setTick] = useState(0);
   const [fast, setFast] = useState(false);
+  const [paused, setPaused] = useState(false);
   const end = result ? lastTick(result.events) : 0;
 
   useEffect(() => {
-    if (!result || tick >= end) return;
+    if (!result || paused || tick >= end) return;
     const id = setTimeout(() => setTick(t => t + 1), fast ? TICK_MS / 4 : TICK_MS);
     return () => clearTimeout(id);
-  }, [result, tick, end, fast]);
+  }, [result, tick, end, fast, paused]);
 
   const frame = useMemo(() => (result ? frameAt(result.events, tick) : null), [result, tick]);
   // The reward is claimed (and saved) as soon as the battle is simulated, so leaving mid-replay loses nothing; it is shown when the replay ends.
@@ -64,7 +65,7 @@ export function Trial({ back }: { back: () => void }) {
     const team = playerTeam(game), r = runBattle(team, floorMonsters(floor), Date.now() >>> 0);
     let reward: Reward | null = null;
     if (r.winner === 'A') { const w = claimWin(game, floor, team.map(f => f.charId)); reward = w.reward; setState(w.state); }
-    setFought({ floor, reward }); setResult(r); setTick(0);
+    setFought({ floor, reward }); setResult(r); setTick(0); setPaused(false);
   };
   const go = (f: number) => { setState(goFloor(game, f)); setFought(null); setResult(null); setTick(0); };
   const [note, setNote] = useState('');
@@ -93,6 +94,10 @@ export function Trial({ back }: { back: () => void }) {
         <div className="team team-b">{side('B')}</div>
       </div>}
       <div className="result-bar">
+        {result && !done && <>
+          <button className="back ctl" onClick={() => setPaused(!paused)}>{paused ? 'Tiếp tục' : 'Tạm dừng'}</button>
+          <input type="range" className="scrub" aria-label="Tua trận" min={0} max={end} value={tick} onChange={e => { setPaused(true); setTick(Number(e.currentTarget.value)); }} />
+        </>}
         {!result && <span className="reward">{preview.firstClear ? 'Thắng lần đầu' : preview.linhThach ? `Thưởng lặp (còn ${preview.repeatsLeft + 1} lần)` : 'Hết thưởng lặp'}: +{preview.linhThach} linh thạch · +{preview.exp} EXP{preview.tickets ? ` · +${preview.tickets} thẻ triệu hồi` : ''}</span>}
         {done && <span className="reward">{rw
           ? <>Thưởng: +{rw.linhThach} linh thạch · +{rw.exp} EXP mỗi người{rw.tickets ? ` · +${rw.tickets} thẻ triệu hồi` : ''}{rw.firstClear ? (floor < FLOOR_COUNT ? ' · Mở tầng kế' : ' · Hoàn thành cả 20 tầng') : ''}</>
@@ -102,7 +107,7 @@ export function Trial({ back }: { back: () => void }) {
       </div>
       <nav className="trial-buttons">
         <button className="back" onClick={start} disabled={!!result && !done}>Bắt đầu</button>
-        <button className="back" onClick={() => setTick(0)} disabled={!done}>Phát lại</button>
+        <button className="back" onClick={() => { setTick(0); setPaused(false); }} disabled={!done}>Phát lại</button>
         <button className="back" onClick={() => setFast(!fast)} disabled={!result || !!done}>{fast ? 'Tốc độ thường' : 'Tua nhanh'}</button>
         <button className="back" onClick={() => setTick(end)} disabled={!result || !!done}>Bỏ qua</button>
         <button className="back" onClick={() => go(floor - 1)} disabled={(!!result && !done) || !canEnter(game.trial, floor - 1)}>Tầng trước</button>

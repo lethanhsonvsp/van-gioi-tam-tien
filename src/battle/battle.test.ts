@@ -58,6 +58,14 @@ describe('battle', () => {
     expect(f.end?.winner).toBe(r.winner);
     for (const u of r.survivors) expect(f.units.find(v => v.uid === u.uid)?.hp).toBe(u.hp);
     expect(f.units.filter(u => !u.dead)).toHaveLength(r.survivors.length);
+    expect(f.floats).toHaveLength(0);
+  });
+
+  it('replay: no floats linger on a unit a few ticks after its death', () => {
+    const r = runBattle(team(), floorMonsters(2), 9);
+    const d = r.events.find(e => e.type === 'death')!;
+    if (d.type !== 'death') throw new Error('no death');
+    expect(frameAt(r.events, d.t + 3).floats.filter(f => f.target === d.target)).toHaveLength(0);
   });
 
   it('level-1 sample team: floor 1 easy, top floor out of reach (alpha-temporary numbers)', () => {
