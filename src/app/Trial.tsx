@@ -8,10 +8,12 @@ import type { BattleResult } from '../battle/types';
 import { canEnter, claimWin, floorReward, goFloor, type Reward } from '../core/rewards';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
+import { TrialPreview } from './TrialPreview';
 import { useGame } from './useGame';
 import './trial.css';
 
 const TICK_MS = 60;
+const seedOf = (r: BattleResult) => (r.events[0].type === 'start' ? r.events[0].seed : 0);
 const RESULT = { A: 'Thắng', B: 'Thua', draw: 'Hòa (hết giờ)' } as const;
 
 function UnitCard({ u, floats }: { u: UnitView; floats: { key: number; text: string; kind: string }[] }) {
@@ -52,6 +54,11 @@ export function Trial({ back }: { back: () => void }) {
     setFought({ floor, reward }); setResult(r); setTick(0);
   };
   const go = (f: number) => { setState(goFloor(game, f)); setFought(null); setResult(null); setTick(0); };
+  const [note, setNote] = useState('');
+  const copySeed = async () => {
+    try { await navigator.clipboard.writeText(String(seedOf(result!))); setNote('Đã sao chép'); } catch { setNote('Không sao chép được, hãy chép tay'); }
+    setTimeout(() => setNote(''), 2000);
+  };
   const done = frame?.end;
   const preview = floorReward(game.trial, floor);
   const rw = fought?.reward;
@@ -64,17 +71,18 @@ export function Trial({ back }: { back: () => void }) {
       <header className="trial-head">
         <h1>Thí Luyện · Tầng {floor}/{FLOOR_COUNT}{floor % TRIAL.monster.bossEvery === 0 ? ' · Thủ Lĩnh' : ''}</h1>
         <div className="trial-sub">Đã qua tầng {game.trial.cleared} · Thưởng thắng: {preview.firstClear ? 'lần đầu' : preview.linhThach ? `lặp lại, còn ${preview.repeatsLeft + 1} lần có thưởng` : 'hết thưởng lặp lại'} <code>tạm alpha</code></div>
-        {result && <code>hạt giống {result.events[0].type === 'start' ? result.events[0].seed : ''} · tick {tick}/{end}</code>}
+        {result && <code>tick {tick}/{end}</code>}
       </header>
-      <div className="arena">
+      {!result && <TrialPreview floor={floor} />}
+      {result && <div className="arena">
         <div className="team team-a">{side('A')}</div>
         <div className="vs">{done ? <div className={`verdict w-${done.winner}`}>{RESULT[done.winner]}</div> : 'VS'}</div>
         <div className="team team-b">{side('B')}</div>
         {done && <div className="reward">{rw
           ? <>Thưởng: +{rw.linhThach} linh thạch · +{rw.exp} EXP mỗi người trong đội{rw.tickets ? ` · +${rw.tickets} thẻ triệu hồi` : ''}{rw.firstClear ? (floor < FLOOR_COUNT ? ' · Mở tầng kế' : ' · Hoàn thành cả 20 tầng Thí Luyện') : ''}</>
           : done.winner === 'A' ? 'Thắng' : 'Không có thưởng khi thua. Tu Luyện hoặc đổi đội rồi thử lại.'}</div>}
-        {!result && <p className="hint">Đội của bạn (chưa có Tiên Nô thì dùng đội mẫu). Bấm "Bắt đầu".</p>}
-      </div>
+      </div>}
+      {done && <div className="seedbar">Hạt giống trận: <code>{seedOf(result!)}</code> <button className="back small" onClick={copySeed}>Sao chép hạt giống</button> {note && <span>{note}</span>}</div>}
       <nav className="trial-buttons">
         <button className="back" onClick={back}>Quay lại</button>
         <button className="back" onClick={start} disabled={!!result && !done}>Bắt đầu</button>

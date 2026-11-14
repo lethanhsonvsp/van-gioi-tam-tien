@@ -16,6 +16,8 @@ export function realmLabel(level: number): string {
   return `${P.realms[i]} ${level - i * P.realmSize}`;
 }
 
+export const capBonusOf = (r: Character['rarity']): number => P.capBonus[r];
+
 // Protagonist: global max. Tien No: player level + rarity bonus (alpha-temporary), never above the global max.
 export const levelCap = (c: Character, playerLevel: number, isPlayer: boolean): number =>
   isPlayer ? MAX_LEVEL : Math.min(MAX_LEVEL, playerLevel + P.capBonus[c.rarity]);

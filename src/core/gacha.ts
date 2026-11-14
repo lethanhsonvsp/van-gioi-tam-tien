@@ -1,10 +1,10 @@
 import { GACHA, RARITIES, TIEN_NO, type Rarity, type TienNo } from '../content';
 import { makeCharacter } from './character';
 import { nextFloat, nextInt } from './rng';
-import { toggleParty } from './roster';
+import { autoJoin, toggleParty } from './roster';
 import type { GameState } from './save';
 
-export interface PullResult { id: string; rarity: Rarity; isNew: boolean }
+export interface PullResult { id: string; rarity: Rarity; isNew: boolean; joined: boolean } // joined: a new Tien No was auto-placed in an empty party slot
 
 const rank = (r: Rarity) => RARITIES.indexOf(r);
 const TOP: Rarity[] = ['SR', 'SSR', 'UR'];
@@ -38,7 +38,9 @@ function pullOne(s: GameState): PullResult {
   const own = s.tienNo.find(c => c.id === t.id);
   if (own) s.tienNo = s.tienNo.map(c => (c === own ? { ...c, copies: c.copies + 1 } : c));
   else s.tienNo = [...s.tienNo, { ...makeCharacter(t, s.player.level), copies: 0 }];
-  return { id: t.id, rarity: t.rarity, isNew: !own };
+  const j = own ? { party: s.party, joined: false } : autoJoin(s.party, t.id);
+  s.party = j.party;
+  return { id: t.id, rarity: t.rarity, isNew: !own, joined: j.joined };
 }
 
 // Pure: returns the new state and results, or null (state untouched) when tickets are short. The caller's state is never mutated.

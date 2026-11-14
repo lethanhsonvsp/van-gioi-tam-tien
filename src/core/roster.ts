@@ -27,3 +27,10 @@ export function toggleParty(party: (string | null)[], id: string, owned: string[
 
 export const clearSlot = (party: (string | null)[], slot: number): (string | null)[] =>
   slot > 0 && party[slot] !== null ? party.map((x, k) => (k === slot ? null : x)) : party;
+
+// Auto-assign a newly owned Tien No to the first empty slot 1-5. Never displaces anyone, never duplicates. `joined` tells the caller whether it moved.
+export function autoJoin(party: (string | null)[], id: string): { party: (string | null)[]; joined: boolean } {
+  const free = party.indexOf(null, 1);
+  if (party.includes(id) || free < 0) return { party, joined: false };
+  return { party: party.map((x, k) => (k === free ? id : x)), joined: true };
+}

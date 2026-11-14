@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { GACHA, SKILLS, TIEN_NO } from '../content';
 import { pull, toggleInParty, type PullResult } from '../core/gacha';
+import { capBonusOf } from '../core/progress';
 import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
@@ -23,6 +24,7 @@ function Profile({ id, close }: { id: string; close: () => void }) {
           <p>Hệ: {t.element} · Độ hiếm: {t.rarity} · Bản sao {own.copies}</p>
           <p><b>Chiến đấu:</b> {t.combatVi}<br /><b>Ngoài chiến đấu:</b> {t.roleVi}</p>
           <CultivatePanel id={id} />
+          <p className="cap-note">Trần cấp = cấp nhân vật chính ({g.player.level}) + {capBonusOf(t.rarity)} cho bậc {t.rarity}. Muốn Tiên Nô lên cấp, hãy nâng nhân vật chính trước.</p>
           {kit && <p><b>{kit.name}</b> ({kit.tag}): {kit.kind === 'damage' ? 'sát thương' : kit.kind === 'support' ? 'hỗ trợ' : 'khống chế'}, mỗi {kit.every} lượt.</p>}
           <button className="back" onClick={() => setState(toggleInParty(g, id))} disabled={!inTeam && !g.party.includes(null)}>
             {inTeam ? 'Rời đội' : g.party.includes(null) ? 'Vào đội' : 'Đội đã đầy'}
@@ -57,7 +59,7 @@ export function Roster({ back }: { back: () => void }) {
           <button className="back" onClick={back}>Quay lại</button>
         </div>
         {msg && <div className="msg">{msg}</div>}
-        <div className="results">{results.map((r, i) => <Card key={i} id={r.id} fresh={r.isNew} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />)}</div>
+        <div className="results">{results.map((r, i) => <Card key={i} id={r.id} fresh={r.isNew} joined={r.joined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />)}</div>
       </section>
       <section className="owned">
         <h2>Tiên Nô đã có ({g.tienNo.length}/{TIEN_NO.length}) · Tổ đội {g.party.filter(Boolean).length}/{g.party.length}</h2>

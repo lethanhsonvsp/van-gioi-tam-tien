@@ -40,14 +40,15 @@ await ev('localStorage.clear()'); await send('Page.navigate', { url }); await sl
 let passed = 0; const NAME = 'Tử Vân Tử';
 await step('lobby + guide', async () => { await shot('00-guide'); await click('Đã hiểu'); await shot('01-lobby'); });
 await step('doi ten', async () => { await click('Tu Luyện'); await ev(`(() => { const i = document.querySelector('input[aria-label="Tên nhân vật"]'); const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set; set.call(i, ${JSON.stringify(NAME)}); i.dispatchEvent(new Event('input', { bubbles: true })); })()`); await sleep(200); await click('Đổi tên'); await shot('02-tu-luyen'); await click('Quay lại'); });
-await step('quay 10', async () => { await click('Tiên Nô'); await click('Quay 10'); await sleep(300); await shot('03-quay10'); });
+await step('quay 10', async () => { await click('Tiên Nô'); await click('Quay 10'); await sleep(300); await shot('03-quay10'); const sv = await save(); if (sv.party.filter(Boolean).length < 2) errors.push('quay 10: doi khong tu co Tien No'); if (!(await text()).includes('Đã vào đội')) errors.push('quay 10: thieu nhan Đã vào đội'); });
 await step('ho so', async () => { await ev(`document.querySelector('.tcard')?.click()`); await sleep(250); await shot('04-ho-so'); await click('Đóng'); });
 await step('vao doi', async () => { for (let i = 0; i < 4; i++) { await ev(`document.querySelectorAll('.owned .tcard')[${i}]?.click()`); await sleep(200); if (await ev(`document.body.innerText.includes('Vào đội')`)) await click('Vào đội'); await click('Đóng'); } await shot('05-roster'); await click('Quay lại'); await click('Tổ Đội'); await shot('06-to-doi'); await click('Quay lại'); });
 console.log('save:', summary(await save()));
 await click('Thí Luyện'); await shot('07-thi-luyen-truoc');
+{ const t = await text(); if (!t.includes('Đội của bạn') || !t.includes('Quái') || !t.includes('Thắng lần đầu')) errors.push('thi luyen: thieu ban xem truoc doi/quai/thuong'); }
 for (let f = 1; f <= 5; f++) {
   let verdict;
-  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); await sleep(1500); if (f === 1) await shot('08-tran-giua'); if (f === 2) await click('Bỏ qua'); if (f === 3) await click('Tua nhanh'); verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); });
+  await step(`tang ${f} tran`, async () => { await click('Bắt đầu'); await sleep(1500); if (f === 1) await shot('08-tran-giua'); if (f === 2) await click('Bỏ qua'); if (f === 3) await click('Tua nhanh'); verdict = await waitEnd(); await sleep(300); await shot(`09-tang${f}-${verdict}`); if (f === 1 && !(await text()).includes('Sao chép hạt giống')) errors.push('thieu nut Sao chep hat giong'); });
   console.log('   ->', verdict, summary(await save()));
   if (verdict === 'Thắng') { passed = f; if (f < 5) await click('Tầng kế'); } else break;
 }

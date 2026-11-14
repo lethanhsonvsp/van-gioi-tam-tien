@@ -37,3 +37,5 @@
 .dump { width: 100%; height: 160px; font: 12px monospace; background: #0008; color: #ddd; border: 1px solid var(--gold-dim); }
 .rename { display: flex; gap: 10px; align-items: center; margin: 8px 0; }
 .rename input { font-size: 20px; padding: 6px 10px; width: 260px; }
+.tcard .joined { position: absolute; left: 12px; right: 12px; top: 44px; text-align: center; font-size: 12px; background: #2a7; border-radius: 8px; padding: 1px 4px; }
+.cap-note { font-size: 15px; opacity: .85; margin: 0 0 8px; }

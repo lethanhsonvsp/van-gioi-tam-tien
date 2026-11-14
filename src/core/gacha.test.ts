@@ -125,7 +125,8 @@ describe('party', () => {
     const s0 = newGame(1);
     expect(playerTeam(s0).length).toBeGreaterThan(1);
     let s = { ...rich(1) }; s = pull(s, 10)!.state;
-    expect(playerTeam(s)).toHaveLength(1); // owns some, party only main
+    s = { ...s, party: [s.player.id, null, null, null, null, null] }; // owns some, party only main
+    expect(playerTeam(s)).toHaveLength(1);
     s = toggleInParty(s, s.tienNo[0].id);
     expect(playerTeam(s).map(f => f.charId)).toEqual([s.player.id, s.tienNo[0].id]);
   });
