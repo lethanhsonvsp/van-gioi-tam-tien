@@ -1,58 +1,64 @@
 /* Phone landscape: Thí Luyện, Tiên Nô, Tổ Đội (stage.compact). Lists scroll vertically inside the screen, never sideways. */
-.compact .trial { display: flex; flex-direction: column; padding: 4px 8px; gap: 4px; }
-.compact .trial-head { position: relative; inset: auto; flex: none; }
+.compact .screen.trial { padding: 4px 8px 6px; gap: 4px; }
 .compact .trial-head h1 { font-size: 20px; }
 .compact .trial-sub { font-size: 13px; }
-.compact .arena { position: relative; inset: auto; flex: 1; min-height: 0; overflow-y: auto; grid-template-columns: 1fr 88px 1fr; align-items: start; gap: 0 4px; }
-.compact .team { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+.compact .arena { overflow-y: auto; grid-template-columns: 1fr 72px 1fr; align-items: start; gap: 0 4px; }
+.compact .team { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: auto; justify-self: stretch; }
 .compact .vs { font-size: 20px; align-self: center; }
 .compact .verdict { font-size: 20px; }
-.compact .unit { grid-template-columns: 28px 1fr; column-gap: 6px; padding: 4px 6px; border-radius: 8px; }
-.compact .team-b .unit { direction: ltr; }
-.compact .orb { width: 26px; height: 26px; border-width: 1px; }
-.compact .st { inset: -3px; border-width: 2px; } .compact .st-slow { inset: -4px; }
-.compact .unit-name { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.compact .hp { height: 16px; } .compact .hp span { font-size: 13px; line-height: 16px; padding: 1px 0; white-space: nowrap; }
+.compact .unit { grid-template-columns: 34px 1fr; column-gap: 6px; row-gap: 2px; padding: 3px 6px 3px 4px; border-radius: 20px 8px 8px 20px; }
+.compact .team-b .unit { direction: ltr; border-radius: 20px 8px 8px 20px; padding: 3px 6px 3px 4px; }
+.compact .medal { width: 34px; height: 34px; padding: 2px; box-shadow: 0 0 0 2px var(--ring); }
+.compact .medal-core { border-width: 1px; }
+.compact .st { inset: -4px; border-width: 2px; } .compact .st-slow { inset: -5px; }
+.compact .unit-name { font-size: 13px; }
+.compact .hp { height: 16px; } .compact .hp span { font-size: 13px; line-height: 16px; white-space: nowrap; }
+.compact .shield { height: 3px; }
 .compact .float { left: 20px; font-size: 16px; } .compact .float.shield { font-size: 13px; }
-.compact .reward { position: relative; inset: auto; grid-column: 1 / -1; font-size: 14px; padding-top: 4px; }
-.compact .seedbar { position: relative; inset: auto; flex: none; font-size: 13px; }
-.compact .trial-buttons { position: relative; inset: auto; flex: none; gap: 6px; flex-wrap: wrap; }
-.compact .trial-buttons .back { padding: 6px 8px; font-size: 14px; }
-.compact .preview { position: relative; inset: auto; flex: 1; min-height: 0; overflow-y: auto; gap: 8px; align-content: start; }
+.compact .result-bar { min-height: 44px; gap: 2px 8px; }
+.compact .reward { font-size: 14px; }
+.compact .tech { font-size: 13px; }
+.compact .back.small { font-size: 13px; padding: 6px 10px; margin-left: 8px; }
+.compact .trial-buttons { grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.compact .trial-buttons .back { padding: 6px 4px; font-size: 14px; white-space: nowrap; }
+.compact .preview { gap: 8px; }
 .compact .preview h3 { font-size: 16px; margin-bottom: 4px; }
 .compact .preview .tag { font-size: 13px; }
 .compact .pv-row { grid-template-columns: 1fr auto; padding: 3px 8px; margin-bottom: 3px; font-size: 14px; }
 .compact .pv-row small { font-size: 13px; }
-.compact .pv-reward { font-size: 14px; position: sticky; bottom: 0; background: var(--glass); padding: 2px 4px; }
 
-/* Roster / Party: one vertical scroll, header row stays on top. */
+/* Roster / Party: one vertical scroll; "Về sảnh" sits top right, so the header keeps clear of it. */
 .compact .roster { overflow-y: auto; padding: 0 10px 8px; }
-.compact .roster .summon { position: relative; inset: auto; height: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px; }
-.compact .roster .summon h1 { font-size: 20px; flex: 1; }
+.compact .roster .summon { position: relative; inset: auto; height: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 12px; padding: 4px 120px 0 0; }
+.compact .roster .summon h1 { font-size: 20px; line-height: 48px; }
 .compact .roster .tickets { font-size: 14px; margin: 0; width: 100%; order: 3; }
 .compact .roster .tickets b { font-size: 16px; }
 .compact .roster .buttons { margin: 0; flex: none; }
-.compact .roster .msg { font-size: 14px; order: 4; }
-.compact .roster .results { order: 5; width: 100%; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
-.compact .roster .owned { position: relative; inset: auto; overflow: visible; margin-top: 8px; padding: 8px 10px; }
+.compact .roster .msg { font-size: 13px; padding: 2px 8px; order: 4; }
+.compact .roster .pity { font-size: 13px; margin: 0; order: 3; width: 100%; }
+.compact .roster .buttons .back small { font-size: 13px; }
+.compact .roster .results { order: 5; width: calc(100% + 120px); margin: 4px -120px 0 0; flex-wrap: wrap; gap: 6px; }
+.compact .roster .owned { position: relative; inset: auto; max-height: none; overflow: visible; margin-top: 8px; padding: 8px 10px; }
 .compact .roster .owned h2 { font-size: 16px; }
 .compact .roster .owned p { font-size: 14px; margin: 4px 0; }
 .compact .roster .grid { gap: 6px; }
-.compact .tcard, .compact .slot { width: 100px; height: 152px; }
-.compact .slot { font-size: 14px; text-align: center; } .compact .slot small { font-size: 13px; }
-.compact .tcard .portrait { inset: 6px; }
-.compact .tcard .elem { width: 24px; height: 24px; left: 8px; top: 8px; }
-.compact .tcard .rar { font-size: 14px; right: 10px; top: 8px; }
-.compact .tcard .badges { left: 8px; right: 8px; top: 34px; gap: 2px; }
+
+/* Card at phone size: 120x182, name and title still 2 lines each. */
+.compact .tcard, .compact .slot { width: 120px; height: 182px; }
+.compact .slot { font-size: 14px; text-align: center; }
+.compact .tcard .portrait { inset: 7px; }
+.compact .tcard .elem { width: 24px; height: 24px; left: 10px; top: 10px; }
+.compact .tcard .rar { font-size: 14px; right: 12px; top: 10px; }
+.compact .tcard .badges { left: 9px; right: 9px; top: 38px; gap: 2px; }
 .compact .tcard .badges span { font-size: 13px; line-height: 16px; padding: 0 5px; }
-.compact .tcard .tinfo { left: 8px; right: 8px; bottom: 10px; padding-top: 10px; gap: 0; }
-.compact .tcard .tname { font-size: 13px; }
-.compact .tcard .ttitle { font-size: 13px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.compact .roster .home { position: static; min-height: 44px; }
-.compact .roster .pity { font-size: 13px; margin: 0; order: 3; width: 100%; }
-.compact .roster .buttons .back small { font-size: 13px; }
-.compact .roster .msg { font-size: 13px; padding: 2px 8px; }
-.compact .roster .owned.tall { top: auto; }
-.compact .summon-pop { justify-content: flex-start; overflow-y: auto; padding: 8px; gap: 8px; }
-.compact .summon-pop h2 { font-size: 20px; }
-.compact .summon-pop .results { width: 100%; max-width: none; }
+.compact .tcard .tinfo { left: 11px; right: 11px; bottom: 23px; padding-top: 10px; gap: 1px; }
+.compact .tcard .tname { font-size: 14px; }
+.compact .tcard .ttitle { font-size: 13px; }
+.compact .tcard.hero .portrait { inset: 4px; }
+.compact .tcard.hero .tinfo { bottom: 8px; left: 8px; right: 8px; }
+
+/* Summon results: full-screen window, 5 x 2 grid that scrolls inside, "Đóng" fixed in the header. */
+.compact .pop-window { max-width: 100%; max-height: 100%; width: 100%; height: 100%; border-radius: 0; border-width: 0; padding: 6px 10px 8px; }
+.compact .pop-window header { margin-bottom: 6px; }
+.compact .pop-window h2 { font-size: 20px; }
+.compact .pop-grid { grid-template-columns: repeat(var(--n), 120px); gap: 6px; }

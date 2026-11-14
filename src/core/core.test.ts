@@ -55,3 +55,11 @@ describe('content', () => {
     expect(hpMaxFor('UR', 3)).toBeGreaterThan(hpMaxFor('N', 3));
   });
 });
+
+describe('element names', () => {
+  it('every element used by Tien No and monsters has a Vietnamese name', async () => {
+    const { ELEMENT_VI } = await import('../content/elements');
+    const { TRIAL } = await import('../content');
+    for (const e of [...TIEN_NO.map(t => t.element), ...TRIAL.elements, 'NONE']) expect(ELEMENT_VI[e]).toBeTruthy();
+  });
+});
