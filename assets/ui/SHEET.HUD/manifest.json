@@ -3,7 +3,7 @@
   "repo": "lethanhsonvsp/van-gioi-tam-tien",
   "source_path": "docs/UI_PROMPTS.md",
   "source_sha": "9855deae44c753b786391e1f1dc8911e2e5b553a",
-  "status": "FAIL_SOURCE_SAFE_ZONE",
+  "status": "MIXED: UI.FRAME.AVATAR and UI.BAR.FILL.LINH_LUC pass (redrawn, _sheet_fix.png); UI.BADGE.LEVEL, UI.BTN.PLUS, UI.BTN.ROUND still fail safe zone by 1-380 px",
   "acceptance": "NOT_APPROVED / PREVIEW ONLY",
   "reason": "Image generation failed the 12% safe-zone requirement. Multiple whole-sheet regeneration attempts were made, but produced incorrect objects/grid. Extracted cells are NOT resized, translated, erased, or repaired.",
   "source_image": "_sheet.png",
@@ -46,16 +46,18 @@
         "right": true
       },
       "edge_pass": true,
-      "safe_zone_violation_pixels": 6745,
-      "safe_zone_pass": false,
-      "pass": false,
+      "safe_zone_violation_pixels": 0,
+      "safe_zone_pass": true,
+      "pass": true,
       "file": "UI.FRAME.AVATAR.png",
       "bbox_nontransparent": [
         56,
         24,
         494,
         477
-      ]
+      ],
+      "source_image": "_sheet_fix.png",
+      "details": "see manifest_fix.json"
     },
     {
       "index": 2,
@@ -108,16 +110,18 @@
         "right": true
       },
       "edge_pass": true,
-      "safe_zone_violation_pixels": 1332,
-      "safe_zone_pass": false,
-      "pass": false,
+      "safe_zone_violation_pixels": 0,
+      "safe_zone_pass": true,
+      "pass": true,
       "file": "UI.BAR.FILL.LINH_LUC.png",
       "bbox_nontransparent": [
         38,
         228,
         459,
         288
-      ]
+      ],
+      "source_image": "_sheet_fix.png",
+      "details": "see manifest_fix.json"
     },
     {
       "index": 4,

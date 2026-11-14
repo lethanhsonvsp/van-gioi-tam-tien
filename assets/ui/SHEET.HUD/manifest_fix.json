@@ -1,0 +1,112 @@
+{
+  "generation_method": "image_gen.imagegen",
+  "attempts": 4,
+  "prompt_source": "docs/HUD_FIX_PROMPT.md, Prompt block used verbatim",
+  "sheet_size": [
+    1536,
+    1024
+  ],
+  "assets": [
+    {
+      "id": "UI.FRAME.AVATAR",
+      "file": "UI.FRAME.AVATAR.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        103,
+        91,
+        410,
+        438
+      ],
+      "safe_zone_pass": true,
+      "band_bad_pixels": 0,
+      "magenta_pixels": 0,
+      "visible_magenta_pixels": 0,
+      "generation_method": "image_gen.imagegen",
+      "attempts": 4,
+      "despill": {
+        "edge_magenta_before": 506,
+        "edge_magenta_after": 0,
+        "changed_pixels": 506,
+        "safe_zone_band_nontransparent_pixels": 0,
+        "alpha_unchanged": true,
+        "blue_dominant_pixels_unchanged": true
+      }
+    },
+    {
+      "id": "UI.BAR.FILL.LINH_LUC",
+      "file": "UI.BAR.FILL.LINH_LUC.png",
+      "w": 512,
+      "h": 512,
+      "bbox": [
+        68,
+        228,
+        448,
+        297
+      ],
+      "safe_zone_pass": true,
+      "band_bad_pixels": 0,
+      "magenta_pixels": 0,
+      "visible_magenta_pixels": 0,
+      "generation_method": "image_gen.imagegen",
+      "attempts": 4,
+      "despill": {
+        "edge_magenta_before": 31,
+        "edge_magenta_after": 0,
+        "changed_pixels": 31,
+        "safe_zone_band_nontransparent_pixels": 0,
+        "alpha_unchanged": true,
+        "blue_dominant_pixels_unchanged": true
+      }
+    }
+  ],
+  "attempt_checks": [
+    {
+      "attempt": 1,
+      "grid_pass": true,
+      "safe_zone_pass": true,
+      "opaque_magenta_pass": false,
+      "failure": "Avatar: 104 opaque magenta pixels after keying"
+    },
+    {
+      "attempt": 2,
+      "grid_pass": true,
+      "safe_zone_pass": false,
+      "failure": "Bar: 110 out-of-tolerance pixels in outer 62 px band"
+    },
+    {
+      "attempt": 3,
+      "grid_pass": true,
+      "safe_zone_pass": false,
+      "failure": "Bar: 470 out-of-tolerance pixels in outer 62 px band"
+    },
+    {
+      "attempt": 4,
+      "grid_pass": true,
+      "safe_zone_pass": true,
+      "opaque_magenta_pass": true,
+      "visible_magenta_pass": true
+    }
+  ],
+  "despill": {
+    "method": "Re-keyed original _sheet.png using existing matte; on visible pixels with alpha < 255 or touching transparency (8 neighbours), clamp r and b to g only when r > g+60, b > g+60, r >= b-20. Alpha, dimensions, positions and blue-dominant violet pixels preserved.",
+    "counts": {
+      "UI.FRAME.AVATAR.png": {
+        "edge_magenta_before": 506,
+        "edge_magenta_after": 0,
+        "changed_pixels": 506,
+        "safe_zone_band_nontransparent_pixels": 0,
+        "alpha_unchanged": true,
+        "blue_dominant_pixels_unchanged": true
+      },
+      "UI.BAR.FILL.LINH_LUC.png": {
+        "edge_magenta_before": 31,
+        "edge_magenta_after": 0,
+        "changed_pixels": 31,
+        "safe_zone_band_nontransparent_pixels": 0,
+        "alpha_unchanged": true,
+        "blue_dominant_pixels_unchanged": true
+      }
+    }
+  }
+}
