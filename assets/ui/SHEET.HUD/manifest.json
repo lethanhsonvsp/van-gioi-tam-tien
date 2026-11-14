@@ -3,7 +3,7 @@
   "repo": "lethanhsonvsp/van-gioi-tam-tien",
   "source_path": "docs/UI_PROMPTS.md",
   "source_sha": "9855deae44c753b786391e1f1dc8911e2e5b553a",
-  "status": "MIXED: UI.FRAME.AVATAR and UI.BAR.FILL.LINH_LUC pass (redrawn, _sheet_fix.png); UI.BADGE.LEVEL, UI.BTN.PLUS, UI.BTN.ROUND still fail safe zone by 1-380 px",
+  "status": "MIXED: UI.FRAME.AVATAR, UI.BAR.FILL.LINH_LUC pass (_sheet_fix.png); UI.BADGE.LEVEL, UI.BTN.PLUS accepted by owner override; UI.BTN.ROUND fails safe zone (380 px), redraw pending",
   "acceptance": "NOT_APPROVED / PREVIEW ONLY",
   "reason": "Image generation failed the 12% safe-zone requirement. Multiple whole-sheet regeneration attempts were made, but produced incorrect objects/grid. Extracted cells are NOT resized, translated, erased, or repaired.",
   "source_image": "_sheet.png",
@@ -88,7 +88,8 @@
         60,
         426,
         447
-      ]
+      ],
+      "owner_override": "accepted as is 2026-11-14 (safe zone miss 1-6 px)"
     },
     {
       "index": 3,
@@ -152,7 +153,8 @@
         83,
         431,
         417
-      ]
+      ],
+      "owner_override": "accepted as is 2026-11-14 (safe zone miss 1-6 px)"
     },
     {
       "index": 5,

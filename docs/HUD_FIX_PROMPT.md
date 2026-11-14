@@ -31,3 +31,22 @@ After generation, run Python:
 ```
 
 Replace only those two PNGs in `assets/ui/SHEET.HUD/`; keep `_sheet.png` as the earlier source.
+
+## Round button (UI.BTN.ROUND)
+
+Badge and plus button were accepted as is by the owner (2026-11-14). The round button missed the safe zone by 380 px and is redrawn alone, same grid, only cell row 2 col 2.
+
+```text
+Semi-realistic 2D xianxia game UI art, rendered like polished 3D then exported to 2D. Theme: moonlit blue-violet immortal sect.
+SHARED MATERIAL (match the approved SHEET.FEATURE_CARDS frame): polished warm gold metal trim with fine engraved scrollwork and chamfered corners, deep indigo-violet glass body, small teal-cyan diamond gem accents. No green jade, no other trim colour.
+Sprite sheet, canvas 1536x1024, exact grid of 3 columns × 2 rows, equal cells. Each cell is 512x512 px; cell borders are invisible (no lines, no gutters drawn).
+ONLY ONE CELL IS FILLED: row 2 col 2. The other five cells are completely empty flat background.
+SAFE ZONE, STRICT: keep at least 62 px of empty background on every side of the cell. Everything, including glow, sparkles, gem flares and scrollwork tips, stays inside the central 389x389 px of the cell. Draw the object SMALLER than you think is needed; a lot of empty space around it is correct.
+Glow hugs the object tightly (at most 6 px), never a wide halo or bloom spreading onto the background.
+Sharp, centred in its cell, lighting from top-left.
+Flat solid #FF00FF chroma-key background, no shadows or glow spilling onto the background. No pink, magenta or purple-pink inside the element.
+Cell row 2, col 2: round button base, OUTER DIAMETER ABOUT 290 px INCLUDING the gem and its ornament, centred in the cell: gold rim with a small teal-cyan gem at top, deep indigo glass body with subtle cloud swirl, empty centre; shared by mail, bell, settings and other icons.
+No text, no letters, no numbers, no watermark, no characters, no people, no faces. Not pixel art, not ink wash, not watercolor, not brush painting, not flat vector clip art.
+```
+
+After generation: same steps as above, for cell row 2 col 2 only; save `UI.BTN.ROUND.png`, zip as `SHEET.HUD_FIX_ROUND.zip`.
