@@ -1,212 +1,214 @@
 {
   "sheet_id": "SHEET.HUD",
-  "canvas": [
-    1536,
-    1024
-  ],
+  "repo": "lethanhsonvsp/van-gioi-tam-tien",
+  "source_path": "docs/UI_PROMPTS.md",
+  "source_sha": "9855deae44c753b786391e1f1dc8911e2e5b553a",
+  "status": "FAIL_SOURCE_SAFE_ZONE",
+  "acceptance": "NOT_APPROVED / PREVIEW ONLY",
+  "reason": "Image generation failed the 12% safe-zone requirement. Multiple whole-sheet regeneration attempts were made, but produced incorrect objects/grid. Extracted cells are NOT resized, translated, erased, or repaired.",
+  "source_image": "_sheet.png",
+  "canvas": {
+    "w": 1536,
+    "h": 1024
+  },
   "grid": {
-    "columns": 3,
+    "cols": 3,
     "rows": 2,
-    "cell_width": 512,
-    "cell_height": 512
+    "cell_w": 512,
+    "cell_h": 512
   },
   "background": "#FF00FF",
-  "chroma_key": "magenta",
-  "soft_alpha": true,
-  "despill": "magenta (red/blue fringe cleanup)",
-  "source_generation": "_raw_generation.png",
-  "cut_image": "_sheet.png",
-  "note": "The image-generation model violated the 12% safe zone. Original raw is retained. The entire sheet was reconstructed by compositing and uniformly resizing extracted source artwork; therefore this is a practical derivative, NOT a faithful unmodified image-generation output as required by strict After generation.",
-  "strict_after_generation_compliance": false,
-  "quality_control_reconstructed_sheet": {
-    "all_edges_6px_and_safezone_passed": true,
-    "edge_checks": [
-      {
-        "cell": 1,
-        "id": "UI.FRAME.AVATAR",
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      },
-      {
-        "cell": 2,
-        "id": "UI.BADGE.LEVEL",
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      },
-      {
-        "cell": 3,
-        "id": "UI.BAR.FILL.LINH_LUC",
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      },
-      {
-        "cell": 4,
-        "id": "UI.BTN.PLUS",
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      },
-      {
-        "cell": 5,
-        "id": "UI.BTN.ROUND",
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      },
-      {
-        "cell": 6,
-        "id": null,
-        "edges": {
-          "top": true,
-          "bottom": true,
-          "left": true,
-          "right": true
-        },
-        "safe_zone_12pct_violating_pixels": 0,
-        "passed": true
-      }
-    ]
-  },
+  "chroma_key_tolerance_per_channel": 30,
+  "edge_test_pixels": 6,
+  "safe_zone_fraction": 0.12,
+  "safe_zone_margin_ceil_px": 62,
+  "alpha": "soft",
+  "despill": "magenta / semi-transparent antialias edge only",
+  "cell_pictures_untouched_geometry": true,
   "cells": [
     {
+      "index": 1,
+      "row": 1,
+      "col": 1,
       "id": "UI.FRAME.AVATAR",
-      "row": 1,
-      "column": 1,
+      "w": 512,
+      "h": 512,
+      "source_bbox": [
+        55,
+        23,
+        494,
+        477
+      ],
+      "edge_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "edge_pass": true,
+      "safe_zone_violation_pixels": 6745,
+      "safe_zone_pass": false,
+      "pass": false,
       "file": "UI.FRAME.AVATAR.png",
-      "w": 512,
-      "h": 512,
       "bbox_nontransparent": [
-        80,
-        73,
-        431,
-        438
-      ],
-      "source_bbox": [
-        58,
-        45,
-        460,
-        463
-      ],
-      "recomposed_scale": 0.87321
+        56,
+        24,
+        494,
+        477
+      ]
     },
     {
+      "index": 2,
+      "row": 1,
+      "col": 2,
       "id": "UI.BADGE.LEVEL",
-      "row": 1,
-      "column": 2,
-      "file": "UI.BADGE.LEVEL.png",
       "w": 512,
       "h": 512,
-      "bbox_nontransparent": [
-        95,
-        81,
-        416,
-        430
-      ],
       "source_bbox": [
-        98,
-        79,
-        419,
-        428
+        85,
+        60,
+        426,
+        448
       ],
-      "recomposed_scale": 1.0
+      "edge_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "edge_pass": true,
+      "safe_zone_violation_pixels": 6,
+      "safe_zone_pass": false,
+      "pass": false,
+      "file": "UI.BADGE.LEVEL.png",
+      "bbox_nontransparent": [
+        86,
+        60,
+        426,
+        447
+      ]
     },
     {
-      "id": "UI.BAR.FILL.LINH_LUC",
+      "index": 3,
       "row": 1,
-      "column": 3,
-      "file": "UI.BAR.FILL.LINH_LUC.png",
+      "col": 3,
+      "id": "UI.BAR.FILL.LINH_LUC",
       "w": 512,
       "h": 512,
-      "bbox_nontransparent": [
-        73,
-        228,
-        438,
-        283
-      ],
       "source_bbox": [
-        40,
-        223,
-        473,
+        37,
+        228,
+        460,
         288
       ],
-      "recomposed_scale": 0.84296
+      "edge_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "edge_pass": true,
+      "safe_zone_violation_pixels": 1332,
+      "safe_zone_pass": false,
+      "pass": false,
+      "file": "UI.BAR.FILL.LINH_LUC.png",
+      "bbox_nontransparent": [
+        38,
+        228,
+        459,
+        288
+      ]
     },
     {
+      "index": 4,
+      "row": 2,
+      "col": 1,
       "id": "UI.BTN.PLUS",
-      "row": 2,
-      "column": 1,
-      "file": "UI.BTN.PLUS.png",
       "w": 512,
       "h": 512,
-      "bbox_nontransparent": [
-        93,
-        82,
-        418,
-        429
-      ],
       "source_bbox": [
-        100,
-        69,
-        425,
-        416
+        0,
+        83,
+        432,
+        512
       ],
-      "recomposed_scale": 1.0
+      "edge_6px": {
+        "top": true,
+        "bottom": false,
+        "left": false,
+        "right": true
+      },
+      "edge_pass": false,
+      "safe_zone_violation_pixels": 1,
+      "safe_zone_pass": false,
+      "pass": false,
+      "file": "UI.BTN.PLUS.png",
+      "bbox_nontransparent": [
+        98,
+        83,
+        431,
+        417
+      ]
     },
     {
-      "id": "UI.BTN.ROUND",
+      "index": 5,
       "row": 2,
-      "column": 2,
-      "file": "UI.BTN.ROUND.png",
+      "col": 2,
+      "id": "UI.BTN.ROUND",
       "w": 512,
       "h": 512,
-      "bbox_nontransparent": [
-        92,
-        80,
-        419,
+      "source_bbox": [
+        77,
+        42,
+        435,
         431
       ],
-      "source_bbox": [
-        92,
-        69,
-        419,
-        420
-      ],
-      "recomposed_scale": 1.0
-    }
-  ],
-  "empty_cells": [
+      "edge_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "edge_pass": true,
+      "safe_zone_violation_pixels": 380,
+      "safe_zone_pass": false,
+      "pass": false,
+      "file": "UI.BTN.ROUND.png",
+      "bbox_nontransparent": [
+        78,
+        43,
+        435,
+        431
+      ]
+    },
     {
       "index": 6,
       "row": 2,
-      "column": 3
+      "col": 3,
+      "id": null,
+      "w": 512,
+      "h": 512,
+      "source_bbox": null,
+      "edge_6px": {
+        "top": true,
+        "bottom": true,
+        "left": true,
+        "right": true
+      },
+      "edge_pass": true,
+      "safe_zone_violation_pixels": 0,
+      "safe_zone_pass": true,
+      "pass": true
     }
+  ],
+  "all_6px_edges_pass": false,
+  "all_safe_zones_pass": false,
+  "image_geometry_valid": true,
+  "expected_icon_ids": [
+    "UI.FRAME.AVATAR",
+    "UI.BADGE.LEVEL",
+    "UI.BAR.FILL.LINH_LUC",
+    "UI.BTN.PLUS",
+    "UI.BTN.ROUND"
   ]
 }
