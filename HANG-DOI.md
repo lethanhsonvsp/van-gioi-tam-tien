@@ -43,3 +43,12 @@ Việc 10, 11: một ảnh một lần chạy Codex (task brief tương tự `_c
 
 ## Ghi chú 2026-11-14
 Ảnh nhân vật do Codex tạo (ảnh ID Diễm Vô Tâm trong `assets/characters/` và 10 ảnh ID thử trong `_codex_out/`) đã bị xóa theo lệnh Chủ tịch: mặt cùng khuôn, tóc, môi, áo cổ cao không đạt. Việc 10, 11 làm lại bằng ChatGPT theo `docs/CHAR_ID_CHATGPT.md`.
+
+## Nhập ảnh công pháp, chiêu, quái từ RoomCost/TuTien (ý tưởng Chủ tịch 2026-11-14, Phó chủ tịch và Cố vấn bàn)
+Kết luận: HOÃN, chưa chép tệp nào. Lý do: VGTT chưa có dữ liệu chiêu, công pháp, quái, chưa có `package.json`; VGTT là repo công khai (Pages) còn RoomCost riêng tư, ảnh đã đẩy lên thì không thu hồi được; ảnh quái Meshy chưa ghi gói và ngày trong `ASSETS_LICENSES.md`.
+Khi cần: icon công pháp (285, 128 px) và icon chiêu (488, 256 px) hợp phong cách, ghép khung vàng-chàm-teal bằng script nhập kèm manifest; chân dung quái (166) hợp màn không pixel; VFX (374 MB) chỉ lấy 20-40 dải cho Bí Cảnh sau khi chốt engine; Thí Luyện cần hiệu ứng và quái pixel mới. Chỉ lấy hình, không lấy tên công pháp gắn thế lực TuTien. Đề xuất miền ID: `ICON.ART`, `ICON.ART_SUB`, `ICON.SKILL`, `MON.PORTRAIT`, `FX.SKILL`.
+| # | Trạng thái | Việc |
+|---|---|---|
+| 17 | ask | Chủ tịch quyết: (a) giữ ảnh TuTien riêng, VGTT tạo bộ ảnh riêng theo cùng quy trình (đề xuất); (b) chuyển VGTT sang repo riêng tư; (c) dùng chung ảnh, có văn bản của Chủ tịch. |
+| 18 | ask | VFX trong Bí Cảnh là pixel hay độ phân giải cao (chốt cùng engine, việc 16). |
+| 19 | ready | Phác tài liệu miền ID cho chiêu, công pháp, quái (không kèm ảnh). |
