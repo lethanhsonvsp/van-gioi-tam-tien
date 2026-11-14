@@ -119,3 +119,19 @@ Cảm giác nhịp chơi: vòng quay -> đánh -> lên cấp ngắn và rõ, 5 t
 Số cân bằng cần Chủ tịch duyệt (đều alpha-temporary): tỉ lệ Gacha N40/R30/SR20/SSR8/UR2 và pity 10/60 (màn hiện "SR sau ~10, UR sau ~50"); thưởng 30+15/tầng linh thạch, 30+20/tầng EXP; lặp 0,5x giảm 0,7, tối đa 5 lần; giá tu luyện 15*cấp^1,4; EXP 40*cấp^1,3; trần cấp 40; bonus trần theo độ hiếm; có muốn bằng linh thạch tới được cấp 40 hay chỉ ~20 như hiện tại (trần kinh tế là có chủ đích: không nguồn vô hạn).
 
 Đề xuất việc tiếp theo: VS-7 màn Thí Luyện xem trước đội/quái và Gacha tự xếp đội mới (Chủ tịch duyệt mặc định); VS-8 bố cục di động riêng (tùy Chủ tịch muốn chơi điện thoại không); VS-9 luật Tiên Nô trùng (cần Chủ tịch quyết, L3); VS-10 gắn ảnh chân dung khi có ảnh duyệt.
+
+## Quyết định Phó chủ tịch và Cố vấn (2026-11-14, số alpha-temporary, Chủ tịch chỉ đưa ý tưởng)
+- Độ hiếm: Tần Nguyệt Dao lên R; Tiên Nô chỉ R, SR, SSR, UR; N là bậc của nhân vật chính, quái và trang bị. Hệ số tiềm năng N 1.0, R 1.15, SR 1.25, SSR 1.4, UR 1.55.
+- Gacha: N 0, R 58, SR 30, SSR 10, UR 2; pity SR+ ở lượt 10, pity UR 50; 10 thẻ khởi điểm.
+- Kinh tế: không đổi giá tu luyện; `maxLevel` 30 (Nguyên Anh "Sắp mở"); linh thạch base 40, perFloor 25; không thêm nguồn vô hạn.
+- Độ khó: `levelPerFloor` thử 1.4 (chỉ chốt sau khi sim với bộ hệ số mới đạt tiêu chí; không đạt thì giữ 1.3, được chỉnh trong 1.3 đến 1.6), `bossMult` 1.5. Cần chạy sim từng thay đổi một.
+- Tiên Nô trùng (VS-9 thu hẹp): chỉ +1 trần cấp mỗi bản trùng, tối đa 5; từ bản thứ 6 chỉ đếm, HOÃN đổi ra linh thạch (chỉ cần khi có nguồn thẻ định kỳ, lúc đó chạy phép thử bảo toàn).
+- Mặc định thiết kế tạm chấp nhận; lên cấp hồi đầy máu chỉ ngoài Bí Cảnh.
+- Pages công khai và merge `main`: chờ lệnh người dùng, không tự làm.
+| # | Trạng thái | Việc |
+|---|---|---|
+| VS-11 | ready | Áp số trên. Merge origin/main vào nhánh trước (độ hiếm trong `data/tien_no_appearance.json` và `docs/ALPHA_TIEN_NO_ROSTER.md` đã đổi trên main). Chạy `gen_content.mjs`. Sửa `gacha.json` (N 0, R 58, SR 30, SSR 10, UR 2, urEvery 50), `balance.json` (hệ số hiếm, maxLevel 30, capBonus R 2, khóa Nguyên Anh), `rewards.json` (linh thạch 40 + 25/tầng), `trial.json` (levelPerFloor thử 1.4). Migrate save lên v4: gán lại rarity theo id từ nội dung, hạ cấp quá 30 xuống 30. Cập nhật test Gacha và climb. Tiêu chí (40 hạt giống): tầng 1-2 thắng >=90%; không kẹt trước tầng 10; tổng kẹt <=1/40; >=85% qua tầng 20; cấp chính ở tầng 20 khoảng 18-22; đội toàn UR vẫn qua nhưng tầng 16-20 thắng ngay lần đầu <=70% và >=50% hạt giống thua ít nhất một lần. Chạy sim từng thay đổi một, báo số trước và sau. |
+| VS-7 | ready | Thí Luyện xem trước đội và quái trước khi Bắt đầu; Gacha tự xếp Tiên Nô mới vào ô đội trống (không đẩy ai ra); màn kết quả hiện hạt giống trận. |
+| VS-9 | ready (sau VS-11) | Trần cấp +1 mỗi bản trùng (tối đa 5), hiện trong hồ sơ, có test; bản thứ 6 trở đi chỉ đếm. |
+| VS-8 | ready (sau VS-9) | Bố cục điện thoại ngang riêng, chữ tối thiểu 13 px thật, nút chạm 44 px; kiểm bằng `playthrough.mjs` ở 844x390. |
+| VS-10 | blocked | Gắn ảnh chân dung theo ID khi ảnh đã duyệt. |
