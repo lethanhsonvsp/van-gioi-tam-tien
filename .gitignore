@@ -1,0 +1,10 @@
+# Build and dependencies
+node_modules/
+dist/
+
+# Downloaded asset packs: contents are extracted into assets/ui/<SHEET.ID>/
+*.zip
+/Fantasy Rarity UI Asset Sheet.png
+
+# Codex scratch output, reviewed before anything is copied into assets/
+_codex_out/
