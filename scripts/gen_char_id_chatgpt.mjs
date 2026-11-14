@@ -39,6 +39,6 @@ Why: the Codex batch (2026-11-14) gave all ten faces the same template (oval fac
 |---|---|---|
 ${d.characters.map(c => `| ${c.name} | ${c.id} | ${c.lips} |`).join('\n')}
 `;
+for (const c of d.characters) if (/high-collar|plain robe covering/i.test(prompt(c).replace(/NO high collar[^.]*\./g, ''))) throw new Error(`covered outfit text in ${c.id}`);
 for (const c of d.characters) md += `\n## ${c.name} — ${c.id}\n\n\`\`\`text\n${prompt(c)}\n\`\`\`\n`;
-if (/high-collar|plain robe covering/i.test(md.replace(/NO high collar[^.]*\./g, ''))) throw new Error('covered outfit text leaked into ChatGPT ID prompts');
 writeFileSync('docs/CHAR_ID_CHATGPT.md', md);
