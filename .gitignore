@@ -8,3 +8,6 @@ dist/
 
 # Codex scratch output, reviewed before anything is copied into assets/
 _codex_out/
+
+# Art drafts not yet reviewed
+art-drafts/
