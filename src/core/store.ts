@@ -8,8 +8,10 @@ const listeners = new Set<() => void>();
 
 export const getState = (): GameState => state;
 export const subscribe = (l: () => void) => { listeners.add(l); return () => { listeners.delete(l); }; };
-export function setState(next: GameState): void {
+// Returns false when the browser refused the write (full or blocked); the in-memory state is still updated.
+export function setState(next: GameState): boolean {
   state = next;
-  saveGame(state);
+  const saved = saveGame(state);
   listeners.forEach(l => l());
+  return saved;
 }

@@ -1,0 +1,9 @@
+.import { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--gold-dim); }
+.import h2 { margin: 0 0 6px; font-size: 20px; color: var(--gold); }
+.import .dump { height: 64px; font-size: 13px; resize: none; overflow: hidden; box-sizing: border-box; }
+.import p { font-size: 15px; margin: 6px 0; }
+.import .buttons { margin: 8px 0; gap: 10px; }
+.import .back { min-height: 44px; font-size: 15px; }
+.import-err { color: #ffb0a0; }
+.import-count { opacity: .8; margin: 2px 0 0; }
+.stage:not(.compact) .import .dump { font-size: 16px; height: 84px; }

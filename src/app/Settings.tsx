@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { newGame, serialize } from '../core/save';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
+import { ImportSave } from './ImportSave';
 import { Home } from './Home';
 import { useGame } from './useGame';
 import './roster.css';
@@ -26,6 +27,7 @@ export function Settings({ back, guide }: { back: () => void; guide: () => void 
         </div>
         {wiped && <p className="done-note" role="status">Đã xóa save. Game mới bắt đầu từ đầu.</p>}
         {dump !== null && <textarea className="dump tech" readOnly value={dump} onFocus={e => e.currentTarget.select()} />}
+        <ImportSave back={back} />
       </div>
       <Home back={back} />
     </div>

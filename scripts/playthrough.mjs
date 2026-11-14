@@ -75,6 +75,20 @@ await step('quay them', async () => { await click('Tiên Nô'); const t = (await
 await step('so tay', async () => { await click('Sổ Tay'); await shot('15-so-tay-tien-no'); const t = await text(); if (!t.includes('Đã gặp') || !t.includes('Chưa gặp')) errors.push('so tay: thieu tong Da gap hoac nhan Chua gap'); await click('Chiêu thức'); await shot('16-so-tay-chieu'); if (!(await text()).includes('Khống chế')) errors.push('so tay: thieu cam nang chieu'); await click('Độ hiếm'); await shot('17-so-tay-do-hiem'); if (!(await text()).includes('bậc cao mạnh hơn')) errors.push('so tay: thieu ghi chu do hiem'); await click('Về sảnh'); });
 const before = await save();
 await step('reload + kiem tra', async () => { await send('Page.navigate', { url }); await sleep(1500); const after = await save(); const same = JSON.stringify(before) === JSON.stringify(after); console.log('   save giong het truoc reload:', same, summary(after)); if (!same) errors.push('save differs after reload'); await shot('12-sau-reload'); if (!(await text()).includes(NAME)) errors.push('name missing in lobby after reload'); });
+await step('cai dat nhap save', async () => {
+  await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xuất save');
+  const dump = await ev(`document.querySelector('textarea[readonly]').value`); const want = summary(await save()); await click('Ẩn save');
+  const fill = v => ev(`(() => { const t = document.querySelector('textarea[aria-label="Dán chuỗi save"]'); Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value').set.call(t, ${JSON.stringify(v)}); t.dispatchEvent(new Event('input', { bubbles: true })); })()`);
+  const nhap = () => ev(`!![...document.querySelectorAll('button')].find(b => b.textContent.startsWith('Nhập save') && !b.disabled)`);
+  await fill(JSON.stringify({ ...JSON.parse(dump), player: { ...JSON.parse(dump).player, level: -3 } })); await sleep(150);
+  if (await nhap()) errors.push('nhap save: nut Nhap save bam duoc truoc khi kiem');
+  await click('Kiểm tra'); if (!(await text()).includes('Lỗi:') || await nhap()) errors.push('nhap save: save sai khong hien loi hoac van cho nhap'); await shot('18-nhap-loi');
+  await fill(dump); await click('Kiểm tra'); if (!(await text()).includes('Hợp lệ:')) errors.push('nhap save: save hop le khong bao hop le'); await shot('19-nhap-hop-le');
+  await click('Nhập save'); if (!(await text()).includes('Bấm lần nữa để ghi đè')) errors.push('nhap save: thieu buoc xac nhan hai'); await shot('20-nhap-xac-nhan');
+  await click('Bấm lần nữa để ghi đè'); if (!(await text()).includes('Đã nhập save')) errors.push('nhap save: thieu thong bao thanh cong'); await shot('21-nhap-xong');
+  const got = summary(await save()); console.log('   sau nhap:', got); if (got !== want) errors.push(`nhap save: trang thai lech ${want} != ${got}`);
+  await click('Về sảnh'); if (!(await text()).includes(NAME)) errors.push('nhap save: sanh mat ten sau khi nhap');
+});
 await step('cai dat xoa save', async () => { await ev(`document.querySelector('button[aria-label="Cài Đặt"]').click()`); await sleep(250); await click('Xóa save'); await click('Bấm lần nữa'); await sleep(300); await shot('13-sau-xoa'); if (!(await text()).includes('Đã xóa save')) errors.push('xoa save: thieu thong bao da xoa'); const s = await save(); console.log('   sau xoa:', summary(s)); if (s.tienNo.length || s.trial.cleared) errors.push('xoa save: chua ve game moi'); await click('Về sảnh'); await shot('14-sanh-moi'); if ((await text()).includes(NAME)) errors.push('sanh sau xoa van con ten cu'); });
 console.log(`\nhạt giống: ${process.env.VGTT_SEED ?? 'ngẫu nhiên'}`);
 console.log(`\ntầng qua được: ${passed}/5 | tổng ${(steps.reduce((a, s) => a + s[1], 0) / 1000).toFixed(0)}s | viewport ${W}x${H}`);

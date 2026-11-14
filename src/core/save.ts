@@ -69,10 +69,19 @@ export function migrate(raw: { version: number }): GameState | null {
 }
 
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null;
-const looksValid = (s: unknown): s is GameState =>
-  isObj(s) && isObj(s.rng) && typeof s.rng.state === 'number' && isObj(s.player) && typeof s.player.level === 'number'
-  && Array.isArray(s.tienNo) && typeof s.tickets === 'number' && isObj(s.pity) && Array.isArray(s.party) && s.party.length === PARTY_SIZE
-  && isObj(s.trial) && typeof s.trial.cleared === 'number' && typeof s.trial.floor === 'number' && isObj(s.trial.repeats) && isObj(s.linhLuc) && isObj(s.currency);
+// Shape checks per field; importSave reuses them to name the first bad field, so import and real load never disagree.
+export const SAVE_SHAPE: [string, (s: Record<string, unknown>) => boolean][] = [
+  ['rng', s => isObj(s.rng) && typeof s.rng.state === 'number'],
+  ['player', s => isObj(s.player) && typeof s.player.level === 'number'],
+  ['tienNo', s => Array.isArray(s.tienNo)],
+  ['tickets', s => typeof s.tickets === 'number'],
+  ['pity', s => isObj(s.pity)],
+  ['party', s => Array.isArray(s.party) && s.party.length === PARTY_SIZE],
+  ['trial', s => isObj(s.trial) && typeof s.trial.cleared === 'number' && typeof s.trial.floor === 'number' && isObj(s.trial.repeats)],
+  ['linhLuc', s => isObj(s.linhLuc)],
+  ['currency', s => isObj(s.currency)],
+];
+const looksValid = (s: unknown): s is GameState => isObj(s) && SAVE_SHAPE.every(([, ok]) => ok(s));
 
 export const serialize = (s: GameState): string => JSON.stringify(s);
 
