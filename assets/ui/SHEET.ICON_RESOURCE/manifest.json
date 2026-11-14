@@ -1,0 +1,189 @@
+{
+  "sheet_id": "SHEET.ICON_RESOURCE",
+  "status": "OWNER_ACCEPTED_NEAR_PASS",
+  "generation_method": "built-in image_gen; verbatim source prompt plus layout clarifications on retries; Pillow grid cropping and chroma extraction only",
+  "attempts": 4,
+  "kept_attempt": 4,
+  "failed_band_pixels_per_attempt": [
+    {
+      "attempt": 1,
+      "total": 108927,
+      "per_cell": {
+        "ICON.RES.LINH_THACH": 13611,
+        "ICON.RES.TIEN_NGOC": 13346,
+        "ICON.RES.XU": 13658,
+        "ICON.RES.THE_TRIEU_HOI": 13500,
+        "ICON.RES.DAN_TANG_CAP": 13783,
+        "ICON.RES.MANH_TIEN_NO": 13504,
+        "ICON.RES.NANG_LUONG": 13848,
+        "ICON.RES.KINH_NGHIEM": 13677
+      }
+    },
+    {
+      "attempt": 2,
+      "total": 1000,
+      "per_cell": {
+        "ICON.RES.LINH_THACH": 0,
+        "ICON.RES.TIEN_NGOC": 0,
+        "ICON.RES.XU": 0,
+        "ICON.RES.THE_TRIEU_HOI": 182,
+        "ICON.RES.DAN_TANG_CAP": 393,
+        "ICON.RES.MANH_TIEN_NO": 0,
+        "ICON.RES.NANG_LUONG": 0,
+        "ICON.RES.KINH_NGHIEM": 425
+      }
+    },
+    {
+      "attempt": 3,
+      "total": 294,
+      "per_cell": {
+        "ICON.RES.LINH_THACH": 0,
+        "ICON.RES.TIEN_NGOC": 0,
+        "ICON.RES.XU": 0,
+        "ICON.RES.THE_TRIEU_HOI": 0,
+        "ICON.RES.DAN_TANG_CAP": 61,
+        "ICON.RES.MANH_TIEN_NO": 0,
+        "ICON.RES.NANG_LUONG": 0,
+        "ICON.RES.KINH_NGHIEM": 233
+      }
+    },
+    {
+      "attempt": 4,
+      "total": 59,
+      "per_cell": {
+        "ICON.RES.LINH_THACH": 0,
+        "ICON.RES.TIEN_NGOC": 0,
+        "ICON.RES.XU": 0,
+        "ICON.RES.THE_TRIEU_HOI": 0,
+        "ICON.RES.DAN_TANG_CAP": 0,
+        "ICON.RES.MANH_TIEN_NO": 0,
+        "ICON.RES.NANG_LUONG": 0,
+        "ICON.RES.KINH_NGHIEM": 59
+      }
+    }
+  ],
+  "cells": [
+    {
+      "id": "ICON.RES.LINH_THACH",
+      "file": "ICON.RES.LINH_THACH.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        130,
+        139,
+        294,
+        408
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.TIEN_NGOC",
+      "file": "ICON.RES.TIEN_NGOC.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        107,
+        132,
+        280,
+        410
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.XU",
+      "file": "ICON.RES.XU.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        70,
+        133,
+        276,
+        410
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.THE_TRIEU_HOI",
+      "file": "ICON.RES.THE_TRIEU_HOI.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        49,
+        126,
+        257,
+        413
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.DAN_TANG_CAP",
+      "file": "ICON.RES.DAN_TANG_CAP.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        120,
+        139,
+        316,
+        364
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.MANH_TIEN_NO",
+      "file": "ICON.RES.MANH_TIEN_NO.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        103,
+        124,
+        291,
+        346
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.NANG_LUONG",
+      "file": "ICON.RES.NANG_LUONG.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        75,
+        109,
+        266,
+        345
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "ICON.RES.KINH_NGHIEM",
+      "file": "ICON.RES.KINH_NGHIEM.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        42,
+        119,
+        275,
+        367
+      ],
+      "band_pixels": 59,
+      "safe_zone_pass": false,
+      "background_cast_pixels": 0,
+      "owner_override": "near-pass accepted 2026-11-14 (standing owner rule)"
+    }
+  ],
+  "self_review": "Eight correct resource objects; glossy gold, violet and cyan materials; no people or readable text. Scroll has 59 raw pixels in required safe-zone band. Candidate is failed and has not been resized, shifted, erased or patched."
+}

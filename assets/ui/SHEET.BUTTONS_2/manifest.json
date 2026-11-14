@@ -1,0 +1,161 @@
+{
+  "sheet_id": "SHEET.BUTTONS_2",
+  "status": "OWNER_ACCEPTED_NEAR_PASS",
+  "generation_method": "built-in image_gen; chroma key with soft alpha and edge despill",
+  "attempts": 4,
+  "failed_band_pixels_per_attempt": [
+    1076,
+    872,
+    894,
+    819
+  ],
+  "attempt_notes": [
+    "Rejected: band and height",
+    "Rejected: band and height",
+    "Rejected: band and height",
+    "Final attempt"
+  ],
+  "cells": [
+    {
+      "id": "UI.BTN.DANGER.NORMAL",
+      "file": "UI.BTN.DANGER.NORMAL.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        85,
+        203,
+        341,
+        346
+      ],
+      "band_pixels": 209,
+      "safe_zone_pass": false,
+      "background_cast_pixels": 0,
+      "object_w": 256,
+      "object_h": 143,
+      "owner_override": "near-pass accepted (standing owner rule), ~205 px"
+    },
+    {
+      "id": "UI.BTN.DANGER.HOVER",
+      "file": "UI.BTN.DANGER.HOVER.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        71,
+        204,
+        327,
+        347
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "object_w": 256,
+      "object_h": 143
+    },
+    {
+      "id": "UI.BTN.DANGER.PRESSED",
+      "file": "UI.BTN.DANGER.PRESSED.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        57,
+        204,
+        313,
+        347
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "object_w": 256,
+      "object_h": 143
+    },
+    {
+      "id": "UI.BTN.DANGER.DISABLED",
+      "file": "UI.BTN.DANGER.DISABLED.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        44,
+        204,
+        299,
+        346
+      ],
+      "band_pixels": 202,
+      "safe_zone_pass": false,
+      "background_cast_pixels": 0,
+      "object_w": 255,
+      "object_h": 142,
+      "owner_override": "near-pass accepted (standing owner rule), ~205 px"
+    },
+    {
+      "id": "UI.BTN.TAB.NORMAL",
+      "file": "UI.BTN.TAB.NORMAL.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        85,
+        161,
+        340,
+        304
+      ],
+      "band_pixels": 205,
+      "safe_zone_pass": false,
+      "background_cast_pixels": 0,
+      "object_w": 255,
+      "object_h": 143,
+      "owner_override": "near-pass accepted (standing owner rule), ~205 px"
+    },
+    {
+      "id": "UI.BTN.TAB.HOVER",
+      "file": "UI.BTN.TAB.HOVER.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        71,
+        161,
+        326,
+        304
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "object_w": 255,
+      "object_h": 143
+    },
+    {
+      "id": "UI.BTN.TAB.PRESSED",
+      "file": "UI.BTN.TAB.PRESSED.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        57,
+        161,
+        313,
+        304
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "object_w": 256,
+      "object_h": 143
+    },
+    {
+      "id": "UI.BTN.TAB.DISABLED",
+      "file": "UI.BTN.TAB.DISABLED.png",
+      "w": 384,
+      "h": 512,
+      "bbox": [
+        44,
+        161,
+        299,
+        304
+      ],
+      "band_pixels": 203,
+      "safe_zone_pass": false,
+      "background_cast_pixels": 0,
+      "object_w": 255,
+      "object_h": 143,
+      "owner_override": "near-pass accepted (standing owner rule), ~205 px"
+    }
+  ],
+  "review": "Empty interiors, correct materials and states; failed centering/safe zone and 140px maximum height. Kept attempt 4 with fewest band pixels; no resizing or patching."
+}

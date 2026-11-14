@@ -47,8 +47,18 @@
       "aura": "gentle and kind",
       "expression": "calm soft gaze, lips closed with a faint gentle curve",
       "posture": "upright, hands folded in front",
-      "outfit": "sheer layered white and jade-green saintess gown with halter neckline, open back, thigh-high side slits, gold leaf body chains, detached translucent long sleeves, healing light motif",
-      "outfitKey": "halter saintess gown"
+      "outfit": "white and jade-green layered gauze saintess gown with a deep plunging neckline and bare shoulders, lotus-embroidered halter collar, bare back, sheer long floating sleeves, skirt with a high slit to the hip over sheer white stockings and jade slippers, long silk ribbons and leaf-shaped gold ornaments floating around her, soft green qi glow",
+      "outfitKey": "layered gauze saintess gown",
+      "lips": "small soft lips with a slightly plumper lower lip, natural peach-pink, gentle rounded cupid bow",
+      "hairStyle": "FRONT: soft see-through air bangs (thin wispy fringe) over the forehead, two long face-framing strands; BACK: straight black hair falling to the waist, upper half gathered in a round bun with a white jade flower; silhouette tall and narrow",
+      "skinTone": "porcelain white with a warm pink undertone",
+      "makeup": "almost bare face, peach blush, sparse natural lashes, no eyeliner",
+      "mark": "no mark, bare smooth forehead",
+      "jewelry": "white jade flower hairpin and small jade stud earrings only",
+      "pose": "neck medium length, head slightly lowered, gentle kind gaze",
+      "bust": "medium, natural and soft",
+      "rarity": "SR",
+      "title": "Thanh Vân Tông · Thánh Nữ"
     },
     {
       "id": "CHAR.TIEN_NO.MO_DUNG_TUYET",
@@ -86,8 +96,18 @@
       "aura": "cold and aloof",
       "expression": "neutral, sharp level gaze, lips firmly closed",
       "posture": "straight, sword held vertically at side",
-      "outfit": "frost-silver fitted short combat dress with high-cut sides, single ice-crystal pauldron, white fur stole over one shoulder, thigh-high silver boots, sheer ice-blue cape, long straight sword",
-      "outfitKey": "short combat dress with boots"
+      "outfit": "frost-silver qipao-style gown with a keyhole plunging neckline and bare shoulders, sheer ice-blue sleeves drifting like mist, short front hem with a long trailing back panel, white thigh-high stockings and silver boots, white fur stole slipping off one shoulder, ice-crystal ornaments and drifting snow qi",
+      "outfitKey": "frost short qipao with trailing panel",
+      "lips": "razor-thin, perfectly straight lips like a drawn line, no cupid bow, pale cool rose, almost colourless",
+      "hairStyle": "FRONT: no bangs, forehead fully bare, hair swept sleekly back from a sharp hairline, two thin long strands in front of the ears; BACK: one very high tight ponytail of silver-white hair falling to the hips, ice-crystal crown; silhouette sharp and vertical",
+      "skinTone": "cool pale white with a faint blue undertone",
+      "makeup": "no makeup; eyebrows and lashes silver-white like her hair",
+      "mark": "no mark",
+      "jewelry": "ice-crystal crown and a single long ice-crystal earring on one ear only",
+      "pose": "long neck, three-quarter view, chin level, cold distant gaze",
+      "bust": "small to medium, slender and refined",
+      "rarity": "SSR",
+      "title": "Bắc Vực · Kiếm Tiên"
     },
     {
       "id": "CHAR.TIEN_NO.DIEM_VO_TAM",
@@ -96,11 +116,11 @@
       "element": "HOA",
       "apparentAge": 32,
       "face": {
-        "shape": "soft square face, broad jaw with softened angles",
-        "forehead": "broad, slightly flat",
+        "shape": "soft square-oval face, gently defined jaw corners",
+        "forehead": "medium, smooth",
         "cheekbones": "medium-high",
-        "jaw": "wide soft-square jaw",
-        "chin": "broad rounded-square chin"
+        "jaw": "softly defined jaw, slightly wider than average",
+        "chin": "soft rounded chin"
       },
       "eyes": {
         "shape": "deep-set eyes with visible sockets",
@@ -125,8 +145,18 @@
       "aura": "bewitching and dangerous",
       "expression": "half-lidded knowing gaze, lips closed, faint asymmetric curve",
       "posture": "weight on one hip, one hand raised with crimson flame",
-      "outfit": "black and crimson gown with a deep plunging V neckline, side waist cutouts, long translucent crimson trailing skirt panels, gold body chains with rubies, flame motifs",
-      "outfitKey": "plunging trailing gown"
+      "outfit": "black and crimson gown with a plunging neckline open to the navel, bare back to the hips, hip-high slits on both legs, long translucent crimson trailing panels moving like flames, gold body chains with rubies, black stockings and crimson heels, drifting ember qi",
+      "outfitKey": "plunging trailing gown",
+      "lips": "wide mouth with a very full plump lower lip and a thin upper lip, deep crimson lipstick, sensual and defined",
+      "hairStyle": "FRONT: deep side part with a long dramatic side-swept fringe sweeping across the forehead over one brow; BACK: voluminous heavy wavy black hair with red undertone falling past the chest in big waves; silhouette wide and lush",
+      "skinTone": "warm ivory with a rosy undertone",
+      "makeup": "smoky deep red eyeshadow, long dramatic eyeliner, thick curled lashes",
+      "mark": "a beauty mole below the right corner of the mouth",
+      "jewelry": "ruby teardrop earrings and a red spider-lily hair ornament",
+      "pose": "head tilted about 10 degrees, sideways glance from the corner of the eyes",
+      "bust": "full and curvy, the most voluptuous of the roster",
+      "rarity": "SSR",
+      "title": "U Minh Cung · Ma Nữ"
     },
     {
       "id": "CHAR.TIEN_NO.BACH_LINH_NHI",
@@ -164,8 +194,18 @@
       "aura": "playful and mischievous",
       "expression": "lively eyes, lips closed with a playful slight curve",
       "posture": "light on her feet, head slightly tilted, nine white fox tails behind",
-      "outfit": "off-shoulder lavender and white short wrap dress, sheer pink layered sleeves, small bells and tassels, ribbon thigh garters, pink illusion mist",
-      "outfitKey": "off-shoulder short wrap"
+      "outfit": "lavender and pink off-shoulder wrap dress with a sweetheart neckline and bare shoulders, short layered tulle skirt, sheer detached sleeves with ribbons, white thigh-high stockings with ribbon garters and tiny bell anklets, bells and tassels, spirit fox tails of light and floating sakura petals",
+      "outfitKey": "off-shoulder short wrap dress",
+      "lips": "tiny heart-shaped lips with a strong pointed cupid bow and glossy bright pink colour",
+      "hairStyle": "FRONT: short fluffy side-swept bangs, round full fringe above large eyes; BACK: white hair to mid-back with bouncy soft waves and curled ends, lavender ribbon tied at one side; silhouette round and soft",
+      "skinTone": "milk white with pink flush on cheeks and nose tip",
+      "makeup": "pink-violet glitter on the lids, short round eyeliner, clear lower lashes",
+      "mark": "two thin pink fox-style streaks at the outer eye corners",
+      "jewelry": "tiny bells and lavender ribbon, no dangling earrings",
+      "pose": "head tilted about 15 degrees, looking up playfully",
+      "bust": "small and petite, youthful",
+      "rarity": "R",
+      "title": "Cửu Vĩ Hồ · Yêu Tộc"
     },
     {
       "id": "CHAR.TIEN_NO.TAN_NGUYET_DAO",
@@ -203,8 +243,18 @@
       "aura": "mysterious",
       "expression": "unreadable, watchful, lips closed",
       "posture": "crouched-ready stance, dagger held reverse grip",
-      "outfit": "black halter crop top with criss-cross straps, bare midriff, high-cut wrap skirt open at one side, long deep-violet sash, arm wraps, thigh dagger holsters, purple veil lowered around the neck so the face is visible",
-      "outfitKey": "strappy crop top and wrap skirt"
+      "outfit": "black and deep-violet halter qipao-dress with a deep criss-cross laced plunging neckline and bare shoulders and arms, short side-slit skirt over black stockings and tall boots, long sheer purple veil and scarves trailing from the neck and wrists, small dagger holsters on the thighs, dark violet moon-mist qi",
+      "outfitKey": "laced halter qipao with veil",
+      "lips": "wide medium lips, corners slightly turned down giving a stern look, matte dusty rose",
+      "hairStyle": "FRONT: choppy uneven blunt bangs cut at brow level, hair tucked behind the ears; BACK: one long tight low braid down the back with a dark purple cord, nothing loose; silhouette close to the head, severe",
+      "skinTone": "pale neutral porcelain with a faint grey undertone, matte",
+      "makeup": "grey smoke along the lower lash line, short straight lashes",
+      "mark": "a thin pale scar crossing the tail of the left eyebrow",
+      "jewelry": "no earrings, only a dark purple hair cord",
+      "pose": "chin tucked, eyes looking up, shoulders slightly forward",
+      "bust": "medium, firm and athletic",
+      "rarity": "N",
+      "title": "Vô Ảnh Lâu · Sát Thủ"
     },
     {
       "id": "CHAR.TIEN_NO.LIEU_NHU_YEN",
@@ -242,8 +292,18 @@
       "aura": "experienced and composed",
       "expression": "calm knowing gaze, lips closed, at ease",
       "posture": "relaxed, holding a small green elixir vial",
-      "outfit": "emerald silk dress with sweetheart corset bodice, bare shoulders, sheer cream overrobe slipping off the shoulders, high front slit, herb pouches on a gold waist chain",
-      "outfitKey": "corset dress with slipping overrobe"
+      "outfit": "emerald silk underbust corset gown with a sweetheart neckline, bare shoulders and cleavage, sheer cream overrobe slipping off both shoulders down to the elbows, short front skirt with a long sheer back train, cream stockings and embroidered slippers, herb pouches on a gold waist chain, floating herb-leaf qi",
+      "outfitKey": "corset dress with slipping overrobe",
+      "lips": "full soft plump lips, both lips equally full, flat cupid bow, warm coral, relaxed",
+      "hairStyle": "FRONT: no bangs, centre part with soft loose strands falling at both cheeks; BACK: low loose messy bun at the nape with a wooden hairpin and small herb sprigs; silhouette low and relaxed",
+      "skinTone": "warm peach ivory",
+      "makeup": "earthy warm brown tones, no eyeliner",
+      "mark": "a small mole on the left cheek",
+      "jewelry": "jade bud earrings and a wooden hairpin, no gold",
+      "pose": "relaxed shoulders, eyelids slightly lowered",
+      "bust": "full and soft, generous",
+      "rarity": "R",
+      "title": "Dược Vương Cốc · Đan Sư"
     },
     {
       "id": "CHAR.TIEN_NO.HAN_NGUYET_SUONG",
@@ -255,8 +315,8 @@
         "shape": "angular face, defined bone structure",
         "forehead": "high, flat",
         "cheekbones": "prominent",
-        "jaw": "sharp angular jaw",
-        "chin": "square-angular chin"
+        "jaw": "clean defined jawline",
+        "chin": "small firm chin"
       },
       "eyes": {
         "shape": "phoenix eyes, long with lifted outer corners",
@@ -281,8 +341,18 @@
       "aura": "commanding and dignified",
       "expression": "direct steady gaze, lips firmly closed",
       "posture": "squared stance, hand on halberd",
-      "outfit": "sculpted navy and silver armor breastplate leaving shoulders and midriff bare, armored tassets over a short battle skirt, thigh-high armored greaves, short cape with lightning engravings, guandao halberd crackling with lightning",
-      "outfitKey": "sculpted armor with bare midriff"
+      "outfit": "navy and silver battle gown with a sculpted metal bustier neckline, bare shoulders, arms and midriff, high-cut armored skirt with open side panels, thigh-high armored greaves, short cape with lightning engravings, crackling blue lightning qi drifting around her",
+      "outfitKey": "sculpted armor with bare midriff",
+      "lips": "long thin firm horizontal lips, muted pale mauve, no gloss, very controlled",
+      "hairStyle": "FRONT: no bangs, all hair pulled tight back and up, forehead and ears bare, small braids along both sides of the head; BACK: high warrior topknot with a metal crown; silhouette tall, tight and angular",
+      "skinTone": "light beige, clear and healthy",
+      "makeup": "no makeup, only strong dark eyebrows",
+      "mark": "a small silver lightning mark in the middle of the forehead",
+      "jewelry": "plain small silver hoop earrings and a metal hair crown",
+      "pose": "strong neck, square shoulders, looking straight into the camera",
+      "bust": "medium, firm, sculpted by training",
+      "rarity": "SR",
+      "title": "Bắc Minh · Nữ Tướng"
     },
     {
       "id": "CHAR.TIEN_NO.SO_HONG_LIEN",
@@ -320,8 +390,18 @@
       "aura": "proud and regal",
       "expression": "chin slightly raised, confident gaze, lips closed",
       "posture": "upright royal stance, one hand on sword hilt",
-      "outfit": "sleeveless crimson and gold royal gown with high mandarin collar and keyhole chest cutout, floor-length with twin thigh-high slits, gold phoenix shoulder guards, flame-patterned sash",
-      "outfitKey": "collared slit royal gown"
+      "outfit": "crimson and gold royal gown with a high mandarin collar and a large diamond cutout from collarbone to navel, sleeveless, bare back, front and back panels only with sides open to the hip, gold phoenix shoulder guards, sheer gold stockings and gold heels, phoenix-feather sash and drifting golden light",
+      "outfitKey": "collared slit royal gown",
+      "lips": "prominent full upper lip with sharp crisp corners and a bold saturated red lipstick",
+      "hairStyle": "FRONT: thick blunt straight full bangs cut straight across the brows (hime cut) with long cheek-length side locks; BACK: very long straight black hair to the hips, gold phoenix crown on top; silhouette a heavy straight curtain",
+      "skinTone": "golden ivory with a peach glow",
+      "makeup": "gold shimmer on the lids, red eyeliner flicked upward at the tail",
+      "mark": "a red phoenix flower decal in the middle of the forehead",
+      "jewelry": "large gold phoenix earrings and a gold phoenix crown",
+      "pose": "chin raised, looking down at the viewer",
+      "bust": "medium to full, elegant",
+      "rarity": "R",
+      "title": "Hỏa Quốc · Công Chúa"
     },
     {
       "id": "CHAR.TIEN_NO.VAN_MONG_DAO",
@@ -359,8 +439,18 @@
       "aura": "intelligent and observant",
       "expression": "focused thoughtful gaze, lips closed",
       "posture": "standing still, glowing water formation array floating at her hand",
-      "outfit": "deep blue and white sheer layered robe draped off one shoulder, backless wrapped bodice, translucent water-ribbon skirt revealing the legs, formation-script embroidery on the hems",
-      "outfitKey": "one-shoulder backless flowing robe"
+      "outfit": "deep blue sheer silk wrap robe draped over one shoulder with a deep plunging neckline, fully backless and open on the other side down to the hip, slim opaque blue underlayer, translucent water-ribbon skirt panels, sheer stockings and barefoot-style sandals, flowing water ribbons floating around her",
+      "outfitKey": "one-shoulder backless flowing robe",
+      "lips": "small delicate thin straight lips, pale natural peach, understated and quiet",
+      "hairStyle": "FRONT: long curtain bangs parted in the centre and swept to both sides of the face; BACK: extremely long straight blue-black hair to the knees, upper section tied half-up with a jade formation-disc hairpin; silhouette extremely long and thin",
+      "skinTone": "neutral ivory, matte",
+      "makeup": "nearly bare, a faint light-blue streak at the outer eye corners",
+      "mark": "a tear mole under the left eye",
+      "jewelry": "pearl drop earrings and a jade formation-disc hairpin",
+      "pose": "head bowed, distant gaze not looking at the viewer",
+      "bust": "small to medium, delicate",
+      "rarity": "SR",
+      "title": "Thiên Cơ Các · Trận Pháp Sư"
     },
     {
       "id": "CHAR.TIEN_NO.CO_U_LAN",
@@ -372,8 +462,8 @@
         "shape": "wide face with high prominent cheekbones",
         "forehead": "medium, flat",
         "cheekbones": "high and wide",
-        "jaw": "wide, slightly angular",
-        "chin": "broad chin"
+        "jaw": "wide soft jaw",
+        "chin": "soft rounded chin"
       },
       "eyes": {
         "shape": "deep-set eyes, heavy upper lids",
@@ -398,9 +488,20 @@
       "aura": "serene and calm",
       "expression": "still, quiet steady gaze, lips closed",
       "posture": "standing firm, staff planted, small stone guardian beside her",
-      "outfit": "ochre one-shoulder draped garment with wide bronze belt, bare arms with bronze arm bands, long skirt of open side panels over a dark sheer underlayer, heavy stone-bead necklace, bronze talismans",
-      "outfitKey": "one-shoulder drape with open panels"
+      "outfit": "ochre and bronze one-shoulder drape gown with a deep neckline, bare midriff and arms, wide bronze belt low on the hips, long slit skirt panels with open sides over sheer stockings and sandals, bronze arm bands and a heavy stone-bead necklace, floating earth-dust qi motes",
+      "outfitKey": "one-shoulder drape with open panels",
+      "lips": "wide thin lips with level corners, matte plum-brown, mature and composed",
+      "hairStyle": "FRONT: side part with the hair brushed back off the forehead, no bangs, a few short strands at the temples; BACK: long straight ash-grey hair gathered in a low ponytail bound with bronze rings, falling over one shoulder; silhouette plain and mature",
+      "skinTone": "light golden ivory, the warmest of the roster but still fair",
+      "makeup": "soft bronze outline around the eyes, no shimmer",
+      "mark": "three small earth-seal dots on the forehead",
+      "jewelry": "heavy round bronze earrings on elongated lobes",
+      "pose": "head perfectly upright and still, looking into the distance",
+      "bust": "medium to full, solid and mature",
+      "rarity": "UR",
+      "title": "Tiên Cổ · Thủ Mộ Lão Tổ"
     }
   ],
-  "outfitRule": "Adult 18+ glamour: revealing and sensual (bare shoulders, back, midriff, legs; sheer layers; slits) but never nude: nipples and genitals always fully covered by opaque fabric."
+  "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character, but always graceful and immortal, never vulgar or brothel-like. Sexy comes from elegant xianxia cuts: plunging necklines, bare shoulders and back, high slits, sheer layers, short skirts with stockings. Every outfit MUST carry tiên khí (immortal aura): long floating ribbons, sashes and sleeves, cloud, lotus, crane or phoenix motifs, jade, crystal or gold ornaments, a soft glow of her element qi, hem and hair drifting as if weightless, a poised refined posture. Forbidden: bikini, thong, lingerie or bra-like tops, tiny loincloths, stripper or street-walker look, harem or tribal look, cheap shiny plastic fabrics. No trousers or pants on any character: use slit gowns, qipao, robes or short skirts with stockings and footwear that fit her role. How much skin shows varies with each character's style. Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",
+  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image."
 }

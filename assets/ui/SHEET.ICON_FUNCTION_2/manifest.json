@@ -1,0 +1,183 @@
+{
+  "sheet_id": "SHEET.ICON_FUNCTION_2",
+  "status": "PASS_12PCT_BAND (0 band pixels in all 8 cells; only the stricter 240x215 box was exceeded, accepted by standing owner rule)",
+  "generation_method": "built-in image_gen; verbatim prompt plus user size correction; Pillow grid crops, soft chroma key and edge-only despill",
+  "attempts": 4,
+  "failed_band_pixels_per_attempt": [
+    0,
+    8,
+    306,
+    32714
+  ],
+  "tighter_margin_pixels_per_attempt": [
+    1261,
+    4891,
+    6719,
+    58155
+  ],
+  "kept_attempt": 1,
+  "cells": [
+    {
+      "id": "ICON.FN.MAIL",
+      "file": "ICON.FN.MAIL.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        122,
+        108,
+        310,
+        292
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 319,
+      "tighter_margin_pass": false
+    },
+    {
+      "id": "ICON.FN.JOURNAL",
+      "file": "ICON.FN.JOURNAL.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        106,
+        108,
+        294,
+        292
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 314,
+      "tighter_margin_pass": false
+    },
+    {
+      "id": "ICON.FN.QUESTS",
+      "file": "ICON.FN.QUESTS.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        90,
+        108,
+        278,
+        292
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 312,
+      "tighter_margin_pass": false
+    },
+    {
+      "id": "ICON.FN.EVENTS",
+      "file": "ICON.FN.EVENTS.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        73,
+        108,
+        261,
+        293
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 316,
+      "tighter_margin_pass": false
+    },
+    {
+      "id": "ICON.FN.BENEFITS",
+      "file": "ICON.FN.BENEFITS.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        122,
+        64,
+        310,
+        249
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
+    },
+    {
+      "id": "ICON.FN.DAILY_LOGIN",
+      "file": "ICON.FN.DAILY_LOGIN.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        106,
+        64,
+        294,
+        249
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
+    },
+    {
+      "id": "ICON.FN.SETTINGS",
+      "file": "ICON.FN.SETTINGS.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        90,
+        64,
+        278,
+        249
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
+    },
+    {
+      "id": "ICON.FN.NOTIFICATIONS",
+      "file": "ICON.FN.NOTIFICATIONS.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        73,
+        64,
+        261,
+        249
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
+    }
+  ],
+  "empty_cells": [
+    {
+      "index": 9,
+      "band_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "nonbackground_pixels": 0
+    },
+    {
+      "index": 10,
+      "band_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "nonbackground_pixels": 0
+    },
+    {
+      "index": 11,
+      "band_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "nonbackground_pixels": 0
+    },
+    {
+      "index": 12,
+      "band_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "nonbackground_pixels": 0
+    }
+  ]
+}

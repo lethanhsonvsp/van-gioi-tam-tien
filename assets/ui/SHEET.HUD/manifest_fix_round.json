@@ -1,0 +1,32 @@
+{
+  "id": "UI.BTN.ROUND",
+  "file": "UI.BTN.ROUND.png",
+  "w": 512,
+  "h": 512,
+  "bbox": [
+    91,
+    57,
+    421,
+    413
+  ],
+  "safe_zone_pass": false,
+  "magenta_pixels": 0,
+  "generation_method": "built-in image_gen; required prompt verbatim, material reference; attempt 4 adds size validation reminder",
+  "attempts": 4,
+  "despill": {
+    "method": "soft chroma key; edge-only magenta unmix and red clamp; indigo interior preserved",
+    "pixels_clamped": 360,
+    "remaining_edge_magenta_pixels": 0
+  },
+  "band_check": {
+    "tolerance_per_channel": 30,
+    "outer_band_px": 62,
+    "failed_pixels_by_attempt": [
+      56,
+      31,
+      202,
+      25
+    ]
+  },
+  "status": "FAILED_SAFE_ZONE; no resize, shift, erasure or patch performed"
+}

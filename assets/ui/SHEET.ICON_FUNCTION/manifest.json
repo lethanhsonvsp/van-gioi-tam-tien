@@ -1,334 +1,253 @@
 {
   "sheet_id": "SHEET.ICON_FUNCTION",
-  "status": "REJECTED_NOT_PRODUCTION_READY",
-  "source": "docs/UI_PROMPTS.md (main), lethanhsonvsp/van-gioi-tam-tien",
-  "canvas": [
-    1536,
-    1024
+  "status": "OWNER_ACCEPTED_NEAR_PASS (redone in ICON_FUNCTION_2 style; row 3 misses ~450 px each)",
+  "generation_method": "built-in image_gen; verbatim prompt plus user size correction; Pillow grid crops, soft chroma key and edge-only despill",
+  "attempts": 4,
+  "failed_band_pixels_per_attempt": [
+    19105,
+    0,
+    2734,
+    1794
   ],
-  "grid": {
-    "columns": 4,
-    "rows": 3,
-    "horizontal_boundaries": [
-      0,
-      384,
-      768,
-      1152,
-      1536
-    ],
-    "vertical_boundaries": [
-      0,
-      341,
-      683,
-      1024
-    ]
-  },
-  "requested_cell": [
-    384,
-    341
+  "tighter_margin_pixels_per_attempt": [
+    73338,
+    0,
+    15910,
+    13031
   ],
-  "actual_cell_note": "Height is 341, 342, 341 due to 1024 not divisible by 3; round(row*1024/3). No resize or trim.",
-  "background": "#00FF00",
-  "chroma_key": {
-    "soft_alpha": "alpha=clip((max_abs_rgb_distance_to_00ff00-30)/52,0,1)",
-    "despill": "for pixels at chroma boundary, G<=max(R,B)",
-    "four_edge_check_px": 6,
-    "tolerance_per_channel": 30
-  },
-  "overall_validation": {
-    "four_edge_strips_pass": true,
-    "safe_zone_12pct_pass": false,
-    "correct_count_and_order": true
-  },
-  "IMPORTANT": "Source generated sheet has all requested 12 subjects in the correct order and passes four 6-pixel edge tests, but all 12 objects exceed their 12% safe zones. This is a diagnostic, not a completed compliant deliverable. Full-sheet regeneration was attempted but returned the wrong icon count/background. No prohibited resizing or per-cell patching was used.",
+  "kept_attempt": 4,
   "cells": [
     {
-      "cell": 1,
       "id": "ICON.FN.CULTIVATION",
-      "description": "meditation lotus with rising qi",
       "file": "ICON.FN.CULTIVATION.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        69,
-        19,
-        317,
-        315
+        122,
+        115,
+        311,
+        294
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 767,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 445,
+      "tighter_margin_pass": false
     },
     {
-      "cell": 2,
       "id": "ICON.FN.BREAKTHROUGH",
-      "description": "glowing golden core cracking outward",
       "file": "ICON.FN.BREAKTHROUGH.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        53,
-        41,
-        328,
-        301
+        106,
+        115,
+        295,
+        294
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 1,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 437,
+      "tighter_margin_pass": false
     },
     {
-      "cell": 3,
       "id": "ICON.FN.TIEN_NO",
-      "description": "ornate folding fan with jade tassel",
       "file": "ICON.FN.TIEN_NO.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        33,
-        43,
-        344,
-        313
+        90,
+        115,
+        278,
+        294
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 734,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 448,
+      "tighter_margin_pass": false
     },
     {
-      "cell": 4,
       "id": "ICON.FN.EQUIPMENT",
-      "description": "crossed sword and armor plate",
       "file": "ICON.FN.EQUIPMENT.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        38,
-        27,
-        333,
-        314
+        73,
+        115,
+        262,
+        294
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 571,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 439,
+      "tighter_margin_pass": false
     },
     {
-      "cell": 5,
       "id": "ICON.FN.GACHA",
-      "description": "glowing summoning altar with light pillar",
       "file": "ICON.FN.GACHA.png",
       "w": 384,
       "h": 342,
       "bbox": [
-        46,
-        12,
-        338,
-        290
+        122,
+        70,
+        310,
+        249
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 322,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
     },
     {
-      "cell": 6,
       "id": "ICON.FN.TRIAL",
-      "description": "multi-tier trial pagoda",
       "file": "ICON.FN.TRIAL.png",
       "w": 384,
       "h": 342,
       "bbox": [
-        51,
-        21,
-        346,
-        299
+        106,
+        69,
+        294,
+        249
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 254,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
     },
     {
-      "cell": 7,
       "id": "ICON.FN.SECRET_REALM",
-      "description": "swirling portal gate in mountain",
       "file": "ICON.FN.SECRET_REALM.png",
       "w": 384,
       "h": 342,
       "bbox": [
-        33,
-        29,
-        355,
-        302
+        90,
+        70,
+        278,
+        249
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 1404,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
     },
     {
-      "cell": 8,
       "id": "ICON.FN.TEAM",
-      "description": "three overlapping banner flags",
       "file": "ICON.FN.TEAM.png",
       "w": 384,
       "h": 342,
       "bbox": [
-        45,
-        27,
-        343,
-        303
+        73,
+        69,
+        262,
+        249
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 399,
-      "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 0,
+      "tighter_margin_pass": true
     },
     {
-      "cell": 9,
       "id": "ICON.FN.INVENTORY",
-      "description": "embroidered storage pouch",
       "file": "ICON.FN.INVENTORY.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        61,
-        33,
-        313,
-        286
+        122,
+        23,
+        311,
+        203
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 435,
+      "band_pixels": 445,
       "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 2809,
+      "tighter_margin_pass": false,
+      "owner_override": "near-pass accepted (standing owner rule), ~450 px, nothing touches the cell edge"
     },
     {
-      "cell": 10,
       "id": "ICON.FN.SHOP",
-      "description": "merchant pavilion with lantern",
       "file": "ICON.FN.SHOP.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        38,
-        14,
-        333,
-        287
+        106,
+        22,
+        294,
+        203
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 1156,
+      "band_pixels": 453,
       "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 2817,
+      "tighter_margin_pass": false,
+      "owner_override": "near-pass accepted (standing owner rule), ~450 px, nothing touches the cell edge"
     },
     {
-      "cell": 11,
       "id": "ICON.FN.GUILD",
-      "description": "sect gate archway",
       "file": "ICON.FN.GUILD.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        33,
-        13,
-        352,
-        288
+        90,
+        23,
+        278,
+        203
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 768,
+      "band_pixels": 447,
       "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 2809,
+      "tighter_margin_pass": false,
+      "owner_override": "near-pass accepted (standing owner rule), ~450 px, nothing touches the cell edge"
     },
     {
-      "cell": 12,
       "id": "ICON.FN.RANKING",
-      "description": "gold stele with laurel",
       "file": "ICON.FN.RANKING.png",
       "w": 384,
       "h": 341,
       "bbox": [
-        52,
-        11,
-        332,
-        291
+        73,
+        22,
+        262,
+        203
       ],
-      "edge_strip_6px_nonbackground_pixels": {
-        "top": 0,
-        "right": 0,
-        "bottom": 0,
-        "left": 0
-      },
-      "edges_pass": true,
-      "safe_zone_12pct_nonbackground_pixels": 1145,
+      "band_pixels": 449,
       "safe_zone_pass": false,
-      "status": "REJECTED_SAFE_ZONE"
+      "background_cast_pixels": 0,
+      "tighter_margin_pixels": 2827,
+      "tighter_margin_pass": false,
+      "owner_override": "near-pass accepted (standing owner rule), ~450 px, nothing touches the cell edge"
     }
-  ]
+  ],
+  "empty_cells": [],
+  "attempt_reviews": [
+    {
+      "attempt": 1,
+      "content_pass": true,
+      "safe_zone_pass": false
+    },
+    {
+      "attempt": 2,
+      "content_pass": false,
+      "reason": "Copied reference subjects; excluded from candidate selection despite clean margins."
+    },
+    {
+      "attempt": 3,
+      "content_pass": true,
+      "safe_zone_pass": false
+    },
+    {
+      "attempt": 4,
+      "content_pass": true,
+      "safe_zone_pass": false
+    }
+  ],
+  "self_review": "All 12 required subjects are distinct, no people or text, matching indigo-violet glass, engraved gold and cyan gems. Bottom row fails safe zone; kept attempt 4 has the fewest band pixels among content-valid attempts. No artwork resized, shifted or patched."
 }

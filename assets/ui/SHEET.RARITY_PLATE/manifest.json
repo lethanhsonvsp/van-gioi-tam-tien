@@ -1,0 +1,100 @@
+{
+  "sheet_id": "SHEET.RARITY_PLATE",
+  "status": "PASS_12PCT_BAND (attempt 4: 0 band pixels; only the stricter 520x170 box was exceeded by UR, 820 px, accepted by standing owner rule)",
+  "generation_method": "built-in image_gen; Pillow grid crop, soft chroma key and edge despill",
+  "attempts": 4,
+  "failed_band_pixels_per_attempt": [
+    9245,
+    0,
+    8053,
+    0
+  ],
+  "empty_cell_nonbackground_pixels": 0,
+  "cells": [
+    {
+      "id": "UI.PLATE.N",
+      "file": "UI.PLATE.N.png",
+      "w": 768,
+      "h": 341,
+      "bbox": [
+        181,
+        146,
+        586,
+        249
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "compact_box_overflow_pixels": 0
+    },
+    {
+      "id": "UI.PLATE.R",
+      "file": "UI.PLATE.R.png",
+      "w": 768,
+      "h": 341,
+      "bbox": [
+        177,
+        131,
+        591,
+        255
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "compact_box_overflow_pixels": 0
+    },
+    {
+      "id": "UI.PLATE.SR",
+      "file": "UI.PLATE.SR.png",
+      "w": 768,
+      "h": 341,
+      "bbox": [
+        174,
+        101,
+        593,
+        238
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "compact_box_overflow_pixels": 0
+    },
+    {
+      "id": "UI.PLATE.SSR",
+      "file": "UI.PLATE.SSR.png",
+      "w": 768,
+      "h": 341,
+      "bbox": [
+        177,
+        101,
+        591,
+        234
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "compact_box_overflow_pixels": 0
+    },
+    {
+      "id": "UI.PLATE.UR",
+      "file": "UI.PLATE.UR.png",
+      "w": 768,
+      "h": 342,
+      "bbox": [
+        168,
+        75,
+        600,
+        224
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0,
+      "compact_box_overflow_pixels": 820
+    }
+  ],
+  "kept_attempt": 4,
+  "selection_reason": "Attempts 2 and 4 tied at zero 12% band pixels; attempt 4 had fewer corrected compact-box overflow pixels.",
+  "failure_reason": "UR has 820 raw nonbackground pixels above the corrected centered 520x170 box; top margin 75px rather than 86px. Overall plate sizes and centering vary slightly.",
+  "self_review": "Reviewed checkerboard preview: correct five rarity plates, sixth cell empty; no text or people; bronze, jade-teal, silver-violet, engraved gold, celestial winged/halo progression. UR clearly more ornate than SSR. Tight-box placement remains failed.",
+  "prompt_file": "prompt.txt"
+}

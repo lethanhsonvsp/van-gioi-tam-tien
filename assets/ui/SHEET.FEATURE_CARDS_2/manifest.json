@@ -1,0 +1,94 @@
+{
+  "sheet_id": "SHEET.FEATURE_CARDS_2",
+  "status": "PASS",
+  "generation_method": "built-in image_gen; chroma key and edge-only despill with Pillow",
+  "attempts": 3,
+  "failed_band_pixels_per_attempt": [
+    86788,
+    31951,
+    0
+  ],
+  "per_cell_failed_band_pixels_per_attempt": [
+    [
+      21718,
+      21688,
+      21713,
+      21669
+    ],
+    [
+      8033,
+      7931,
+      8027,
+      7960
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "kept_attempt": 3,
+  "cells": [
+    {
+      "id": "UI.FEATURE_CARD.GACHA",
+      "file": "UI.FEATURE_CARD.GACHA.png",
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        109,
+        138,
+        666,
+        426
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.FEATURE_CARD.TRIAL",
+      "file": "UI.FEATURE_CARD.TRIAL.png",
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        103,
+        138,
+        660,
+        426
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.FEATURE_CARD.SECRET_REALM",
+      "file": "UI.FEATURE_CARD.SECRET_REALM.png",
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        109,
+        90,
+        666,
+        378
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.FEATURE_CARD.TEAM",
+      "file": "UI.FEATURE_CARD.TEAM.png",
+      "w": 768,
+      "h": 512,
+      "bbox": [
+        103,
+        90,
+        660,
+        378
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    }
+  ]
+}

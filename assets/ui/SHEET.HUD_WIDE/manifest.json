@@ -1,0 +1,66 @@
+{
+  "sheet_id": "SHEET.HUD_WIDE",
+  "status": "PASS: UI.NAV.BOTTOM_BAR (_sheet.png); UI.PANEL.PROFILE redrawn (_sheet_profile.png, manifest_profile.json), 0 band pixels, 0 green cast",
+  "generation_method": "image_gen.imagegen",
+  "attempts": 3,
+  "kept_attempt": 3,
+  "failed_band_pixels_per_attempt": [
+    {
+      "attempt": 1,
+      "cells": [
+        558,
+        30401
+      ],
+      "total": 30959
+    },
+    {
+      "attempt": 2,
+      "cells": [
+        1160,
+        17977
+      ],
+      "total": 19137
+    },
+    {
+      "attempt": 3,
+      "cells": [
+        0,
+        0
+      ],
+      "total": 0
+    }
+  ],
+  "prompt_source": "docs/UI_PROMPTS.md, SHEET.HUD_WIDE text block used verbatim; placement clarifications appended on retries",
+  "cells": [
+    {
+      "id": "UI.PANEL.PROFILE",
+      "file": "UI.PANEL.PROFILE.png",
+      "w": 1536,
+      "h": 512,
+      "bbox": [
+        338,
+        194,
+        1106,
+        411
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.NAV.BOTTOM_BAR",
+      "file": "UI.NAV.BOTTOM_BAR.png",
+      "w": 1536,
+      "h": 512,
+      "bbox": [
+        298,
+        133,
+        1238,
+        321
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    }
+  ]
+}
