@@ -2,6 +2,7 @@ import tienNoJson from './tien_no.json';
 import balanceJson from './balance.json';
 import skillsJson from './skills.json';
 import trialJson from './trial.json';
+import gachaJson from './gacha.json';
 
 export const RARITIES = ['N', 'R', 'SR', 'SSR', 'UR'] as const;
 export type Rarity = (typeof RARITIES)[number];
@@ -38,6 +39,8 @@ export interface Trial {
   monster: { levelPerFloor: number; statMult: Record<'hp' | 'atk' | 'def' | 'spd', number>; countBase: number; countPerFloor: number; countMax: number; bossEvery: number; bossMult: number };
   elements: string[]; names: Record<string, string>;
 }
+
+export interface Gacha { status: string; cost: number; startTickets: number; rates: Record<Rarity, number>; pity: { srEvery: number; urEvery: number } }
 
 const isStr = (v: unknown): v is string => typeof v === 'string' && v.length > 0;
 
@@ -85,7 +88,16 @@ export function validateTrial(data: unknown, tienNo: TienNo[]): Trial {
   return t;
 }
 
+export function validateGacha(data: unknown): Gacha {
+  const g = data as Gacha;
+  if (!g || !isStr(g.status) || !(g.cost >= 1) || !(g.startTickets >= 0)) throw new Error('gacha: bad data');
+  for (const r of RARITIES) if (!(g.rates?.[r] >= 0)) throw new Error(`gacha: bad rate for ${r}`);
+  if (!RARITIES.some(r => g.rates[r] > 0) || !(g.pity?.srEvery >= 1) || !(g.pity?.urEvery >= g.pity.srEvery)) throw new Error('gacha: bad pity');
+  return g;
+}
+
 export const TIEN_NO: TienNo[] = validateTienNo(tienNoJson);
 export const BALANCE: Balance = validateBalance(balanceJson);
 export const SKILLS: Skills = validateSkills(skillsJson);
 export const TRIAL: Trial = validateTrial(trialJson, TIEN_NO);
+export const GACHA: Gacha = validateGacha(gachaJson);

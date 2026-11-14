@@ -1,0 +1,32 @@
+/* Tien No roster, summon and party. Portraits are colour blocks until art exists. */
+.roster .summon { position: absolute; left: 60px; right: 60px; top: 20px; height: 400px; }
+.roster .summon h1 { margin: 0; color: var(--gold); font-size: 34px; text-shadow: 0 2px 4px #000; }
+.roster .tickets { font-size: 20px; margin: 6px 0; }
+.roster .tickets b { color: var(--gold); font-size: 26px; }
+.roster .buttons { display: flex; gap: 14px; margin: 8px 0; }
+.roster .msg { color: #ff9b9b; font-size: 18px; }
+.roster .results { display: flex; gap: 10px; flex-wrap: nowrap; margin-top: 8px; }
+.roster .owned { position: absolute; left: 60px; right: 60px; top: 440px; bottom: 20px; overflow-y: auto; background: var(--glass); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 12px 16px; }
+.roster .owned h2 { margin: 0 0 8px; font-size: 22px; color: var(--gold); }
+.roster .grid { display: flex; gap: 12px; flex-wrap: wrap; }
+.tcard { position: relative; width: 130px; height: 200px; padding: 0; border: 0; background: none; flex: none; }
+.tcard .portrait { position: absolute; inset: 8px; border-radius: 8px; display: flex; align-items: center; justify-content: center; text-align: center; }
+.tcard .portrait span, .portrait.big span { font-size: 12px; color: rgba(0,0,0,.55); }
+.tcard .frame { pointer-events: none; }
+.tcard .elem { position: absolute; left: 10px; top: 10px; width: 28px; height: 28px; }
+.tcard .rar { position: absolute; right: 12px; top: 10px; font-weight: 700; text-shadow: 0 1px 3px #000; }
+.tcard .tname { position: absolute; left: 6px; right: 6px; bottom: 30px; font-size: 15px; font-weight: 700; text-shadow: 0 1px 3px #000; }
+.tcard .ttitle { position: absolute; left: 6px; right: 6px; bottom: 12px; font-size: 10px; opacity: .9; text-shadow: 0 1px 3px #000; }
+.tcard .new, .tcard .copies { position: absolute; right: 12px; bottom: 60px; font-size: 12px; background: #c33; border-radius: 8px; padding: 1px 6px; }
+.tcard .copies { background: #36a; bottom: 80px; }
+.tcard.sel { outline: 3px solid var(--gold); outline-offset: 1px; border-radius: 10px; }
+.slot { width: 130px; height: 200px; flex: none; border: 2px dashed var(--gold-dim); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: .8; }
+.slot.main { border-style: solid; background: var(--glass); opacity: 1; }
+.modal { position: absolute; inset: 0; background: rgba(0,0,0,.6); display: flex; align-items: center; justify-content: center; z-index: 5; }
+.profile-card { display: flex; gap: 24px; width: 760px; padding: 28px; background: var(--glass); border: 2px solid var(--gold-dim); border-radius: 16px; }
+.portrait.big { width: 240px; height: 340px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex: none; }
+.profile-card h2 { margin: 0; color: var(--gold); font-size: 34px; }
+.profile-card .sub { opacity: .8; margin-bottom: 8px; }
+.profile-card p { font-size: 18px; }
+.profile-card .back { margin-right: 10px; }
+.back:disabled { opacity: .45; }

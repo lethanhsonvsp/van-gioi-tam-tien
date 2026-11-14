@@ -3,6 +3,8 @@ import type { ScreenId } from '../ui_ids';
 import { viewOf } from '../core/player';
 import { useGame } from './useGame';
 import { Lobby } from './Lobby';
+import { Party } from './Party';
+import { Roster } from './Roster';
 import { Screen } from './Screen';
 import { Trial } from './Trial';
 
@@ -23,6 +25,10 @@ export function App() {
       <div className="stage" style={{ width: W, height: H, transform: `translate(-50%, -50%) scale(${scale})` }}>
         {screen === 'screen.trial'
           ? <Trial back={() => setScreen(null)} />
+          : screen === 'screen.tien_no' || screen === 'screen.gacha'
+          ? <Roster back={() => setScreen(null)} />
+          : screen === 'screen.team'
+          ? <Party back={() => setScreen(null)} />
           : screen
           ? <Screen id={screen} back={() => setScreen(null)} />
           : <Lobby player={viewOf(game)} go={setScreen} />}

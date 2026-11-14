@@ -35,7 +35,7 @@ describe('save', () => {
     const bad = { getItem: () => { throw new Error('denied'); }, setItem: () => { throw new Error('denied'); } };
     expect(loadGame(bad).warning).toBeTruthy();
     expect(saveGame(newGame(1), bad)).toBe(false);
-    expect(serialize(newGame(1))).toContain('"version":1');
+    expect(serialize(newGame(1))).toContain('"version":2');
     expect(SAVE_KEY).toBe('vgtt.save');
   });
 });

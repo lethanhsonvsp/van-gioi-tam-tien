@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { runBattle } from '../battle/engine';
 import { FLOOR_COUNT, floorMonsters } from '../battle/monsters';
 import { frameAt, lastTick, type UnitView } from '../battle/replay';
-import { sampleTeam } from '../battle/team';
+import { playerTeam } from '../battle/team';
 import type { BattleResult } from '../battle/types';
 import { Art } from '../ui/Art';
 import { useGame } from './useGame';
@@ -26,7 +26,7 @@ function UnitCard({ u, floats }: { u: UnitView; floats: { key: number; text: str
 
 // Replay only: the battle is simulated once on "Bắt đầu"; the view folds the event log up to the current tick.
 export function Trial({ back }: { back: () => void }) {
-  const { player } = useGame();
+  const game = useGame();
   const [floor, setFloor] = useState(1);
   const [result, setResult] = useState<BattleResult | null>(null);
   const [tick, setTick] = useState(0);
@@ -39,7 +39,7 @@ export function Trial({ back }: { back: () => void }) {
   }, [result, tick, end]);
 
   const frame = useMemo(() => (result ? frameAt(result.events, tick) : null), [result, tick]);
-  const start = () => { setResult(runBattle(sampleTeam(player), floorMonsters(floor), Date.now() >>> 0)); setTick(0); };
+  const start = () => { setResult(runBattle(playerTeam(game), floorMonsters(floor), Date.now() >>> 0)); setTick(0); };
   const next = () => { setFloor(f => f + 1); setResult(null); setTick(0); };
   const done = frame?.end;
   const side = (s: 'A' | 'B') => frame?.units.filter(u => u.side === s).map(u =>
@@ -56,7 +56,7 @@ export function Trial({ back }: { back: () => void }) {
         <div className="team team-a">{side('A')}</div>
         <div className="vs">{done ? <div className={`verdict w-${done.winner}`}>{RESULT[done.winner]}</div> : 'VS'}</div>
         <div className="team team-b">{side('B')}</div>
-        {!result && <p className="hint">Đội thử: nhân vật chính + 3 Tiên Nô. Bấm "Bắt đầu".</p>}
+        {!result && <p className="hint">Đội của bạn (chưa có Tiên Nô thì dùng đội mẫu). Bấm "Bắt đầu".</p>}
       </div>
       <nav className="trial-buttons">
         <button className="back" onClick={back}>Quay lại</button>

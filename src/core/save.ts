@@ -1,15 +1,20 @@
 import { BALANCE } from '../content';
+import { GACHA } from '../content';
 import { makeCharacter, type Character } from './character';
+import { emptyParty, PARTY_SIZE, type OwnedTienNo, type Pity } from './roster';
 import { newRng, type Rng } from './rng';
 
 export const SAVE_KEY = 'vgtt.save';
-export const SAVE_VERSION = 1;
+export const SAVE_VERSION = 2;
 
 export interface GameState {
   version: number;
   rng: Rng;
   player: Character;
-  tienNo: Character[]; // owned Tien No, empty at start
+  tienNo: OwnedTienNo[]; // owned Tien No, empty at start
+  tickets: number; // summon tickets (alpha-temporary start amount in gacha.json)
+  pity: Pity;
+  party: (string | null)[]; // 6 slots; slot 0 is always the protagonist
   linhLuc: { cur: number; max: number };
   currency: { LINH_THACH: number; TIEN_NGOC: number; XU: number };
 }
@@ -21,20 +26,38 @@ export function newGame(seed = Date.now()): GameState {
     rng: newRng(seed),
     player: makeCharacter({ id: 'CHAR.PLAYER.MAIN', name: s.playerName, title: 'Tán tu', element: 'NONE', rarity: 'N' }, s.level),
     tienNo: [],
+    tickets: GACHA.startTickets,
+    pity: { sinceSR: 0, sinceUR: 0 },
+    party: emptyParty('CHAR.PLAYER.MAIN'),
     linhLuc: { cur: s.linhLuc, max: s.linhLuc },
     currency: { LINH_THACH: s.linhThach, TIEN_NGOC: s.tienNgoc, XU: s.xu },
   };
 }
 
-// Frame for future version bumps: upgrade `raw` step by step until it reaches SAVE_VERSION.
+// Upgrade `raw` step by step until it reaches SAVE_VERSION. Unknown or newer versions return null.
+const STEPS: Record<number, (s: Record<string, unknown>) => Record<string, unknown>> = {
+  1: s => ({
+    ...s, version: 2,
+    tienNo: (Array.isArray(s.tienNo) ? s.tienNo : []).map((t: object) => ({ copies: 0, ...t })),
+    tickets: GACHA.startTickets,
+    pity: { sinceSR: 0, sinceUR: 0 },
+    party: emptyParty('CHAR.PLAYER.MAIN'),
+  }),
+};
 export function migrate(raw: { version: number }): GameState | null {
-  return raw.version === SAVE_VERSION ? (raw as GameState) : null;
+  let s = raw as Record<string, unknown>;
+  while (typeof s.version === 'number' && s.version < SAVE_VERSION) {
+    const step = STEPS[s.version];
+    if (!step) return null;
+    s = step(s);
+  }
+  return s.version === SAVE_VERSION ? (s as unknown as GameState) : null;
 }
 
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null;
 const looksValid = (s: unknown): s is GameState =>
   isObj(s) && isObj(s.rng) && typeof s.rng.state === 'number' && isObj(s.player) && typeof s.player.level === 'number'
-  && Array.isArray(s.tienNo) && isObj(s.linhLuc) && isObj(s.currency);
+  && Array.isArray(s.tienNo) && typeof s.tickets === 'number' && isObj(s.pity) && Array.isArray(s.party) && s.party.length === PARTY_SIZE && isObj(s.linhLuc) && isObj(s.currency);
 
 export const serialize = (s: GameState): string => JSON.stringify(s);
 

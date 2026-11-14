@@ -1,5 +1,6 @@
 import { SKILLS, TIEN_NO, TRIAL } from '../content';
 import { makeCharacter, statsFor, type Character } from '../core/character';
+import type { GameState } from '../core/save';
 import type { Fighter } from './types';
 
 // Battle view of the shared Character model: stats derive from rarity, level and element.
@@ -13,4 +14,12 @@ export function fighterOf(c: Character): Fighter {
 export function sampleTeam(player: Character): Fighter[] {
   const members = TRIAL.team.map(id => makeCharacter(TIEN_NO.find(t => t.id === id)!, player.level));
   return [{ ...fighterOf(player), hp: statsFor(player.rarity, player.level, player.element).hp }, ...members.map(fighterOf)];
+}
+
+// The player's own party (protagonist + Tien No in slots 1-5, full HP; Thi Luyen does not persist HP).
+// Default (reversible): a player who owns no Tien No yet gets the sample team so the slice stays playable; once they own any, the party is used even if only the protagonist.
+export function playerTeam(s: GameState): Fighter[] {
+  if (s.tienNo.length === 0) return sampleTeam(s.player);
+  const byId = new Map<string, Character>([[s.player.id, s.player], ...s.tienNo.map(c => [c.id, c] as [string, Character])]);
+  return s.party.flatMap(id => { const c = id && byId.get(id); if (!c) return []; const f = fighterOf(c); return [{ ...f, hp: f.hpMax }]; });
 }
