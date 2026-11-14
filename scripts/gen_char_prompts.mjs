@@ -21,7 +21,7 @@ const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not 
 const style = c => `Chinese xianxia gacha card illustration matching the style reference docs/reference/tien_no_style_target.png: soft luminous semi-realistic 3D-rendered look, delicate beautiful feminine face, large expressive eyes with detailed lashes, glossy lips, flawless porcelain skin, ornate hair ornaments and gold jewelry, ${d.elementBackgrounds[c.element]} elemental glow, floating light particles and petals, dreamy cinematic lighting. Stylized game art, NOT a photograph. ${d.faceRule}`;
 
 const face = c => [
-  `Apparent age ${c.apparentAge}.`,
+  `The face looks about ${Math.min(Math.max(c.apparentAge,20),27)} years old (immortal youth; any older apparent age shows only in poise and gaze).`,
   `Face: ${c.face.shape}; forehead ${c.face.forehead}; cheekbones ${c.face.cheekbones}; jaw ${c.face.jaw}; chin ${c.face.chin}.`,
   `Eyes: ${c.eyes.shape}, ${c.eyes.spacing} spacing, ${c.eyes.depth} sockets, ${c.eyes.eyelid}, ${c.eyes.iris} iris.`,
   `Brows: ${c.brows}. Nose: ${c.nose}. Mouth: ${c.mouth}. Ears: ${c.ears}.`,

@@ -270,10 +270,10 @@
         "chin": "full rounded chin"
       },
       "eyes": {
-        "shape": "downturned eyes, outer corners lower",
+        "shape": "soft sweet gently downturned doe eyes, charming",
         "spacing": "average",
         "depth": "medium",
-        "eyelid": "heavy upper lid, double fold",
+        "eyelid": "soft double eyelid",
         "iris": "amber"
       },
       "brows": "soft natural sparse brows, gently downturned",
@@ -319,7 +319,7 @@
         "chin": "small firm rounded chin"
       },
       "eyes": {
-        "shape": "phoenix eyes, long with lifted outer corners",
+        "shape": "elegant phoenix eyes, long with softly lifted outer corners, luminous",
         "spacing": "average",
         "depth": "medium-deep",
         "eyelid": "thin double eyelid",
@@ -466,10 +466,10 @@
         "chin": "soft rounded chin"
       },
       "eyes": {
-        "shape": "deep-set eyes, heavy upper lids",
+        "shape": "calm almond eyes with softly hooded lids, serene and alluring",
         "spacing": "wide",
-        "depth": "deep",
-        "eyelid": "heavy hooded lid",
+        "depth": "softly set",
+        "eyelid": "soft double eyelid",
         "iris": "light gold-brown"
       },
       "brows": "natural softly curved medium brows",
@@ -503,5 +503,5 @@
     }
   ],
   "outfitRule": "Adult 18+ glamour, 100% sexy and alluring on every character, but always graceful and immortal, never vulgar or brothel-like. Sexy comes from elegant xianxia cuts: plunging necklines, bare shoulders and back, high slits, sheer layers, short skirts with stockings. Every outfit MUST carry tiên khí (immortal aura): long floating ribbons, sashes and sleeves, cloud, lotus, crane or phoenix motifs, jade, crystal or gold ornaments, a soft glow of her element qi, hem and hair drifting as if weightless, a poised refined posture. Forbidden: bikini, thong, lingerie or bra-like tops, tiny loincloths, stripper or street-walker look, harem or tribal look, cheap shiny plastic fabrics. No trousers or pants on any character: use slit gowns, qipao, robes or short skirts with stockings and footwear that fit her role. How much skin shows varies with each character's style. Hard limit: never nude, nipples and genitals always fully covered by opaque fabric or metal, never see-through over them. Adult woman's face and body.",
-  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image."
+  "faceRule": "Every face is beautiful, harmonious and clearly feminine: the listed structure (face shape, jaw, eyes, nose, lips) must be visible but rendered soft and graceful, never masculine, harsh, gaunt or coarse. Ageless immortal beauty at any apparent age: smooth youthful skin, no wrinkles, no nasolabial folds, no under-eye bags, no sagging. All characters have fair, light skin, each with her own undertone (see her Skin line); never dark or tanned skin; the element colour stays in the background and rim light, never tints the skin or floods the whole image. Every face is a stunning, breathtaking beauty (mỹ nhân tuyệt sắc): the same high level of beauty for all ten, never plain, tired, stern, severe, aged, heavy-lidded or harsh. Tiên Nô are cultivators with immortal youth (trú nhan): every face LOOKS about 20 to 27 years old; an older apparent age shows only in poise, aura and gaze, never in the skin or the face structure."
 }
