@@ -16,7 +16,7 @@ for (const c of cs) {
 }
 
 /* STYLE depends on the element, so it is built per character. */
-const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, symmetric eyes, no merged clothing.`;
+const NEG = `${d.outfitRule} Clearly adult proportions. Not photorealistic, not a live-action photo, not a real person. Lips closed, no teeth visible, no open-mouth smile. No text, no letters, no watermark, no frame, no UI. Not pixel art, not ink wash, not watercolor, not brush painting, not anime chibi. Correct anatomy: five fingers per hand, no merged clothing.`;
 
 const style = c => `Chinese xianxia gacha card illustration matching the style reference docs/reference/tien_no_style_target.png: soft luminous semi-realistic 3D-rendered look, delicate beautiful feminine face, large expressive eyes with detailed lashes, glossy lips, flawless porcelain skin, ornate hair ornaments and gold jewelry, ${d.elementBackgrounds[c.element]} elemental glow, floating light particles and petals, dreamy cinematic lighting. Stylized game art, NOT a photograph. ${d.faceRule}`;
 
@@ -25,6 +25,7 @@ const face = c => [
   `Face: ${c.face.shape}; forehead ${c.face.forehead}; cheekbones ${c.face.cheekbones}; jaw ${c.face.jaw}; chin ${c.face.chin}.`,
   `Eyes: ${c.eyes.shape}, ${c.eyes.spacing} spacing, ${c.eyes.depth} sockets, ${c.eyes.eyelid}, ${c.eyes.iris} iris.`,
   `Brows: ${c.brows}. Nose: ${c.nose}. Mouth: ${c.mouth}. Ears: ${c.ears}.`,
+  `Skin: ${c.skinTone}. Eye makeup: ${c.makeup}. Mark: ${c.mark}. Jewelry only: ${c.jewelry}. Head and gaze: ${c.pose}.`,
   `Lips (must visibly differ from other characters, lips closed): ${c.lips}.`,
 ].join('\n');
 
