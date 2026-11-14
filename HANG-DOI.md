@@ -12,17 +12,29 @@ Một phiên Claude Code mở tại thư mục này, chạy `/loop` với câu l
    - Sai phong cách, sai món, lấn nhiều, chạm mép: không chép. Thử lại tối đa 1 lần với câu lệnh chỉnh. Vẫn hỏng thì đánh `blocked` kèm lý do.
 6. Việc `ask` hoặc `blocked` thì dừng loop và báo chủ. Không tự quyết.
 
+## Quyết định của Phó chủ tịch (Chủ tịch ủy quyền 2026-11-14, Cố vấn soát chéo)
+- Bộ ICON_FUNCTION cũ: tạo lại theo kiểu ICON_FUNCTION_2, giữ 12 ID `ICON.FN.*`. Không bỏ.
+- Thanh linh lực: giữ xanh lá (khác thanh HP đỏ, EXP vàng, năng lượng cyan). Chỉ được dịu độ neon bằng tint khi ráp HUD, không tạo ảnh lại.
+- Ảnh Tiên Nô: Codex image_gen (kèm `docs/reference/tien_no_style_target.png`); hai lần mặt hỏng thì chuyển ChatGPT TT-gacha. Làm ảnh ID của cả 10 người trước, rồi FULL, rồi CARD. Duyệt từng ảnh theo checklist `docs/ART_QUALITY_RULES.md` (che tóc vẫn khác mọi mặt đã duyệt; môi khép; đẹp hài hòa; mắt tay viền sắc; tối thiểu 1024; không cắt từ ảnh ghép). Chủ tịch chỉ xem một lần bảng ghép 10 mặt che tóc trước khi vào game.
+- Mã game: React + Vite + TypeScript cho màn quản lý; PixiJS cho Thí Luyện khi tới lúc; bước đầu chỉ ráp khung sảnh Nguyệt Dạ Thanh Vân từ sheet UI đã đạt, không nhân vật, không gameplay. Làm trên nhánh `feature/lobby-frame`, merge `main` cần Chủ tịch duyệt. Engine HD-2D cho Bí Cảnh: làm prototype Phaser so Three.js, Chủ tịch chốt.
+- Không quyết (chờ Chủ tịch, khi tới Bí Cảnh/Thí Luyện): cooldown đổi người, chết và hồi sinh, cỡ đội, chia thưởng, offline auto, multiplayer, engine HD-2D cuối, bậc hiếm N/R/SR/SSR/UR.
+
+## Việc loại khác sheet UI
+Việc 10, 11: một ảnh một lần chạy Codex (task brief tương tự `_codex_out/sheet_task.md`, lấy khối "### ID" của nhân vật trong `docs/CHAR_PROMPTS.md`), tự xem ảnh theo checklist; đạt thì lưu `assets/characters/<ID>/<ID>.ID.png`, commit. Việc 14, 16: làm trên nhánh `feature/...`, có build và smoke test, không đẩy `main`. Gặp việc `ask` thì dừng loop.
+
 ## Việc
 | # | Trạng thái | Việc |
 |---|---|---|
-| 1 | done | SHEET.BUTTONS_2: lần trước ra nút mobile phổ thông có chữ tiếng Anh. Tạo lại đúng khung vàng chạm, kính chàm, đá teal, không chữ. |
-| 2 | done | SHEET.RARITY_PLATE: lần trước khung lấn mép ô, cánh UR chạm mép. Vẽ nhỏ hơn, mọi thứ trong 389×(vùng an toàn) mỗi ô. |
-| 3 | done | UI.PANEL.PROFILE (SHEET.HUD_WIDE, ô 1): ám xanh lá ở đoạn mờ, cuối bị cắt. Tạo lại; `UI.NAV.BOTTOM_BAR` đã nhận, giữ nguyên. |
-| 4 | done | SHEET.ICON_FUNCTION_2: hình đẹp nhưng lấn ~1070 px mỗi biểu tượng (sát hai bên). Tạo lại với biểu tượng nhỏ hơn, cách mép ô ít nhất 62 px. Hỏng thì giữ bản hiện có ở `_codex_out/` và báo chủ. |
-| 5 | ask | SHEET.ICON_FUNCTION (bộ cũ, `REJECTED_NOT_PRODUCTION_READY`): thay bằng ICON_FUNCTION_2 hay tạo lại. Chủ quyết. |
-| 6 | ask | Màu thanh linh lực: giữ xanh lá hay đổi chàm/xanh lam. Chủ quyết. |
-| 7 | ask | Ảnh Tiên Nô (ID, FULL, CARD) cho 10 nhân vật: mỗi mặt phải được chủ duyệt, tạo qua ChatGPT Project TT-gacha hoặc Codex. Diễm Vô Tâm: ảnh ID chờ chủ duyệt sau khi sửa tóc bị cắt. |
-| 8 | ask | Mã game: chưa có `package.json`, chưa chọn engine HD-2D. Chủ quyết (xem "Unresolved design decisions" trong `CLAUDE.md`). |
+| 1-4 | done | BUTTONS_2, RARITY_PLATE, UI.PANEL.PROFILE, ICON_FUNCTION_2 |
+| 5-8 | done | Đã quyết, xem mục trên |
+| 9 | ready | Tạo lại SHEET.ICON_FUNCTION theo kiểu ICON_FUNCTION_2, giữ 12 ID, lưới 4×3, cách mép ô ít nhất 62 px. Hỏng một lần thì tách thành 6+6 (`SHEET.ICON_FUNCTION_3`), ID icon giữ nguyên. Xem ghép cả 20 icon cạnh nhau trước khi nhận. |
+| 10 | ready | Tạo lại ảnh ID Diễm Vô Tâm (câu lệnh đã sửa tóc). |
+| 11 | ready | Tạo ảnh ID 9 Tiên Nô còn lại theo thứ tự `CHAR_PROMPTS.md`, từng ảnh, so với mọi mặt đã duyệt. |
+| 12 | ask | Dựng bảng ghép 10 mặt che tóc, trình Chủ tịch xem một lần (sau việc 11). |
+| 13 | ask | FULL rồi CARD cho 10 Tiên Nô, ảnh ID làm tham chiếu (chờ việc 12). |
+| 14 | ready | Nhánh `feature/lobby-frame`: React + Vite + TS, ráp sảnh từ sheet UI đã đạt, không nhân vật, build và smoke test. |
+| 15 | ask | Merge `feature/lobby-frame` vào `main` (Chủ tịch duyệt). |
+| 16 | ready | Prototype Bí Cảnh HD-2D Phaser so Three.js, nhánh riêng, báo FPS và cỡ bundle. Chốt engine: ask Chủ tịch. |
 
 ## Câu lệnh loop
 ```text
