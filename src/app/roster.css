@@ -10,7 +10,7 @@
 .roster .results { display: flex; gap: 14px; justify-content: center; margin-top: 12px; }
 /* Lists: fixed columns (5 on Tiên Nô = all 10 in two rows, 6 on Tổ Đội = same width as the party row), last row left-aligned, panel shrinks to the grid. */
 .roster .owned { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 400px; max-height: calc(100% - 420px); overflow-y: auto; background: rgba(12,16,52,.82); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 12px 16px 16px; }
-.roster .owned.tall { top: 190px; max-height: calc(100% - 210px); left: 60px; right: auto; margin: 0; }
+.roster .owned.tall { top: 206px; max-height: calc(100% - 226px); left: 60px; right: auto; margin: 0; }
 .roster .owned h2 { margin: 0 0 10px; font-size: 22px; color: var(--gold); }
 .roster .grid { --cols: 5; display: grid; grid-template-columns: repeat(var(--cols), 190px); gap: 14px; padding: 4px; }
 .roster .grid > p { grid-column: 1 / -1; }
@@ -37,12 +37,14 @@
 .tcard.r-UR { --il: 31px; --ir: 30px; --it: 44px; }
 .tcard .win { position: absolute; pointer-events: none; left: calc(var(--il) * var(--s)); right: calc(var(--ir) * var(--s)); top: calc(var(--it) * var(--s)); bottom: calc(var(--ib) * var(--s)); }
 .tcard .portrait { position: absolute; inset: calc(11px * var(--s)); border-radius: 8px; }
-.tcard .portrait .pic { top: 34%; height: 28%; }
+.tcard .portrait .pic { top: 37%; height: 26%; }
 .tcard .frame { pointer-events: none; }
 .tcard .elem { position: absolute; left: calc(var(--il) * var(--s) + 6px); top: calc(var(--it) * var(--s) + 6px); width: calc(30px * var(--s)); height: calc(30px * var(--s)); }
 .tcard .rar { position: absolute; right: calc(var(--ir) * var(--s) + 8px); top: calc(var(--it) * var(--s) + 6px); font-size: 20px; line-height: 1; font-weight: 700; text-shadow: 0 1px 3px #000; }
 .tcard .badges { position: absolute; left: calc(var(--il) * var(--s) + 6px); right: calc(var(--ir) * var(--s) + 6px); top: calc(var(--it) * var(--s) + 42px * var(--s)); display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
-.tcard .badges span { font-size: 15px; line-height: 19px; border-radius: 10px; padding: 1px 8px; background: #b8323a; text-align: center; box-shadow: 0 1px 3px #000a; }
+/* MỚI sits in the top row beside the element icon; the badge row (copies / in party) stays above the emblem, never on it. */
+.tcard .new { position: absolute; left: calc(var(--il) * var(--s) + 12px + 30px * var(--s)); top: calc(var(--it) * var(--s) + 10px); }
+.tcard .badges span, .tcard .new { font-size: 15px; line-height: 19px; border-radius: 10px; padding: 1px 8px; background: #b8323a; text-align: center; box-shadow: 0 1px 3px #000a; }
 .tcard .badges .copies { background: #2d5aa0; } .tcard .badges .joined { background: #23845e; }
 .tcard .tinfo { position: absolute; left: calc(var(--il) * var(--s)); right: calc(var(--ir) * var(--s)); bottom: calc(var(--ib) * var(--s));
   display: flex; flex-direction: column; gap: 2px; padding: 12px var(--pad) var(--pad); border-radius: 0 0 6px 6px;

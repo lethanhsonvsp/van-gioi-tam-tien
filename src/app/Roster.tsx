@@ -66,9 +66,10 @@ export function Roster({ back }: { back: () => void }) {
           {msg && <span className="msg">{msg}</span>}
         </div>
       </section>
+      {/* Rows of at most 5, balanced (6 = 3 + 3, 7 = 4 + 3) so the last row is never one lone card. */}
       <section className="owned tall">
         <h2>Tiên Nô đã có ({g.tienNo.length}/{TIEN_NO.length}) · Tổ đội {g.party.filter(Boolean).length}/{g.party.length}</h2>
-        <div className="grid">
+        <div className="grid" style={{ '--cols': Math.ceil(g.tienNo.length / Math.ceil(g.tienNo.length / 5)) || 5 } as CSSProperties}>
           {g.tienNo.length === 0 && <p>Chưa có Tiên Nô nào. Hãy triệu hồi.</p>}
           {g.tienNo.map(c => <Card key={c.id} id={c.id} copies={c.copies} selected={inParty(g.party, c.id)} onClick={() => setOpen(c.id)} />)}
         </div>

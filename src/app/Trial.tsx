@@ -22,7 +22,7 @@ function UnitCard({ u, floats }: { u: UnitView; floats: { key: number; text: str
   return (
     <div className={`unit el-${u.element}${u.dead ? ' dead' : ''}${u.acting && !u.dead ? ' acting' : ''}`}>
       <Medal u={u} />
-      <div className="unit-name">{u.name}</div>
+      <div className="unit-name" title={u.name}>{u.name}</div>
       <div className="hp"><div className="hp-fill" style={{ width: `${(u.hp / u.hpMax) * 100}%` }} /><span>{u.hp}/{u.hpMax}</span></div>
       <div className="shield">{u.shield > 0 && <div className="shield-fill" style={{ width: `${Math.min(1, u.shield / u.hpMax) * 100}%` }} />}</div>
       {floats.map(f => <div key={f.key} className={`float ${f.kind}`}>{f.text}</div>)}

@@ -6,7 +6,7 @@
 .compact .team { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: auto; justify-self: stretch; }
 .compact .vs { font-size: 20px; align-self: center; }
 .compact .verdict { font-size: 20px; }
-.compact .unit { grid-template-columns: 34px 1fr; column-gap: 6px; row-gap: 2px; padding: 3px 6px 3px 4px; border-radius: 20px 8px 8px 20px; }
+.compact .unit { grid-template-columns: 34px minmax(0, 1fr); column-gap: 6px; row-gap: 2px; padding: 3px 6px 3px 4px; border-radius: 20px 8px 8px 20px; }
 .compact .team-b .unit { direction: ltr; border-radius: 20px 8px 8px 20px; padding: 3px 6px 3px 4px; }
 .compact .medal { width: 34px; height: 34px; padding: 2px; box-shadow: 0 0 0 2px var(--ring); }
 .compact .medal-core { border-width: 1px; }
@@ -14,8 +14,9 @@
 .compact .unit-name { font-size: 13px; }
 .compact .hp { height: 16px; } .compact .hp span { font-size: 13px; line-height: 16px; white-space: nowrap; }
 .compact .shield { height: 3px; }
-.compact .float, .compact .team-b .float { left: 0; right: auto; top: -2px; margin: 0; font-size: 16px; animation-name: rise-s; } .compact .float.shield { font-size: 13px; }
-@keyframes rise-s { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-6px); opacity: 0; } }
+/* Floats: dark pill at the row's right end, clear of the medallion. */
+.compact .float, .compact .team-b .float { left: auto; right: 4px; top: 2px; margin: 0; padding: 0 6px; line-height: 22px; font-size: 16px; animation-name: rise-s; } .compact .float.shield { font-size: 13px; }
+@keyframes rise-s { from { transform: translateY(0); opacity: 1; } 70% { opacity: 1; } to { transform: translateY(-4px); opacity: 0; } }
 .compact .result-bar .ctl { padding: 6px 12px; font-size: 14px; }
 .compact .scrub { width: 300px; }
 .compact .result-bar { min-height: 44px; gap: 2px 8px; }
@@ -29,7 +30,7 @@
 .compact .preview .tag { font-size: 13px; }
 .compact .preview h3 { margin-bottom: 2px; }
 /* One line per fighter so six rows fit without scrolling: name, details, HP. */
-.compact .pv-row { grid-template-columns: auto 1fr auto; align-items: baseline; gap: 0 8px; padding: 2px 8px; margin-bottom: 3px; font-size: 14px; }
+.compact .pv-row { grid-template-columns: auto minmax(0, 1fr) auto; align-items: baseline; gap: 0 8px; padding: 2px 8px; margin-bottom: 3px; font-size: 14px; }
 .compact .pv-row small { grid-column: 2; grid-row: 1; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Roster / Party: one vertical scroll; "Về sảnh" sits top right, so the header keeps clear of it. */
@@ -55,7 +56,7 @@
 .compact .slot { width: 150px; height: 227px; font-size: 14px; text-align: center; }
 .compact .tcard .rar { font-size: 14px; }
 .compact .tcard .badges { gap: 2px; }
-.compact .tcard .badges span { font-size: 13px; line-height: 16px; padding: 0 5px; }
+.compact .tcard .badges span, .compact .tcard .new { font-size: 13px; line-height: 16px; padding: 0 5px; }
 .compact .tcard .tinfo { padding-top: 10px; gap: 1px; }
 .compact .tcard .tname { font-size: 14px; }
 .compact .tcard .ttitle { font-size: 13px; }

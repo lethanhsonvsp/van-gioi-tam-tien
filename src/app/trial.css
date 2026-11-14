@@ -24,11 +24,13 @@
 .hp span { position: relative; display: block; text-align: center; font-size: 15px; line-height: 18px; text-shadow: 0 1px 2px #000; }
 .shield { height: 5px; border-radius: 3px; background: rgba(0,0,0,.35); overflow: hidden; }
 .shield-fill { height: 100%; background: linear-gradient(90deg, #cfe8ff, #8fc4ff); }
-.float { position: absolute; left: 100%; top: 8px; margin-left: 10px; font-size: 24px; font-weight: 700; pointer-events: none; text-shadow: 0 2px 3px #000; animation: rise .7s ease-out forwards; }
-.float.damage { color: #ffb0a0; } .float.heal { color: #8cf2a8; } .float.shield { color: #cfe8ff; font-size: 18px; }
+/* Floats: on a dark pill beside the row, level with the HP bar, clear of the medallion and the row edge; full opacity most of their life. */
+.float { position: absolute; left: 100%; top: calc(50% - 18px); margin-left: 16px; padding: 0 10px; border-radius: 12px; background: rgba(5,6,24,.82); line-height: 36px;
+  font-size: 26px; font-weight: 700; white-space: nowrap; pointer-events: none; text-shadow: 0 2px 3px #000; animation: rise .7s ease-out forwards; }
+.float.damage { color: #ff8f7a; } .float.heal { color: #8cf2a8; } .float.shield { color: #cfe8ff; font-size: 18px; }
 /* Floats sit beside the unit (team B: on its left), never over a HP bar. */
-.team-b .float { left: auto; right: 100%; margin: 0 10px 0 0; }
-@keyframes rise { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-14px); opacity: 0; } }
+.team-b .float { left: auto; right: 100%; margin: 0 16px 0 0; }
+@keyframes rise { from { transform: translateY(0); opacity: 1; } 70% { opacity: 1; } to { transform: translateY(-12px); opacity: 0; } }
 .result-bar .ctl { padding: 8px 18px; font-size: 18px; }
 .scrub { width: 420px; height: 44px; accent-color: var(--gold); background: none; border: 0; box-shadow: none; }
 
@@ -41,9 +43,10 @@
 .trial-buttons .back { white-space: nowrap; padding: 12px 10px; }
 .trial-buttons button:disabled { cursor: default; }
 
-.preview { flex: 1; min-height: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-content: start; overflow-y: auto; }
+.preview { flex: 1; min-height: 0; width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-content: start; overflow-y: auto; }
 .preview h3 { margin: 0 0 8px; color: var(--gold); font-size: 22px; }
 .preview .tag { font-size: 15px; background: #36a; border-radius: 8px; padding: 1px 8px; margin-left: 8px; color: #fff; }
-.pv-row { display: grid; grid-template-columns: 1fr 120px; gap: 2px 10px; padding: 6px 12px; margin-bottom: 6px; background: rgba(12,16,52,.9); border: 1px solid var(--gold-dim); border-radius: 10px; font-size: 17px; }
+/* HP at the right end of the row, on the name line. */
+.pv-row { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 6px 12px; margin-bottom: 6px; background: rgba(12,16,52,.9); border: 1px solid var(--gold-dim); border-radius: 10px; font-size: 17px; }
 .pv-row small { opacity: .85; grid-column: 1 / -1; font-size: 15px; }
 .pv-row .boss { color: #ff9b6b; font-weight: 700; }
