@@ -7,3 +7,4 @@
 .import-err { color: #ffb0a0; }
 .import-count { opacity: .8; margin: 2px 0 0; }
 .stage:not(.compact) .import .dump { font-size: 16px; height: 84px; }
+.import-head { scroll-margin: 8px; } /* actions + status sit above the paste box so they are never below the fold; scrolled into view when armed/done */

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { newGame, serialize } from '../core/save';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
-import { ImportSave } from './ImportSave';
+import { dropImportBackup, ImportSave } from './ImportSave';
 import { Home } from './Home';
 import { useGame } from './useGame';
 import './roster.css';
@@ -12,6 +12,7 @@ export function Settings({ back, guide }: { back: () => void; guide: () => void 
   const [dump, setDump] = useState<string | null>(null);
   const [armed, setArmed] = useState(false);
   const [wiped, setWiped] = useState(false);
+  const [gen, setGen] = useState(0); // remounts the import box after a wipe so a stale undo can't come back
   return (
     <div className="screen">
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
@@ -21,13 +22,13 @@ export function Settings({ back, guide }: { back: () => void; guide: () => void 
         <div className="buttons">
           <button className="back" onClick={guide}>Hướng dẫn</button>
           <button className="back" onClick={() => setDump(dump === null ? serialize(g) : null)}>{dump === null ? 'Xuất save' : 'Ẩn save'}</button>
-          <button className="back" onClick={() => { if (armed) { setState(newGame()); setArmed(false); setWiped(true); } else { setArmed(true); setWiped(false); } }}>
+          <button className="back" onClick={() => { if (armed) { setState(newGame()); dropImportBackup(); setGen(gen + 1); setArmed(false); setWiped(true); } else { setArmed(true); setWiped(false); } }}>
             {armed ? 'Bấm lần nữa để xóa' : 'Xóa save và chơi lại'}
           </button>
         </div>
         {wiped && <p className="done-note" role="status">Đã xóa save. Game mới bắt đầu từ đầu.</p>}
         {dump !== null && <textarea className="dump tech" readOnly value={dump} onFocus={e => e.currentTarget.select()} />}
-        <ImportSave back={back} />
+        <ImportSave key={gen} back={back} />
       </div>
       <Home back={back} />
     </div>

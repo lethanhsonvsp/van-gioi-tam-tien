@@ -48,6 +48,20 @@ describe('importSave', () => {
     expect(err({ ...g, player: { ...g.player, name: '<b>x</b>' } })).toMatch(/tên/);
     expect(err({ ...g, trial: { ...g.trial, cleared: 3, floor: 9 } })).toMatch(/Thí Luyện/);
   });
+  it('rejects non-finite, over-cap and absurd numbers', () => {
+    const g = withTn(), t = g.tienNo[0];
+    for (const bad of ['1e999', '-1e999']) { // JSON.stringify would turn Infinity into null, so splice the literal
+      expect(err(text(g).replace(/"tickets":\d+/, `"tickets":${bad}`))).toMatch(/thẻ/);
+      expect(err(text(g).replace(/"exp":[\d.]+/, `"exp":${bad}`))).toMatch(/kinh nghiệm/);
+      expect(err(text(g).replace(/"hpMax":[\d.]+/, `"hpMax":${bad}`))).toMatch(/máu/);
+      expect(err(text(g).replace(/"LINH_THACH":\d+/, `"LINH_THACH":${bad}`))).toMatch(/LINH_THACH/);
+    }
+    expect(err({ ...g, player: { ...g.player, exp: null } })).toMatch(/kinh nghiệm/); // NaN serializes to null
+    expect(err({ ...g, player: { ...g.player, hpMax: 1e15, hp: 1 } })).toMatch(/máu/);
+    expect(err({ ...g, player: { ...g.player, hpMax: 100.5, hp: 1 } })).toMatch(/máu/);
+    expect(err({ ...g, player: { ...g.player, level: 3 }, tienNo: [{ ...t, level: 12 }] })).toMatch(/vượt trần/);
+    expect(err({ ...g, tienNo: [{ ...t, copies: 1e9 }] })).toMatch(/bản sao/);
+  });
   it('rejects duplicate, unknown and wrong-rarity Tien No and bad party', () => {
     const g = withTn(), t = g.tienNo[0];
     expect(err({ ...g, tienNo: [t, t] })).toMatch(/trùng/);

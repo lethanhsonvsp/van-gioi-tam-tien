@@ -68,7 +68,7 @@ export function SkillTab() {
           <article className="jcard" key={id}>
             <h3>{name}</h3>
             <p>{text}</p>
-            <p className="jnum">Kéo dài khoảng {row(statusTurns(id))} lượt hành động.</p>
+            <p className="jnum">Hiệu lực khoảng {row(statusTurns(id))} lượt{id === 'slow' ? ' (tốc độ giảm một nửa)' : ''}.</p>
           </article>
         ))}
       </section>
@@ -77,9 +77,9 @@ export function SkillTab() {
 }
 
 const MEANING: Record<string, string> = {
-  N: 'Nhân vật chính, quái và trang bị. Không có trong Gacha.',
+  N: 'Nhân vật chính, quái và trang bị. Không có trong Triệu hồi.',
   R: 'Nền tảng vững, dễ gặp nhất.',
-  SR: 'Tiềm năng cao, có bảo đảm sau một số lần quay.',
+  SR: 'Tiềm năng cao, có bảo đảm sau một số lần triệu hồi.',
   SSR: 'Tiềm năng rất cao, hiếm.',
   UR: 'Tiềm năng tối thượng, có bảo đảm dài hơn.',
 };
@@ -87,9 +87,9 @@ const MEANING: Record<string, string> = {
 export function RarityTab() {
   return (
     <>
-      <p className="jtotal">Cùng cấp, bậc cao mạnh hơn.</p>
+      <p className="jtotal">Cùng cấp, độ hiếm cao mạnh hơn.</p>
       <table className="jtable">
-        <thead><tr><th>Bậc</th><th>Ý nghĩa</th><th>Hệ số chỉ số</th><th>Mỗi cấp</th><th>Trần cấp</th></tr></thead>
+        <thead><tr><th>Độ hiếm</th><th>Ý nghĩa</th><th>Hệ số chỉ số</th><th>Mỗi cấp</th><th>Trần cấp</th></tr></thead>
         <tbody>
           {rarityRows().map(r => (
             <tr key={r.rarity} className={`r-${r.rarity}`}>
@@ -99,7 +99,7 @@ export function RarityTab() {
           ))}
         </tbody>
       </table>
-      <p className="jnote">Trần cấp Tiên Nô = cấp nhân vật chính + số cộng theo bậc (cộng thêm +1 mỗi bản trùng, có giới hạn).</p>
+      <p className="jnote">Trần cấp Tiên Nô = cấp nhân vật chính + số cộng theo độ hiếm (cộng thêm +1 mỗi bản trùng, có giới hạn).</p>
     </>
   );
 }

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { summarize, type UnitStats } from '../battle/summary';
 import type { BattleEvent } from '../battle/types';
 import './report.css';
@@ -19,6 +19,7 @@ export function ReportBar({ events, open, toggle }: { events: BattleEvent[]; ope
 
 export function ReportTable({ events }: { events: BattleEvent[] }) {
   const { units } = useMemo(() => summarize(events), [events]);
+  const [shut, setShut] = useState<Record<string, boolean>>({}); // collapsed groups, so a short screen can fold Đội to reach Quái
   const row = (u: UnitStats) => (
     <tr key={u.uid} className={u.dead ? 'dead' : ''}>
       <th scope="row" title={u.name}>{u.name}{u.dead ? ' (gục)' : ''}</th>
@@ -26,7 +27,8 @@ export function ReportTable({ events }: { events: BattleEvent[] }) {
     </tr>
   );
   const group = (side: 'A' | 'B', title: string) => <>
-    <tr className="grp"><th colSpan={7}>{title}</th></tr>{units.filter(u => u.side === side).map(row)}
+    <tr className="grp"><th colSpan={7}><button className="grp-toggle" aria-expanded={!shut[side]} onClick={() => setShut({ ...shut, [side]: !shut[side] })}>{title} {shut[side] ? '▾' : '▴'}</button></th></tr>
+    {!shut[side] && units.filter(u => u.side === side).map(row)}
   </>;
   return (
     <div className="report">

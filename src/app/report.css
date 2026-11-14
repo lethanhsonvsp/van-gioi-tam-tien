@@ -2,7 +2,7 @@
 .report-bar { flex: none; display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; }
 .report-bar .back { min-height: 44px; padding: 6px 16px; font-size: 18px; white-space: nowrap; }
 .report-line { font-size: 17px; color: var(--gold); text-shadow: 0 1px 3px #000; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.report { flex: 1; min-height: 0; width: 100%; max-width: 1000px; margin: 0 auto; overflow-y: auto; background: rgba(12,16,52,.92); border: 1px solid var(--gold-dim); border-radius: 10px; }
+.report { flex: 0 1 auto; min-height: 0; width: 100%; max-width: 1000px; margin: auto; /* shrinks to its rows, centred; scrolls past the free height */ overflow-y: auto; background: rgba(12,16,52,.92); border: 1px solid var(--gold-dim); border-radius: 10px; }
 .report table { width: 100%; border-collapse: collapse; font-size: 17px; }
 .report th, .report td { padding: 4px 10px; text-align: right; white-space: nowrap; }
 .report thead th { position: sticky; top: 0; background: #0c1034; color: var(--gold); font-size: 15px; }
@@ -17,3 +17,5 @@
 .compact .report th, .compact .report td { padding: 3px 6px; }
 .compact .report thead th, .compact .report .grp th { font-size: 13px; }
 .compact .report tbody th { max-width: 150px; }
+.report .grp-toggle { all: unset; cursor: pointer; display: block; width: 100%; min-height: 44px; line-height: 44px; }
+.report .grp-toggle:focus-visible { outline: 2px solid var(--gold); }

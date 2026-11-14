@@ -1,5 +1,7 @@
 import { BALANCE, RARITIES, TIEN_NO, TRIAL } from '../content';
 import { validateName } from './name';
+import { levelCap } from './progress';
+import { hpMaxFor } from './character';
 import { validParty } from './roster';
 import { migrate, parseSave, SAVE_SHAPE, SAVE_VERSION, serialize, type GameState } from './save';
 
@@ -7,6 +9,8 @@ export const IMPORT_MAX_CHARS = 1_000_000; // 1 MB of text; a real save is a few
 export interface ImportSummary { name: string; level: number; linhThach: number; floor: number; tienNo: number; version: number }
 export type ImportResult = { ok: true; state: GameState; summary: ImportSummary } | { ok: false; error: string };
 
+// Duplicate pulls are unbounded in play (only the cap bonus is capped at duplicateCapMax), so this just rejects absurd counts.
+const MAX_COPIES = 100_000;
 const fail = (error: string): ImportResult => ({ ok: false, error });
 const isObj = (v: unknown): v is Record<string, unknown> => typeof v === 'object' && v !== null && !Array.isArray(v);
 const int = (v: unknown, min: number, max = Number.MAX_SAFE_INTEGER): boolean => Number.isInteger(v) && (v as number) >= min && (v as number) <= max;
@@ -18,8 +22,10 @@ function checkCharacter(c: unknown, what: string): string | null {
   if (typeof c.name !== 'string' || validateName(c.name) !== c.name) return `${what}: tên không hợp lệ.`;
   if (!RARITIES.includes(c.rarity as never)) return `${what}: độ hiếm "${String(c.rarity)}" không có trong nội dung.`;
   if (!int(c.level, 1, BALANCE.progression.maxLevel)) return `${what}: cấp ${String(c.level)} ngoài miền 1..${BALANCE.progression.maxLevel}.`;
-  if (typeof c.exp !== 'number' || !(c.exp >= 0) || !Number.isFinite(c.exp)) return `${what}: kinh nghiệm không hợp lệ.`;
-  if (typeof c.hpMax !== 'number' || !(c.hpMax > 0) || typeof c.hp !== 'number' || !(c.hp >= 0) || c.hp > c.hpMax) return `${what}: máu không hợp lệ.`;
+  if (typeof c.exp !== 'number' || !Number.isFinite(c.exp) || c.exp < 0 || c.exp > Number.MAX_SAFE_INTEGER) return `${what}: kinh nghiệm không hợp lệ.`;
+  // Real HP is statsFor at the same level; allow 2x headroom over the max-level value (element bias, future balance), reject absurd values.
+  const hpCeil = 2 * hpMaxFor(c.rarity as never, BALANCE.progression.maxLevel, String(c.element));
+  if (!int(c.hpMax, 1, hpCeil) || !int(c.hp, 0, c.hpMax as number)) return `${what}: máu không hợp lệ.`;
   return null;
 }
 
@@ -36,7 +42,8 @@ function checkRanges(s: GameState): string | null {
     if (seen.has(t.id)) return `Tiên Nô "${t.id}" bị trùng.`;
     seen.add(t.id);
     if (t.rarity !== def.rarity) return `Tiên Nô ${def.name}: độ hiếm ${t.rarity} sai (đúng là ${def.rarity}).`;
-    if (!int(t.copies, 0)) return `Tiên Nô ${def.name}: số bản sao không hợp lệ.`;
+    if (!int(t.copies, 0, MAX_COPIES)) return `Tiên Nô ${def.name}: số bản sao không hợp lệ.`;
+    if (t.level > levelCap(t, s.player.level, false)) return `Tiên Nô ${def.name}: cấp ${t.level} vượt trần cấp ${levelCap(t, s.player.level, false)}.`;
   }
   if (!validParty(s.party, s.player.id, [...seen])) return 'Tổ đội không hợp lệ (trùng người, người chưa sở hữu hoặc thiếu nhân vật chính).';
   if (!int(s.tickets, 0)) return 'Số thẻ triệu hồi không hợp lệ.';
