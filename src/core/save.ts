@@ -1,12 +1,11 @@
-import { BALANCE } from '../content';
-import { GACHA } from '../content';
-import { makeCharacter, type Character } from './character';
+import { BALANCE, GACHA, TIEN_NO } from '../content';
+import { hpMaxFor, makeCharacter, type Character } from './character';
 import { emptyParty, PARTY_SIZE, type OwnedTienNo, type Pity } from './roster';
 import { newRng, type Rng } from './rng';
 import { newTrial, type TrialProgress } from './rewards';
 
 export const SAVE_KEY = 'vgtt.save';
-export const SAVE_VERSION = 3;
+export const SAVE_VERSION = 4;
 
 export interface GameState {
   version: number;
@@ -47,6 +46,16 @@ const STEPS: Record<number, (s: Record<string, unknown>) => Record<string, unkno
     party: emptyParty('CHAR.PLAYER.MAIN'),
   }),
   2: s => ({ ...s, version: 3, trial: newTrial() }),
+  // VS-11: Tien No rarity follows content by id (Tan Nguyet Dao N -> R); levels above the new maxLevel drop to it. Protagonist stays N.
+  3: s => {
+    const max = BALANCE.progression.maxLevel;
+    const fix = <C extends Character>(c: C, rarity = c.rarity): C => {
+      const level = Math.min(c.level, max), hpMax = hpMaxFor(rarity, level, c.element);
+      return { ...c, rarity, level, hpMax, hp: Math.min(c.hp, hpMax) };
+    };
+    const tienNo = (s.tienNo as Character[]).map(c => fix(c, TIEN_NO.find(t => t.id === c.id)?.rarity ?? c.rarity));
+    return { ...s, version: 4, player: fix(s.player as Character), tienNo };
+  },
 };
 export function migrate(raw: { version: number }): GameState | null {
   let s = raw as Record<string, unknown>;

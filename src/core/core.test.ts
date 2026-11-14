@@ -35,7 +35,7 @@ describe('save', () => {
     const bad = { getItem: () => { throw new Error('denied'); }, setItem: () => { throw new Error('denied'); } };
     expect(loadGame(bad).warning).toBeTruthy();
     expect(saveGame(newGame(1), bad)).toBe(false);
-    expect(serialize(newGame(1))).toContain('"version":3');
+    expect(serialize(newGame(1))).toContain('"version":4');
     expect(SAVE_KEY).toBe('vgtt.save');
   });
 });
@@ -51,7 +51,7 @@ describe('content', () => {
   });
   it('rarity multipliers', () => {
     expect(BALANCE.status).toBe('alpha-temporary');
-    expect(['N', 'R', 'SR', 'SSR', 'UR'].map(r => rarityMultiplier(r as 'N'))).toEqual([1, 1.15, 1.3, 1.5, 1.75]);
+    expect(['N', 'R', 'SR', 'SSR', 'UR'].map(r => rarityMultiplier(r as 'N'))).toEqual([1, 1.15, 1.25, 1.4, 1.55]);
     expect(hpMaxFor('UR', 3)).toBeGreaterThan(hpMaxFor('N', 3));
   });
 });
