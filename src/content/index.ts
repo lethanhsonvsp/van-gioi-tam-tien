@@ -25,7 +25,7 @@ export interface Balance {
   };
   progression: {
     status: string; maxLevel: number; realmSize: number; realms: string[];
-    expToNext: { base: number; pow: number }; cultivateCost: { base: number; pow: number }; capBonus: Record<Rarity, number>;
+    expToNext: { base: number; pow: number }; cultivateCost: { base: number; pow: number }; capBonus: Record<Rarity, number>; duplicateCapMax: number;
   };
 }
 
@@ -79,6 +79,7 @@ export function validateBalance(data: unknown): Balance {
   if (!bt || !(bt.actGauge > 0) || !(bt.maxTicks > 0) || !(bt.statBase?.spd > 0)) throw new Error('balance: bad "battle"');
   const p = b.progression;
   if (!p || !(p.maxLevel >= 1) || !(p.realmSize >= 1) || !p.realms?.length || !(p.expToNext?.base > 0) || !(p.cultivateCost?.base > 0)) throw new Error('balance: bad "progression"');
+  if (!Number.isInteger(p.duplicateCapMax) || p.duplicateCapMax < 0) throw new Error('balance: bad duplicateCapMax');
   for (const r of RARITIES) if (!(p.capBonus?.[r] >= 0)) throw new Error(`balance: bad capBonus for ${r}`);
   if (p.maxLevel > p.realms.length * p.realmSize) throw new Error('balance: maxLevel has no realm label');
   return b;

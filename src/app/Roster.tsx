@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { GACHA, SKILLS, TIEN_NO } from '../content';
+import { BALANCE, GACHA, SKILLS, TIEN_NO } from '../content';
 import { pull, toggleInParty, type PullResult } from '../core/gacha';
-import { capBonusOf } from '../core/progress';
+import { capBonusOf, capOf, dupCapBonus } from '../core/progress';
 import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
@@ -21,10 +21,11 @@ function Profile({ id, close }: { id: string; close: () => void }) {
         <div className="info">
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
-          <p>Hệ: {t.element} · Độ hiếm: {t.rarity} · Bản sao {own.copies}</p>
+          <p>Hệ: {t.element} · Độ hiếm: {t.rarity}</p>
+          <p className="dup-note">Bản sao: {own.copies} (+{dupCapBonus(own.copies)} trần cấp, tối đa {BALANCE.progression.duplicateCapMax}){own.copies > BALANCE.progression.duplicateCapMax && ' · Đã đạt tối đa, bản sao thừa chỉ được đếm'}</p>
           <p><b>Chiến đấu:</b> {t.combatVi}<br /><b>Ngoài chiến đấu:</b> {t.roleVi}</p>
           <CultivatePanel id={id} />
-          <p className="cap-note">Trần cấp = cấp nhân vật chính ({g.player.level}) + {capBonusOf(t.rarity)} cho bậc {t.rarity}. Muốn Tiên Nô lên cấp, hãy nâng nhân vật chính trước.</p>
+          <p className="cap-note">Trần cấp = cấp nhân vật chính ({g.player.level}) + {capBonusOf(t.rarity)} cho bậc {t.rarity} + {dupCapBonus(own.copies)} bản sao = cấp {capOf(g, id)}. Muốn Tiên Nô lên cấp, hãy nâng nhân vật chính trước.</p>
           {kit && <p><b>{kit.name}</b> ({kit.tag}): {kit.kind === 'damage' ? 'sát thương' : kit.kind === 'support' ? 'hỗ trợ' : 'khống chế'}, mỗi {kit.every} lượt.</p>}
           <button className="back" onClick={() => setState(toggleInParty(g, id))} disabled={!inTeam && !g.party.includes(null)}>
             {inTeam ? 'Rời đội' : g.party.includes(null) ? 'Vào đội' : 'Đội đã đầy'}

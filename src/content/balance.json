@@ -28,6 +28,7 @@
     "expToNext": { "base": 40, "pow": 1.3 },
     "cultivateCost": { "base": 15, "pow": 1.4 },
     "capBonus": { "N": 0, "R": 2, "SR": 2, "SSR": 4, "UR": 6 },
+    "duplicateCapMax": 5,
     "realmSize": 10,
     "realms": ["Luyện Khí", "Trúc Cơ", "Kim Đan"],
     "realmsComingSoon": ["Nguyên Anh"]

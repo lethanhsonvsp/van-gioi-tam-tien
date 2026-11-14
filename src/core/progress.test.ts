@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { BALANCE, REWARDS, TIEN_NO, TRIAL } from '../content';
 import { makeCharacter } from './character';
 import { viewOf } from './player';
-import { addExp, cultivate, cultivateBlock, cultivateCost, expToNext, levelCap, MAX_LEVEL, realmLabel } from './progress';
+import { addExp, cultivate, cultivateBlock, cultivateCost, capOf, expToNext, levelCap, MAX_LEVEL, realmLabel } from './progress';
 import { canEnter, claimWin, floorReward, goFloor, newTrial } from './rewards';
 import { migrate, newGame, parseSave, SAVE_VERSION, type GameState } from './save';
 
@@ -31,6 +31,24 @@ describe('levels', () => {
     expect(levelCap(t, 5, false)).toBe(11);
     expect(levelCap(t, MAX_LEVEL, false)).toBe(MAX_LEVEL);
     expect(levelCap(t, 5, true)).toBe(MAX_LEVEL);
+  });
+  it('duplicates: +1 cap per copy up to duplicateCapMax, extras only count, clamped to maxLevel', () => {
+    const M = P.duplicateCapMax;
+    expect(M).toBe(5);
+    const cap = (copies: number, pl = 5, rarity: 'N' | 'UR' = 'N') => levelCap({ ...makeCharacter({ ...TIEN_NO[0], rarity }), copies }, pl, false);
+    expect([0, 1, 2, 5].map(n => cap(n))).toEqual([5, 6, 7, 10]);
+    expect([6, 7, 40].map(n => cap(n))).toEqual([10, 10, 10]);
+    expect(cap(5, MAX_LEVEL - 1, 'UR')).toBe(MAX_LEVEL);
+    expect(cap(3, 8)).toBe(11); // follows the protagonist level
+    expect(cap(0, 5, 'UR')).toBe(11); // no copies: unchanged
+  });
+  it('old v4 save with copies loads and capOf counts them', () => {
+    const s = withTienNo(newGame(1), 'N');
+    const old = JSON.parse(JSON.stringify({ ...s, tienNo: [{ ...s.tienNo[0], copies: 3 }] }));
+    const { state: g, warning } = parseSave(JSON.stringify(old));
+    expect(warning).toBeUndefined();
+    expect(g.tienNo[0].copies).toBe(3);
+    expect(capOf(g, g.tienNo[0].id)).toBe(g.player.level + 3);
   });
   it('realm labels change every 10 levels', () => {
     expect([1, 10, 11, 25, 30].map(realmLabel)).toEqual(['Luyện Khí 1', 'Luyện Khí 10', 'Trúc Cơ 1', 'Kim Đan 5', 'Kim Đan 10']);

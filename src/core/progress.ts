@@ -18,9 +18,12 @@ export function realmLabel(level: number): string {
 
 export const capBonusOf = (r: Character['rarity']): number => P.capBonus[r];
 
-// Protagonist: global max. Tien No: player level + rarity bonus (alpha-temporary), never above the global max.
-export const levelCap = (c: Character, playerLevel: number, isPlayer: boolean): number =>
-  isPlayer ? MAX_LEVEL : Math.min(MAX_LEVEL, playerLevel + P.capBonus[c.rarity]);
+// +1 cap per duplicate copy, counted up to duplicateCapMax; extra copies only count (no other effect).
+export const dupCapBonus = (copies = 0): number => Math.min(Math.max(0, copies), P.duplicateCapMax);
+
+// Protagonist: global max. Tien No: player level + rarity bonus + duplicate bonus (alpha-temporary), never above the global max.
+export const levelCap = (c: Character & { copies?: number }, playerLevel: number, isPlayer: boolean): number =>
+  isPlayer ? MAX_LEVEL : Math.min(MAX_LEVEL, playerLevel + P.capBonus[c.rarity] + dupCapBonus(c.copies));
 
 const atLevel = <C extends Character>(c: C, level: number, exp: number): C => {
   const hpMax = hpMaxFor(c.rarity, level, c.element);
