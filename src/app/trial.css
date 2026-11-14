@@ -1,0 +1,30 @@
+/* Thí Luyện replay: CSS shapes stand in for pixel sprites until they exist. */
+.trial-head { position: absolute; top: 24px; left: 0; right: 0; text-align: center; }
+.trial-head h1 { margin: 0; color: var(--gold); font-size: 40px; text-shadow: 0 2px 4px #000; }
+.trial-head code { opacity: .7; }
+.arena { position: absolute; left: 80px; right: 80px; top: 130px; bottom: 140px; display: grid; grid-template-columns: 1fr 160px 1fr; align-items: center; }
+.team { display: flex; flex-direction: column; gap: 14px; align-items: center; }
+.vs { text-align: center; font-size: 36px; color: var(--gold); }
+.verdict { font-size: 44px; font-weight: 700; }
+.verdict.w-A { color: #7be0a0; } .verdict.w-B { color: #ff7b7b; } .verdict.w-draw { color: #ccc; }
+.hint { position: absolute; left: 0; right: 0; bottom: 0; text-align: center; font-size: 22px; }
+.unit { position: relative; display: grid; grid-template-columns: 72px 220px; grid-template-rows: auto auto; column-gap: 12px; align-items: center;
+  padding: 8px 12px; border-radius: 14px; background: var(--glass); border: 1px solid var(--gold-dim); transition: transform .15s; }
+.team-b .unit { direction: rtl; } .team-b .unit > * { direction: ltr; }
+.unit.acting { transform: scale(1.06); border-color: var(--gold); }
+.unit.dead { opacity: .3; filter: grayscale(1); }
+.orb { grid-row: span 2; position: relative; width: 64px; height: 64px; border-radius: 50%; border: 2px solid #fff6; box-shadow: inset -8px -8px 16px #0006, 0 0 12px #0008; }
+.el-NONE { background: #e8dcb8; } .el-MOC { background: #3fa35a; } .el-BANG { background: #9fe3ff; } .el-HOA { background: #e8522f; }
+.el-HUYEN { background: #b06ae8; } .el-AM { background: #4a3a63; } .el-THUY { background: #2f7de8; } .el-LOI { background: #f2d33a; } .el-THO { background: #a0703a; }
+.st { position: absolute; inset: -6px; border-radius: 50%; border: 3px dashed; }
+.st-stun { border-color: #ffe066; } .st-freeze { border-color: #bff3ff; } .st-slow { border-color: #8fb3ff; inset: -10px; }
+.unit-name { font-size: 18px; font-weight: 700; text-shadow: 0 1px 2px #000; }
+.hp { position: relative; height: 20px; border-radius: 10px; background: #0009; overflow: hidden; }
+.hp-fill { position: absolute; inset: 0 auto 0 0; background: linear-gradient(#e85a5a, #a82828); transition: width .12s; }
+.hp-shield { position: absolute; inset: 0 auto 0 0; background: #cfe8ff88; border-right: 2px solid #fff; }
+.hp span { position: relative; display: block; text-align: center; font-size: 14px; line-height: 20px; text-shadow: 0 1px 2px #000; }
+.float { position: absolute; left: 36px; top: 0; font-size: 24px; font-weight: 700; pointer-events: none; text-shadow: 0 2px 3px #000; animation: rise .7s ease-out forwards; }
+.float.damage { color: #ffb0a0; } .float.heal { color: #8cf2a8; } .float.shield { color: #cfe8ff; font-size: 18px; }
+@keyframes rise { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-40px); opacity: 0; } }
+.trial-buttons { position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 24px; }
+.trial-buttons button:disabled { opacity: .4; cursor: default; }
