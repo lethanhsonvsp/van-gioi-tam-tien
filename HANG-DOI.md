@@ -73,3 +73,26 @@ Vòng chơi: Sảnh, Gacha, xem Tiên Nô, tổ đội 6 (1 chính + 5 Tiên Nô
 
 ## Độ hiếm và tiềm năng Tiên Nô (Chủ tịch bảo triển khai 2026-11-14)
 Đã ghi `rarity` và `title` cho 10 Tiên Nô trong `data/tien_no_appearance.json` và cột Độ hiếm trong `docs/ALPHA_TIEN_NO_ROSTER.md`: Cổ U Lan UR; Mộ Dung Tuyết, Diễm Vô Tâm SSR; Hàn Nguyệt Sương, Vân Mộng Dao, Lạc Thanh Y SR; Sở Hồng Liên, Bạch Linh Nhi, Liễu Như Yên R; Tần Nguyệt Dao N. Hệ số tiềm năng N 1.0, R 1.15, SR 1.3, SSR 1.5, UR 1.75, tạm alpha. VS-3, VS-4 dùng các giá trị này; số chính thức cần Chủ tịch duyệt (VS-L3).
+
+## Vòng lặp bản chơi sớm (Chủ tịch bảo 2026-11-14)
+Mục tiêu: Chủ tịch chơi được sớm nhất bằng `cd ~/wt/vgtt-vs && npm run dev`. Nguồn việc: bảng VS-2 đến VS-6 dưới đây trong tệp này (nhánh `feature/vertical-slice`). Một phiên Claude Code mở sẵn chạy `/loop` đọc mục này; mỗi vòng giao đúng một việc cho một agent làm trong worktree `~/wt/vgtt-vs`, rồi kiểm và đóng. Máy tắt thì loop dừng, chạy lại `/loop`.
+
+### Quy trình một vòng
+1. `git status` trong worktree phải sạch; nếu không thì dừng và báo. `git pull` nhánh.
+2. Lấy việc `ready` đầu tiên trong bảng. Không có thì báo "hết việc" và dừng loop.
+3. Giao cho MỘT agent (`general-purpose`, model sonnet; nâng opus khi hỏng một lần hoặc việc đụng thiết kế trận/cân bằng) với brief: đọc `CLAUDE.md`, `MEMORY.md`, mục kế hoạch và việc đó; chỉ làm trong worktree trên nhánh `feature/vertical-slice`; commit nhỏ; được push nhánh này; KHÔNG push `main`, KHÔNG merge `main`, KHÔNG bật Pages; không tạo ảnh; không đưa ảnh nhân vật chưa duyệt vào game; chỉ một tiến trình build/test lúc một; mỗi tệp mã tối đa khoảng 300 dòng; lõi thuần TS tách khỏi render; mọi số cân bằng ghi `alpha-temporary` trong `src/content/*.json`.
+4. Kiểm tự lập: chạy `npm test` và `npm run build` (phải xanh), xem `git log`, đọc diff chính. Việc có giao diện thì chạy `npm run dev` và dùng trình duyệt headless (nếu có) hoặc curl để chắc trang lên.
+5. Xanh: cập nhật bảng (`done` + ghi chú), commit, push nhánh. Hỏng: thử lại một lần với model cao hơn và ghi lý do; vẫn hỏng thì đánh `blocked` kèm lý do và dừng loop.
+
+### Khi bí về thiết kế hoặc nội dung
+Tham khảo game TuTien tại `/home/sonlt/code/RoomCost/TuTien` (tài liệu `TuTien_doc/`, lõi `TuTien_game/src/core/`, `TuTien_game/content/`): cảnh giới, công pháp, chiến đấu, kinh tế, nhật ký thiết kế. Giao agent Nghiên cứu (opus, chỉ đọc) tóm tắt cách TuTien làm và đề xuất bản đơn giản cho bản chơi sớm. Quy tắc: chỉ học ý tưởng và cơ chế, viết lại bằng lời và số của mình; không chép tệp, ảnh, đoạn văn, tên thế lực của TuTien vào repo này (repo này công khai, TuTien riêng tư); số lấy làm tham khảo ghi `alpha-temporary`. Kinh tế theo nguyên tắc bảo toàn tài nguyên của TuTien (không nguồn tiền vô hạn). Quyết định thiết kế lõi mới (đổi luật đã chốt, hồi sinh, cooldown đổi người, cỡ đội, số Gacha chính thức, merge main, lên Pages) vẫn dừng hỏi Chủ tịch.
+
+### Việc
+| # | Trạng thái | Việc |
+|---|---|---|
+| VS-2 | ready | Thí Luyện: lõi trận tick tất định (`src/battle/`), 3 khuôn chiêu có tham số (sát thương, hồi máu và khiên, khống chế) + 1 nhãn đặc trưng mỗi Tiên Nô, khắc hệ tạm 1.0, đội cố định (nhân vật chính + 3 Tiên Nô), 3 tầng, quái sinh theo công thức theo tầng, nhật ký sự kiện; bộ phát lại DOM/CSS bằng hình khối theo màu hệ + thanh máu + chữ sát thương. Màn Thí Luyện vào từ nút trên sảnh. Test tất định (cùng hạt giống cùng kết quả). |
+| VS-3 | ready | Gacha có pity + màn Tiên Nô gộp danh sách + tổ đội 6 (1 chính + 5). Thẻ: khung độ hiếm + icon hệ + tên + danh xưng `title`, chân dung là khối màu "đang vẽ". Tỉ lệ và pity ghi `alpha-temporary`. Test tỉ lệ và pity. |
+| VS-4 | ready | Thưởng sau trận (linh thạch, EXP, thẻ triệu hồi), lên cấp (cảnh giới là nhãn theo mốc 10 cấp), nút lên cấp trong hồ sơ, mở rộng 20 tầng quái sinh theo công thức, vitest chạy đội mẫu qua 20 tầng tìm tầng kẹt và đội toàn UR. |
+| VS-5 | ready | Chỗ đổi tên nhân vật, `role` tiếng Việt cho 10 Tiên Nô, màn hướng dẫn ngắn, nút "Lưu và xóa save" trong cài đặt; smoke test mở trang bằng trình duyệt headless nếu có. |
+| VS-6 | ready | Bản chơi thử: build, chạy `npm run dev`, chơi một vòng đầy đủ bằng script mô phỏng (tạo game mới, quay Gacha, xếp đội, đánh 5 tầng, lên cấp), báo các chỗ gãy và cảm giác nhịp chơi; lập danh sách chỉnh. |
+| VS-L3 | ask | Chủ tịch duyệt: số Gacha và độ hiếm chính thức; lên Pages công khai (sửa `.github` ở main, tách prompt 18+); merge nhánh vào `main`; chốt engine HD-2D và Bí Cảnh. |
