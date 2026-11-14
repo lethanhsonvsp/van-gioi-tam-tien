@@ -14,7 +14,10 @@
 .compact .unit-name { font-size: 13px; }
 .compact .hp { height: 16px; } .compact .hp span { font-size: 13px; line-height: 16px; white-space: nowrap; }
 .compact .shield { height: 3px; }
-.compact .float { left: 20px; font-size: 16px; } .compact .float.shield { font-size: 13px; }
+.compact .float, .compact .team-b .float { left: 0; right: auto; top: -2px; margin: 0; font-size: 16px; animation-name: rise-s; } .compact .float.shield { font-size: 13px; }
+@keyframes rise-s { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-6px); opacity: 0; } }
+.compact .result-bar .ctl { padding: 6px 12px; font-size: 14px; }
+.compact .scrub { width: 300px; }
 .compact .result-bar { min-height: 44px; gap: 2px 8px; }
 .compact .reward { font-size: 14px; }
 .compact .tech { font-size: 13px; }
@@ -24,8 +27,10 @@
 .compact .preview { gap: 8px; }
 .compact .preview h3 { font-size: 16px; margin-bottom: 4px; }
 .compact .preview .tag { font-size: 13px; }
-.compact .pv-row { grid-template-columns: 1fr auto; padding: 3px 8px; margin-bottom: 3px; font-size: 14px; }
-.compact .pv-row small { font-size: 13px; }
+.compact .preview h3 { margin-bottom: 2px; }
+/* One line per fighter so six rows fit without scrolling: name, details, HP. */
+.compact .pv-row { grid-template-columns: auto 1fr auto; align-items: baseline; gap: 0 8px; padding: 2px 8px; margin-bottom: 3px; font-size: 14px; }
+.compact .pv-row small { grid-column: 2; grid-row: 1; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* Roster / Party: one vertical scroll; "Về sảnh" sits top right, so the header keeps clear of it. */
 .compact .roster { overflow-y: auto; padding: 0 10px 8px; }
@@ -38,27 +43,26 @@
 .compact .roster .pity { font-size: 13px; margin: 0; order: 3; width: 100%; }
 .compact .roster .buttons .back small { font-size: 13px; }
 .compact .roster .results { order: 5; width: calc(100% + 120px); margin: 4px -120px 0 0; flex-wrap: wrap; gap: 6px; }
-.compact .roster .owned { position: relative; inset: auto; max-height: none; overflow: visible; margin-top: 8px; padding: 8px 10px; }
+.compact .roster .owned { position: relative; inset: auto; width: auto; max-height: none; overflow: visible; margin: 8px 0 0; padding: 8px 10px; }
 .compact .roster .owned h2 { font-size: 16px; }
 .compact .roster .owned p { font-size: 14px; margin: 4px 0; }
-.compact .roster .grid { gap: 6px; }
+.compact .roster .grid { grid-template-columns: repeat(auto-fill, 150px); justify-content: center; gap: 6px; }
+.compact .roster .party-row { width: auto; margin: 0; padding: 4px 120px 0 0; }
+.compact .roster .party-row .results { justify-content: center; }
 
-/* Card at phone size: 120x182, name and title still 2 lines each. */
-.compact .tcard, .compact .slot { width: 120px; height: 182px; }
-.compact .slot { font-size: 14px; text-align: center; }
-.compact .tcard .portrait { inset: 7px; }
-.compact .tcard .elem { width: 24px; height: 24px; left: 10px; top: 10px; }
-.compact .tcard .rar { font-size: 14px; right: 12px; top: 10px; }
-.compact .tcard .badges { left: 9px; right: 9px; top: 38px; gap: 2px; }
+/* Card at phone size: 150x227 (--s), name max 2 lines; insets and the 10 px text padding follow the frame window (roster.css). */
+.compact .tcard { --s: .79; }
+.compact .slot { width: 150px; height: 227px; font-size: 14px; text-align: center; }
+.compact .tcard .rar { font-size: 14px; }
+.compact .tcard .badges { gap: 2px; }
 .compact .tcard .badges span { font-size: 13px; line-height: 16px; padding: 0 5px; }
-.compact .tcard .tinfo { left: 11px; right: 11px; bottom: 23px; padding-top: 10px; gap: 1px; }
+.compact .tcard .tinfo { padding-top: 10px; gap: 1px; }
 .compact .tcard .tname { font-size: 14px; }
 .compact .tcard .ttitle { font-size: 13px; }
 .compact .tcard.hero .portrait { inset: 4px; }
-.compact .tcard.hero .tinfo { bottom: 8px; left: 8px; right: 8px; }
 
 /* Summon results: full-screen window, 5 x 2 grid that scrolls inside, "Đóng" fixed in the header. */
 .compact .pop-window { max-width: 100%; max-height: 100%; width: 100%; height: 100%; border-radius: 0; border-width: 0; padding: 6px 10px 8px; }
 .compact .pop-window header { margin-bottom: 6px; }
 .compact .pop-window h2 { font-size: 20px; }
-.compact .pop-grid { grid-template-columns: repeat(var(--n), 120px); gap: 6px; }
+.compact .pop-grid { grid-template-columns: repeat(var(--n), 150px); gap: 6px; padding: 2px 4px 8px; }

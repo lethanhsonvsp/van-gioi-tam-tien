@@ -8,10 +8,21 @@
 .roster .buttons .back small { font-size: 16px; opacity: .8; margin-left: 6px; }
 .roster .msg { color: #ffd9a0; font-size: 18px; background: rgba(120,60,20,.45); border: 1px solid #b9783a; border-radius: 10px; padding: 4px 12px; }
 .roster .results { display: flex; gap: 14px; justify-content: center; margin-top: 12px; }
-.roster .owned { position: absolute; left: 60px; right: 60px; top: 400px; max-height: calc(100% - 420px); overflow-y: auto; background: rgba(12,16,52,.82); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 12px 16px 16px; }
-.roster .owned.tall { top: 190px; max-height: calc(100% - 210px); }
+/* Lists: fixed columns (5 on Tiên Nô = all 10 in two rows, 6 on Tổ Đội = same width as the party row), last row left-aligned, panel shrinks to the grid. */
+.roster .owned { position: absolute; left: 0; right: 0; margin: 0 auto; width: fit-content; top: 400px; max-height: calc(100% - 420px); overflow-y: auto; background: rgba(12,16,52,.82); border: 1px solid var(--gold-dim); border-radius: 14px; padding: 12px 16px 16px; }
+.roster .owned.tall { top: 190px; max-height: calc(100% - 210px); left: 60px; right: auto; margin: 0; }
 .roster .owned h2 { margin: 0 0 10px; font-size: 22px; color: var(--gold); }
-.roster .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+.roster .grid { --cols: 5; display: grid; grid-template-columns: repeat(var(--cols), 190px); gap: 14px; padding: 4px; }
+.roster .grid > p { grid-column: 1 / -1; }
+/* Tổ Đội (desktop): the party row and the pool share one 6-column width; the pool shows one whole row and snaps row by row. */
+.roster .party-row { left: 0; right: 0; margin: 0 auto; width: fit-content; padding: 0 20px; }
+.roster .party-row .results { justify-content: flex-start; }
+.pool .grid { --cols: 6; }
+.stage:not(.compact) .roster .owned.pool { overflow: visible; top: 392px; }
+.stage:not(.compact) .pool .grid { max-height: 296px; overflow-y: auto; scroll-snap-type: y mandatory; }
+.pool .grid > * { scroll-snap-align: start; }
+.pool .hint { font-size: 17px; color: var(--ink); opacity: .85; margin-left: 10px; font-weight: 400; }
+
 
 .summon-pop { position: absolute; inset: 0; z-index: 6; display: flex; align-items: center; justify-content: center; }
 .pop-window { display: flex; flex-direction: column; max-width: calc(100% - 40px); max-height: calc(100% - 40px); padding: 16px 24px 24px; border: 2px solid var(--gold-dim); border-radius: 16px; }
@@ -19,26 +30,31 @@
 .pop-window h2 { margin: 0; color: var(--gold); font-size: 30px; }
 .pop-grid { --n: 5; display: grid; grid-template-columns: repeat(var(--n), 190px); gap: 14px; justify-content: center; overflow-y: auto; min-height: 0; padding: 4px; }
 
-/* Card: rarity frame over the emblem; name and title are each clamped to 2 lines in a bottom band. */
-.tcard { position: relative; width: 190px; height: 288px; padding: 0; border: 0; background: none; flex: none; text-align: left; }
-.tcard .portrait { position: absolute; inset: 11px; border-radius: 8px; }
-.tcard .portrait .pic { top: 31%; height: 30%; }
+/* Card: rarity frame over the emblem. --il/--ir/--it/--ib = the frame's inner window (measured from the frame PNGs at 190 px wide, scaled by --s);
+   every piece of text sits inside that window, the name/title band keeps --pad from its edges. */
+.tcard { --s: 1; --pad: 10px; --il: 20px; --ir: 18px; --it: 37px; --ib: 41px;
+  position: relative; width: calc(190px * var(--s)); height: calc(288px * var(--s)); padding: 0; border: 0; background: none; flex: none; text-align: left; }
+.tcard.r-UR { --il: 31px; --ir: 30px; --it: 44px; }
+.tcard .win { position: absolute; pointer-events: none; left: calc(var(--il) * var(--s)); right: calc(var(--ir) * var(--s)); top: calc(var(--it) * var(--s)); bottom: calc(var(--ib) * var(--s)); }
+.tcard .portrait { position: absolute; inset: calc(11px * var(--s)); border-radius: 8px; }
+.tcard .portrait .pic { top: 34%; height: 28%; }
 .tcard .frame { pointer-events: none; }
-.tcard .elem { position: absolute; left: 16px; top: 16px; width: 38px; height: 38px; }
-.tcard .rar { position: absolute; right: 18px; top: 16px; font-size: 20px; font-weight: 700; text-shadow: 0 1px 3px #000; }
-.tcard .badges { position: absolute; left: 16px; right: 16px; top: 60px; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.tcard .elem { position: absolute; left: calc(var(--il) * var(--s) + 6px); top: calc(var(--it) * var(--s) + 6px); width: calc(30px * var(--s)); height: calc(30px * var(--s)); }
+.tcard .rar { position: absolute; right: calc(var(--ir) * var(--s) + 8px); top: calc(var(--it) * var(--s) + 6px); font-size: 20px; line-height: 1; font-weight: 700; text-shadow: 0 1px 3px #000; }
+.tcard .badges { position: absolute; left: calc(var(--il) * var(--s) + 6px); right: calc(var(--ir) * var(--s) + 6px); top: calc(var(--it) * var(--s) + 42px * var(--s)); display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
 .tcard .badges span { font-size: 15px; line-height: 19px; border-radius: 10px; padding: 1px 8px; background: #b8323a; text-align: center; box-shadow: 0 1px 3px #000a; }
 .tcard .badges .copies { background: #2d5aa0; } .tcard .badges .joined { background: #23845e; }
-.tcard .tinfo { position: absolute; left: 18px; right: 18px; bottom: 38px; display: flex; flex-direction: column; gap: 2px; padding-top: 18px;
-  text-shadow: 0 1px 3px #000, 0 0 6px #000; background: linear-gradient(0deg, rgba(5,6,24,.92) 62%, transparent); }
-.tcard .tname, .tcard .ttitle { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
-.tcard .tname { font-size: 19px; font-weight: 700; line-height: 1.15; }
-.tcard .ttitle { font-size: 16px; line-height: 1.2; opacity: .92; }
+.tcard .tinfo { position: absolute; left: calc(var(--il) * var(--s)); right: calc(var(--ir) * var(--s)); bottom: calc(var(--ib) * var(--s));
+  display: flex; flex-direction: column; gap: 2px; padding: 12px var(--pad) var(--pad); border-radius: 0 0 6px 6px;
+  text-shadow: 0 1px 3px #000, 0 0 6px #000; background: linear-gradient(0deg, rgba(5,6,24,.94) 70%, transparent); }
+.tcard .tname, .tcard .ttitle { display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+.tcard .tname { -webkit-line-clamp: 2; line-clamp: 2; font-size: 18px; font-weight: 700; line-height: 1.15; }
+.tcard .ttitle { -webkit-line-clamp: 3; line-clamp: 3; white-space: pre-line; font-size: 15px; line-height: 1.2; opacity: .92; }
 .tcard.sel { outline: 3px solid var(--gold); outline-offset: 1px; border-radius: 10px; }
-.tcard.hero { border: 3px solid #d9ad52; border-radius: 12px; background: #0b0d2c; box-shadow: inset 0 0 0 1px rgba(255,236,170,.35), 0 0 14px rgba(232,196,106,.35); }
+.tcard.hero { --il: 3px; --ir: 3px; --it: 3px; --ib: 3px; border: 3px solid #d9ad52; border-radius: 12px; background: #0b0d2c; box-shadow: inset 0 0 0 1px rgba(255,236,170,.35), 0 0 14px rgba(232,196,106,.35); }
+.tcard.hero .win, .tcard.hero .tinfo { left: 0; right: 0; bottom: 0; } .tcard.hero .win { top: 0; }
 .tcard.hero .portrait { inset: 6px; }
-.tcard.hero .rar { color: var(--gold); }
-.tcard.hero .tinfo { bottom: 16px; left: 14px; right: 14px; }
+.tcard.hero .rar { color: var(--gold); right: 14px; top: 14px; }
 .tcard.hero .portrait .pic { top: 14%; height: 40%; }
 .slot { width: 190px; height: 288px; flex: none; border: 2px dashed var(--gold-dim); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; opacity: .8; font-size: 18px; }
 
@@ -48,7 +64,6 @@
 .profile-card .sub { opacity: .8; margin-bottom: 8px; font-size: 17px; }
 .profile-card p { font-size: 18px; margin: 0 0 10px; }
 .profile-card .back { margin-right: 10px; }
-.back:disabled { opacity: .45; }
 .cultivate { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 4px 0 12px; }
 .cultivate p { width: 100%; margin: 0; }
 .screen-panel .cultivate { justify-content: center; }
@@ -58,3 +73,10 @@
 .rename { display: flex; gap: 10px; align-items: center; justify-content: center; margin: 8px 0; }
 .rename input { font-size: 20px; padding: 8px 14px; width: 260px; }
 .cap-note { font-size: 15px; opacity: .85; }
+/* Profile (desktop): the emblem column runs the full height of the text column. */
+.stage:not(.compact) .profile-card .portrait.big { height: auto; min-height: 340px; align-self: stretch; }
+.stage:not(.compact) .profile-card .portrait.big .pic { top: 22%; height: 40%; }
+/* Settings / panels: buttons on one evenly spaced row (wraps as a whole when narrow). */
+.screen-panel .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin: 10px 0; }
+.done-note { color: #8cf2a8; }
+.stage:not(.compact) .screen-panel.settings { width: 860px; }

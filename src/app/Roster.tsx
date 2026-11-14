@@ -5,8 +5,8 @@ import { capBonusOf, capOf, dupCapBonus } from '../core/progress';
 import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
-import { elementVi } from '../content/elements';
-import { Card, Emblem } from './Card';
+import { elementLabel, elementVi } from '../content/elements';
+import { Card, Emblem, copiesText } from './Card';
 import { Home } from './Home';
 import { CultivatePanel } from './Cultivate';
 import { useGame } from './useGame';
@@ -19,15 +19,15 @@ function Profile({ id, close }: { id: string; close: () => void }) {
   return (
     <div className="modal" onClick={close}>
       <div className="profile-card" onClick={e => e.stopPropagation()}>
-        <Emblem element={t.element} className="big" caption={`Hệ ${elementVi(t.element)} · ${t.rarity}`} />
+        <Emblem element={t.element} className="big" caption={`${elementLabel(t.element)} · ${t.rarity}`} />
         <div className="info">
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
           <p>Hệ: {elementVi(t.element)} · Độ hiếm: {t.rarity}</p>
-          <p className="dup-note">Bản sao: {own.copies} (+{dupCapBonus(own.copies)} trần cấp, tối đa {BALANCE.progression.duplicateCapMax}){own.copies > BALANCE.progression.duplicateCapMax && ' · Đã đạt tối đa, bản sao thừa chỉ được đếm'}</p>
+          <p className="dup-note">{copiesText(own.copies)} (mỗi bản thêm +1 trần cấp, đang +{dupCapBonus(own.copies)}, tối đa +{BALANCE.progression.duplicateCapMax}){own.copies > BALANCE.progression.duplicateCapMax && ' · Đã đạt tối đa, bản sao thừa chỉ được đếm'}</p>
           <p><b>Chiến đấu:</b> {t.combatVi}<br /><b>Ngoài chiến đấu:</b> {t.roleVi}</p>
           <CultivatePanel id={id} />
-          <p className="cap-note">Trần cấp = cấp nhân vật chính ({g.player.level}) + {capBonusOf(t.rarity)} cho bậc {t.rarity} + {dupCapBonus(own.copies)} bản sao = cấp {capOf(g, id)}. Muốn Tiên Nô lên cấp, hãy nâng nhân vật chính trước.</p>
+          <p className="cap-note">Trần cấp = cấp nhân vật chính ({g.player.level}) + {capBonusOf(t.rarity)} cho bậc {t.rarity} + {dupCapBonus(own.copies)} từ bản thêm = cấp {capOf(g, id)}. Muốn Tiên Nô lên cấp, hãy nâng nhân vật chính trước.</p>
           {kit && <p><b>{kit.name}</b> ({kit.tag}): {kit.kind === 'damage' ? 'sát thương' : kit.kind === 'support' ? 'hỗ trợ' : 'khống chế'}, mỗi {kit.every} lượt.</p>}
           <button className="back" onClick={() => setState(toggleInParty(g, id))} disabled={!inTeam && !g.party.includes(null)}>
             {inTeam ? 'Rời đội' : g.party.includes(null) ? 'Vào đội' : 'Đội đã đầy'}
@@ -53,6 +53,7 @@ export function Roster({ back }: { back: () => void }) {
   const pity = GACHA.pity;
   const card = (r: PullResult, i: number) => <Card key={i} id={r.id} fresh={r.isNew} tag={r.joined ? 'Đã vào đội' : undefined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />;
   return (
+    <>
     <div className="screen roster">
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
       <section className="summon tight">
@@ -73,6 +74,8 @@ export function Roster({ back }: { back: () => void }) {
         </div>
       </section>
       <Home back={back} />
+    </div>
+      {/* Overlays sit outside the scrolling screen so only one area scrolls. */}
       {results.length > 0 && (
         <div className="summon-pop">
           <div className="pop-window">
@@ -82,6 +85,6 @@ export function Roster({ back }: { back: () => void }) {
         </div>
       )}
       {open && <Profile id={open} close={() => setOpen(null)} />}
-    </div>
+    </>
   );
 }
