@@ -5,6 +5,7 @@ import { useGame } from './useGame';
 import { Cultivation } from './Cultivate';
 import { Lobby } from './Lobby';
 import { Guide, guideSeen } from './Guide';
+import { Journal } from './Journal';
 import { Party } from './Party';
 import { Roster } from './Roster';
 import { Screen } from './Screen';
@@ -42,6 +43,8 @@ export function App() {
           ? <Party back={() => setScreen(null)} />
           : screen === 'screen.settings'
           ? <Settings back={() => setScreen(null)} guide={() => setGuide(true)} />
+          : screen === 'screen.journal'
+          ? <Journal back={() => setScreen(null)} />
           : screen
           ? <Screen id={screen} back={() => setScreen(null)} />
           : <Lobby player={viewOf(game)} go={setScreen} />}

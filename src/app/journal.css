@@ -1,0 +1,50 @@
+/* Sổ Tay: fixed-size panel, tab bar on top, only .jbody scrolls. Gold on indigo with teal accents. */
+.screen-panel.journal { width: 1400px; height: 740px; padding: 20px 28px; display: flex; flex-direction: column; text-align: left; overflow: hidden; top: calc(50% + 30px); }
+.jhead { flex: none; display: flex; align-items: center; gap: 28px; margin-bottom: 12px; }
+.journal h1 { margin: 0; font-size: 36px; }
+.jtabs { display: flex; gap: 12px; }
+.jtabs .back { min-height: 44px; padding: 6px 28px; font-size: 20px; }
+.jtabs .back.on { background: rgba(86,200,190,.22); border-color: #56c8be; color: #bff5ee; }
+.jbody { flex: 1; min-height: 0; overflow-y: auto; padding-right: 8px; }
+.journal p { font-size: 18px; margin: 4px 0; line-height: 1.35; }
+.jtotal { color: var(--gold); font-size: 20px !important; }
+.jtotal b { font-size: 24px; }
+.jgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.jentry { display: flex; gap: 14px; padding: 12px; border: 1px solid var(--gold-dim); border-radius: 12px; background: rgba(8,10,40,.6); }
+.jemblem { position: relative; flex: none; width: 96px; height: 120px; border-radius: 10px; border: 2px solid #d9ad52; }
+.jemblem .pic { top: 20%; height: 50%; }
+.jentry.locked .jemblem { filter: grayscale(1) brightness(.55); border-color: #6d6045; }
+.jentry.locked { opacity: .9; }
+.jtext { min-width: 0; }
+.jtext h3, .jcard h3 { margin: 0; font-size: 22px; color: var(--gold); }
+.jrar { font-size: 17px; color: #56c8be; margin-left: 6px; }
+.jsub { opacity: .85; }
+.jcols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.jcols h2 { margin: 0 0 8px; font-size: 24px; color: #56c8be; }
+.jcard { padding: 10px 14px; margin: 8px 0; border: 1px solid var(--gold-dim); border-radius: 12px; background: rgba(8,10,40,.6); }
+.jnum { color: #bff5ee; font-size: 17px !important; }
+.jtable { width: 100%; border-collapse: collapse; font-size: 18px; }
+.jtable th, .jtable td { padding: 10px 12px; border-bottom: 1px solid rgba(232,196,106,.25); text-align: left; }
+.jtable thead th { color: #56c8be; }
+.jtable tbody th { color: var(--gold); font-size: 22px; }
+.jnote { opacity: .85; }
+
+.compact .screen-panel.journal { width: 98%; height: calc(100% - 56px); max-height: none; padding: 6px 12px; top: auto; bottom: 4px; transform: translateX(-50%); }
+.compact .jhead { gap: 12px; margin-bottom: 6px; }
+.compact .journal h1 { font-size: 22px; }
+.compact .jtabs { gap: 8px; }
+.compact .jtabs .back { padding: 6px 14px; font-size: 15px; }
+.compact .journal p { font-size: 14px; margin: 2px 0; }
+.compact .jtotal { font-size: 15px !important; }
+.compact .jtotal b { font-size: 16px; }
+.compact .jtext h3, .compact .jcard h3 { font-size: 16px; }
+.compact .jrar { font-size: 14px; }
+.compact .jemblem { width: 64px; height: 84px; }
+.compact .jentry { gap: 8px; padding: 6px; }
+.compact .jnum { font-size: 14px !important; }
+.compact .jcols h2 { font-size: 17px; }
+.compact .jcols { gap: 10px; }
+.compact .jcard { padding: 6px 10px; margin: 6px 0; }
+.compact .jtable { font-size: 14px; }
+.compact .jtable th, .compact .jtable td { padding: 6px 8px; }
+.compact .jtable tbody th { font-size: 16px; }
