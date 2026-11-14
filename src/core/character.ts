@@ -16,11 +16,23 @@ export interface Character {
 
 export const rarityMultiplier = (r: Rarity): number => BALANCE.rarityStatMultiplier[r];
 
-// shortcut: HP-only stat growth (base * mult^(level-1)); real stats come with the battle core (VS-2).
-export const hpMaxFor = (rarity: Rarity, level: number): number =>
-  Math.round(BALANCE.start.hpBase * rarityMultiplier(rarity) ** (level - 1));
+export interface Stats { hp: number; atk: number; def: number; spd: number }
+
+// Stats come from level, rarity multiplier and element bias (balance.json, alpha-temporary). Speed does not grow with level.
+export function statsFor(rarity: Rarity, level: number, element: string): Stats {
+  const b = BALANCE.battle, bias = b.elementBias[element] ?? {};
+  const g = rarityMultiplier(rarity) * (1 + b.growthPerLevel * (level - 1));
+  return {
+    hp: Math.round(BALANCE.start.hpBase * g * (bias.hp ?? 1)),
+    atk: Math.round(b.statBase.atk * g * (bias.atk ?? 1)),
+    def: Math.round(b.statBase.def * g * (bias.def ?? 1)),
+    spd: b.statBase.spd * (bias.spd ?? 1),
+  };
+}
+
+export const hpMaxFor = (rarity: Rarity, level: number, element = 'NONE'): number => statsFor(rarity, level, element).hp;
 
 export function makeCharacter(c: Pick<Character, 'id' | 'name' | 'title' | 'element' | 'rarity'>, level = 1): Character {
-  const hpMax = hpMaxFor(c.rarity, level);
+  const hpMax = hpMaxFor(c.rarity, level, c.element);
   return { ...c, level, exp: 0, hp: hpMax, hpMax };
 }

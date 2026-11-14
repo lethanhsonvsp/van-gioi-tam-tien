@@ -1,0 +1,17 @@
+{
+  "status": "alpha-temporary",
+  "basic": { "name": "Đánh thường", "kind": "damage", "power": 1.0, "target": "front", "every": 1 },
+  "kits": {
+    "CHAR.PLAYER.MAIN": { "tag": "Kiếm khí", "name": "Tán Tu Kiếm", "kind": "damage", "power": 1.8, "target": "front", "every": 3 },
+    "CHAR.TIEN_NO.LAC_THANH_Y": { "tag": "Hồi máu + thanh tẩy", "name": "Thanh Vân Linh Lộ", "kind": "support", "heal": 1.6, "cleanse": true, "target": "lowestAlly", "every": 2 },
+    "CHAR.TIEN_NO.MO_DUNG_TUYET": { "tag": "Băng kiếm + làm chậm", "name": "Hàn Băng Kiếm Khí", "kind": "control", "power": 1.5, "status": "slow", "ticks": 60, "target": "lowest", "every": 3 },
+    "CHAR.TIEN_NO.DIEM_VO_TAM": { "tag": "Hiến tế HP + hút máu", "name": "Huyết Diễm Phệ Hồn", "kind": "damage", "power": 2.4, "selfCost": 0.08, "lifesteal": 0.5, "target": "front", "every": 3 },
+    "CHAR.TIEN_NO.BACH_LINH_NHI": { "tag": "Mê hoặc (choáng)", "name": "Cửu Vĩ Mị Ảnh", "kind": "control", "power": 0.8, "status": "stun", "ticks": 40, "target": "random", "every": 3 },
+    "CHAR.TIEN_NO.TAN_NGUYET_DAO": { "tag": "Ám sát tuyến sau", "name": "Vô Ảnh Thứ", "kind": "damage", "power": 2.2, "target": "back", "every": 3 },
+    "CHAR.TIEN_NO.LIEU_NHU_YEN": { "tag": "Đan dược + khiên", "name": "Hộ Tâm Đan", "kind": "support", "heal": 0.8, "shield": 1.0, "target": "lowestAlly", "every": 3 },
+    "CHAR.TIEN_NO.HAN_NGUYET_SUONG": { "tag": "Sát thương lan", "name": "Lôi Đình Trận", "kind": "damage", "power": 0.9, "target": "all", "every": 4 },
+    "CHAR.TIEN_NO.SO_HONG_LIEN": { "tag": "Mạnh dần theo thời gian", "name": "Liệt Hỏa Quyền", "kind": "damage", "power": 1.4, "ramp": 0.2, "target": "front", "every": 2 },
+    "CHAR.TIEN_NO.VAN_MONG_DAO": { "tag": "Trận khống chế vùng", "name": "Thủy Lao Trận", "kind": "control", "power": 0.5, "status": "freeze", "ticks": 30, "target": "all", "every": 4 },
+    "CHAR.TIEN_NO.CO_U_LAN": { "tag": "Kết giới đá", "name": "Cổ Mộ Kết Giới", "kind": "support", "shield": 1.2, "target": "allAllies", "every": 4 }
+  }
+}
