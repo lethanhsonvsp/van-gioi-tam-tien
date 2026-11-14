@@ -30,3 +30,6 @@
 .profile-card p { font-size: 18px; }
 .profile-card .back { margin-right: 10px; }
 .back:disabled { opacity: .45; }
+.cultivate { margin: 8px 0 14px; }
+.cultivate p { margin: 0 0 8px; }
+.cultivate .block { color: #ffb0a0; font-size: 15px; }

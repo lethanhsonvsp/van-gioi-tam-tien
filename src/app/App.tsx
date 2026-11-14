@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import type { ScreenId } from '../ui_ids';
 import { viewOf } from '../core/player';
 import { useGame } from './useGame';
+import { Cultivation } from './Cultivate';
 import { Lobby } from './Lobby';
 import { Party } from './Party';
 import { Roster } from './Roster';
@@ -27,6 +28,8 @@ export function App() {
           ? <Trial back={() => setScreen(null)} />
           : screen === 'screen.tien_no' || screen === 'screen.gacha'
           ? <Roster back={() => setScreen(null)} />
+          : screen === 'screen.cultivation'
+          ? <Cultivation back={() => setScreen(null)} />
           : screen === 'screen.team'
           ? <Party back={() => setScreen(null)} />
           : screen

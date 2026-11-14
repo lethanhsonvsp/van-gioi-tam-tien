@@ -5,6 +5,7 @@ import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
 import { Card } from './Card';
+import { CultivatePanel } from './Cultivate';
 import { useGame } from './useGame';
 import './roster.css';
 
@@ -19,7 +20,8 @@ function Profile({ id, close }: { id: string; close: () => void }) {
         <div className="info">
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
-          <p>Hệ: {t.element} · Độ hiếm: {t.rarity} · Cấp {own.level} · Bản sao {own.copies}</p>
+          <p>Hệ: {t.element} · Độ hiếm: {t.rarity} · Bản sao {own.copies}</p>
+          <CultivatePanel id={id} />
           {kit && <p><b>{kit.name}</b> ({kit.tag}): {kit.kind === 'damage' ? 'sát thương' : kit.kind === 'support' ? 'hỗ trợ' : 'khống chế'}, mỗi {kit.every} lượt.</p>}
           <button className="back" onClick={() => setState(toggleInParty(g, id))} disabled={!inTeam && !g.party.includes(null)}>
             {inTeam ? 'Rời đội' : g.party.includes(null) ? 'Vào đội' : 'Đội đã đầy'}

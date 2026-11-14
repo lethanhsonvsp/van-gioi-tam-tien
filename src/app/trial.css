@@ -28,3 +28,5 @@
 @keyframes rise { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-40px); opacity: 0; } }
 .trial-buttons { position: absolute; bottom: 40px; left: 0; right: 0; display: flex; justify-content: center; gap: 24px; }
 .trial-buttons button:disabled { opacity: .4; cursor: default; }
+.trial-sub { font-size: 18px; opacity: .9; }
+.reward { position: absolute; left: 0; right: 0; bottom: -10px; text-align: center; font-size: 22px; color: var(--gold); text-shadow: 0 1px 3px #000; }
