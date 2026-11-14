@@ -70,3 +70,6 @@ Vòng chơi: Sảnh, Gacha, xem Tiên Nô, tổ đội 6 (1 chính + 5 Tiên Nô
 | VS-3 | ready | Gacha có pity + màn Tiên Nô gộp + tổ đội 6. Số tỉ lệ và pity ghi "tạm alpha". |
 | VS-4 | ready | Thưởng, Tu Luyện, 20 tầng sinh theo công thức, vitest tìm tầng kẹt. |
 | VS-L3 | ask | Chủ tịch duyệt: số gacha và bậc hiếm chính thức; lên Pages công khai; merge vào `main` (việc 15). |
+
+## Độ hiếm và tiềm năng Tiên Nô (Chủ tịch bảo triển khai 2026-11-14)
+Đã ghi `rarity` và `title` cho 10 Tiên Nô trong `data/tien_no_appearance.json` và cột Độ hiếm trong `docs/ALPHA_TIEN_NO_ROSTER.md`: Cổ U Lan UR; Mộ Dung Tuyết, Diễm Vô Tâm SSR; Hàn Nguyệt Sương, Vân Mộng Dao, Lạc Thanh Y SR; Sở Hồng Liên, Bạch Linh Nhi, Liễu Như Yên R; Tần Nguyệt Dao N. Hệ số tiềm năng N 1.0, R 1.15, SR 1.3, SSR 1.5, UR 1.75, tạm alpha. VS-3, VS-4 dùng các giá trị này; số chính thức cần Chủ tịch duyệt (VS-L3).
