@@ -32,7 +32,7 @@ const prompts = c => {
   return {
     id: `${style(c)}
 IDENTITY SHEET in the same game-art style as the card art, used to check the face. Front view, head turned 0 degrees, camera at eye level, soft flattering light, softly blurred ${d.elementBackgrounds[c.element]} atmospheric background.
-Head and shoulders, face fills most of the frame, hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Same glamorous makeup and hair ornaments as the card art, kept off the face outline. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
+Head and shoulders, centred, with headroom: the whole head, all hair, crown and hair ornaments fully inside the frame, about 8% empty space above the highest hair or ornament, nothing cropped at the top or sides; the face takes about 35-40% of the image height. Hair pulled back away from the face so the full face outline, forehead, jaw and ears are visible. Same glamorous makeup and hair ornaments as the card art, kept off the face outline. Neckline of the outfit visible: ${c.outfit.split(',')[0]}.
 ${face(c)}
 Expression: neutral, ${c.expression}.
 Canvas 1024x1024.
@@ -52,7 +52,7 @@ ${face(c)}
 Hair: ${c.hair}.
 Role: ${c.role}. Outfit: ${c.outfit}. Draw the outfit exactly as described: do not add extra fabric, long skirts or sleeves, and do not cover more skin than described.
 Aura: ${c.aura}. Expression: ${c.expression}. Posture: ${c.posture}.
-Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. No card border (the game draws the rarity frame). Canvas 1024x1536.
+Same face and body as the identity sheet and full-body art. Keep the face clear and unobstructed. The whole head, hair and hair ornaments stay inside the frame, never cropped at the top. No card border (the game draws the rarity frame). Canvas 1024x1536.
 ${NEG}`,
   };
 };
