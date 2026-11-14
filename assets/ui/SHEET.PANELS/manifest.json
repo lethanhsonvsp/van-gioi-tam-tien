@@ -1,0 +1,196 @@
+{
+  "sheet_id": "SHEET.PANELS",
+  "status": "PASS",
+  "generation_method": "built-in image_gen; verbatim SHEET.PANELS prompt and safe-zone correction",
+  "attempts": 4,
+  "failed_band_pixels_per_attempt": [
+    36535,
+    269,
+    11662,
+    0
+  ],
+  "cells": [
+    {
+      "id": "UI.PANEL.MAIN",
+      "file": "UI.PANEL.MAIN.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        110,
+        105,
+        282,
+        277
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.PANEL.SMALL",
+      "file": "UI.PANEL.SMALL.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        130,
+        123,
+        256,
+        260
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.PANEL.POPUP",
+      "file": "UI.PANEL.POPUP.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        92,
+        131,
+        289,
+        256
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.PANEL.HEADER_BAR",
+      "file": "UI.PANEL.HEADER_BAR.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        87,
+        161,
+        295,
+        217
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.DIVIDER.H",
+      "file": "UI.DIVIDER.H.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        103,
+        152,
+        288,
+        192
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.TAB_BAR",
+      "file": "UI.TAB_BAR.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        88,
+        138,
+        297,
+        192
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.BAR.FRAME",
+      "file": "UI.BAR.FRAME.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        86,
+        137,
+        297,
+        200
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.BAR.FILL.HP",
+      "file": "UI.BAR.FILL.HP.png",
+      "w": 384,
+      "h": 342,
+      "bbox": [
+        87,
+        151,
+        294,
+        191
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.BAR.FILL.EXP",
+      "file": "UI.BAR.FILL.EXP.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        96,
+        134,
+        292,
+        173
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.BAR.FILL.ENERGY",
+      "file": "UI.BAR.FILL.ENERGY.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        94,
+        134,
+        291,
+        174
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.BADGE.NOTIFY",
+      "file": "UI.BADGE.NOTIFY.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        154,
+        115,
+        231,
+        192
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    },
+    {
+      "id": "UI.PILL.CURRENCY",
+      "file": "UI.PILL.CURRENCY.png",
+      "w": 384,
+      "h": 341,
+      "bbox": [
+        93,
+        124,
+        290,
+        183
+      ],
+      "band_pixels": 0,
+      "safe_zone_pass": true,
+      "background_cast_pixels": 0
+    }
+  ],
+  "kept_attempt": 4,
+  "self_review": "All twelve described objects present; no text or people; warm engraved gold, indigo-violet glass and cyan gems match references."
+}
