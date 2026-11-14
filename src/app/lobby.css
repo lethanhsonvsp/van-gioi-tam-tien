@@ -32,52 +32,51 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .missing { border: 2px solid #d9ad52; background: var(--indigo-glass); border-radius: 12px;
   box-shadow: inset 0 0 0 1px rgba(255,236,170,.25), inset 0 0 18px rgba(90,120,255,.25), 0 2px 6px rgba(0,0,0,.5); }
 
+.ico { overflow: hidden; }
+.ico img { position: absolute; max-width: none; }
 /* Profile, top left */
-.profile { position: absolute; left: 12px; top: 8px; width: 520px; height: 150px; }
-.profile-panel { position: absolute; left: 70px; top: 18px; width: 440px; height: 118px; }
+.profile { position: absolute; left: 12px; top: 6px; width: 600px; height: 156px; }
+.profile-panel { position: absolute; left: 66px; top: 14px; width: 540px; height: 131px; }
 .profile-panel.missing { border: 0; box-shadow: none; border-radius: 0 60px 60px 0; background: linear-gradient(90deg, rgba(14,20,58,.85), rgba(14,20,58,0)); }
-.avatar { position: absolute; left: 0; top: 0; width: 146px; height: 146px; }
-.avatar img.fill { transform: scale(1.3); }
+.avatar { position: absolute; left: 0; top: 0; width: 150px; height: 150px; }
 .avatar .missing { border-radius: 50%; }
-.level { position: absolute; left: 34px; top: 112px; width: 74px; height: 40px; display: grid; place-items: center; }
-.level img.fill { object-fit: fill; }
+.level { position: absolute; left: 38px; top: 118px; width: 74px; height: 38px; display: grid; place-items: center; }
+.level .fill { object-fit: fill; }
 .level span { position: relative; font-weight: 700; font-size: 17px; text-shadow: 0 1px 2px #000; }
-.who { position: absolute; left: 156px; top: 10px; right: 0; }
-.game { font-size: 26px; font-weight: 700; color: #fff; text-shadow: 0 2px 4px #000; }
-.name { font-size: 22px; color: var(--gold); margin-top: 2px; text-shadow: 0 1px 3px #000; }
-.realm { font-size: 18px; color: #f0d58c; text-shadow: 0 1px 3px #000; }
-.bar { position: relative; margin-top: 8px; width: 250px; height: 28px; border-radius: 14px; overflow: hidden; background: rgba(0,0,0,.5); }
-.bar-frame.missing { border-radius: 14px; background: none; }
+.who { position: absolute; left: 176px; top: 36px; width: 360px; }
+.game { font-size: 24px; font-weight: 700; color: #fff; text-shadow: 0 2px 4px #000; line-height: 1.2; }
+.name { display: inline; font-size: 20px; color: var(--gold); text-shadow: 0 1px 3px #000; }
+.realm { display: inline; margin-left: 12px; font-size: 17px; color: #f0d58c; text-shadow: 0 1px 3px #000; }
+.bar { --bw: 300px; margin-top: 6px; width: var(--bw); }
+.bar-text { display: block; font-size: 15px; font-weight: 700; line-height: 20px; text-shadow: 0 1px 2px #000; }
+.bar-track { position: relative; height: 16px; border-radius: 8px; overflow: hidden; background: rgba(0,0,0,.55); box-shadow: inset 0 0 0 1px rgba(232,196,106,.5); }
 .bar-fill { position: absolute; left: 0; top: 0; bottom: 0; overflow: hidden; }
-.bar-fill img.fill { width: 250px; object-fit: fill; transform: scale(1.4, 4); }
-.bar span { position: relative; display: block; padding-left: 14px; line-height: 28px; font-size: 16px; font-weight: 700; text-shadow: 0 1px 2px #000; }
+.bar-fill .ico { inset: auto; left: 0; top: 0; width: var(--bw); height: 100%; }
 
 /* Currencies, top centre-right */
-.currencies { position: absolute; top: 16px; right: 270px; display: flex; gap: 18px; }
-.pill { position: relative; width: 200px; height: 48px; display: flex; align-items: center; }
-.pill > .fill.missing { border-radius: 24px; }
-.pill-icon { position: relative; width: 52px; height: 52px; margin-left: -8px; object-fit: contain; }
-.pill-icon.missing { border-radius: 50%; width: 36px; height: 36px; margin: 0 8px 0 4px; }
-.pill span { position: relative; flex: 1; text-align: right; font-size: 20px; font-weight: 700; padding-right: 6px; }
-.plus { position: relative; width: 40px; height: 40px; flex: none; }
+.currencies { position: absolute; top: 20px; right: 316px; display: flex; gap: 12px; }
+.pill { position: relative; width: 200px; height: 56px; display: flex; align-items: center; padding: 0 6px 0 10px; }
+.pill > .fill.missing { border-radius: 28px; }
+.pill-icon { position: relative; width: 46px; height: 46px; flex: none; }
+.pill-icon.missing { border-radius: 50%; }
+.pill span { position: relative; flex: 1; text-align: right; font-size: 21px; font-weight: 700; padding-right: 8px; text-shadow: 0 1px 3px #000; }
+.plus { position: relative; width: 44px; height: 44px; flex: none; }
 .plus .missing { border-radius: 50%; }
-.plus img.fill { transform: scale(1.35); }
 
 /* Round buttons */
-.round { position: relative; display: block; width: 64px; height: 64px; flex: none; }
-.round img.fill { transform: scale(1.35); }
+.round { position: relative; display: block; width: 88px; height: 88px; flex: none; }
 .round .missing { border-radius: 50%; }
-.round-icon { position: absolute; left: 12%; top: 12%; width: 76%; height: 76%; object-fit: contain; }
+.round-icon { position: absolute; inset: 0; }
 .round-icon.missing { border: 0; background: none; }
-.top-buttons { position: absolute; top: 10px; right: 20px; display: flex; gap: 14px; }
+.top-buttons { position: absolute; top: 6px; right: 16px; display: flex; gap: 10px; }
 
 /* Left column */
-.side { position: absolute; left: 22px; top: 190px; display: flex; flex-direction: column; gap: 18px; }
-.side-item { display: flex; flex-direction: column; align-items: center; gap: 4px; width: 96px; }
-.side-item .label { font-size: 18px; font-weight: 700; }
+.side { position: absolute; left: 22px; top: 176px; display: flex; flex-direction: column; gap: 12px; }
+.side-item { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 112px; }
+.side-item .label { font-size: 18px; font-weight: 700; white-space: nowrap; }
 
 /* Feature cards, right: 2 columns x 4 rows */
-.features { position: absolute; right: 16px; top: 196px; display: grid; grid-template-columns: repeat(2, 256px); grid-auto-rows: 130px; gap: 10px 14px; }
+.features { position: absolute; right: 16px; top: 180px; display: grid; grid-template-columns: repeat(2, 256px); grid-auto-rows: 130px; gap: 10px 14px; }
 .feature { position: relative; text-align: right; }
 /* Card PNGs are 768x512 with the card at bbox 102,113-665,398 (safe-zone padding): scale the image so the card itself fills the button. */
 .feature img.card-art { inset: auto; left: -18.1%; top: -39.6%; width: 136.4%; height: 179.6%; object-fit: fill; }
@@ -89,14 +88,13 @@ button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .feature .label { position: absolute; right: 26px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 700; }
 .feature:hover .card-art, .side-item:hover .round, .bottom-item:hover .bottom-icon, .round:hover { filter: brightness(1.2); }
 
-/* Bottom bar */
-.bottom { position: absolute; left: 380px; right: 330px; bottom: 6px; height: 120px; display: flex; justify-content: space-evenly; align-items: flex-end; padding-bottom: 14px; }
-.bottom-bar { object-fit: fill; }
+/* Bottom bar: the bar art is cropped to its drawn part (about 5:1), icons sit on it, labels below the icons. */
+.bottom { position: absolute; left: 360px; right: 400px; bottom: 4px; height: 168px; display: flex; justify-content: space-between; align-items: center; padding: 22px 64px 8px; }
 .bottom-bar.missing { border-radius: 20px 20px 0 0; border-bottom: 0; }
-.bottom-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; }
-.bottom-icon { width: 84px; height: 84px; object-fit: contain; transform: scale(1.25); transform-origin: bottom; }
+.bottom-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 0; }
+.bottom-icon { position: relative; width: 76px; height: 76px; }
 .bottom-icon.missing { border-radius: 50%; width: 56px; height: 56px; margin: 8px; }
-.bottom-item .label { font-size: 19px; font-weight: 700; }
+.bottom-item .label { font-size: 17px; font-weight: 700; white-space: nowrap; margin-top: -2px; }
 
 /* Placeholder screens */
 .screen-panel { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 640px; padding: 40px;

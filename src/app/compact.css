@@ -10,12 +10,13 @@
 .compact .profile-panel, .compact .avatar, .compact .game, .compact .plus, .compact .feature-icon { display: none; }
 .compact .level { position: relative; inset: auto; left: auto; top: auto; width: 56px; height: 30px; flex: none; }
 .compact .level span { font-size: 14px; }
-.compact .who { position: relative; inset: auto; display: grid; grid-template-columns: auto auto; column-gap: 8px; align-items: baseline; }
+.compact .who { position: relative; inset: auto; width: auto; display: grid; grid-template-columns: auto auto; column-gap: 8px; align-items: baseline; }
 .compact .name { font-size: 15px; margin: 0; }
+.compact .realm { margin: 0; }
 .compact .realm { font-size: 13px; }
-.compact .bar { grid-column: 1 / -1; margin: 2px 0 0; width: 170px; height: 20px; border-radius: 10px; }
-.compact .bar-fill img.fill { width: 170px; }
-.compact .bar span { font-size: 13px; line-height: 20px; padding-left: 8px; }
+.compact .bar { --bw: 170px; grid-column: 1 / -1; margin: 0; }
+.compact .bar-text { font-size: 13px; line-height: 16px; }
+.compact .bar-track { height: 10px; border-radius: 5px; }
 .compact .currencies { top: 6px; right: 160px; gap: 4px; }
 .compact .pill { width: auto; min-width: 84px; height: 40px; padding: 0 10px 0 4px; }
 .compact .pill-icon { width: 30px; height: 30px; margin: 0 4px 0 0; }
@@ -30,7 +31,7 @@
 .compact .feature .label { right: 0; left: 0; text-align: center; font-size: 15px; }
 .compact .card-art.missing { --cut: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px); }
 
-.compact .bottom { position: relative; inset: auto; grid-area: bottom; left: auto; right: auto; bottom: auto; height: 56px; padding: 0 4px; align-items: center; }
+.compact .bottom { position: relative; inset: auto; grid-area: bottom; left: auto; right: auto; bottom: auto; height: 56px; padding: 0 28px; align-items: center; }
 .compact .bottom-bar.missing { border-radius: 14px 14px 0 0; }
 .compact .bottom-item { min-width: 56px; min-height: 44px; justify-content: center; }
 .compact .bottom-icon { width: 28px; height: 28px; transform: none; }

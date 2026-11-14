@@ -1,6 +1,7 @@
 import { resolveAction, type ScreenId, type UIActionId } from '../ui_ids';
 import type { CurrencyId, PlayerView } from '../core/player';
 import { Art } from '../ui/Art';
+import { Icon } from '../ui/Icon';
 import { assetUrl } from '../ui/assets';
 import { BOTTOM, FEATURES, SIDE, TOP, cardId, iconId } from './menu';
 
@@ -15,17 +16,18 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       <div className="shade" />
 
       <header className="profile">
-        <Art id="UI.PANEL.PROFILE" className="profile-panel" />
-        <div className="avatar"><Art id="UI.FRAME.AVATAR" className="fill" /></div>
+        <Icon id="UI.PANEL.PROFILE" className="profile-panel" stretch />
+        <div className="avatar"><Icon id="UI.FRAME.AVATAR" className="fill" /></div>
         <div className="level"><Art id="UI.BADGE.LEVEL" className="fill" /><span>Lv.{player.level}</span></div>
         <div className="who">
           <div className="game">Vạn Giới Tầm Tiên</div>
           <div className="name">{player.name}</div>
           <div className="realm">{player.realm}</div>
           <div className="bar">
-            <Art id="UI.BAR.FRAME" className="fill bar-frame" />
-            <div className="bar-fill" style={{ width: `${fill * 100}%` }}><Art id="UI.BAR.FILL.LINH_LUC" className="fill" /></div>
-            <span>Linh Lực {player.linhLuc.cur}/{player.linhLuc.max}</span>
+            <span className="bar-text">Linh Lực {player.linhLuc.cur}/{player.linhLuc.max}</span>
+            <div className="bar-track">
+              <div className="bar-fill" style={{ width: `${fill * 100}%` }}><Icon id="UI.BAR.FILL.LINH_LUC" className="fill" stretch /></div>
+            </div>
           </div>
         </div>
       </header>
@@ -33,10 +35,10 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       <div className="currencies">
         {CURRENCIES.map(c => (
           <div className="pill" key={c}>
-            <Art id="UI.PILL.CURRENCY" className="fill" />
-            <Art id={`ICON.RES.${c}`} className="pill-icon" />
+            <Icon id="UI.PILL.CURRENCY" className="fill" stretch />
+            <Icon id={`ICON.RES.${c}`} className="pill-icon" fill={0.9} />
             <span>{player.currency[c].toLocaleString('vi-VN')}</span>
-            <button className="plus" aria-label="Nạp" onClick={open('lobby.btn.shop')}><Art id="UI.BTN.PLUS" className="fill" /></button>
+            <button className="plus" aria-label="Nạp" onClick={open('lobby.btn.shop')}><Icon id="UI.BTN.PLUS" className="fill" /></button>
           </div>
         ))}
       </div>
@@ -44,7 +46,7 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       <nav className="top-buttons">
         {TOP.map(([a, label]) => (
           <button key={a} className="round" title={label} aria-label={label} onClick={open(a)}>
-            <Art id="UI.BTN.ROUND" className="fill" /><Art id={iconId(a)} className="round-icon" />
+            <Icon id="UI.BTN.ROUND" className="fill" /><Icon id={iconId(a)} className="round-icon" fill={0.7} />
           </button>
         ))}
       </nav>
@@ -52,7 +54,7 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       <nav className="side">
         {SIDE.map(([a, label]) => (
           <button key={a} className="side-item" onClick={open(a)}>
-            <span className="round"><Art id="UI.BTN.ROUND" className="fill" /><Art id={iconId(a)} className="round-icon" /></span>
+            <span className="round"><Icon id="UI.BTN.ROUND" className="fill" /><Icon id={iconId(a)} className="round-icon" fill={0.7} /></span>
             <span className="label">{label}</span>
           </button>
         ))}
@@ -69,10 +71,10 @@ export function Lobby({ player, go }: { player: PlayerView; go: (s: ScreenId) =>
       </nav>
 
       <nav className="bottom">
-        <Art id="UI.NAV.BOTTOM_BAR" className="fill bottom-bar" />
+        <Icon id="UI.NAV.BOTTOM_BAR" className="fill bottom-bar" stretch />
         {BOTTOM.map(([a, label]) => (
           <button key={a} className="bottom-item" onClick={open(a)}>
-            <Art id={iconId(a)} className="bottom-icon" />
+            <Icon id={iconId(a)} className="bottom-icon" fill={0.96} />
             <span className="label">{label}</span>
           </button>
         ))}
