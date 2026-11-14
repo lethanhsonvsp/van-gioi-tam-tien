@@ -3,7 +3,7 @@
   "repo": "lethanhsonvsp/van-gioi-tam-tien",
   "source_path": "docs/UI_PROMPTS.md",
   "source_sha": "9855deae44c753b786391e1f1dc8911e2e5b553a",
-  "status": "MIXED: UI.FRAME.AVATAR, UI.BAR.FILL.LINH_LUC pass (_sheet_fix.png); UI.BADGE.LEVEL, UI.BTN.PLUS accepted by owner override; UI.BTN.ROUND fails safe zone (380 px), redraw pending",
+  "status": "OWNER_ACCEPTED: UI.FRAME.AVATAR, UI.BAR.FILL.LINH_LUC pass (_sheet_fix.png); UI.BADGE.LEVEL, UI.BTN.PLUS, UI.BTN.ROUND (_sheet_fix_round.png) accepted by owner override with 1-25 px safe zone miss",
   "acceptance": "NOT_APPROVED / PREVIEW ONLY",
   "reason": "Image generation failed the 12% safe-zone requirement. Multiple whole-sheet regeneration attempts were made, but produced incorrect objects/grid. Extracted cells are NOT resized, translated, erased, or repaired.",
   "source_image": "_sheet.png",
@@ -176,7 +176,7 @@
         "right": true
       },
       "edge_pass": true,
-      "safe_zone_violation_pixels": 380,
+      "safe_zone_violation_pixels": 25,
       "safe_zone_pass": false,
       "pass": false,
       "file": "UI.BTN.ROUND.png",
@@ -185,7 +185,10 @@
         43,
         435,
         431
-      ]
+      ],
+      "source_image": "_sheet_fix_round.png",
+      "owner_override": "accepted 2026-11-14 (top gem 5 px into safe zone)",
+      "details": "see manifest_fix_round.json"
     },
     {
       "index": 6,
