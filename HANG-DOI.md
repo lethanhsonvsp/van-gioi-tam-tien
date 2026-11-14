@@ -27,7 +27,7 @@ Việc 10, 11: một ảnh một lần chạy Codex (task brief tương tự `_c
 |---|---|---|
 | 1-4 | done | BUTTONS_2, RARITY_PLATE, UI.PANEL.PROFILE, ICON_FUNCTION_2 |
 | 5-8 | done | Đã quyết, xem mục trên |
-| 9 | ready | Tạo lại SHEET.ICON_FUNCTION theo kiểu ICON_FUNCTION_2, giữ 12 ID, lưới 4×3, cách mép ô ít nhất 62 px. Hỏng một lần thì tách thành 6+6 (`SHEET.ICON_FUNCTION_3`), ID icon giữ nguyên. Xem ghép cả 20 icon cạnh nhau trước khi nhận. |
+| 9 | done | Tạo lại SHEET.ICON_FUNCTION theo kiểu ICON_FUNCTION_2, giữ 12 ID, lưới 4×3, cách mép ô ít nhất 62 px. Hỏng một lần thì tách thành 6+6 (`SHEET.ICON_FUNCTION_3`), ID icon giữ nguyên. Xem ghép cả 20 icon cạnh nhau trước khi nhận. |
 | 10 | ready | Tạo lại ảnh ID Diễm Vô Tâm (câu lệnh đã sửa tóc). |
 | 11 | ready | Tạo ảnh ID 9 Tiên Nô còn lại theo thứ tự `CHAR_PROMPTS.md`, từng ảnh, so với mọi mặt đã duyệt. |
 | 12 | ask | Dựng bảng ghép 10 mặt che tóc, trình Chủ tịch xem một lần (sau việc 11). |
