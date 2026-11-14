@@ -1,12 +1,13 @@
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 import { BALANCE, GACHA, SKILLS, TIEN_NO } from '../content';
 import { pull, toggleInParty, type PullResult } from '../core/gacha';
 import { capBonusOf, capOf, dupCapBonus } from '../core/progress';
 import { inParty } from '../core/roster';
 import { setState } from '../core/store';
 import { Art } from '../ui/Art';
-import { Icon } from '../ui/Icon';
-import { Card } from './Card';
+import { elementVi } from '../content/elements';
+import { Card, Emblem } from './Card';
+import { Home } from './Home';
 import { CultivatePanel } from './Cultivate';
 import { useGame } from './useGame';
 import './roster.css';
@@ -18,11 +19,11 @@ function Profile({ id, close }: { id: string; close: () => void }) {
   return (
     <div className="modal" onClick={close}>
       <div className="profile-card" onClick={e => e.stopPropagation()}>
-        <div className={`portrait big el-${t.element}`}><Icon id={`ICON.ELEM.${t.element}`} className="pic" fill={0.6} /><span>Chân dung đang vẽ</span></div>
+        <Emblem element={t.element} className="big" caption={`Hệ ${elementVi(t.element)} · ${t.rarity}`} />
         <div className="info">
           <h2>{t.name}</h2>
           <div className="sub">{t.title}</div>
-          <p>Hệ: {t.element} · Độ hiếm: {t.rarity}</p>
+          <p>Hệ: {elementVi(t.element)} · Độ hiếm: {t.rarity}</p>
           <p className="dup-note">Bản sao: {own.copies} (+{dupCapBonus(own.copies)} trần cấp, tối đa {BALANCE.progression.duplicateCapMax}){own.copies > BALANCE.progression.duplicateCapMax && ' · Đã đạt tối đa, bản sao thừa chỉ được đếm'}</p>
           <p><b>Chiến đấu:</b> {t.combatVi}<br /><b>Ngoài chiến đấu:</b> {t.roleVi}</p>
           <CultivatePanel id={id} />
@@ -50,15 +51,14 @@ export function Roster({ back }: { back: () => void }) {
   };
   const toUR = GACHA.pity.urEvery - g.pity.sinceUR, toSR = GACHA.pity.srEvery - g.pity.sinceSR;
   const pity = GACHA.pity;
-  const card = (r: PullResult, i: number) => <Card key={i} id={r.id} fresh={r.isNew} joined={r.joined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />;
+  const card = (r: PullResult, i: number) => <Card key={i} id={r.id} fresh={r.isNew} tag={r.joined ? 'Đã vào đội' : undefined} onClick={() => g.tienNo.some(c => c.id === r.id) && setOpen(r.id)} />;
   return (
     <div className="screen roster">
       <Art id="BG.LOBBY.NGUYET_DA" className="bg dim" />
       <section className="summon tight">
         <h1>Tiên Nô · Triệu hồi</h1>
-        <button className="back home" onClick={back}>Về sảnh</button>
         <div className="tickets">Thẻ triệu hồi: <b>{g.tickets}</b></div>
-        <div className="pity">Bảo đảm Tiên Nô SR+ sau {pity.srEvery} lần, UR sau {pity.urEvery} lần (số tạm). Còn lại: SR+ {toSR}, UR {toUR}.</div>
+        <div className="pity">Bảo đảm Tiên Nô SR+ sau {pity.srEvery} lần, UR sau {pity.urEvery} lần. Còn lại: SR+ {toSR}, UR {toUR}.</div>
         <div className="buttons">
           <button className="back" onClick={roll(1)}>Quay 1<small>{GACHA.cost} thẻ</small></button>
           <button className="back" onClick={roll(10)}>Quay 10<small>{GACHA.cost * 10} thẻ</small></button>
@@ -72,11 +72,13 @@ export function Roster({ back }: { back: () => void }) {
           {g.tienNo.map(c => <Card key={c.id} id={c.id} copies={c.copies} selected={inParty(g.party, c.id)} onClick={() => setOpen(c.id)} />)}
         </div>
       </section>
+      <Home back={back} />
       {results.length > 0 && (
         <div className="summon-pop">
-          <h2>Kết quả triệu hồi</h2>
-          <div className="results">{results.map(card)}</div>
-          <button className="back" onClick={() => setResults([])}>Đóng</button>
+          <div className="pop-window">
+            <header><h2>Kết quả triệu hồi</h2><button className="back" onClick={() => setResults([])}>Đóng</button></header>
+            <div className="pop-grid" style={{ '--n': Math.min(5, results.length) } as CSSProperties}>{results.map(card)}</div>
+          </div>
         </div>
       )}
       {open && <Profile id={open} close={() => setOpen(null)} />}
